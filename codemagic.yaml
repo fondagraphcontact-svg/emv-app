@@ -1,0 +1,59 @@
+# Codemagic : build iOS de Electro Meca View (copié du pipeline FondaGraph qui fonctionne).
+# Prérequis : dépôt Git (GitHub/GitLab/Bitbucket) contenant ce dossier, compte Codemagic relié.
+workflows:
+  ios-verification:
+    name: iOS compilation sans signature (gratuit, aucun compte Apple requis)
+    instance_type: mac_mini_m2
+    max_build_duration: 40
+    environment:
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+    scripts:
+      - name: Dépendances
+        script: flutter pub get
+      - name: Analyse et tests
+        script: |
+          flutter analyze
+          flutter test
+      - name: Compilation sans signature
+        script: flutter build ios --release --no-codesign
+    artifacts:
+      - build/ios/iphoneos/Runner.app
+
+  ios-testflight:
+    name: iOS signé vers TestFlight (compte Apple Developer requis)
+    instance_type: mac_mini_m2
+    max_build_duration: 60
+    integrations:
+      app_store_connect: FondaGraph-ASC
+    environment:
+      groups:
+        - default
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+      vars:
+        APP_STORE_APPLE_ID: "A_REMPLACER_ID_APP_STORE_CONNECT_EMV"
+    scripts:
+      - name: Dépendances
+        script: flutter pub get
+      - name: Tests
+        script: flutter test
+      - name: Signature automatique
+        script: |
+          keychain initialize
+          app-store-connect fetch-signing-files "com.electromecaview.emv" --type IOS_APP_STORE --create --certificate-key "$CERTIFICATE_PRIVATE_KEY"
+          keychain add-certificates
+          xcode-project use-profiles
+      - name: Numéro de build
+        script: |
+          LATEST=$(app-store-connect get-latest-app-store-build-number "$APP_STORE_APPLE_ID" || echo 0)
+          NEXT=$((LATEST + 1))
+          flutter build ipa --release --export-options-plist=/Users/builder/export_options.plist --build-number=$NEXT
+    artifacts:
+      - build/ios/ipa/*.ipa
+    publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: true

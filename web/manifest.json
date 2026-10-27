@@ -1,0 +1,35 @@
+{
+    "name": "Electro Meca View",
+    "short_name": "EMV",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#0B2E5C",
+    "theme_color": "#0B2E5C",
+    "description": "Electro Meca View : vues éclatées, arborescence pièces, codes défaut OBD et guides d'entretien auto/moto, hors ligne.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

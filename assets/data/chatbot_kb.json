@@ -1,0 +1,4482 @@
+[
+ {
+  "id": "greeting",
+  "patterns": [
+   "bonjour",
+   "salut",
+   "hello",
+   "bonsoir",
+   "coucou",
+   "yo"
+  ],
+  "fuel": [],
+  "priority": -2,
+  "answer": "Bonjour ! Décrivez un symptôme (ex. « voyant moteur », « fumée noire », « ne démarre pas »), un code défaut (P0401) ou votre véhicule (« Laguna 3 dCi 150 »).",
+  "checks": [],
+  "parts": [],
+  "dtc": [],
+  "section": ""
+ },
+ {
+  "id": "thanks",
+  "patterns": [
+   "merci",
+   "merci beaucoup",
+   "super merci",
+   "top merci",
+   "parfait"
+  ],
+  "fuel": [],
+  "priority": -2,
+  "answer": "Avec plaisir. Si le problème persiste après ces contrôles, faites confirmer le diagnostic par un professionnel.",
+  "checks": [],
+  "parts": [],
+  "dtc": [],
+  "section": ""
+ },
+ {
+  "id": "help",
+  "patterns": [
+   "aide",
+   "que sais tu faire",
+   "comment ca marche",
+   "tu fais quoi",
+   "help",
+   "comment utiliser",
+   "tu sers a quoi",
+   "a quoi tu sers",
+   "a quoi sert l application"
+  ],
+  "fuel": [],
+  "priority": -2,
+  "answer": "Je réponds hors ligne à partir des données de l'application : codes défaut OBD, symptômes, pièces et vues éclatées. Indiquez votre véhicule pour des réponses adaptées (carburant, FAP).",
+  "checks": [
+   "Tapez un code : P0401",
+   "Ou un symptôme : « claque au ralenti »",
+   "Ou une pièce : « vanne EGR »",
+   "Ou un véhicule : « Meriva 1.7 CDTI 2011 »"
+  ],
+  "parts": [],
+  "dtc": [],
+  "section": ""
+ },
+ {
+  "id": "obd-read-codes",
+  "patterns": [
+   "lire les codes",
+   "lire code defaut",
+   "prise obd",
+   "valise diagnostic",
+   "lecteur obd",
+   "effacer les codes",
+   "effacer defaut",
+   "scanner obd",
+   "elm327"
+  ],
+  "fuel": [],
+  "priority": -1,
+  "answer": "Les codes défaut se lisent avec un lecteur OBD-II branché sur la prise diagnostic (sous le volant en général). Un code indique un circuit ou une stratégie en défaut, pas forcément la pièce à changer.",
+  "checks": [
+   "Contact mis, branchez le lecteur sur la prise OBD (16 broches)",
+   "Notez tous les codes et leurs données figées avant d'effacer",
+   "Effacez puis roulez : notez quel code revient en premier",
+   "Cherchez chaque code dans l'onglet Pannes"
+  ],
+  "parts": [
+   "ecu"
+  ],
+  "dtc": [],
+  "section": "control-units"
+ },
+ {
+  "id": "warning-light-colors",
+  "patterns": [
+   "couleur des voyants",
+   "voyant rouge",
+   "voyant orange",
+   "voyant tableau de bord",
+   "temoin allume",
+   "signification voyant",
+   "voyant orange allume",
+   "voyant jaune allume"
+  ],
+  "fuel": [],
+  "priority": -1,
+  "answer": "Voyant rouge = arrêt dès que possible (pression d'huile, température, freins, charge). Voyant orange = défaut à faire contrôler rapidement, on peut en général rouler prudemment.",
+  "checks": [
+   "Identifiez le symbole exact du voyant (manuel du véhicule)",
+   "Rouge : arrêtez-vous en sécurité et coupez le moteur",
+   "Orange : lisez les codes défaut avec un lecteur OBD",
+   "Notez quand il s'allume (à froid, en charge, en virage...)"
+  ],
+  "safety": "Voyant rouge de pression d'huile, de température ou de freins : ne continuez pas à rouler.",
+  "parts": [],
+  "dtc": [],
+  "section": "control-units"
+ },
+ {
+  "id": "service-oil-change",
+  "patterns": [
+   "vidange",
+   "quand faire la vidange",
+   "huile moteur",
+   "quelle huile",
+   "entretien moteur",
+   "revision",
+   "changer filtre a huile"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "priority": -1,
+  "answer": "La vidange se fait selon le carnet d'entretien (souvent tous les 10 000 à 30 000 km ou 1 à 2 ans). Utilisez une huile conforme à la norme constructeur, surtout sur moteur avec FAP (huile faible teneur en cendres).",
+  "checks": [
+   "Vérifiez le kilométrage de la dernière vidange (carnet, facture)",
+   "Contrôlez le niveau à froid, véhicule à plat, entre mini et maxi",
+   "Respectez la norme d'huile du constructeur (viscosité + homologation)",
+   "Changez le filtre à huile à chaque vidange",
+   "[dpf] Moteur avec FAP : huile « low SAPS » si exigée"
+  ],
+  "parts": [
+   "oil-filter",
+   "oil-pan",
+   "oil-level-sensor"
+  ],
+  "dtc": [],
+  "section": "lubrication"
+ },
+ {
+  "id": "check-engine-light",
+  "patterns": [
+   "voyant moteur",
+   "voyant moteur allume",
+   "voyant orange moteur",
+   "voyant injection",
+   "voyant antipollution",
+   "voyant moteur fixe",
+   "check engine",
+   "temoin moteur",
+   "voyant defaut moteur",
+   "voyant moteur orange",
+   "voyant orange moteur allume",
+   "voyant jaune moteur",
+   "voyant moteur jaune"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "priority": -1,
+  "answer": "Le voyant moteur orange fixe signale un défaut enregistré par le calculateur (souvent dépollution, capteur ou admission). Il faut lire le code défaut pour savoir quel circuit est en cause.",
+  "checks": [
+   "Lisez les codes avec un lecteur OBD et notez-les",
+   "Vérifiez que le bouchon de réservoir est bien serré",
+   "Contrôlez les connecteurs et durites autour du code relevé",
+   "Effacez et vérifiez si le défaut revient"
+  ],
+  "parts": [
+   "ecu",
+   "maf-sensor",
+   "egr-valve",
+   "lambda-sensor-upstream"
+  ],
+  "dtc": [
+   "P0100",
+   "P0401",
+   "P0420"
+  ],
+  "section": "control-units",
+  "guide": "check-engine-light"
+ },
+ {
+  "id": "check-engine-flashing",
+  "patterns": [
+   "voyant moteur clignote",
+   "voyant clignotant",
+   "voyant moteur qui clignote",
+   "temoin moteur clignote"
+  ],
+  "fuel": [
+   "petrol"
+  ],
+  "answer": "Un voyant moteur qui clignote indique des ratés d'allumage importants : l'essence imbrûlée peut détruire le catalyseur très vite.",
+  "checks": [
+   "Réduisez la charge et rentrez doucement, ou arrêtez-vous",
+   "Lisez les codes : P0300 à P0304 indiquent le cylindre",
+   "Permutez la bobine du cylindre en défaut avec une autre et voyez si le défaut suit",
+   "Contrôlez la bougie du cylindre concerné",
+   "Si le défaut ne suit ni bobine ni bougie : injecteur ou compression"
+  ],
+  "safety": "Ne roulez pas longtemps avec un voyant qui clignote : risque de surchauffe du catalyseur.",
+  "parts": [
+   "ignition-coil",
+   "spark-plug",
+   "injector",
+   "catalytic-converter"
+  ],
+  "dtc": [
+   "P0300",
+   "P0301",
+   "P0302",
+   "P0303",
+   "P0304"
+  ],
+  "section": "ignition-system",
+  "guide": "check-engine-light"
+ },
+ {
+  "id": "limp-mode",
+  "patterns": [
+   "mode degrade",
+   "mode securite",
+   "passe en mode degrade",
+   "bride",
+   "voiture bridee",
+   "moteur bride",
+   "limite a 3000 tours",
+   "puissance reduite"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Le mode dégradé limite la puissance pour protéger le moteur quand le calculateur détecte un défaut (turbo, EGR, pression de rail, capteur pédale...).",
+  "checks": [
+   "Lisez les codes défaut avant de couper le contact",
+   "Coupez le moteur 1 minute puis redémarrez : notez si le mode revient",
+   "Contrôlez les durites de turbo et la durite de dépression",
+   "Vérifiez débitmètre et capteur de pression de suralimentation",
+   "[diesel] Contrôlez la pression de rail si un code P0087/P0093 est présent"
+  ],
+  "parts": [
+   "turbocharger",
+   "intercooler-hose",
+   "boost-pressure-sensor",
+   "maf-sensor",
+   "egr-valve",
+   "accelerator-pedal-sensor"
+  ],
+  "dtc": [
+   "P0299",
+   "P0234",
+   "P0087",
+   "P0401"
+  ],
+  "section": "turbo",
+  "guide": "check-engine-light"
+ },
+ {
+  "id": "power-loss",
+  "patterns": [
+   "perte de puissance",
+   "manque de puissance",
+   "ne tire plus",
+   "plus de puissance",
+   "n avance plus",
+   "mou",
+   "pas de reprise",
+   "manque de patate",
+   "manque de pêche",
+   "ne monte pas en regime"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Une perte de puissance vient le plus souvent d'un manque d'air (filtre, fuite d'admission, turbo), d'une alimentation insuffisante ou d'une dépollution encrassée.",
+  "checks": [
+   "Lisez les codes défaut",
+   "Contrôlez le filtre à air et les durites d'admission/turbo",
+   "Vérifiez la vanne EGR et le débitmètre",
+   "[dpf] Contrôlez la pression différentielle du FAP",
+   "Contrôlez le filtre à carburant"
+  ],
+  "parts": [
+   "air-filter",
+   "intercooler-hose",
+   "turbocharger",
+   "maf-sensor",
+   "egr-valve",
+   "fuel-filter",
+   "dpf"
+  ],
+  "dtc": [
+   "P0299",
+   "P0101",
+   "P0401",
+   "P2002"
+  ],
+  "section": "intake",
+  "guide": {
+   "diesel": "power-loss-diesel",
+   "petrol": "power-loss-petrol"
+  }
+ },
+ {
+  "id": "hesitation-jerks",
+  "patterns": [
+   "a coups",
+   "acoups",
+   "trou a l acceleration",
+   "hesite a l acceleration",
+   "broute",
+   "saccades",
+   "ca broute",
+   "accelere mal",
+   "tousse",
+   "trous a l acceleration",
+   "ca tousse a l acceleration",
+   "ca hoquete",
+   "ca rate a l acceleration",
+   "a coups quand j accelere",
+   "a coups a l acceleration",
+   "a coups a froid"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Des à-coups à l'accélération viennent souvent de l'allumage (essence), d'injecteurs, d'un débitmètre ou d'une prise d'air.",
+  "checks": [
+   "Lisez les codes défaut (ratés, mélange pauvre, débitmètre)",
+   "[petrol] Contrôlez bougies et bobines",
+   "Recherchez une prise d'air après le débitmètre",
+   "Contrôlez le filtre à carburant",
+   "[diesel] Contrôlez les retours d'injecteurs"
+  ],
+  "parts": [
+   "spark-plug",
+   "ignition-coil",
+   "maf-sensor",
+   "injector",
+   "fuel-filter",
+   "intake-manifold"
+  ],
+  "dtc": [
+   "P0300",
+   "P0171",
+   "P0101"
+  ],
+  "section": "intake",
+  "guide": "jerks"
+ },
+ {
+  "id": "rough-idle",
+  "patterns": [
+   "ralenti instable",
+   "ralenti qui varie",
+   "ralenti irregulier",
+   "ralenti qui pompe",
+   "moteur tremble au ralenti",
+   "ralenti haut",
+   "ralenti bas",
+   "regime qui monte et descend"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Un ralenti instable est souvent dû à une prise d'air, un boîtier papillon encrassé, une vanne EGR qui reste ouverte ou un raté d'allumage.",
+  "checks": [
+   "Écoutez un sifflement de prise d'air moteur tournant (durites, collecteur)",
+   "Nettoyez le boîtier papillon si encrassé",
+   "Contrôlez la vanne EGR (elle doit être fermée au ralenti)",
+   "[petrol] Contrôlez bougies et bobines",
+   "Lisez les codes défaut (P0505, P0506, P0507, P0171)"
+  ],
+  "parts": [
+   "throttle-body",
+   "idle-air-control-valve",
+   "egr-valve",
+   "intake-manifold",
+   "spark-plug"
+  ],
+  "dtc": [
+   "P0505",
+   "P0506",
+   "P0507",
+   "P0171"
+  ],
+  "section": "intake",
+  "guide": "rough-idle"
+ },
+ {
+  "id": "stalling",
+  "patterns": [
+   "cale",
+   "le moteur cale",
+   "cale au ralenti",
+   "cale a l arret",
+   "s arrete tout seul",
+   "coupe en roulant",
+   "moteur coupe",
+   "cale en roulant"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Un moteur qui cale peut venir de l'alimentation en carburant, d'un capteur vilebrequin défaillant (coupure franche) ou d'un ralenti mal régulé.",
+  "checks": [
+   "Lisez les codes défaut (P0335 = capteur vilebrequin)",
+   "Notez si la coupure arrive à chaud : typique d'un capteur PMH",
+   "Contrôlez le boîtier papillon et la régulation de ralenti",
+   "Contrôlez pompe et filtre à carburant",
+   "Vérifiez la tresse de masse moteur"
+  ],
+  "parts": [
+   "crankshaft-position-sensor",
+   "throttle-body",
+   "fuel-pump",
+   "fuel-filter",
+   "ground-strap"
+  ],
+  "dtc": [
+   "P0335",
+   "P0506",
+   "P0087"
+  ],
+  "section": "engine-sensors",
+  "guide": "rough-idle"
+ },
+ {
+  "id": "misfire",
+  "patterns": [
+   "rate d allumage",
+   "rates",
+   "moteur tremble",
+   "tourne sur 3 cylindres",
+   "moteur qui broute",
+   "cylindre qui ne marche pas",
+   "perd un cylindre"
+  ],
+  "fuel": [
+   "petrol"
+  ],
+  "answer": "Un raté d'allumage signifie qu'un cylindre ne brûle pas correctement : bougie, bobine, injecteur ou compression.",
+  "checks": [
+   "Lisez les codes : P0301 à P0304 désignent le cylindre",
+   "Permutez la bobine avec un autre cylindre et voyez si le défaut suit",
+   "Démontez et contrôlez la bougie (écartement, encrassement)",
+   "Contrôlez l'injecteur du cylindre",
+   "Si rien ne suit : test de compression"
+  ],
+  "parts": [
+   "spark-plug",
+   "ignition-coil",
+   "spark-plug-wire",
+   "injector",
+   "piston-ring"
+  ],
+  "dtc": [
+   "P0300",
+   "P0301",
+   "P0302",
+   "P0303",
+   "P0304"
+  ],
+  "section": "ignition-system"
+ },
+ {
+  "id": "diesel-misfire",
+  "patterns": [
+   "moteur diesel tremble",
+   "diesel tourne mal",
+   "diesel tourne sur 3",
+   "injecteur hs",
+   "injecteur qui fuit",
+   "claquement injecteur",
+   "fuite retour injecteur",
+   "debit de retour",
+   "moteur tremble",
+   "diesel qui tremble"
+  ],
+  "fuel": [
+   "diesel"
+  ],
+  "answer": "Sur un diesel, un fonctionnement irrégulier vient souvent d'un injecteur (débit de retour trop important, rondelle de pied d'injecteur qui fuit) ou d'une compression faible.",
+  "checks": [
+   "Lisez les codes et les corrections de débit par cylindre",
+   "Faites un test de débit de retour des injecteurs",
+   "Recherchez une fuite de compression au pied d'injecteur (dépôt noir, bruit de « tchac »)",
+   "Contrôlez la pression de rail",
+   "Test de compression si un cylindre reste faible"
+  ],
+  "parts": [
+   "injector",
+   "injector-return-line",
+   "common-rail",
+   "high-pressure-pump"
+  ],
+  "dtc": [
+   "P0263",
+   "P0201",
+   "P0087"
+  ],
+  "section": "diesel-system"
+ },
+ {
+  "id": "engine-runaway",
+  "patterns": [
+   "moteur s emballe",
+   "emballement moteur",
+   "diesel s emballe",
+   "regime monte tout seul"
+  ],
+  "fuel": [
+   "diesel"
+  ],
+  "answer": "L'emballement d'un diesel (le moteur brûle sa propre huile) est rare mais dangereux : il ne s'arrête pas en coupant le contact.",
+  "checks": [
+   "Calez le moteur : rapport élevé engagé, frein à fond, embrayage relâché",
+   "Ne restez pas à côté du moteur",
+   "Ensuite, faites contrôler turbo (joints) et réaspiration des vapeurs d'huile",
+   "Vérifiez le niveau d'huile (trop plein ou dilution)"
+  ],
+  "safety": "Danger : éloignez-vous du véhicule si le moteur ne s'arrête pas, risque de casse moteur.",
+  "parts": [
+   "turbocharger",
+   "pcv-valve",
+   "oil-pan"
+  ],
+  "dtc": [
+   "P0219"
+  ],
+  "section": "turbo"
+ },
+ {
+  "id": "high-fuel-consumption",
+  "patterns": [
+   "consomme trop",
+   "surconsommation",
+   "consommation elevee",
+   "consomme beaucoup",
+   "trop de carburant",
+   "consommation excessive"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Une surconsommation vient souvent de pneus sous-gonflés, d'un thermostat bloqué ouvert, d'une sonde (lambda, température) ou d'un débitmètre faussé.",
+  "checks": [
+   "Contrôlez la pression des pneus",
+   "Vérifiez que le moteur atteint 90 °C environ (thermostat)",
+   "Lisez les codes défaut (mélange, débitmètre, sonde de température)",
+   "Contrôlez le filtre à air",
+   "Vérifiez que les freins ne frottent pas (roue chaude)"
+  ],
+  "parts": [
+   "tyre",
+   "thermostat",
+   "coolant-temp-sensor",
+   "maf-sensor",
+   "lambda-sensor-upstream",
+   "air-filter"
+  ],
+  "dtc": [
+   "P0128",
+   "P0101",
+   "P0172"
+  ],
+  "section": "fuel-supply",
+  "guide": "high-consumption"
+ },
+ {
+  "id": "lean-rich-mixture",
+  "patterns": [
+   "melange pauvre",
+   "melange riche",
+   "trop pauvre",
+   "trop riche",
+   "richesse"
+  ],
+  "fuel": [
+   "petrol"
+  ],
+  "answer": "Un mélange pauvre vient souvent d'une prise d'air ou d'un manque de carburant ; un mélange riche d'un débitmètre, d'un injecteur qui fuit ou d'une sonde lambda défaillante.",
+  "checks": [
+   "Lisez les codes P0171/P0172 et les corrections de mélange",
+   "Recherchez une prise d'air (durites, joint de collecteur, réaspiration)",
+   "Contrôlez le débitmètre",
+   "Contrôlez la pression d'essence",
+   "Contrôlez la sonde lambda amont"
+  ],
+  "parts": [
+   "maf-sensor",
+   "intake-manifold",
+   "pcv-valve",
+   "fuel-pressure-regulator",
+   "lambda-sensor-upstream",
+   "injector"
+  ],
+  "dtc": [
+   "P0171",
+   "P0172"
+  ],
+  "section": "intake"
+ },
+ {
+  "id": "black-smoke",
+  "patterns": [
+   "fumee noire",
+   "fume noir",
+   "fumee noire a l acceleration",
+   "nuage noir",
+   "fumee noire echappement",
+   "crache noir",
+   "fumee sombre"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "La fumée noire signale un excès de carburant par rapport à l'air : manque d'air (filtre, turbo, fuite d'admission), vanne EGR bloquée ouverte ou injecteur qui fuit.",
+  "checks": [
+   "Contrôlez le filtre à air",
+   "Recherchez une durite de turbo percée ou déboîtée",
+   "Contrôlez la vanne EGR (bloquée ouverte = fumée)",
+   "Contrôlez le débitmètre (valeurs à chaud)",
+   "[diesel] Testez le débit de retour des injecteurs"
+  ],
+  "parts": [
+   "air-filter",
+   "intercooler-hose",
+   "turbocharger",
+   "egr-valve",
+   "maf-sensor",
+   "injector"
+  ],
+  "dtc": [
+   "P0401",
+   "P0101",
+   "P0299"
+  ],
+  "section": "intake",
+  "guide": "exhaust-smoke"
+ },
+ {
+  "id": "white-smoke",
+  "patterns": [
+   "fumee blanche",
+   "fume blanc",
+   "fumee blanche epaisse",
+   "vapeur blanche",
+   "fumee blanche a chaud",
+   "fumee blanche qui sent sucre"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Une légère vapeur blanche à froid est normale (condensation). Une fumée blanche épaisse et persistante à chaud, odeur sucrée, évoque du liquide de refroidissement brûlé (joint de culasse, refroidisseur EGR). Sur diesel à froid, elle peut aussi venir du préchauffage ou d'un injecteur.",
+  "checks": [
+   "Vérifiez si la fumée disparaît une fois le moteur chaud (condensation)",
+   "Contrôlez le niveau du vase d'expansion (baisse régulière ?)",
+   "Recherchez des bulles dans le vase moteur tournant",
+   "[diesel] Contrôlez les bougies de préchauffage",
+   "Faites un test CO2 dans le liquide de refroidissement"
+  ],
+  "safety": "N'ouvrez jamais le vase d'expansion moteur chaud.",
+  "parts": [
+   "head-gasket",
+   "egr-cooler",
+   "expansion-tank",
+   "glow-plug",
+   "injector"
+  ],
+  "dtc": [
+   "P0380",
+   "P0217"
+  ],
+  "section": "cylinder-head-group",
+  "guide": "exhaust-smoke"
+ },
+ {
+  "id": "blue-smoke",
+  "patterns": [
+   "fumee bleue",
+   "fume bleu",
+   "fumee bleutee",
+   "brule de l huile",
+   "fumee grise"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "La fumée bleue indique que le moteur brûle de l'huile : turbo (joints), joints de queues de soupapes (fumée au démarrage) ou segments usés (fumée en accélération).",
+  "checks": [
+   "Contrôlez le niveau d'huile (pas de trop-plein)",
+   "Fumée au démarrage seulement : joints de queues de soupapes",
+   "Démontez la durite d'entrée d'échangeur : présence d'huile = turbo à vérifier",
+   "Contrôlez la réaspiration des vapeurs d'huile",
+   "Test de compression pour les segments"
+  ],
+  "parts": [
+   "turbocharger",
+   "valve-stem-seal",
+   "piston-ring",
+   "pcv-valve"
+  ],
+  "dtc": [],
+  "section": "engine-block-group",
+  "guide": "exhaust-smoke"
+ },
+ {
+  "id": "knock-idle",
+  "patterns": [
+   "claque au ralenti",
+   "claquement au ralenti",
+   "bruit de claquement",
+   "tac tac",
+   "tic tac moteur",
+   "claquement moteur",
+   "claque a froid",
+   "bruit metallique ralenti",
+   "ca tape dans le moteur",
+   "ca tape au ralenti",
+   "ca cogne dans le moteur",
+   "bruit de cognement",
+   "ca claque dans le moteur"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Un claquement au ralenti peut venir des poussoirs hydrauliques (bruit en haut moteur, souvent à froid), d'un injecteur ou d'une fuite au pied d'injecteur (diesel), d'un volant bimasse usé ou de la distribution.",
+  "checks": [
+   "Contrôlez le niveau et la qualité de l'huile",
+   "Localisez le bruit (stéthoscope) : haut moteur, bas moteur ou côté boîte",
+   "[diesel] Recherchez une fuite au pied d'injecteur (dépôt noir)",
+   "Embrayage enfoncé, le bruit change ? Volant bimasse ou butée",
+   "Bruit de bas moteur qui augmente en charge : arrêtez et faites contrôler"
+  ],
+  "safety": "Un cognement grave de bas moteur (bielle) impose d'arrêter le moteur.",
+  "parts": [
+   "hydraulic-lifter",
+   "injector",
+   "dual-mass-flywheel",
+   "timing-chain",
+   "tensioner"
+  ],
+  "dtc": [
+   "P0016"
+  ],
+  "section": "cylinder-head-group",
+  "guide": "engine-noise"
+ },
+ {
+  "id": "pinking-knock",
+  "patterns": [
+   "cliquetis",
+   "cliquetis a l acceleration",
+   "cogne en montee",
+   "detonation",
+   "pre allumage",
+   "bruit de billes"
+  ],
+  "fuel": [
+   "petrol"
+  ],
+  "answer": "Le cliquetis en charge (bruit de billes) est une combustion anormale : carburant à indice trop faible, calaminage, surchauffe ou capteur de cliquetis défaillant.",
+  "checks": [
+   "Vérifiez le carburant utilisé (indice d'octane conseillé)",
+   "Lisez les codes (P0325 capteur de cliquetis)",
+   "Contrôlez les bougies (indice thermique, état)",
+   "Contrôlez la température moteur"
+  ],
+  "parts": [
+   "knock-sensor",
+   "spark-plug",
+   "coolant-temp-sensor"
+  ],
+  "dtc": [
+   "P0325"
+  ],
+  "section": "engine-sensors",
+  "guide": "engine-noise"
+ },
+ {
+  "id": "timing-chain-rattle",
+  "patterns": [
+   "chaine de distribution",
+   "bruit de chaine",
+   "chaine qui claque",
+   "bruit au demarrage a froid",
+   "chaine distribution bruit",
+   "cliquetis au demarrage"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Un bruit de ferraille de quelques secondes au démarrage évoque une chaîne de distribution détendue ou un tendeur hydraulique fatigué.",
+  "checks": [
+   "Contrôlez le niveau et la date de vidange (huile usée = tendeur moins efficace)",
+   "Lisez les codes de calage (P0016, P0011)",
+   "Écoutez côté distribution au démarrage à froid",
+   "Faites vérifier l'allongement de la chaîne"
+  ],
+  "safety": "Une chaîne qui saute peut casser le moteur : ne tardez pas.",
+  "parts": [
+   "timing-chain",
+   "tensioner",
+   "chain-guide",
+   "vvt-solenoid"
+  ],
+  "dtc": [
+   "P0016",
+   "P0011"
+  ],
+  "section": "timing",
+  "guide": "engine-noise"
+ },
+ {
+  "id": "timing-belt",
+  "patterns": [
+   "courroie de distribution",
+   "quand changer la courroie",
+   "kit distribution",
+   "courroie distribution",
+   "distri",
+   "casse courroie"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "La courroie de distribution se remplace selon le kilométrage ET l'âge prévus par le constructeur, avec galets et souvent pompe à eau. Une casse endommage la plupart des moteurs.",
+  "checks": [
+   "Vérifiez la date et le kilométrage du dernier remplacement (facture)",
+   "Respectez l'échéance constructeur (km ou années, le premier atteint)",
+   "Remplacez en kit : courroie + galets (+ pompe à eau si entraînée)",
+   "Ne tournez pas le moteur si la courroie est cassée"
+  ],
+  "parts": [
+   "timing-belt",
+   "tensioner",
+   "idler-pulley",
+   "water-pump"
+  ],
+  "dtc": [],
+  "section": "timing",
+  "safety": "Moteur froid, batterie débranchée ; ne faites jamais tourner le moteur à l'envers et respectez le calage (piges) : une erreur casse les soupapes."
+ },
+ {
+  "id": "belt-squeal",
+  "patterns": [
+   "courroie siffle",
+   "courroie couine",
+   "sifflement courroie",
+   "couinement au demarrage",
+   "courroie accessoire",
+   "courroie alternateur",
+   "bruit de courroie"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Un couinement aigu, surtout à froid, par temps humide ou en braquant, vient de la courroie d'accessoires qui patine : courroie usée, tendeur fatigué ou poulie grippée.",
+  "checks": [
+   "Moteur arrêté, contrôlez l'état de la courroie (craquelures, lustrage)",
+   "Contrôlez le tendeur (doit rester stable moteur tournant)",
+   "Faites tourner les galets à la main : ni jeu ni point dur",
+   "Contrôlez la poulie d'alternateur et la poulie damper"
+  ],
+  "safety": "Moteur arrêté et clé retirée pour toute intervention près de la courroie.",
+  "parts": [
+   "accessory-belt",
+   "accessory-belt-tensioner",
+   "alternator",
+   "crankshaft-pulley"
+  ],
+  "dtc": [],
+  "section": "timing",
+  "guide": "engine-noise"
+ },
+ {
+  "id": "turbo-whistle",
+  "patterns": [
+   "sifflement turbo",
+   "turbo siffle",
+   "bruit de turbo",
+   "turbo qui siffle",
+   "sifflement en acceleration",
+   "chuintement",
+   "bruit d aspirateur"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Un sifflement anormal en accélération évoque d'abord une fuite d'air sur le circuit de suralimentation (durite, collier, échangeur), plus rarement un turbo usé (jeu à l'axe).",
+  "checks": [
+   "Contrôlez les durites et colliers de turbo (traces d'huile, fissures)",
+   "Contrôlez l'échangeur air/air",
+   "Moteur froid et arrêté, vérifiez le jeu de l'axe du turbo",
+   "Lisez les codes P0299/P0234"
+  ],
+  "parts": [
+   "intercooler-hose",
+   "intercooler",
+   "turbocharger",
+   "diverter-valve"
+  ],
+  "dtc": [
+   "P0299",
+   "P0234"
+  ],
+  "section": "turbo",
+  "guide": "engine-noise"
+ },
+ {
+  "id": "engine-vibration",
+  "patterns": [
+   "vibrations moteur",
+   "moteur vibre",
+   "vibre au ralenti",
+   "vibrations dans le volant a l arret",
+   "support moteur",
+   "silentbloc moteur",
+   "a coup au demarrage du vehicule",
+   "ca vibre",
+   "ca tremble au ralenti"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Des vibrations moteur viennent d'un raté, d'un support moteur fendu ou, sur diesel, d'un volant bimasse usé.",
+  "checks": [
+   "Lisez les codes de ratés",
+   "Contrôlez les supports moteur (caoutchouc fissuré, jeu en accélérant/freinant)",
+   "Contrôlez le volant bimasse (vibrations au démarrage/arrêt)",
+   "Vérifiez la poulie damper"
+  ],
+  "parts": [
+   "engine-mount",
+   "dual-mass-flywheel",
+   "crankshaft-pulley",
+   "spark-plug"
+  ],
+  "dtc": [
+   "P0300"
+  ],
+  "section": "engine-block-group"
+ },
+ {
+  "id": "head-gasket",
+  "patterns": [
+   "joint de culasse",
+   "joint de culasse hs",
+   "huile dans le liquide",
+   "mayonnaise",
+   "eau dans l huile",
+   "liquide dans l huile",
+   "bulles dans le vase",
+   "mayonnaise sous le bouchon d huile",
+   "mayonnaise dans le bouchon"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Signes d'un joint de culasse défaillant : perte de liquide sans fuite visible, fumée blanche à chaud, surchauffe, bulles dans le vase, émulsion dans l'huile.",
+  "checks": [
+   "Contrôlez le niveau du vase d'expansion à froid sur plusieurs jours",
+   "Recherchez des bulles dans le vase moteur tournant",
+   "Test CO2 du liquide de refroidissement",
+   "Test de compression ou d'étanchéité des cylindres",
+   "Une « mayonnaise » seule sous le bouchon peut être de la condensation (trajets courts)"
+  ],
+  "safety": "N'ouvrez pas le vase moteur chaud ; ne roulez pas en surchauffe.",
+  "parts": [
+   "head-gasket",
+   "cylinder-head",
+   "expansion-tank",
+   "radiator-hose"
+  ],
+  "dtc": [
+   "P0217"
+  ],
+  "section": "cylinder-head-group"
+ },
+ {
+  "id": "oil-leak",
+  "patterns": [
+   "fuite d huile",
+   "fuit de l huile",
+   "tache d huile",
+   "perte d huile",
+   "huile sous la voiture",
+   "suintement huile"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "La fuite d'huile la plus fréquente vient du joint de couvre-culasse, du carter, du bouchon de vidange, du filtre ou des joints spi de vilebrequin.",
+  "checks": [
+   "Nettoyez la zone, roulez, puis repérez le point le plus haut mouillé",
+   "Contrôlez le bouchon de vidange et le filtre à huile",
+   "Contrôlez le joint de couvre-culasse",
+   "Contrôlez les joints spi côté distribution et côté boîte",
+   "Surveillez le niveau d'huile en attendant"
+  ],
+  "safety": "Huile sur l'échappement = risque d'incendie : faites réparer vite.",
+  "parts": [
+   "valve-cover-gasket",
+   "oil-pan",
+   "oil-filter",
+   "crankshaft-seal",
+   "oil-cooler",
+   "turbocharger"
+  ],
+  "dtc": [],
+  "section": "lubrication",
+  "guide": "oil-leak"
+ },
+ {
+  "id": "oil-pressure-light",
+  "patterns": [
+   "voyant huile",
+   "voyant pression d huile",
+   "voyant burette",
+   "voyant rouge huile",
+   "pression d huile",
+   "voyant huile clignote"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Le voyant rouge de pression d'huile signale un manque de pression : arrêtez immédiatement le moteur, il peut casser en quelques minutes.",
+  "checks": [
+   "Arrêtez le moteur dès que possible",
+   "Contrôlez le niveau d'huile à plat après 5 minutes",
+   "Si le niveau est bon, ne redémarrez pas : faites mesurer la pression au manomètre",
+   "Contrôlez le manocontact et son connecteur",
+   "Pompe à huile ou crépine colmatée si la pression mesurée est faible"
+  ],
+  "safety": "Voyant rouge d'huile allumé moteur tournant : coupez le moteur immédiatement.",
+  "parts": [
+   "oil-pressure-sensor",
+   "oil-pump",
+   "oil-filter",
+   "oil-pan"
+  ],
+  "dtc": [
+   "P0520",
+   "P0524"
+  ],
+  "section": "lubrication"
+ },
+ {
+  "id": "oil-consumption",
+  "patterns": [
+   "consomme de l huile",
+   "consommation d huile",
+   "mange de l huile",
+   "rajoute de l huile",
+   "niveau d huile baisse"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Un moteur qui consomme de l'huile sans fuite visible la brûle (turbo, segments, joints de queues de soupapes) ou la perd par la réaspiration.",
+  "checks": [
+   "Contrôlez le niveau tous les 1000 km pour mesurer la consommation",
+   "Recherchez d'abord une fuite externe",
+   "Fumée bleue ? Voir turbo et segments",
+   "Contrôlez le clapet de réaspiration des vapeurs d'huile",
+   "Test de compression"
+  ],
+  "parts": [
+   "piston-ring",
+   "valve-stem-seal",
+   "turbocharger",
+   "pcv-valve"
+  ],
+  "dtc": [],
+  "section": "engine-block-group"
+ },
+ {
+  "id": "oil-level-rising",
+  "patterns": [
+   "niveau d huile monte",
+   "huile au dessus du maxi",
+   "trop d huile",
+   "dilution huile",
+   "gasoil dans l huile",
+   "huile qui sent le gasoil"
+  ],
+  "fuel": [
+   "diesel"
+  ],
+  "answer": "Un niveau d'huile qui monte sur diesel indique souvent une dilution par le gasoil (régénérations FAP interrompues, injecteur qui fuit) : l'huile perd ses propriétés.",
+  "checks": [
+   "Contrôlez à froid, véhicule à plat",
+   "Sentez l'huile : odeur de gasoil = dilution",
+   "[dpf] Vérifiez les régénérations de FAP (trajets courts répétés)",
+   "Contrôlez l'étanchéité des injecteurs",
+   "Faites une vidange rapidement"
+  ],
+  "safety": "Trop d'huile peut provoquer un emballement moteur : vidangez sans tarder.",
+  "parts": [
+   "oil-pan",
+   "injector",
+   "dpf"
+  ],
+  "dtc": [
+   "P2002"
+  ],
+  "section": "lubrication"
+ },
+ {
+  "id": "no-start-click",
+  "patterns": [
+   "ne demarre pas clic",
+   "clic au demarrage",
+   "fait clic",
+   "claquement au demarrage",
+   "demarreur clique",
+   "tac quand je tourne la cle",
+   "cliquetis demarreur",
+   "relais qui claque au demarrage",
+   "demarreur ne tourne pas"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Un simple clic sans que le moteur tourne vient presque toujours d'une batterie trop faible, d'une cosse oxydée/desserrée ou d'un démarreur (solénoïde, charbons) défaillant.",
+  "checks": [
+   "Mesurez la batterie : 12,4 V ou plus au repos, pas moins de 10 V pendant le démarrage",
+   "Nettoyez et serrez les cosses batterie et la masse moteur",
+   "Essayez avec des câbles ou un booster",
+   "Mesurez la tension sur le fil de commande du démarreur pendant l'essai",
+   "Si 12 V présents et pas de rotation : démarreur à contrôler"
+  ],
+  "parts": [
+   "battery",
+   "starter-motor",
+   "starter-relay",
+   "ground-strap",
+   "wiring-harness"
+  ],
+  "dtc": [
+   "P0615"
+  ],
+  "views": [
+   "wiring-starting"
+  ],
+  "section": "charging-starting",
+  "safety": "Batterie : débranchez la borne − en premier et rebranchez-la en dernier ; pas d'étincelle ni de flamme à proximité (hydrogène). Sur hybride/électrique, ne touchez jamais aux câbles orange (haute tension).",
+  "guide": "no-start-no-crank"
+ },
+ {
+  "id": "no-start-cranks",
+  "patterns": [
+   "ne demarre pas",
+   "demarre pas",
+   "veut pas demarrer",
+   "refuse de demarrer",
+   "tourne mais ne demarre pas",
+   "le demarreur tourne mais",
+   "ne part pas",
+   "ne demarre plus",
+   "voiture ne demarre pas",
+   "le demarreur tourne mais le moteur ne part pas",
+   "demarreur tourne mais moteur ne demarre pas"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "priority": -0.5,
+  "answer": "Si le démarreur entraîne le moteur mais qu'il ne démarre pas, il manque du carburant, de l'allumage (essence), du préchauffage ou de la pression (diesel), ou le calculateur ne voit pas le régime (capteur vilebrequin, antidémarrage).",
+  "checks": [
+   "Vérifiez le niveau réel de carburant",
+   "Regardez le compte-tours pendant le démarrage : aiguille immobile = capteur vilebrequin suspect",
+   "Contact mis, écoutez la pompe de gavage quelques secondes",
+   "[petrol] Contrôlez la présence d'étincelle (testeur d'allumage)",
+   "[diesel] Contrôlez préchauffage et pression de rail au démarrage",
+   "Voyant antidémarrage allumé : essayez le double de clé"
+  ],
+  "parts": [
+   "fuel-pump",
+   "crankshaft-position-sensor",
+   "fuel-filter",
+   "ignition-coil",
+   "glow-plug",
+   "high-pressure-pump",
+   "fuel-pump-relay"
+  ],
+  "dtc": [
+   "P0335",
+   "P0087",
+   "P0230"
+  ],
+  "views": [
+   "wiring-fuel-pump"
+  ],
+  "section": "fuel-supply",
+  "guide": "no-start-cranks"
+ },
+ {
+  "id": "hard-start-cold",
+  "patterns": [
+   "demarrage difficile a froid",
+   "demarre mal le matin",
+   "dur a demarrer a froid",
+   "demarre mal a froid",
+   "plusieurs essais pour demarrer",
+   "demarre mal l hiver"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Un démarrage difficile à froid vient sur diesel du préchauffage (bougies, boîtier) ou d'une prise d'air sur le circuit gasoil ; sur essence d'une sonde de température moteur ou de bougies usées.",
+  "checks": [
+   "Contrôlez la batterie (tension pendant le démarrage)",
+   "[diesel] Mesurez la résistance des bougies de préchauffage (quelques ohms au plus)",
+   "[diesel] Contrôlez le boîtier de préchauffage",
+   "[diesel] Recherchez des bulles d'air dans la durite transparente/filtre à gasoil",
+   "Contrôlez la sonde de température moteur (valeur cohérente à froid)",
+   "[petrol] Contrôlez les bougies d'allumage"
+  ],
+  "parts": [
+   "glow-plug",
+   "glow-plug-control-unit",
+   "battery",
+   "coolant-temp-sensor",
+   "fuel-filter",
+   "spark-plug"
+  ],
+  "dtc": [
+   "P0380",
+   "P0670",
+   "P0115"
+  ],
+  "views": [
+   "wiring-glow-plugs-diesel"
+  ],
+  "section": "cylinder-head-group",
+  "guide": "no-start-cranks"
+ },
+ {
+  "id": "hard-start-hot",
+  "patterns": [
+   "demarrage difficile a chaud",
+   "demarre mal a chaud",
+   "ne redemarre pas a chaud",
+   "cale a chaud",
+   "probleme a chaud"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Un moteur qui démarre bien à froid mais mal à chaud évoque un capteur vilebrequin qui décroche en température, une sonde de température moteur erronée ou une pompe à carburant fatiguée.",
+  "checks": [
+   "Lisez les codes immédiatement après la panne",
+   "Observez le compte-tours au démarrage à chaud",
+   "Contrôlez la sonde de température moteur",
+   "Contrôlez la pression d'alimentation à chaud",
+   "[diesel] Contrôlez la pression de rail au démarrage"
+  ],
+  "parts": [
+   "crankshaft-position-sensor",
+   "coolant-temp-sensor",
+   "fuel-pump",
+   "high-pressure-pump"
+  ],
+  "dtc": [
+   "P0335",
+   "P0117",
+   "P0087"
+  ],
+  "section": "engine-sensors"
+ },
+ {
+  "id": "glow-plug-light",
+  "patterns": [
+   "voyant prechauffage",
+   "voyant prechauffage clignote",
+   "voyant resistance",
+   "voyant tire bouchon",
+   "temoin prechauffage",
+   "bougie de prechauffage",
+   "bougies de prechauffage",
+   "prechauffage"
+  ],
+  "fuel": [
+   "diesel"
+  ],
+  "answer": "Le voyant de préchauffage (spirale) reste allumé brièvement à la mise du contact. S'il clignote ou s'allume en roulant, le calculateur signale un défaut moteur ou de préchauffage.",
+  "checks": [
+   "Lisez les codes (P0380, P0670, P0671-P0674)",
+   "Mesurez la résistance de chaque bougie de préchauffage (débranchée)",
+   "Contrôlez le boîtier de préchauffage et son fusible",
+   "Contrôlez les connecteurs des bougies",
+   "Si clignote en roulant sans code préchauffage : voir défaut moteur (pression rail, turbo)"
+  ],
+  "parts": [
+   "glow-plug",
+   "glow-plug-control-unit",
+   "wiring-harness",
+   "fuse-maxi"
+  ],
+  "dtc": [
+   "P0380",
+   "P0670",
+   "P0671",
+   "P0672",
+   "P0673",
+   "P0674"
+  ],
+  "views": [
+   "wiring-glow-plugs-diesel"
+  ],
+  "section": "cylinder-head-group",
+  "guide": "glow-dpf-light"
+ },
+ {
+  "id": "immobilizer",
+  "patterns": [
+   "antidemarrage",
+   "anti demarrage",
+   "voyant cle",
+   "cle non reconnue",
+   "badge non detecte",
+   "voyant antidemarrage",
+   "cle clignote"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Si l'antidémarrage ne reconnaît pas la clé, le moteur peut tourner puis caler ou ne pas démarrer du tout.",
+  "checks": [
+   "Essayez le double de la clé",
+   "Remplacez la pile de la clé/télécommande",
+   "Rapprochez la clé du lecteur (badge : emplacement de secours)",
+   "Vérifiez la tension batterie (faible = défauts aléatoires)",
+   "Si persistant : diagnostic avec outil constructeur"
+  ],
+  "parts": [
+   "ignition-switch",
+   "ecu",
+   "battery"
+  ],
+  "dtc": [],
+  "section": "control-units"
+ },
+ {
+  "id": "fuel-pump",
+  "patterns": [
+   "pompe a essence",
+   "pompe a carburant",
+   "pompe de gavage",
+   "pompe ne s amorce pas",
+   "on n entend pas la pompe",
+   "pompe immergee"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "La pompe dans le réservoir doit se faire entendre 2 à 3 secondes à la mise du contact. Si rien : fusible, relais, alimentation ou pompe.",
+  "checks": [
+   "Contact mis, écoutez la pompe près du réservoir",
+   "Contrôlez le fusible et le relais de pompe",
+   "Mesurez la tension au connecteur de pompe pendant l'amorçage",
+   "Contrôlez la pression d'alimentation",
+   "Contrôlez la masse de la pompe"
+  ],
+  "parts": [
+   "fuel-pump",
+   "fuel-pump-relay",
+   "fuse-ato",
+   "fuel-filter",
+   "wiring-harness"
+  ],
+  "dtc": [
+   "P0230",
+   "P0087"
+  ],
+  "views": [
+   "wiring-fuel-pump"
+  ],
+  "section": "fuel-supply",
+  "safety": "Carburant : batterie débranchée, aucune flamme ni étincelle, extincteur à portée ; vapeurs d'essence très inflammables."
+ },
+ {
+  "id": "rail-pressure",
+  "patterns": [
+   "pression de rail",
+   "pression rail",
+   "pression gasoil",
+   "pompe haute pression",
+   "regulateur de pression",
+   "manque de pression carburant",
+   "p0087",
+   "p0093"
+  ],
+  "fuel": [
+   "diesel"
+  ],
+  "answer": "Sur un common rail, un défaut de pression de rail peut venir d'un filtre à gasoil colmaté, d'une prise d'air, d'un régulateur, d'un injecteur qui fuit ou de la pompe haute pression.",
+  "checks": [
+   "Remplacez/contrôlez le filtre à gasoil et purgez l'eau",
+   "Recherchez une prise d'air (bulles dans la durite d'alimentation)",
+   "Comparez pression demandée et mesurée (outil de diagnostic)",
+   "Faites un test de débit de retour des injecteurs",
+   "Contrôlez le capteur et le régulateur de pression"
+  ],
+  "safety": "Ne desserrez jamais un raccord haute pression moteur tournant : le jet de gasoil peut perforer la peau.",
+  "parts": [
+   "fuel-filter",
+   "high-pressure-pump",
+   "fuel-pressure-control-valve",
+   "fuel-rail-pressure-sensor",
+   "injector",
+   "pressure-relief-valve"
+  ],
+  "dtc": [
+   "P0087",
+   "P0088",
+   "P0093",
+   "P0191"
+  ],
+  "section": "diesel-system"
+ },
+ {
+  "id": "diesel-fuel-filter",
+  "patterns": [
+   "filtre a gasoil",
+   "filtre a gazole",
+   "eau dans le gasoil",
+   "purger le filtre",
+   "voyant eau dans gasoil",
+   "filtre carburant diesel"
+  ],
+  "fuel": [
+   "diesel"
+  ],
+  "answer": "Le filtre à gasoil retient impuretés et eau. Colmaté, il cause perte de puissance et défauts de pression ; il se change selon l'entretien et se purge d'eau régulièrement.",
+  "checks": [
+   "Vérifiez l'échéance de remplacement",
+   "Purgez l'eau par la vis de purge (si présente)",
+   "Après remplacement, amorcez le circuit (poire ou contact mis plusieurs fois)",
+   "Vérifiez l'absence de prise d'air sur les raccords"
+  ],
+  "parts": [
+   "fuel-filter",
+   "fuel-tank",
+   "high-pressure-pump"
+  ],
+  "dtc": [
+   "P0087"
+  ],
+  "section": "fuel-supply",
+  "safety": "Gasoil : gants (irritant), pas de flamme ; récupérez le carburant et ne laissez pas couler sur l'échappement chaud."
+ },
+ {
+  "id": "diesel-out-of-fuel",
+  "patterns": [
+   "panne seche",
+   "plus de gasoil",
+   "desamorce",
+   "reamorcer",
+   "amorcer le circuit",
+   "air dans le gasoil",
+   "panne de carburant"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Après une panne sèche, il faut parfois réamorcer le circuit avant de démarrer (surtout diesel). N'insistez pas trop au démarreur.",
+  "checks": [
+   "Remettez au moins 5 à 10 litres",
+   "Mettez le contact plusieurs fois (pompe électrique) ou pompez la poire d'amorçage",
+   "Démarrez par séquences de 10 secondes maximum",
+   "[diesel] Vérifiez l'absence de bulles dans la durite après le filtre"
+  ],
+  "parts": [
+   "fuel-pump",
+   "fuel-filter",
+   "fuel-tank"
+  ],
+  "dtc": [
+   "P0087"
+  ],
+  "section": "fuel-supply"
+ },
+ {
+  "id": "wrong-fuel",
+  "patterns": [
+   "erreur de carburant",
+   "mis de l essence dans un diesel",
+   "mis du gasoil dans une essence",
+   "mauvais carburant",
+   "erreur de plein",
+   "trompe de carburant"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Erreur de carburant : ne démarrez pas (et ne mettez pas le contact si possible), faites vidanger le réservoir. Rouler avec de l'essence dans un diesel peut détruire la pompe haute pression.",
+  "checks": [
+   "Ne mettez pas le contact (la pompe s'amorce dès le contact)",
+   "Faites remorquer ou pousser le véhicule hors de la pompe",
+   "Faites vidanger réservoir et circuit",
+   "Remplacez le filtre à carburant",
+   "Si vous avez roulé : faites contrôler pompe et injecteurs"
+  ],
+  "safety": "Ne démarrez pas le moteur. Pas de flamme ni de cigarette près du carburant vidangé.",
+  "parts": [
+   "fuel-tank",
+   "fuel-filter",
+   "high-pressure-pump",
+   "injector"
+  ],
+  "dtc": [],
+  "section": "fuel-supply"
+ },
+ {
+  "id": "fuel-smell",
+  "patterns": [
+   "odeur d essence",
+   "odeur de carburant",
+   "sent l essence",
+   "odeur de gasoil",
+   "sent le gasoil",
+   "fuite de carburant",
+   "fuite d essence",
+   "fuite de gasoil"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Une odeur de carburant doit être prise au sérieux : fuite sur une durite, un injecteur, la rampe, le réservoir ou le circuit de vapeurs (canister).",
+  "checks": [
+   "Recherchez des traces humides sous le véhicule et dans le compartiment moteur",
+   "Contrôlez les raccords de filtre et de rampe",
+   "Vérifiez le bouchon de réservoir",
+   "[petrol] Contrôlez le canister et l'électrovanne de purge",
+   "[diesel] Contrôlez les retours d'injecteurs"
+  ],
+  "safety": "Risque d'incendie : ne roulez pas en cas de fuite active, pas de flamme ni d'étincelle.",
+  "parts": [
+   "fuel-filter",
+   "fuel-rail",
+   "injector",
+   "fuel-cap",
+   "evap-canister",
+   "injector-return-line"
+  ],
+  "dtc": [
+   "P0455",
+   "P0456"
+  ],
+  "section": "fuel-supply"
+ },
+ {
+  "id": "evap-system",
+  "patterns": [
+   "canister",
+   "electrovanne de purge",
+   "bouchon de reservoir mal ferme",
+   "p0455",
+   "p0456",
+   "fuite evap",
+   "vapeurs d essence"
+  ],
+  "fuel": [
+   "petrol"
+  ],
+  "answer": "Le circuit EVAP récupère les vapeurs d'essence du réservoir dans un canister puis les fait brûler. Un défaut vient souvent du bouchon, d'une durite fendue ou de l'électrovanne de purge.",
+  "checks": [
+   "Contrôlez que le bouchon de réservoir est bien serré et son joint en bon état",
+   "Contrôlez les durites du canister",
+   "Testez l'électrovanne de purge (doit être fermée hors commande)",
+   "Effacez et vérifiez si le code revient"
+  ],
+  "parts": [
+   "fuel-cap",
+   "evap-canister",
+   "purge-valve"
+  ],
+  "dtc": [
+   "P0441",
+   "P0455",
+   "P0456",
+   "P0457"
+  ],
+  "section": "petrol-system"
+ },
+ {
+  "id": "fuel-gauge",
+  "patterns": [
+   "jauge a carburant",
+   "jauge fausse",
+   "jauge bloquee",
+   "jauge essence",
+   "jauge ne bouge pas",
+   "niveau carburant faux"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Une jauge fausse vient le plus souvent de la sonde de niveau dans le réservoir (piste usée) ou de son connecteur.",
+  "checks": [
+   "Faites le plein et observez la jauge",
+   "Lisez les codes P0460/P0461",
+   "Contrôlez le connecteur de la sonde de niveau",
+   "Mesurez la résistance de la sonde selon le niveau"
+  ],
+  "parts": [
+   "fuel-level-sender",
+   "wiring-harness"
+  ],
+  "dtc": [
+   "P0460",
+   "P0461"
+  ],
+  "section": "fuel-supply"
+ },
+ {
+  "id": "maf-sensor",
+  "patterns": [
+   "debitmetre",
+   "debimetre",
+   "debitmetre d air",
+   "capteur debit d air",
+   "maf",
+   "p0101",
+   "p0100"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Le débitmètre mesure l'air aspiré. Encrassé ou défaillant, il provoque perte de puissance, fumée noire (diesel), à-coups ou mode dégradé.",
+  "checks": [
+   "Lisez les codes P0100 à P0103 et la valeur d'air au ralenti",
+   "Contrôlez le filtre à air et l'absence de fuite après le débitmètre",
+   "Contrôlez le connecteur",
+   "Essai débranché (moteur au ralenti) : si mieux, le débitmètre est suspect"
+  ],
+  "parts": [
+   "maf-sensor",
+   "air-filter",
+   "airbox",
+   "intercooler-hose"
+  ],
+  "dtc": [
+   "P0100",
+   "P0101",
+   "P0102",
+   "P0103"
+  ],
+  "section": "intake"
+ },
+ {
+  "id": "underboost",
+  "patterns": [
+   "sous pression turbo",
+   "turbo ne pousse plus",
+   "turbo ne charge plus",
+   "p0299",
+   "manque de pression turbo",
+   "defaut turbo",
+   "turbo hs"
+  ],
+  "fuel": [
+   "diesel",
+   "petrol"
+  ],
+  "answer": "Un défaut de sous-pression de suralimentation vient le plus souvent d'une fuite (durite, échangeur), d'une commande de turbo (électrovanne, durite de dépression, actionneur) ou d'une géométrie variable grippée.",
+  "checks": [
+   "Contrôlez durites et colliers du circuit turbo",
+   "Contrôlez la durite de dépression et l'électrovanne de suralimentation",
+   "Vérifiez le débattement de l'actionneur (wastegate / géométrie variable)",
+   "Comparez pression demandée et mesurée en roulant",
+   "Contrôlez le capteur de pression de suralimentation"
+  ],
+  "parts": [
+   "intercooler-hose",
+   "intercooler",
+   "boost-solenoid",
+   "wastegate-actuator",
+   "boost-pressure-sensor",
+   "turbocharger"
+  ],
+  "dtc": [
+   "P0299",
+   "P2263",
+   "P0236"
+  ],
+  "section": "turbo"
+ },
+ {
+  "id": "overboost",
+  "patterns": [
+   "surpression turbo",
+   "suralimentation trop elevee",
+   "p0234",
+   "overboost",
+   "turbo pousse trop",
+   "geometrie variable grippee"
+  ],
+  "fuel": [
+   "diesel",
+   "petrol"
+  ],
+  "answer": "Une surpression de suralimentation vient souvent d'une géométrie variable ou d'une wastegate grippée, d'une électrovanne de commande défaillante ou d'un capteur de pression faussé.",
+  "checks": [
+   "Contrôlez la mobilité de l'actionneur de turbo moteur arrêté",
+   "Testez l'électrovanne de suralimentation",
+   "Contrôlez le capteur de pression de suralimentation (valeur moteur arrêté ≈ pression atmosphérique)",
+   "Lisez le code et ses données figées"
+  ],
+  "parts": [
+   "wastegate-actuator",
+   "boost-solenoid",
+   "boost-pressure-sensor",
+   "turbocharger"
+  ],
+  "dtc": [
+   "P0234",
+   "P0236"
+  ],
+  "section": "turbo"
+ },
+ {
+  "id": "throttle-body",
+  "patterns": [
+   "boitier papillon",
+   "papillon encrasse",
+   "papillon motorise",
+   "corps papillon",
+   "nettoyer le papillon"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Le boîtier papillon dose l'air (essence) ou sert de volet d'admission (diesel). Encrassé ou défaillant, il donne ralenti instable, calage ou mode dégradé.",
+  "checks": [
+   "Lisez les codes (P0638, P2135, P0121)",
+   "Contrôlez l'encrassement côté admission",
+   "Nettoyez avec un produit adapté, contact coupé",
+   "Faites un réapprentissage du papillon si prévu"
+  ],
+  "parts": [
+   "throttle-body",
+   "accelerator-pedal-sensor",
+   "ecu"
+  ],
+  "dtc": [
+   "P0121",
+   "P0638",
+   "P2135"
+  ],
+  "section": "intake"
+ },
+ {
+  "id": "swirl-flaps",
+  "patterns": [
+   "volets de turbulence",
+   "volets d admission",
+   "swirl",
+   "clapets d admission",
+   "p2015",
+   "p2004"
+  ],
+  "fuel": [
+   "diesel"
+  ],
+  "answer": "Les volets de turbulence dans le collecteur d'admission améliorent la combustion à bas régime. Encrassés ou cassés, ils génèrent des codes et peuvent abîmer le moteur si une pièce se détache.",
+  "checks": [
+   "Lisez les codes P2004/P2015",
+   "Contrôlez l'actionneur et sa tringlerie",
+   "Démontez le collecteur pour vérifier l'encrassement et les axes",
+   "Ne supprimez pas les volets sans solution prévue par le constructeur"
+  ],
+  "parts": [
+   "swirl-flap",
+   "intake-manifold"
+  ],
+  "dtc": [
+   "P2004",
+   "P2015"
+  ],
+  "section": "intake"
+ },
+ {
+  "id": "air-filter",
+  "patterns": [
+   "filtre a air",
+   "changer filtre a air",
+   "filtre a air sale",
+   "filtre a air encrasse"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "priority": -0.5,
+  "answer": "Le filtre à air se remplace selon l'entretien (plus souvent en milieu poussiéreux). Colmaté, il réduit la puissance et augmente la fumée sur diesel.",
+  "checks": [
+   "Démontez et regardez à contre-jour",
+   "Vérifiez l'étanchéité du boîtier",
+   "Remplacez selon l'échéance du carnet"
+  ],
+  "parts": [
+   "air-filter",
+   "airbox"
+  ],
+  "dtc": [
+   "P0101"
+  ],
+  "section": "intake"
+ },
+ {
+  "id": "spark-plugs",
+  "patterns": [
+   "bougies d allumage",
+   "bougie d allumage",
+   "changer les bougies",
+   "quand changer les bougies",
+   "bougie encrassee",
+   "bougies"
+  ],
+  "fuel": [
+   "petrol"
+  ],
+  "priority": -0.5,
+  "answer": "Les bougies d'allumage se remplacent selon le carnet (souvent 30 000 à 100 000 km selon le type). Usées, elles provoquent ratés, démarrage difficile et surconsommation.",
+  "checks": [
+   "Vérifiez l'échéance de remplacement",
+   "Démontez moteur froid et observez la couleur (brun clair = normal, noir = mélange riche, huileux = fuite d'huile)",
+   "Respectez la référence et le couple de serrage",
+   "Contrôlez les bobines en même temps"
+  ],
+  "parts": [
+   "spark-plug",
+   "ignition-coil",
+   "spark-plug-wire"
+  ],
+  "dtc": [
+   "P0300"
+  ],
+  "section": "ignition-system"
+ },
+ {
+  "id": "ignition-coil",
+  "patterns": [
+   "bobine d allumage",
+   "bobine hs",
+   "bobine crayon",
+   "bobine grillee",
+   "changer bobine"
+  ],
+  "fuel": [
+   "petrol"
+  ],
+  "answer": "Une bobine défaillante provoque un raté sur un cylindre, souvent sous la pluie ou en charge. Le test simple consiste à la permuter avec celle d'un autre cylindre.",
+  "checks": [
+   "Lisez le code de raté (P0301 à P0304)",
+   "Permutez la bobine avec un autre cylindre et voyez si le code suit",
+   "Contrôlez le connecteur et l'humidité dans le puits de bougie",
+   "Remplacez la bobine si le défaut la suit"
+  ],
+  "parts": [
+   "ignition-coil",
+   "spark-plug"
+  ],
+  "dtc": [
+   "P0301",
+   "P0302",
+   "P0303",
+   "P0304"
+  ],
+  "views": [
+   "wiring-ignition-petrol"
+  ],
+  "section": "ignition-system",
+  "safety": "Contact coupé avant de débrancher une bobine ; ne touchez jamais un fil haute tension moteur tournant."
+ },
+ {
+  "id": "crankshaft-sensor",
+  "patterns": [
+   "capteur pmh",
+   "capteur vilebrequin",
+   "capteur de regime",
+   "p0335",
+   "compte tours ne bouge pas",
+   "capteur point mort haut"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Le capteur vilebrequin (PMH) donne au calculateur le régime et la position moteur. S'il lâche, le moteur ne démarre pas ou coupe net, souvent à chaud.",
+  "checks": [
+   "Lisez les codes P0335/P0336",
+   "Regardez le compte-tours au démarrage (immobile = pas de signal)",
+   "Contrôlez le connecteur et l'entrefer (limaille sur l'aimant)",
+   "Mesurez la résistance ou le signal selon le type de capteur"
+  ],
+  "parts": [
+   "crankshaft-position-sensor",
+   "wiring-harness",
+   "flywheel"
+  ],
+  "dtc": [
+   "P0335",
+   "P0336",
+   "P0016"
+  ],
+  "views": [
+   "wiring-ignition-petrol"
+  ],
+  "section": "engine-sensors"
+ },
+ {
+  "id": "camshaft-sensor",
+  "patterns": [
+   "capteur arbre a cames",
+   "capteur de phase",
+   "p0340",
+   "capteur came",
+   "decalage arbre a cames"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Le capteur d'arbre à cames permet de reconnaître le cylindre en compression. Défaillant : démarrage long, code P0340, parfois mode dégradé. Un code de corrélation (P0016) peut signaler une distribution décalée.",
+  "checks": [
+   "Lisez les codes P0340/P0016",
+   "Contrôlez le connecteur et le faisceau",
+   "Contrôlez le capteur (signal à l'oscilloscope si possible)",
+   "Si P0016 : faites vérifier le calage de distribution"
+  ],
+  "parts": [
+   "camshaft-position-sensor",
+   "timing-belt",
+   "timing-chain",
+   "vvt-solenoid"
+  ],
+  "dtc": [
+   "P0340",
+   "P0016",
+   "P0011"
+  ],
+  "section": "engine-sensors"
+ },
+ {
+  "id": "coolant-temp-sensor",
+  "patterns": [
+   "sonde de temperature",
+   "sonde temperature moteur",
+   "capteur temperature eau",
+   "aiguille de temperature",
+   "temperature affichee fausse",
+   "ventilateur tourne tout le temps",
+   "p0115",
+   "p0117",
+   "p0118"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "La sonde de température moteur informe le calculateur (richesse, préchauffage, ventilateur). Fausse, elle cause démarrage difficile, surconsommation ou ventilateur permanent.",
+  "checks": [
+   "Lisez la valeur à froid : elle doit être proche de la température extérieure",
+   "Lisez les codes P0115 à P0118",
+   "Contrôlez le connecteur (oxydation)",
+   "Contrôlez le niveau de liquide (sonde hors liquide = valeur fausse)"
+  ],
+  "parts": [
+   "coolant-temp-sensor",
+   "thermostat",
+   "cooling-fan"
+  ],
+  "dtc": [
+   "P0115",
+   "P0117",
+   "P0118",
+   "P0128"
+  ],
+  "section": "engine-sensors"
+ },
+ {
+  "id": "egr-valve",
+  "patterns": [
+   "vanne egr",
+   "egr",
+   "vanne egr encrassee",
+   "egr bloquee",
+   "egr hs",
+   "nettoyer egr",
+   "recirculation des gaz",
+   "p0400",
+   "p0401",
+   "p0402",
+   "p0403"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "La vanne EGR renvoie une partie des gaz d'échappement à l'admission pour réduire les NOx. Encrassée, elle reste ouverte (fumée noire, ralenti instable) ou bloquée fermée (code P0401).",
+  "checks": [
+   "Lisez les codes P0400 à P0404",
+   "Commandez la vanne à l'outil de diagnostic et vérifiez son mouvement",
+   "Démontez et contrôlez l'encrassement (calamine)",
+   "Contrôlez la durite de dépression ou le connecteur selon le type",
+   "Vérifiez le débitmètre (il sert à contrôler le débit EGR)"
+  ],
+  "parts": [
+   "egr-valve",
+   "egr-cooler",
+   "intake-manifold",
+   "maf-sensor"
+  ],
+  "dtc": [
+   "P0400",
+   "P0401",
+   "P0402",
+   "P0403"
+  ],
+  "section": "emissions"
+ },
+ {
+  "id": "dpf-clogged",
+  "patterns": [
+   "fap",
+   "fap colmate",
+   "fap bouche",
+   "filtre a particules",
+   "filtre a particules colmate",
+   "voyant fap",
+   "regeneration fap",
+   "p2002",
+   "p2463",
+   "fap plein",
+   "colmatage fap"
+  ],
+  "fuel": [
+   "diesel"
+  ],
+  "requires": [
+   "dpf"
+  ],
+  "answer": "Le filtre à particules (FAP) retient les suies ; il se régénère en roulant (brûlage à haute température). Les trajets courts répétés le colmatent : voyant, perte de puissance, mode dégradé.",
+  "checks": [
+   "Lisez les codes (P2002, P2463, P2452) et la pression différentielle",
+   "Contrôlez le capteur de pression différentielle et ses durites (fendues, bouchées)",
+   "Roulez 20 à 30 minutes à régime soutenu (voie rapide) si le constructeur l'autorise",
+   "Vérifiez le niveau d'additif FAP si le système en utilise",
+   "Recherchez la cause : injecteur, EGR, turbo qui fume"
+  ],
+  "safety": "Une régénération forcée se fait véhicule à l'extérieur, loin de toute matière inflammable (échappement très chaud).",
+  "parts": [
+   "dpf",
+   "dpf-pressure-sensor",
+   "exhaust-temperature-sensor",
+   "egr-valve",
+   "injector"
+  ],
+  "dtc": [
+   "P2002",
+   "P2463",
+   "P2452",
+   "P244A"
+  ],
+  "section": "emissions",
+  "guide": "glow-dpf-light"
+ },
+ {
+  "id": "dpf-regeneration",
+  "patterns": [
+   "regeneration",
+   "ventilateur tourne apres arret",
+   "ralenti eleve tout seul",
+   "odeur de chaud a l arret",
+   "regeneration en cours"
+  ],
+  "fuel": [
+   "diesel"
+  ],
+  "requires": [
+   "dpf"
+  ],
+  "answer": "Pendant une régénération du FAP, le ralenti peut monter, le ventilateur tourner après l'arrêt et une odeur de chaud apparaître : c'est normal. Évitez de couper le moteur à ce moment-là.",
+  "checks": [
+   "Si possible, terminez le trajet à régime stable pour finir la régénération",
+   "Évitez les arrêts répétés en pleine régénération",
+   "Si cela arrive tous les jours : contrôlez la pression différentielle",
+   "Vérifiez le niveau d'huile (dilution)"
+  ],
+  "parts": [
+   "dpf",
+   "dpf-pressure-sensor",
+   "cooling-fan"
+  ],
+  "dtc": [
+   "P2002"
+  ],
+  "section": "emissions",
+  "safety": "Échappement et FAP dépassent plusieurs centaines de degrés : ne vous garez pas sur de l'herbe sèche et ne touchez pas la ligne après roulage.",
+  "guide": "dpf-regeneration"
+ },
+ {
+  "id": "catalyst",
+  "patterns": [
+   "catalyseur",
+   "pot catalytique",
+   "catalyseur hs",
+   "p0420",
+   "efficacite catalyseur",
+   "catalyseur bouche",
+   "odeur d oeuf pourri"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Le code P0420 signifie que le calculateur juge le catalyseur peu efficace, souvent après ratés ou consommation d'huile. La sonde lambda aval ou une fuite d'échappement peuvent aussi fausser le test.",
+  "checks": [
+   "Corrigez d'abord tout raté d'allumage ou consommation d'huile",
+   "Recherchez une fuite d'échappement avant la sonde aval",
+   "Comparez les signaux des sondes amont et aval (l'aval doit rester stable)",
+   "Un catalyseur bouché donne une forte perte de puissance"
+  ],
+  "parts": [
+   "catalytic-converter",
+   "lambda-sensor-upstream",
+   "lambda-sensor-downstream",
+   "exhaust-gasket"
+  ],
+  "dtc": [
+   "P0420"
+  ],
+  "section": "emissions",
+  "safety": "Le catalyseur peut dépasser 600 °C : laissez refroidir avant toute intervention, ne vous garez pas sur de l'herbe sèche."
+ },
+ {
+  "id": "lambda-sensor",
+  "patterns": [
+   "sonde lambda",
+   "sonde o2",
+   "sonde oxygene",
+   "p0130",
+   "p0136",
+   "sonde lambda hs"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "La sonde lambda mesure l'oxygène dans les gaz d'échappement. Amont : réglage du mélange ; aval : surveillance du catalyseur.",
+  "checks": [
+   "Lisez les codes (P0130 à P0141)",
+   "Contrôlez le connecteur et le chauffage de sonde",
+   "Recherchez une fuite d'échappement avant la sonde",
+   "Observez le signal moteur chaud (oscillation pour l'amont)"
+  ],
+  "parts": [
+   "lambda-sensor-upstream",
+   "lambda-sensor-downstream",
+   "exhaust-gasket"
+  ],
+  "dtc": [
+   "P0130",
+   "P0136",
+   "P0135",
+   "P0141"
+  ],
+  "section": "emissions"
+ },
+ {
+  "id": "exhaust-noise",
+  "patterns": [
+   "echappement troue",
+   "bruit d echappement",
+   "echappement qui fuit",
+   "pot d echappement",
+   "silencieux",
+   "bruit de pot",
+   "echappement bruyant",
+   "flexible d echappement"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Un échappement plus bruyant, un ronflement ou des claquements indiquent une fuite (joint de collecteur, flexible, silencieux percé) ou une fixation cassée.",
+  "checks": [
+   "Moteur froid, inspectez la ligne (rouille, trous, suie autour d'un joint)",
+   "Contrôlez les silentblocs de suspension de la ligne",
+   "Écoutez au démarrage à froid un « tac-tac » au collecteur",
+   "Contrôlez le flexible derrière le moteur"
+  ],
+  "safety": "Une fuite d'échappement sous l'habitacle peut faire entrer du monoxyde de carbone : faites réparer rapidement.",
+  "parts": [
+   "exhaust-manifold",
+   "exhaust-gasket",
+   "exhaust-flex-pipe",
+   "muffler"
+  ],
+  "dtc": [],
+  "section": "exhaust-line"
+ },
+ {
+  "id": "adblue",
+  "patterns": [
+   "adblue",
+   "ad blue",
+   "voyant adblue",
+   "defaut adblue",
+   "demarrage impossible dans",
+   "compte a rebours adblue",
+   "scr",
+   "p20ee",
+   "p203f"
+  ],
+  "fuel": [
+   "diesel"
+  ],
+  "answer": "Le système AdBlue (SCR) réduit les NOx sur les diesels récents. Un défaut ou un réservoir vide déclenche un compte à rebours au-delà duquel le redémarrage est bloqué.",
+  "checks": [
+   "Vérifiez et complétez le niveau d'AdBlue (liquide propre, jamais d'eau)",
+   "Lisez les codes (P20EE, P203F, P20E8)",
+   "Contrôlez la cristallisation autour de l'injecteur AdBlue",
+   "Contrôlez le capteur NOx et le chauffage du réservoir AdBlue (hiver)"
+  ],
+  "parts": [
+   "adblue-injector",
+   "scr-catalyst",
+   "nox-sensor"
+  ],
+  "dtc": [
+   "P20EE",
+   "P203F",
+   "P20E8"
+  ],
+  "section": "emissions",
+  "safety": "L'AdBlue n'est pas toxique mais attaque les métaux : rincez à l'eau toute coulure ; ne le mélangez jamais au gasoil.",
+  "guide": "adblue"
+ },
+ {
+  "id": "emissions-test-fail",
+  "patterns": [
+   "controle technique pollution",
+   "refuse au controle technique",
+   "opacite",
+   "contre visite pollution",
+   "ct pollution",
+   "trop polluant",
+   "echec pollution"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Un échec au contrôle de pollution vient d'un moteur qui fume (diesel : opacité) ou d'un mélange mal réglé / catalyseur fatigué (essence), parfois d'un voyant moteur allumé.",
+  "checks": [
+   "Corrigez tout voyant moteur ou code présent",
+   "Faites chauffer le moteur complètement avant le contrôle",
+   "Contrôlez filtre à air et EGR",
+   "[diesel] Contrôlez injecteurs et état du turbo",
+   "[petrol] Contrôlez sondes lambda et catalyseur"
+  ],
+  "parts": [
+   "egr-valve",
+   "air-filter",
+   "injector",
+   "catalytic-converter",
+   "lambda-sensor-upstream",
+   "dpf"
+  ],
+  "dtc": [
+   "P0420",
+   "P0401"
+  ],
+  "section": "emissions"
+ },
+ {
+  "id": "overheating",
+  "patterns": [
+   "surchauffe",
+   "moteur chauffe",
+   "temperature monte",
+   "voyant temperature",
+   "aiguille dans le rouge",
+   "chauffe trop",
+   "le moteur surchauffe",
+   "voyant thermometre",
+   "surchauffe moteur",
+   "moteur chauffe dans les bouchons",
+   "chauffe dans les bouchons"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "La surchauffe vient d'un manque de liquide, d'un ventilateur qui ne se déclenche pas, d'un thermostat bloqué fermé, d'une pompe à eau défaillante ou d'un radiateur colmaté. Le joint de culasse peut en être la cause ou la conséquence.",
+  "checks": [
+   "Arrêtez-vous et laissez refroidir au moins 30 minutes",
+   "Contrôlez le niveau du vase d'expansion à froid",
+   "Vérifiez que le motoventilateur se déclenche vers 95-100 °C (fusible, relais)",
+   "Touchez les durites (avec prudence) : durite basse froide moteur chaud = thermostat ou circulation",
+   "Recherchez une fuite (traces sèches colorées)"
+  ],
+  "safety": "N'ouvrez jamais le bouchon du vase moteur chaud (liquide sous pression, brûlures graves). Ne roulez pas en surchauffe.",
+  "parts": [
+   "expansion-tank",
+   "cooling-fan",
+   "cooling-fan-relay",
+   "thermostat",
+   "water-pump",
+   "radiator",
+   "head-gasket"
+  ],
+  "dtc": [
+   "P0217",
+   "P0480",
+   "P0115"
+  ],
+  "views": [
+   "wiring-cooling-fan"
+  ],
+  "section": "cooling-circuit",
+  "guide": "overheating"
+ },
+ {
+  "id": "coolant-loss",
+  "patterns": [
+   "perte de liquide de refroidissement",
+   "fuite de liquide de refroidissement",
+   "fuite d eau",
+   "liquide de refroidissement baisse",
+   "vase d expansion vide",
+   "niveau liquide baisse",
+   "fuite liquide rose",
+   "fuite liquide vert"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Une perte de liquide vient d'une fuite externe (durite, radiateur, pompe à eau, vase) ou interne (joint de culasse, refroidisseur EGR, radiateur de chauffage).",
+  "checks": [
+   "Contrôlez les traces sous le véhicule et autour des durites, à froid",
+   "Inspectez la pompe à eau (trou témoin)",
+   "Contrôlez le bouchon du vase (joint)",
+   "Humidité sur les tapis côté passager : radiateur de chauffage",
+   "Sans fuite visible : test CO2 / joint de culasse"
+  ],
+  "safety": "Contrôle et remplissage uniquement moteur froid ; liquide toxique (animaux, enfants).",
+  "parts": [
+   "radiator-hose",
+   "radiator",
+   "water-pump",
+   "expansion-tank",
+   "heater-core",
+   "head-gasket",
+   "egr-cooler"
+  ],
+  "dtc": [],
+  "section": "cooling-circuit",
+  "guide": "coolant-leak"
+ },
+ {
+  "id": "cooling-fan",
+  "patterns": [
+   "ventilateur ne tourne pas",
+   "motoventilateur",
+   "ventilateur radiateur",
+   "ventilo ne se declenche pas",
+   "ventilo",
+   "ventilateur hs",
+   "ventilateur ne s arrete pas",
+   "groupe motoventilateur"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Le motoventilateur doit se déclencher quand le moteur chauffe (et souvent avec la climatisation). S'il ne tourne pas : fusible, relais, sonde, moteur du ventilateur.",
+  "checks": [
+   "Moteur chaud au ralenti, vérifiez s'il se déclenche ; mettez la clim pour forcer la commande",
+   "Contrôlez le fusible maxi et le relais du motoventilateur",
+   "Alimentez directement le ventilateur en 12 V pour tester le moteur",
+   "Contrôlez la sonde de température et la commande (code P0480)"
+  ],
+  "safety": "Le ventilateur peut démarrer moteur arrêté : gardez les mains à distance.",
+  "parts": [
+   "cooling-fan",
+   "cooling-fan-relay",
+   "fuse-maxi",
+   "coolant-temp-sensor"
+  ],
+  "dtc": [
+   "P0480",
+   "P0483"
+  ],
+  "views": [
+   "wiring-cooling-fan",
+   "fuse-box-generic"
+  ],
+  "section": "cooling-circuit",
+  "negated_patterns": [
+   "ventilateur se declenche",
+   "ventilo se declenche",
+   "motoventilateur se declenche"
+  ]
+ },
+ {
+  "id": "engine-stays-cold",
+  "patterns": [
+   "moteur ne chauffe pas",
+   "temperature reste basse",
+   "n atteint pas 90",
+   "aiguille reste en bas",
+   "thermostat bloque ouvert",
+   "p0128",
+   "calorstat",
+   "moteur ne monte pas en temperature",
+   "ne monte pas en temperature"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Si le moteur ne monte pas en température, le thermostat est souvent bloqué ouvert : surconsommation, chauffage faible, code P0128.",
+  "checks": [
+   "Observez la température après 15 minutes de route",
+   "Moteur froid démarré, la durite vers le radiateur doit rester froide quelques minutes",
+   "Lisez le code P0128",
+   "Contrôlez la sonde de température moteur"
+  ],
+  "parts": [
+   "thermostat",
+   "coolant-temp-sensor"
+  ],
+  "dtc": [
+   "P0128"
+  ],
+  "section": "cooling-circuit"
+ },
+ {
+  "id": "no-heating",
+  "patterns": [
+   "chauffage ne chauffe pas",
+   "chauffage froid",
+   "pas de chauffage",
+   "air froid",
+   "souffle froid",
+   "chauffage tiede"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Un chauffage froid vient d'un thermostat bloqué ouvert, d'un manque de liquide ou de bulle d'air, d'un radiateur de chauffage bouché ou d'un volet de mixage.",
+  "checks": [
+   "Contrôlez le niveau de liquide à froid et purgez le circuit",
+   "Vérifiez la température moteur (thermostat)",
+   "Moteur chaud, touchez les deux durites du radiateur de chauffage : elles doivent être chaudes",
+   "Vérifiez le volet de mixage (commande chaud/froid)"
+  ],
+  "parts": [
+   "thermostat",
+   "heater-core",
+   "expansion-tank",
+   "water-pump"
+  ],
+  "dtc": [
+   "P0128"
+  ],
+  "section": "cooling-circuit",
+  "negated_patterns": [
+   "chauffage souffle chaud",
+   "souffle chaud",
+   "air chaud"
+  ]
+ },
+ {
+  "id": "battery-dead",
+  "patterns": [
+   "batterie a plat",
+   "batterie morte",
+   "batterie vide",
+   "batterie hs",
+   "batterie faible",
+   "plus de batterie",
+   "batterie dechargee"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Une batterie à plat vient d'un oubli (feux), d'une batterie en fin de vie, d'un défaut de charge (alternateur) ou d'un consommateur qui reste actif véhicule coupé.",
+  "checks": [
+   "Mesurez la tension au repos : 12,6 V chargée, 12,2 V à moitié, moins de 12 V = très déchargée",
+   "Rechargez puis faites un test de capacité (testeur de batterie)",
+   "Moteur tournant, mesurez la charge : 13,5 à 14,8 V environ",
+   "Si elle se vide sur quelques jours : mesurez la consommation de veille",
+   "Contrôlez cosses et tresse de masse"
+  ],
+  "parts": [
+   "battery",
+   "alternator",
+   "ground-strap",
+   "main-fuse"
+  ],
+  "dtc": [
+   "P0562"
+  ],
+  "views": [
+   "wiring-charging",
+   "wiring-starting"
+  ],
+  "section": "charging-starting",
+  "safety": "Batterie : débranchez la borne − en premier et rebranchez-la en dernier ; pas d'étincelle ni de flamme à proximité (hydrogène). Sur hybride/électrique, ne touchez jamais aux câbles orange (haute tension).",
+  "guide": "battery-drain"
+ },
+ {
+  "id": "jump-start",
+  "patterns": [
+   "demarrer avec des cables",
+   "cables de demarrage",
+   "booster",
+   "faire une pince",
+   "demarrer avec une autre voiture",
+   "comment brancher les cables"
+  ],
+  "fuel": [],
+  "answer": "Démarrage avec câbles : rouge sur + de la batterie à plat, rouge sur + de la batterie saine, noir sur − de la batterie saine, noir sur une masse métallique du véhicule en panne (loin de la batterie).",
+  "checks": [
+   "Coupez tous les consommateurs des deux véhicules",
+   "Branchez dans l'ordre : + à plat, + saine, − saine, masse moteur en panne",
+   "Démarrez le véhicule sain, attendez 2 minutes, puis démarrez l'autre",
+   "Débranchez dans l'ordre inverse",
+   "[electric] Véhicule électrique/hybride : suivez le manuel, la batterie 12 V seule sert de point de raccordement"
+  ],
+  "safety": "Ne croisez jamais + et −. Pas d'étincelle près d'une batterie qui a gonflé ou qui sent l'œuf pourri (hydrogène). Hybride/électrique : branchez-vous uniquement sur les points 12 V indiqués par la notice, jamais sur les câbles orange haute tension.",
+  "parts": [
+   "battery",
+   "ground-strap",
+   "starter-motor"
+  ],
+  "dtc": [],
+  "views": [
+   "wiring-starting"
+  ],
+  "section": "charging-starting"
+ },
+ {
+  "id": "battery-light",
+  "patterns": [
+   "voyant batterie",
+   "voyant batterie allume",
+   "voyant charge",
+   "temoin de charge",
+   "alternateur",
+   "alternateur hs",
+   "ne charge plus",
+   "voyant batterie en roulant",
+   "p0620"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Le voyant batterie allumé moteur tournant signifie que l'alternateur ne charge plus : la voiture roule sur la batterie jusqu'à la panne.",
+  "checks": [
+   "Moteur tournant, mesurez la tension batterie : moins de 13 V = pas de charge",
+   "Contrôlez la courroie d'accessoires (cassée, patine)",
+   "Contrôlez le connecteur et le gros câble de l'alternateur",
+   "Contrôlez le fusible de charge et la masse moteur",
+   "Faites tester alternateur et régulateur"
+  ],
+  "safety": "Si la courroie d'accessoires est cassée, la pompe à eau peut aussi être arrêtée : surveillez la température.",
+  "parts": [
+   "alternator",
+   "voltage-regulator",
+   "accessory-belt",
+   "battery",
+   "ground-strap",
+   "fuse-maxi"
+  ],
+  "dtc": [
+   "P0620",
+   "P0562"
+  ],
+  "views": [
+   "wiring-charging"
+  ],
+  "section": "charging-starting",
+  "guide": "battery-light"
+ },
+ {
+  "id": "battery-drain",
+  "patterns": [
+   "batterie se decharge",
+   "batterie se vide",
+   "batterie a plat le matin",
+   "consommation de veille",
+   "decharge la nuit",
+   "consommateur parasite",
+   "batterie a plat apres quelques jours",
+   "batterie se vide la nuit",
+   "batterie se vide pendant la nuit"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Une batterie qui se vide véhicule arrêté indique un consommateur qui reste actif (éclairage, calculateur qui ne s'endort pas, accessoire ajouté) ou une batterie qui ne tient plus la charge.",
+  "checks": [
+   "Rechargez puis testez la batterie",
+   "Verrouillez, attendez la mise en veille (souvent 10 à 30 min), mesurez le courant au pôle − : au-delà de 50 mA environ = anormal",
+   "Retirez les fusibles un par un en surveillant le courant pour trouver le circuit",
+   "Vérifiez coffre, boîte à gants, autoradio, alarme ajoutée",
+   "Diode d'alternateur en fuite possible"
+  ],
+  "parts": [
+   "battery",
+   "alternator",
+   "fuse-mini",
+   "fuse-ato",
+   "relay"
+  ],
+  "dtc": [],
+  "views": [
+   "fuse-box-generic",
+   "wiring-charging"
+  ],
+  "section": "charging-starting",
+  "safety": "Batterie : débranchez la borne − en premier et rebranchez-la en dernier ; pas d'étincelle ni de flamme à proximité (hydrogène). Sur hybride/électrique, ne touchez jamais aux câbles orange (haute tension).",
+  "guide": "battery-drain"
+ },
+ {
+  "id": "starter-slow",
+  "patterns": [
+   "demarreur tourne lentement",
+   "demarreur faible",
+   "demarreur grince",
+   "demarreur force",
+   "demarrage lent",
+   "le moteur tourne doucement au demarrage"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Un démarreur qui tourne lentement vient le plus souvent d'une batterie faible, de cosses oxydées ou d'une masse défectueuse, plus rarement d'un démarreur usé.",
+  "checks": [
+   "Mesurez la tension pendant le démarrage : moins de 9,6 V = batterie ou câbles",
+   "Nettoyez cosses et tresse de masse",
+   "Mesurez la chute de tension sur le câble + et la masse pendant le démarrage",
+   "Bruit de grincement : pignon de démarreur ou couronne"
+  ],
+  "parts": [
+   "battery",
+   "starter-motor",
+   "ground-strap",
+   "flywheel"
+  ],
+  "dtc": [],
+  "views": [
+   "wiring-starting"
+  ],
+  "section": "charging-starting",
+  "safety": "Batterie : débranchez la borne − en premier et rebranchez-la en dernier ; pas d'étincelle ni de flamme à proximité (hydrogène). Sur hybride/électrique, ne touchez jamais aux câbles orange (haute tension).",
+  "guide": "no-start-no-crank"
+ },
+ {
+  "id": "fuse-blown",
+  "patterns": [
+   "fusible grille",
+   "fusible qui saute",
+   "fusible qui grille",
+   "fusible grille a repetition",
+   "fusible hs",
+   "fusible qui pete",
+   "change le fusible il resaute"
+  ],
+  "fuel": [],
+  "answer": "Un fusible qui grille est la conséquence, pas la cause : il protège un circuit contre un court-circuit ou une surcharge. S'il grille à nouveau, il faut chercher le court-circuit.",
+  "checks": [
+   "Remplacez par un fusible de même ampérage (jamais plus fort)",
+   "S'il grille tout de suite : court-circuit franc (fil dénudé contre la masse, connecteur fondu)",
+   "S'il grille après un moment : composant qui force (moteur grippé, ventilateur, lève-vitre)",
+   "Débranchez les consommateurs du circuit un par un pour isoler le coupable",
+   "Inspectez le faisceau aux points de frottement et de passage de portière"
+  ],
+  "safety": "Ne remplacez jamais un fusible par un calibre supérieur ou un fil : risque d'incendie du faisceau.",
+  "parts": [
+   "fuse-ato",
+   "fuse-mini",
+   "fuse-maxi",
+   "wiring-harness",
+   "connector",
+   "fuse-box-cabin"
+  ],
+  "dtc": [],
+  "views": [
+   "fuse-box-generic"
+  ],
+  "section": "wiring-fuses-relays",
+  "guide": "fuse-blowing"
+ },
+ {
+  "id": "fuse-test",
+  "patterns": [
+   "tester un fusible",
+   "comment tester un fusible",
+   "verifier un fusible",
+   "fusible bon ou pas",
+   "code couleur fusible",
+   "amperage fusible",
+   "couleur des fusibles",
+   "test lamp",
+   "lampe temoin"
+  ],
+  "fuel": [],
+  "answer": "Test d'un fusible : visuel (filament coupé), au multimètre ou à la lampe témoin, sans le retirer. Code couleur des fusibles lames : 5 A beige, 7,5 A marron, 10 A rouge, 15 A bleu, 20 A jaune, 25 A transparent, 30 A vert, 40 A orange.",
+  "checks": [
+   "Visuel : retirez-le avec la pince extracteur et regardez le filament à contre-jour",
+   "Multimètre en continuité (ou ohmmètre) entre les deux lames : ~0 Ω = bon, infini = grillé",
+   "En place, contact mis : mesurez 12 V sur les DEUX points test du fusible (un seul = grillé)",
+   "Lampe témoin pince à la masse : elle doit s'allumer des deux côtés",
+   "Remplacez toujours par le même ampérage (même couleur)"
+  ],
+  "parts": [
+   "fuse-ato",
+   "fuse-mini",
+   "fuse-maxi",
+   "fuse-puller",
+   "fuse-box-cabin",
+   "fuse-box-engine"
+  ],
+  "dtc": [],
+  "views": [
+   "fuse-box-generic"
+  ],
+  "section": "wiring-fuses-relays"
+ },
+ {
+  "id": "fuse-box-location",
+  "patterns": [
+   "ou est la boite a fusibles",
+   "boite a fusibles",
+   "emplacement fusibles",
+   "plan des fusibles",
+   "quel fusible",
+   "boitier fusibles",
+   "fusibles habitacle",
+   "fusibles compartiment moteur"
+  ],
+  "fuel": [],
+  "priority": -0.3,
+  "answer": "La plupart des véhicules ont une boîte à fusibles dans l'habitacle (sous le tableau de bord, côté conducteur ou boîte à gants) et une dans le compartiment moteur près de la batterie. Le plan exact est dans le manuel du véhicule ou au dos du couvercle.",
+  "checks": [
+   "Consultez le manuel du véhicule (chapitre fusibles)",
+   "Regardez au dos du couvercle de la boîte : le schéma y est souvent imprimé",
+   "Fusibles maxi et principal batterie : compartiment moteur, près de la batterie",
+   "Testez le fusible du circuit en panne avant de remplacer une pièce"
+  ],
+  "parts": [
+   "fuse-box-cabin",
+   "fuse-box-engine",
+   "main-fuse",
+   "fuse-puller"
+  ],
+  "dtc": [],
+  "views": [
+   "fuse-box-generic"
+  ],
+  "section": "wiring-fuses-relays"
+ },
+ {
+  "id": "relay-clicking",
+  "patterns": [
+   "relais qui claque",
+   "relais claque",
+   "bruit de relais",
+   "clic clic sous le tableau de bord",
+   "relais qui colle",
+   "relais hs",
+   "tester un relais",
+   "cliquetis electrique"
+  ],
+  "fuel": [],
+  "answer": "Un relais qui claque en rafale signale souvent une tension batterie trop faible ou une commande instable ; un relais collé laisse un circuit alimenté en permanence.",
+  "checks": [
+   "Mesurez la tension batterie (un relais claque quand la tension chute)",
+   "Repérez le relais au toucher pendant le bruit",
+   "Permutez avec un relais identique d'un autre circuit pour tester",
+   "Au multimètre : bobine (broches 85-86) quelques dizaines à une centaine d'ohms, contact (30-87) fermé quand la bobine est alimentée",
+   "Contrôlez l'oxydation des broches et du support"
+  ],
+  "parts": [
+   "relay",
+   "battery",
+   "fuse-box-engine",
+   "connector"
+  ],
+  "dtc": [],
+  "views": [
+   "fuse-box-generic",
+   "wiring-starting"
+  ],
+  "section": "wiring-fuses-relays"
+ },
+ {
+  "id": "dim-lights",
+  "patterns": [
+   "feux faibles",
+   "phares faibles",
+   "eclairage faible",
+   "lumiere faible",
+   "phares qui baissent",
+   "eclairage qui varie",
+   "phares eclairent mal"
+  ],
+  "fuel": [],
+  "answer": "Des feux faibles viennent souvent d'une mauvaise masse, d'un connecteur oxydé, d'une tension de charge basse ou d'optiques jaunies/ampoules fatiguées.",
+  "checks": [
+   "Moteur tournant, mesurez la tension batterie : 13,5 à 14,8 V attendus",
+   "Mesurez la tension au connecteur de l'ampoule (chute de plus de 0,5 V = résistance dans le circuit)",
+   "Nettoyez/serrez la masse du projecteur",
+   "Contrôlez l'état des optiques et l'âge des ampoules"
+  ],
+  "parts": [
+   "headlamp",
+   "ground-strap",
+   "connector",
+   "alternator",
+   "relay"
+  ],
+  "dtc": [],
+  "views": [
+   "wiring-lighting"
+  ],
+  "section": "lighting",
+  "guide": "dim-lights"
+ },
+ {
+  "id": "headlight-out",
+  "patterns": [
+   "phare ne marche plus",
+   "ampoule grillee",
+   "feu grille",
+   "phare grille",
+   "feu de croisement",
+   "plus de feux",
+   "feu de route ne marche pas",
+   "veilleuse"
+  ],
+  "fuel": [],
+  "answer": "Un feu éteint d'un seul côté est presque toujours l'ampoule ou son connecteur ; des deux côtés en même temps, pensez fusible, relais ou commodo.",
+  "checks": [
+   "Permutez l'ampoule avec le côté qui fonctionne",
+   "Contrôlez le connecteur (12 V présents feu allumé ?)",
+   "Les deux côtés en panne : fusibles et relais d'éclairage",
+   "Contrôlez la masse du projecteur",
+   "Phares au xénon/LED : laissez faire un professionnel (haute tension)"
+  ],
+  "safety": "Projecteurs au xénon : haute tension au démarrage de l'ampoule, ne pas manipuler sous tension.",
+  "parts": [
+   "headlamp",
+   "fuse-mini",
+   "relay",
+   "connector"
+  ],
+  "dtc": [],
+  "views": [
+   "wiring-lighting",
+   "fuse-box-generic"
+  ],
+  "section": "lighting",
+  "guide": "dim-lights"
+ },
+ {
+  "id": "indicator-fast",
+  "patterns": [
+   "clignotant rapide",
+   "clignotants rapides",
+   "clignote vite",
+   "clignotant ne marche plus",
+   "clignotant qui ne clignote pas",
+   "clignotant hs",
+   "warning ne marche pas"
+  ],
+  "fuel": [],
+  "answer": "Un clignotant qui bat deux fois plus vite indique en général une ampoule grillée ou mal connectée du même côté (l'électronique détecte la charge manquante).",
+  "checks": [
+   "Vérifiez les ampoules avant, arrière et répétiteur latéral du côté concerné",
+   "Contrôlez la masse des feux arrière (oxydation)",
+   "Si ampoules LED montées à la place de l'origine : résistance de charge nécessaire",
+   "Si aucun côté ne fonctionne : fusible, centrale clignotante ou commodo"
+  ],
+  "parts": [
+   "indicator",
+   "tail-lamp",
+   "relay",
+   "connector",
+   "ground-strap"
+  ],
+  "dtc": [],
+  "views": [
+   "wiring-lighting"
+  ],
+  "section": "lighting"
+ },
+ {
+  "id": "brake-lights",
+  "patterns": [
+   "feux stop",
+   "feu stop ne marche pas",
+   "feux de stop",
+   "stop reste allume",
+   "contacteur de stop",
+   "p0571",
+   "p0504"
+  ],
+  "fuel": [],
+  "answer": "Les feux stop sont commandés par le contacteur de pédale de frein. S'ils ne s'allument plus (ou restent allumés), contrôlez ampoules, fusible et contacteur, qui sert aussi au régulateur de vitesse.",
+  "checks": [
+   "Faites appuyer sur la pédale et vérifiez les trois feux",
+   "Contrôlez les ampoules et le fusible",
+   "Contrôlez le réglage et le fonctionnement du contacteur de pédale",
+   "Lisez les codes P0571/P0504"
+  ],
+  "parts": [
+   "brake-light-switch",
+   "tail-lamp",
+   "fuse-mini"
+  ],
+  "dtc": [
+   "P0571",
+   "P0504"
+  ],
+  "views": [
+   "wiring-lighting"
+  ],
+  "section": "control-units"
+ },
+ {
+  "id": "horn-wipers",
+  "patterns": [
+   "klaxon ne marche pas",
+   "klaxon muet",
+   "avertisseur",
+   "essuie glace ne marche plus",
+   "essuie glaces ne marchent plus",
+   "essuie glace bloque",
+   "moteur essuie glace",
+   "lave glace",
+   "essuie glace hs"
+  ],
+  "fuel": [],
+  "answer": "Klaxon ou essuie-glaces muets : fusible, relais, commodo sous le volant, ou le moteur/avertisseur lui-même. Les essuie-glaces bloqués par le gel peuvent griller le fusible.",
+  "checks": [
+   "Contrôlez le fusible du circuit (manuel ou couvercle de boîte)",
+   "Écoutez/touchez le relais quand vous actionnez la commande",
+   "Mesurez 12 V au connecteur du klaxon ou du moteur d'essuie-glace pendant la commande",
+   "Alimentez le klaxon directement en 12 V pour le tester",
+   "Essuie-glace : vérifiez la tringlerie (écrou desserré, rotule déboîtée)"
+  ],
+  "parts": [
+   "horn",
+   "relay",
+   "fuse-mini",
+   "connector",
+   "wiring-harness"
+  ],
+  "dtc": [],
+  "views": [
+   "wiring-horn-wipers",
+   "fuse-box-generic"
+  ],
+  "section": "lighting",
+  "safety": "Klaxon au volant = coussin gonflable (airbag) : débranchez la batterie et attendez quelques minutes avant de déposer le volant ou le ressort spirale ; ne mesurez jamais un connecteur d'airbag au multimètre. Essuie-glace : contact coupé avant de toucher à la tringlerie.",
+  "guide": "wipers-horn"
+ },
+ {
+  "id": "dash-lights-all-on",
+  "patterns": [
+   "tous les voyants s allument",
+   "sapin de noel",
+   "plein de voyants",
+   "voyants allumes en meme temps",
+   "tableau de bord s affole",
+   "compteur s eteint",
+   "tous les voyants du tableau de bord s allument",
+   "tous les voyants s allument d un coup"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Plusieurs voyants qui s'allument en même temps (ABS, ESP, moteur, airbag) viennent souvent d'une tension batterie basse ou d'un défaut de communication entre calculateurs.",
+  "checks": [
+   "Mesurez la tension batterie au repos et moteur tournant",
+   "Contrôlez cosses et tresses de masse",
+   "Lisez les codes de tous les calculateurs (U0100, U0121 = perte de communication)",
+   "Contrôlez les connecteurs principaux et fusibles des calculateurs"
+  ],
+  "parts": [
+   "battery",
+   "alternator",
+   "ground-strap",
+   "ecu",
+   "wiring-harness"
+  ],
+  "dtc": [
+   "U0100",
+   "U0121",
+   "P0562"
+  ],
+  "section": "control-units"
+ },
+ {
+  "id": "electrical-random",
+  "patterns": [
+   "probleme electrique",
+   "panne electrique",
+   "faux contact",
+   "panne aleatoire",
+   "masse",
+   "probleme de masse",
+   "court circuit",
+   "fil coupe",
+   "connecteur oxyde"
+  ],
+  "fuel": [],
+  "answer": "Les pannes électriques aléatoires viennent très souvent d'une masse oxydée, d'un connecteur humide ou d'un fil qui frotte.",
+  "checks": [
+   "Mesurez la tension batterie et serrez les cosses",
+   "Contrôlez les tresses de masse (moteur, caisse)",
+   "Secouez doucement le faisceau en observant le défaut",
+   "Inspectez les connecteurs exposés à l'eau (verdissement)",
+   "Faites une mesure de chute de tension sur l'alimentation et la masse du composant"
+  ],
+  "parts": [
+   "ground-strap",
+   "wiring-harness",
+   "connector",
+   "battery"
+  ],
+  "dtc": [],
+  "section": "wiring-fuses-relays"
+ },
+ {
+  "id": "speedometer",
+  "patterns": [
+   "compteur de vitesse ne marche plus",
+   "compteur bloque a zero",
+   "capteur de vitesse",
+   "aiguille de vitesse",
+   "p0500",
+   "compteur km ne bouge pas"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "answer": "Un compteur de vitesse à zéro vient du capteur de vitesse (boîte ou roue), de son connecteur ou d'un défaut de communication avec le combiné.",
+  "checks": [
+   "Lisez les codes (P0500 ; codes ABS si la vitesse vient des roues)",
+   "Contrôlez le connecteur du capteur de vitesse",
+   "Vérifiez si l'ABS signale aussi un défaut",
+   "Contrôlez le fusible du combiné d'instruments"
+  ],
+  "parts": [
+   "vehicle-speed-sensor",
+   "wheel-speed-sensor",
+   "wiring-harness"
+  ],
+  "dtc": [
+   "P0500"
+  ],
+  "section": "control-units"
+ },
+ {
+  "id": "clutch-slipping",
+  "patterns": [
+   "embrayage patine",
+   "l embrayage patine",
+   "patine",
+   "regime monte sans accelerer",
+   "embrayage use",
+   "odeur d embrayage",
+   "embrayage qui patine",
+   "ca patine en cote",
+   "patine en cote",
+   "patine en 4e",
+   "ca patine quand j accelere"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "kind": "car",
+  "answer": "Un embrayage qui patine (le régime monte sans que la vitesse suive) est usé ou souillé d'huile. Rouler ainsi l'use encore plus vite et peut abîmer le volant moteur.",
+  "checks": [
+   "Test : en 4e à bas régime, accélérez franchement : si le régime monte sans accélération, il patine",
+   "Vérifiez la garde de pédale (câble) ou l'absence d'air (hydraulique)",
+   "Recherchez une fuite d'huile au joint spi de vilebrequin côté boîte",
+   "Prévoir le remplacement en kit (disque, mécanisme, butée) et contrôler le volant"
+  ],
+  "parts": [
+   "clutch-disc",
+   "pressure-plate",
+   "release-bearing",
+   "dual-mass-flywheel",
+   "crankshaft-seal"
+  ],
+  "dtc": [],
+  "section": "clutch",
+  "safety": "Dépose de boîte : batterie débranchée, véhicule sur pont ou chandelles, boîte soutenue par un cric de boîte.",
+  "guide": "clutch-slip-judder"
+ },
+ {
+  "id": "clutch-pedal",
+  "patterns": [
+   "pedale d embrayage dure",
+   "pedale reste au plancher",
+   "pedale d embrayage molle",
+   "plus d embrayage",
+   "pedale ne remonte pas",
+   "emetteur embrayage",
+   "recepteur embrayage",
+   "vitesses ne passent plus"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "kind": "car",
+  "answer": "Une pédale d'embrayage qui reste au plancher ou devient molle indique une fuite ou de l'air dans la commande hydraulique (émetteur, récepteur) ; une pédale très dure, un câble ou un mécanisme fatigué.",
+  "checks": [
+   "Contrôlez le niveau du bocal (souvent commun au liquide de frein)",
+   "Recherchez une fuite au récepteur (côté boîte) et à l'émetteur (sous la pédale)",
+   "Purgez le circuit hydraulique",
+   "Commande à câble : contrôlez le câble et le rattrapage de jeu"
+  ],
+  "parts": [
+   "clutch-master-cylinder",
+   "clutch-slave-cylinder",
+   "release-bearing",
+   "clutch-cable",
+   "brake-fluid-reservoir"
+  ],
+  "dtc": [
+   "P0830"
+  ],
+  "section": "clutch"
+ },
+ {
+  "id": "gear-grinding",
+  "patterns": [
+   "craquement en passant les vitesses",
+   "vitesse craque",
+   "boite craque",
+   "vitesses dures a passer",
+   "ca craque en seconde",
+   "synchro",
+   "boite de vitesse bruit",
+   "vitesse saute",
+   "ca craque quand je passe les vitesses",
+   "les vitesses craquent"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "kind": "car",
+  "answer": "Des craquements au passage des rapports viennent d'un embrayage qui débraye mal (commande, disque collant) ou de synchroniseurs usés.",
+  "checks": [
+   "Moteur tournant, pédale enfoncée 5 s : si la marche arrière craque, l'embrayage débraye mal",
+   "Contrôlez la commande d'embrayage (niveau, purge)",
+   "Contrôlez le niveau d'huile de boîte",
+   "Craquement sur un seul rapport : synchroniseur de ce rapport",
+   "Contrôlez la commande de boîte (câbles, rotules)"
+  ],
+  "parts": [
+   "synchronizer",
+   "gearbox",
+   "gear-selector",
+   "clutch-slave-cylinder",
+   "clutch-disc"
+  ],
+  "dtc": [],
+  "section": "gearbox-group",
+  "guide": "gearbox-grinding"
+ },
+ {
+  "id": "dual-mass-flywheel",
+  "patterns": [
+   "volant moteur bimasse",
+   "bimasse",
+   "volant moteur",
+   "claquement a l arret du moteur",
+   "vibrations au demarrage",
+   "bruit de ferraille au ralenti",
+   "volant moteur hs"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "kind": "car",
+  "answer": "Un volant bimasse usé donne des vibrations au démarrage et à l'arrêt du moteur, un claquement au ralenti qui disparaît embrayage enfoncé, et des à-coups à bas régime.",
+  "checks": [
+   "Écoutez au ralenti : le bruit change-t-il embrayage enfoncé ?",
+   "Observez les secousses à la coupure du moteur",
+   "Faites mesurer le jeu angulaire du volant (outil de diagnostic ou démontage)",
+   "Remplacez souvent avec le kit embrayage"
+  ],
+  "parts": [
+   "dual-mass-flywheel",
+   "clutch-disc",
+   "pressure-plate"
+  ],
+  "dtc": [],
+  "section": "engine-block-group",
+  "safety": "Dépose de boîte : batterie débranchée, véhicule sur pont ou chandelles, boîte soutenue par un cric de boîte.",
+  "guide": "clutch-slip-judder"
+ },
+ {
+  "id": "auto-gearbox",
+  "patterns": [
+   "boite automatique",
+   "boite auto a coups",
+   "boite auto patine",
+   "passage de vitesse brutal",
+   "boite auto en mode secours",
+   "bva",
+   "boite auto bloquee en 3",
+   "p0700",
+   "p0730"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "kind": "car",
+  "answer": "Une boîte automatique qui passe brutalement, patine ou se bloque sur un rapport (mode secours) peut venir du niveau/état de l'huile, d'une électrovanne ou d'un capteur.",
+  "checks": [
+   "Lisez les codes de la boîte (P0700 renvoie vers le calculateur de boîte)",
+   "Contrôlez le niveau et l'état de l'huile de boîte selon la méthode constructeur",
+   "Contrôlez les connecteurs du calculateur et des capteurs de vitesse",
+   "Une vidange de boîte auto doit suivre la procédure constructeur"
+  ],
+  "parts": [
+   "transmission-control-module",
+   "shift-solenoid",
+   "input-speed-sensor",
+   "output-speed-sensor",
+   "torque-converter",
+   "transmission-fluid-temp-sensor"
+  ],
+  "dtc": [
+   "P0700",
+   "P0730",
+   "P0715",
+   "P0720"
+  ],
+  "section": "gearbox-group"
+ },
+ {
+  "id": "cv-joint",
+  "patterns": [
+   "claquement en braquant",
+   "claque en tournant",
+   "bruit en virage",
+   "cardan",
+   "cardan claque",
+   "soufflet de cardan",
+   "soufflet dechire",
+   "cloc cloc en tournant",
+   "joint homocinetique"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel"
+  ],
+  "kind": "car",
+  "answer": "Un claquement régulier en braquant et en accélérant indique un joint homocinétique de cardan usé, souvent après un soufflet déchiré.",
+  "checks": [
+   "Roues braquées à fond, roulez doucement en cercle : claquement = joint extérieur",
+   "Inspectez les soufflets (déchirure, graisse projetée)",
+   "Contrôlez le jeu du cardan à la main",
+   "Soufflet déchiré récent : remplacez-le avant que le joint ne s'use"
+  ],
+  "parts": [
+   "cv-joint",
+   "cv-boot",
+   "driveshaft"
+  ],
+  "dtc": [],
+  "section": "driveline",
+  "safety": "Levage : cric sur un point de levage prévu puis chandelles sur sol dur ; ne passez jamais sous un véhicule tenu seulement par le cric.",
+  "guide": "cv-joint-click"
+ },
+ {
+  "id": "wheel-bearing",
+  "patterns": [
+   "roulement de roue",
+   "ronflement",
+   "bruit de roulement",
+   "ronronnement qui augmente avec la vitesse",
+   "bruit d avion",
+   "roulement hs",
+   "grondement",
+   "ca ronfle",
+   "ronflement qui augmente avec la vitesse"
+  ],
+  "fuel": [],
+  "answer": "Un ronflement qui augmente avec la vitesse et change en virage évoque un roulement de roue. Il peut aussi venir des pneus (usure irrégulière).",
+  "checks": [
+   "Notez si le bruit change en virage gauche/droite (le roulement chargé est du côté opposé au virage)",
+   "Roue levée, cherchez du jeu et tournez la roue à la main (grattement)",
+   "Contrôlez l'usure des pneus (crantage)",
+   "Contrôlez le capteur ABS si le roulement intègre la cible magnétique"
+  ],
+  "safety": "Levez le véhicule sur chandelles, jamais seulement sur le cric.",
+  "parts": [
+   "wheel-bearing",
+   "tyre",
+   "wheel-speed-sensor"
+  ],
+  "dtc": [],
+  "section": "driveline"
+ },
+ {
+  "id": "brake-squeal",
+  "patterns": [
+   "freins grincent",
+   "frein qui grince",
+   "bruit de frein",
+   "freins couinent",
+   "grincement au freinage",
+   "bruit metallique au freinage",
+   "frein qui siffle",
+   "ca couine au freinage",
+   "ca grince quand je freine"
+  ],
+  "fuel": [],
+  "answer": "Un grincement léger peut venir de plaquettes neuves ou de l'humidité. Un bruit métallique (frottement de métal) signifie des plaquettes usées jusqu'au support : remplacez immédiatement.",
+  "checks": [
+   "Contrôlez l'épaisseur des plaquettes (moins de 3 mm = à remplacer)",
+   "Contrôlez le témoin d'usure s'il existe",
+   "Vérifiez l'état des disques (rayures, lèvre, épaisseur mini)",
+   "Contrôlez que les étriers coulissent librement"
+  ],
+  "safety": "Freins : intervention de sécurité. En cas de doute, faites contrôler par un professionnel. Levage : cric sur un point de levage prévu puis chandelles sur sol dur ; ne passez jamais sous un véhicule tenu seulement par le cric.",
+  "parts": [
+   "brake-pad",
+   "brake-disc",
+   "caliper"
+  ],
+  "dtc": [],
+  "section": "brake-system",
+  "guide": "brake-noise"
+ },
+ {
+  "id": "brake-vibration",
+  "patterns": [
+   "vibration au freinage",
+   "volant vibre au freinage",
+   "pedale vibre",
+   "disques voiles",
+   "frein qui tremble",
+   "trepidation au freinage"
+  ],
+  "fuel": [],
+  "answer": "Des vibrations au freinage viennent le plus souvent de disques déformés ou à épaisseur irrégulière, plus rarement d'un jeu dans la suspension ou la direction.",
+  "checks": [
+   "Mesurez le voile et l'épaisseur des disques",
+   "Contrôlez les étriers (coulisseaux grippés = échauffement)",
+   "Contrôlez le jeu des rotules et triangles",
+   "Remplacez disques et plaquettes par paire (même essieu)"
+  ],
+  "safety": "Freins : intervention de sécurité, couple de serrage des roues à respecter. Levage : cric sur un point de levage prévu puis chandelles sur sol dur ; ne passez jamais sous un véhicule tenu seulement par le cric.",
+  "parts": [
+   "brake-disc",
+   "brake-pad",
+   "caliper",
+   "ball-joint",
+   "control-arm"
+  ],
+  "dtc": [],
+  "section": "brake-system",
+  "guide": "vibration-speed"
+ },
+ {
+  "id": "brake-pedal-soft",
+  "patterns": [
+   "pedale de frein molle",
+   "pedale de frein s enfonce",
+   "pedale spongieuse",
+   "freins ne freinent plus",
+   "pedale va au plancher",
+   "freinage faible",
+   "liquide de frein"
+  ],
+  "fuel": [],
+  "answer": "Une pédale de frein molle ou qui s'enfonce indique de l'air dans le circuit, une fuite de liquide ou un maître-cylindre défaillant. C'est une panne de sécurité.",
+  "checks": [
+   "Ne roulez plus si la pédale descend au plancher",
+   "Contrôlez le niveau du bocal de liquide de frein",
+   "Recherchez une fuite aux roues, flexibles et raccords",
+   "Purgez le circuit (liquide âgé de plus de 2 ans = à remplacer)",
+   "Pédale qui s'enfonce lentement sans fuite : maître-cylindre"
+  ],
+  "safety": "Danger : ne roulez pas avec une pédale de frein qui s'enfonce. Faites remorquer le véhicule.",
+  "parts": [
+   "brake-fluid-reservoir",
+   "master-cylinder",
+   "brake-hose",
+   "caliper",
+   "wheel-cylinder"
+  ],
+  "dtc": [],
+  "section": "brake-system",
+  "guide": "brake-pedal-soft"
+ },
+ {
+  "id": "brake-pulls",
+  "patterns": [
+   "tire a gauche au freinage",
+   "tire a droite au freinage",
+   "deport au freinage",
+   "freine d un cote",
+   "frein qui chauffe",
+   "roue chaude",
+   "frein qui frotte",
+   "etrier grippe",
+   "ca tire a droite quand je freine",
+   "ca tire a gauche au freinage",
+   "tire au freinage"
+  ],
+  "fuel": [],
+  "answer": "Un véhicule qui tire d'un côté au freinage, ou une roue qui chauffe, évoque un étrier grippé, un flexible interne écrasé ou des plaquettes souillées.",
+  "checks": [
+   "Après un trajet, comparez prudemment la température des jantes",
+   "Contrôlez les coulisseaux et le piston d'étrier",
+   "Contrôlez les flexibles de frein (gonflement)",
+   "Contrôlez la pression des pneus et l'usure"
+  ],
+  "safety": "Freins : intervention de sécurité. Disques et jantes peuvent être brûlants. Levage : cric sur un point de levage prévu puis chandelles sur sol dur ; ne passez jamais sous un véhicule tenu seulement par le cric.",
+  "parts": [
+   "caliper",
+   "brake-hose",
+   "brake-pad",
+   "tyre"
+  ],
+  "dtc": [],
+  "section": "brake-system",
+  "guide": "pulls-to-side"
+ },
+ {
+  "id": "abs-light",
+  "patterns": [
+   "voyant abs",
+   "abs",
+   "voyant esp",
+   "esp",
+   "abs allume",
+   "voyant abs et esp",
+   "capteur abs",
+   "abs se declenche tout seul",
+   "voyant antipatinage"
+  ],
+  "fuel": [],
+  "answer": "Le voyant ABS/ESP signale un défaut du système antiblocage, le plus souvent un capteur de vitesse de roue (connecteur, cible magnétique encrassée) ou une tension basse. Le freinage de base fonctionne, sans l'ABS.",
+  "checks": [
+   "Lisez les codes du calculateur ABS (un lecteur compatible ABS est nécessaire)",
+   "Contrôlez le capteur de roue désigné : connecteur, câble, propreté",
+   "Contrôlez la cible (couronne ou bague magnétique du roulement)",
+   "Mesurez la tension batterie",
+   "Contrôlez le niveau de liquide de frein"
+  ],
+  "safety": "Sans ABS, les roues peuvent bloquer au freinage d'urgence : conduisez avec prudence.",
+  "parts": [
+   "wheel-speed-sensor",
+   "abs-module",
+   "wheel-bearing",
+   "brake-fluid-reservoir"
+  ],
+  "dtc": [
+   "U0121"
+  ],
+  "views": [
+   "wiring-abs"
+  ],
+  "section": "brake-system",
+  "guide": "abs-esp-light"
+ },
+ {
+  "id": "brake-warning-light",
+  "patterns": [
+   "voyant frein",
+   "voyant frein rouge",
+   "voyant frein allume",
+   "voyant point d exclamation",
+   "niveau liquide de frein bas",
+   "voyant usure plaquettes"
+  ],
+  "fuel": [],
+  "answer": "Le voyant de frein rouge indique un frein de stationnement serré, un niveau de liquide de frein bas ou un défaut du circuit. Un niveau bas signale souvent des plaquettes usées... ou une fuite.",
+  "checks": [
+   "Vérifiez que le frein à main est complètement desserré",
+   "Contrôlez le niveau du bocal de liquide de frein",
+   "Contrôlez l'épaisseur des plaquettes",
+   "Recherchez une fuite si le niveau a baissé franchement"
+  ],
+  "safety": "Voyant de frein rouge + pédale anormale : ne roulez pas.",
+  "parts": [
+   "brake-fluid-reservoir",
+   "brake-pad",
+   "handbrake-cable",
+   "electric-parking-brake"
+  ],
+  "dtc": [],
+  "section": "brake-system"
+ },
+ {
+  "id": "parking-brake",
+  "patterns": [
+   "frein a main",
+   "frein a main ne serre plus",
+   "frein de parking electrique",
+   "frein a main bloque",
+   "defaut frein de parking",
+   "epb",
+   "frein a main reste serre"
+  ],
+  "fuel": [],
+  "kind": "car",
+  "answer": "Un frein à main qui ne tient plus vient d'un câble détendu/grippé ou de garnitures usées ; un frein de parking électrique en défaut d'un moteur d'étrier, d'un connecteur ou d'une tension batterie basse.",
+  "checks": [
+   "Comptez les crans de frein à main : trop de crans = réglage ou garnitures",
+   "Contrôlez que les câbles coulissent librement",
+   "Frein électrique : lisez les codes et mesurez la tension batterie",
+   "Changement de plaquettes arrière sur frein électrique : passez en mode atelier avec un outil"
+  ],
+  "safety": "Calez les roues avant de travailler sur le frein de stationnement.",
+  "parts": [
+   "handbrake-cable",
+   "electric-parking-brake",
+   "brake-shoe",
+   "caliper"
+  ],
+  "dtc": [],
+  "section": "brake-system"
+ },
+ {
+  "id": "brake-pads-wear",
+  "patterns": [
+   "plaquettes de frein",
+   "changer les plaquettes",
+   "plaquettes usees",
+   "quand changer les plaquettes",
+   "disques de frein",
+   "changer les disques",
+   "epaisseur plaquette"
+  ],
+  "fuel": [],
+  "priority": -0.3,
+  "answer": "Les plaquettes se remplacent sous environ 3 mm de garniture, toujours par essieu complet. Les disques se remplacent sous l'épaisseur mini gravée sur le disque.",
+  "checks": [
+   "Contrôlez l'épaisseur des plaquettes intérieure et extérieure",
+   "Mesurez l'épaisseur du disque et comparez au mini gravé",
+   "Remplacez par paire sur le même essieu",
+   "Après remplacement, pompez la pédale avant de rouler et faites un rodage doux"
+  ],
+  "safety": "Freins : intervention de sécurité. Pompez la pédale avant de rouler. Levage : cric sur un point de levage prévu puis chandelles sur sol dur ; ne passez jamais sous un véhicule tenu seulement par le cric.",
+  "parts": [
+   "brake-pad",
+   "brake-disc",
+   "caliper",
+   "brake-drum",
+   "brake-shoe"
+  ],
+  "dtc": [],
+  "section": "brake-system"
+ },
+ {
+  "id": "suspension-noise",
+  "patterns": [
+   "bruit de suspension",
+   "claquement sur les bosses",
+   "bruit sur les dos d ane",
+   "cloc sur les bosses",
+   "biellette de barre stabilisatrice",
+   "bruit train avant",
+   "grincement suspension",
+   "silentbloc",
+   "ca tape sur les bosses",
+   "ca cogne sur les bosses",
+   "ca tape a l avant",
+   "ca cogne a l avant",
+   "claque sur les bosses"
+  ],
+  "fuel": [],
+  "kind": "car",
+  "answer": "Les claquements sur bosses viennent le plus souvent des biellettes de barre stabilisatrice, puis des silentblocs, rotules, coupelles ou amortisseurs.",
+  "checks": [
+   "Véhicule au sol, secouez la barre stabilisatrice : jeu aux biellettes ?",
+   "Contrôlez les silentblocs de triangle (caoutchouc fendu)",
+   "Contrôlez les rotules de suspension (jeu roue levée)",
+   "Coupelles d'amortisseur : bruit en braquant à l'arrêt",
+   "Contrôlez la fixation des amortisseurs"
+  ],
+  "parts": [
+   "anti-roll-bar-link",
+   "suspension-bushing",
+   "ball-joint",
+   "strut-mount",
+   "shock-absorber",
+   "control-arm"
+  ],
+  "dtc": [],
+  "section": "suspension-car",
+  "safety": "Levage : cric sur un point de levage prévu puis chandelles sur sol dur ; ne passez jamais sous un véhicule tenu seulement par le cric."
+ },
+ {
+  "id": "shock-absorber",
+  "patterns": [
+   "amortisseur",
+   "amortisseurs uses",
+   "amortisseur hs",
+   "voiture rebondit",
+   "amortisseur qui fuit",
+   "tenue de route",
+   "vehicule flotte"
+  ],
+  "fuel": [],
+  "answer": "Des amortisseurs usés font rebondir la caisse, allongent les distances de freinage et usent les pneus. Une trace d'huile sur le corps signale une fuite.",
+  "checks": [
+   "Appuyez fort sur un coin et relâchez : plus d'une oscillation = amortisseur fatigué",
+   "Inspectez le corps de l'amortisseur (huile)",
+   "Contrôlez l'usure des pneus (méplats)",
+   "Remplacez toujours par paire sur le même essieu"
+  ],
+  "parts": [
+   "shock-absorber",
+   "strut-mount",
+   "coil-spring",
+   "rear-monoshock"
+  ],
+  "dtc": [],
+  "section": "suspension-car",
+  "safety": "Levage : cric sur un point de levage prévu puis chandelles sur sol dur ; ne passez jamais sous un véhicule tenu seulement par le cric."
+ },
+ {
+  "id": "broken-spring",
+  "patterns": [
+   "ressort casse",
+   "ressort de suspension casse",
+   "voiture penche",
+   "vehicule plus bas d un cote",
+   "bruit de ressort"
+  ],
+  "fuel": [],
+  "kind": "car",
+  "answer": "Un ressort cassé (souvent la dernière spire) fait pencher la voiture et peut faire un bruit métallique en braquant ; le morceau peut abîmer le pneu.",
+  "checks": [
+   "Comparez la hauteur de caisse gauche/droite",
+   "Inspectez les spires (basse et haute)",
+   "Vérifiez que le ressort ne touche pas le pneu",
+   "Remplacez par paire"
+  ],
+  "safety": "Un ressort se démonte uniquement avec un compresseur de ressort adapté : danger.",
+  "parts": [
+   "coil-spring",
+   "shock-absorber",
+   "tyre"
+  ],
+  "dtc": [],
+  "section": "suspension-car"
+ },
+ {
+  "id": "steering-heavy",
+  "patterns": [
+   "direction dure",
+   "volant dur",
+   "plus d assistance",
+   "direction assistee",
+   "direction lourde",
+   "voyant direction",
+   "direction assistee hs",
+   "bruit pompe de direction"
+  ],
+  "fuel": [],
+  "kind": "car",
+  "answer": "Une direction devenue dure vient d'une assistance défaillante : niveau d'huile, courroie ou pompe (hydraulique), ou défaut électrique (direction électrique : tension, capteur, moteur). Vérifiez aussi la pression des pneus.",
+  "checks": [
+   "Contrôlez la pression des pneus avant",
+   "Direction hydraulique : niveau du bocal, fuite, courroie d'accessoires",
+   "Direction électrique : lisez les codes et mesurez la tension batterie",
+   "Contrôlez les rotules (grippage)"
+  ],
+  "safety": "Perte d'assistance : le véhicule reste dirigeable mais avec un effort élevé, roulez prudemment.",
+  "parts": [
+   "power-steering-pump",
+   "eps-motor",
+   "steering-rack",
+   "steering-angle-sensor",
+   "tie-rod-end",
+   "accessory-belt"
+  ],
+  "dtc": [],
+  "section": "steering"
+ },
+ {
+  "id": "steering-play",
+  "patterns": [
+   "jeu dans la direction",
+   "jeu dans le volant",
+   "claquement direction",
+   "rotule de direction",
+   "biellette de direction",
+   "cremaillere",
+   "direction flottante"
+  ],
+  "fuel": [],
+  "kind": "car",
+  "answer": "Du jeu ou un claquement dans la direction vient des rotules ou biellettes de direction, ou de la crémaillère. C'est un point de sécurité contrôlé au contrôle technique.",
+  "checks": [
+   "Roues au sol, faites bouger le volant de gauche à droite et observez les rotules",
+   "Roue levée, secouez-la à 9 h - 3 h : jeu = direction",
+   "Contrôlez les soufflets de crémaillère",
+   "Après remplacement, faites régler la géométrie"
+  ],
+  "safety": "Jeu de direction important : ne roulez pas, risque de perte de contrôle. Levage : cric sur un point de levage prévu puis chandelles sur sol dur ; ne passez jamais sous un véhicule tenu seulement par le cric.",
+  "parts": [
+   "tie-rod-end",
+   "tie-rod",
+   "steering-rack",
+   "steering-column"
+  ],
+  "dtc": [],
+  "section": "steering"
+ },
+ {
+  "id": "pulls-to-side",
+  "patterns": [
+   "tire a droite",
+   "tire a gauche",
+   "la voiture tire d un cote",
+   "deporte",
+   "volant de travers",
+   "parallelisme",
+   "geometrie",
+   "ca part a droite",
+   "ca part a gauche",
+   "volant pas droit",
+   "la voiture part d un cote"
+  ],
+  "fuel": [],
+  "kind": "car",
+  "answer": "Un véhicule qui tire d'un côté en roulant (sans freiner) vient en priorité de la pression des pneus, puis de la géométrie (parallélisme, carrossage) ou d'un frein qui frotte.",
+  "checks": [
+   "Contrôlez et égalisez la pression des pneus",
+   "Permutez les roues avant gauche/droite : si le défaut change de côté, c'est un pneu",
+   "Vérifiez qu'aucun frein ne frotte (roue chaude)",
+   "Faites contrôler la géométrie"
+  ],
+  "parts": [
+   "tyre",
+   "tie-rod-end",
+   "control-arm",
+   "caliper"
+  ],
+  "dtc": [],
+  "section": "wheels",
+  "guide": "pulls-to-side"
+ },
+ {
+  "id": "wheel-vibration-speed",
+  "patterns": [
+   "volant vibre a haute vitesse",
+   "vibrations a 110",
+   "vibre a 130",
+   "vibrations autoroute",
+   "equilibrage",
+   "vibration en roulant",
+   "volant qui tremble"
+  ],
+  "fuel": [],
+  "answer": "Des vibrations à partir de 90-130 km/h viennent le plus souvent d'un mauvais équilibrage, d'une jante voilée ou d'un pneu déformé.",
+  "checks": [
+   "Faites équilibrer les roues",
+   "Contrôlez la jante (choc trottoir) et le pneu (hernie)",
+   "Contrôlez le serrage des roues",
+   "Si vibrations en accélérant seulement : cardans"
+  ],
+  "parts": [
+   "tyre",
+   "wheel-rim",
+   "driveshaft",
+   "wheel-bearing"
+  ],
+  "dtc": [],
+  "section": "wheels",
+  "guide": "vibration-speed"
+ },
+ {
+  "id": "tyres",
+  "patterns": [
+   "voyant pression pneus",
+   "pression des pneus",
+   "pneu crevé",
+   "crevaison",
+   "pneus uses",
+   "usure irreguliere des pneus",
+   "tpms",
+   "pneu degonfle",
+   "usure des pneus"
+  ],
+  "fuel": [],
+  "answer": "Le voyant de pression des pneus signale un pneu sous-gonflé (ou un capteur en défaut). Une usure irrégulière révèle un défaut de pression, de géométrie ou d'amortisseurs.",
+  "checks": [
+   "Contrôlez la pression à froid (valeurs sur la portière ou la trappe à carburant)",
+   "Inspectez les pneus (clou, hernie, profondeur mini 1,6 mm)",
+   "Réinitialisez le système de surveillance après regonflage",
+   "Usure sur un bord : géométrie ; au centre : surgonflage ; sur les deux bords : sous-gonflage"
+  ],
+  "safety": "Pneu endommagé (hernie, entaille) : remplacez-le avant de rouler.",
+  "parts": [
+   "tyre",
+   "tpms-sensor",
+   "wheel-rim"
+  ],
+  "dtc": [],
+  "section": "wheels"
+ },
+ {
+  "id": "ac-not-cold",
+  "patterns": [
+   "clim ne refroidit pas",
+   "clim ne marche pas",
+   "climatisation ne fait pas de froid",
+   "clim souffle chaud",
+   "recharge clim",
+   "climatisation hs",
+   "compresseur de clim",
+   "clim"
+  ],
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "kind": "car",
+  "answer": "Une climatisation qui ne refroidit plus manque le plus souvent de gaz (micro-fuite). Autres causes : compresseur qui ne s'enclenche pas, capteur de pression, condenseur bouché ou ventilateur.",
+  "checks": [
+   "Clim allumée moteur tournant, vérifiez si l'embrayage du compresseur s'enclenche",
+   "Contrôlez le fusible et le relais du compresseur",
+   "Contrôlez la propreté du condenseur (devant le radiateur)",
+   "Faites contrôler la charge et l'étanchéité par un professionnel équipé"
+  ],
+  "safety": "Le gaz de climatisation se manipule avec un équipement de récupération (réglementé) : ne le relâchez pas.",
+  "parts": [
+   "ac-compressor",
+   "ac-condenser",
+   "ac-pressure-sensor",
+   "evaporator",
+   "ac-expansion-valve",
+   "cooling-fan"
+  ],
+  "dtc": [],
+  "section": "ac",
+  "negated_patterns": [
+   "clim souffle froid",
+   "clim refroidit",
+   "air froid"
+  ],
+  "guide": "ac-not-cold"
+ },
+ {
+  "id": "ac-smell",
+  "patterns": [
+   "odeur clim",
+   "mauvaise odeur ventilation",
+   "clim sent mauvais",
+   "odeur de moisi",
+   "filtre habitacle",
+   "filtre a pollen",
+   "buee sur les vitres"
+  ],
+  "fuel": [],
+  "kind": "car",
+  "answer": "Une odeur de moisi à la ventilation vient de bactéries sur l'évaporateur et d'un filtre d'habitacle saturé. Un filtre colmaté réduit aussi le débit d'air et favorise la buée.",
+  "checks": [
+   "Remplacez le filtre d'habitacle (chaque année environ)",
+   "Utilisez un traitement d'évaporateur adapté",
+   "Vérifiez que l'évacuation d'eau de l'évaporateur n'est pas bouchée",
+   "Coupez la clim quelques minutes avant l'arrivée en laissant la ventilation"
+  ],
+  "parts": [
+   "cabin-filter",
+   "evaporator",
+   "blower-motor"
+  ],
+  "dtc": [],
+  "section": "ac"
+ },
+ {
+  "id": "blower",
+  "patterns": [
+   "ventilation ne marche plus",
+   "pulseur",
+   "soufflerie ne marche plus",
+   "ventilation habitacle",
+   "ventilation marche seulement en 4",
+   "plus de ventilation",
+   "resistance de pulseur"
+  ],
+  "fuel": [],
+  "kind": "car",
+  "answer": "Une soufflerie muette vient d'un fusible, du pulseur lui-même ou de sa commande. Si seule la vitesse maximale fonctionne, la résistance (ou le module) du pulseur est en cause.",
+  "checks": [
+   "Contrôlez le fusible de soufflerie",
+   "Ne fonctionne qu'en vitesse max : résistance/module de pulseur",
+   "Mesurez 12 V au connecteur du pulseur, commande activée",
+   "Tapotez le carter du pulseur : s'il repart, le moteur est usé"
+  ],
+  "parts": [
+   "blower-motor",
+   "fuse-ato",
+   "relay",
+   "cabin-filter"
+  ],
+  "dtc": [],
+  "views": [
+   "fuse-box-generic"
+  ],
+  "section": "ac"
+ },
+ {
+  "id": "hybrid-warning",
+  "patterns": [
+   "voyant systeme hybride",
+   "defaut systeme hybride",
+   "voyant haute tension",
+   "batterie hybride",
+   "batterie de traction",
+   "voyant tortue",
+   "puissance limitee electrique",
+   "verifier systeme hybride"
+  ],
+  "fuel": [
+   "hybrid",
+   "electric"
+  ],
+  "kind": "car",
+  "answer": "Un défaut du système hybride ou électrique (batterie de traction, onduleur, refroidissement) limite souvent la puissance. Le diagnostic demande un outil et une habilitation haute tension.",
+  "checks": [
+   "Lisez les codes avec un outil compatible",
+   "Contrôlez la batterie 12 V (une 12 V faible provoque beaucoup de défauts)",
+   "Contrôlez le niveau du liquide de refroidissement de l'électronique s'il existe",
+   "Ne démontez aucun élément haute tension"
+  ],
+  "safety": "Haute tension (câbles orange) : danger de mort. Intervention réservée aux personnes habilitées.",
+  "parts": [
+   "hv-battery",
+   "inverter",
+   "dc-dc-converter",
+   "bms",
+   "battery"
+  ],
+  "dtc": [],
+  "section": "hv-components"
+ },
+ {
+  "id": "ev-not-charging",
+  "patterns": [
+   "ne charge pas",
+   "recharge impossible",
+   "la borne ne charge pas",
+   "prise de recharge",
+   "cable de recharge",
+   "chargeur embarque",
+   "charge interrompue"
+  ],
+  "fuel": [
+   "electric",
+   "hybrid"
+  ],
+  "kind": "car",
+  "answer": "Une recharge impossible vient souvent de la borne ou du câble, du verrouillage de la prise, d'une programmation de charge ou du chargeur embarqué.",
+  "checks": [
+   "Essayez une autre borne ou un autre câble",
+   "Vérifiez la programmation de charge (heure différée)",
+   "Contrôlez la prise : corps étranger, verrouillage",
+   "Contrôlez la batterie 12 V",
+   "Lisez les codes si le défaut persiste"
+  ],
+  "safety": "N'introduisez rien dans la prise de recharge et ne démontez pas le chargeur : haute tension.",
+  "parts": [
+   "charging-port",
+   "onboard-charger",
+   "hv-battery",
+   "battery"
+  ],
+  "dtc": [],
+  "section": "hv-components"
+ },
+ {
+  "id": "moto-chain-maintenance",
+  "patterns": [
+   "chaine moto",
+   "graisser la chaine",
+   "tension de chaine",
+   "chaine detendue",
+   "regler la chaine",
+   "entretien chaine",
+   "chaine seche"
+  ],
+  "fuel": [
+   "petrol"
+  ],
+  "kind": "moto",
+  "answer": "La chaîne de moto se graisse tous les 500 à 1000 km (et après la pluie) et se règle selon la flèche indiquée par le constructeur (souvent 20 à 35 mm).",
+  "checks": [
+   "Moto sur béquille, mesurez la flèche au point le plus tendu",
+   "Nettoyez puis graissez côté intérieur, moteur arrêté",
+   "Réglez avec les tendeurs en gardant la roue alignée (repères des deux côtés)",
+   "Resserrez l'axe de roue au couple"
+  ],
+  "safety": "Ne graissez jamais la chaîne moteur tournant ou roue entraînée par le moteur.",
+  "parts": [
+   "drive-chain",
+   "chain-adjuster",
+   "rear-sprocket",
+   "front-sprocket"
+  ],
+  "dtc": [],
+  "section": "final-drive-moto",
+  "guide": "moto-chain"
+ },
+ {
+  "id": "moto-chain-worn",
+  "patterns": [
+   "kit chaine",
+   "chaine usee",
+   "bruit de chaine moto",
+   "chaine qui saute",
+   "couronne usee",
+   "pignon use",
+   "a coups transmission moto"
+  ],
+  "fuel": [
+   "petrol"
+  ],
+  "kind": "moto",
+  "answer": "Une chaîne qui fait du bruit, qui se détend vite ou qui se décolle de la couronne à l'arrière est usée : remplacez le kit complet (chaîne, pignon, couronne).",
+  "checks": [
+   "Tirez la chaîne vers l'arrière sur la couronne : si elle découvre plus d'une demi-dent, elle est usée",
+   "Contrôlez les dents de couronne (pointues, en crochet)",
+   "Recherchez des points durs en tournant la roue",
+   "Contrôlez les silentblocs de couronne (jeu de la couronne)"
+  ],
+  "parts": [
+   "drive-chain",
+   "front-sprocket",
+   "rear-sprocket",
+   "rear-hub-damper"
+  ],
+  "dtc": [],
+  "section": "final-drive-moto",
+  "guide": "moto-chain"
+ },
+ {
+  "id": "moto-no-start",
+  "patterns": [
+   "moto ne demarre pas",
+   "moto demarre pas",
+   "scooter ne demarre pas",
+   "moto refuse de demarrer",
+   "demarreur moto",
+   "moto ne veut pas demarrer"
+  ],
+  "fuel": [
+   "petrol"
+  ],
+  "kind": "moto",
+  "answer": "Une moto qui ne démarre pas : vérifiez d'abord les sécurités (coupe-circuit, béquille latérale, embrayage, point mort), puis batterie, carburant et étincelle.",
+  "checks": [
+   "Coupe-circuit sur RUN, point mort, béquille relevée, embrayage tiré",
+   "Mesurez la batterie (12,6 V au repos)",
+   "Vérifiez le robinet d'essence et le niveau",
+   "Contrôlez la bougie et la présence d'étincelle",
+   "Après hivernage : carburateur ou essence vieillie"
+  ],
+  "parts": [
+   "battery",
+   "starter-motor",
+   "spark-plug",
+   "ignition-coil",
+   "carburetor",
+   "fuel-pump"
+  ],
+  "dtc": [],
+  "views": [
+   "wiring-moto-starting"
+  ],
+  "section": "charging-starting",
+  "guide": "moto-no-start"
+ },
+ {
+  "id": "moto-carburetor",
+  "patterns": [
+   "carburateur",
+   "carbu",
+   "carburateur encrasse",
+   "gicleur",
+   "starter moto",
+   "cuve du carburateur",
+   "moto tousse",
+   "apres hivernage",
+   "essence vieille"
+  ],
+  "fuel": [
+   "petrol"
+  ],
+  "kind": "moto",
+  "answer": "Un carburateur encrassé (souvent après plusieurs mois d'arrêt) donne démarrage difficile, ralenti instable et trous à l'accélération. L'essence vieillie laisse des dépôts dans les gicleurs.",
+  "checks": [
+   "Vidangez la cuve par sa vis de purge et remettez de l'essence fraîche",
+   "Contrôlez le fonctionnement du starter",
+   "Démontez et nettoyez gicleurs et passages (sans les agrandir)",
+   "Contrôlez le niveau de cuve et le pointeau",
+   "Contrôlez le filtre à air"
+  ],
+  "parts": [
+   "carburetor",
+   "float-bowl",
+   "main-jet",
+   "choke",
+   "air-filter"
+  ],
+  "dtc": [],
+  "section": "carburation",
+  "guide": "moto-carburetor"
+ },
+ {
+  "id": "moto-injection",
+  "patterns": [
+   "injection moto",
+   "voyant injection moto",
+   "ralenti moto instable",
+   "moto broute",
+   "moto cale au ralenti",
+   "moto a coups bas regime"
+  ],
+  "fuel": [
+   "petrol"
+  ],
+  "kind": "moto",
+  "answer": "Sur une moto à injection, un ralenti instable ou des à-coups viennent d'une prise d'air, d'un papillon déréglé, d'un injecteur encrassé ou d'un capteur.",
+  "checks": [
+   "Lisez les codes défaut (prise diagnostic ou procédure de clignotement constructeur)",
+   "Contrôlez les pipes d'admission (fissures = prise d'air)",
+   "Contrôlez la bougie",
+   "Moto bicylindre/4 cylindres : la synchronisation des papillons peut être nécessaire"
+  ],
+  "parts": [
+   "injector",
+   "throttle-body",
+   "spark-plug",
+   "intake-manifold"
+  ],
+  "dtc": [],
+  "section": "fuel-supply"
+ },
+ {
+  "id": "moto-clutch",
+  "patterns": [
+   "embrayage moto",
+   "embrayage moto patine",
+   "embrayage moto colle",
+   "point mort difficile",
+   "embrayage moto dur",
+   "levier d embrayage"
+  ],
+  "fuel": [
+   "petrol"
+  ],
+  "kind": "moto",
+  "answer": "L'embrayage multidisque à bain d'huile d'une moto patine quand les disques sont usés, les ressorts fatigués ou l'huile inadaptée (huile auto avec additifs friction).",
+  "checks": [
+   "Vérifiez la garde du levier (câble) ou le niveau de liquide (hydraulique)",
+   "Utilisez une huile moto compatible embrayage (norme JASO MA)",
+   "Contrôlez l'épaisseur des disques garnis et les ressorts",
+   "Point mort difficile moteur chaud : embrayage qui colle ou huile"
+  ],
+  "parts": [
+   "wet-clutch-pack",
+   "clutch-cable",
+   "clutch-slave-cylinder"
+  ],
+  "dtc": [],
+  "section": "clutch"
+ },
+ {
+  "id": "scooter-cvt",
+  "patterns": [
+   "variateur",
+   "galets de variateur",
+   "courroie de scooter",
+   "scooter ne monte plus en vitesse",
+   "scooter a coups au demarrage",
+   "scooter broute au demarrage",
+   "transmission scooter",
+   "cvt",
+   "courroie de variateur"
+  ],
+  "fuel": [
+   "petrol"
+  ],
+  "kind": "moto",
+  "answer": "Sur un scooter, la transmission à variation continue (CVT) s'use : galets aplatis, courroie usée ou glacée, embrayage centrifuge et cloche marqués. Symptômes : broutage au démarrage, vitesse max en baisse.",
+  "checks": [
+   "Contrôlez la largeur de la courroie (minimum constructeur) et son état",
+   "Contrôlez les galets (méplats)",
+   "Broutage au départ : embrayage centrifuge et cloche",
+   "Nettoyez le carter (poussière de courroie)",
+   "Remplacez courroie et galets ensemble"
+  ],
+  "parts": [
+   "cvt-belt",
+   "variator",
+   "variator-rollers",
+   "cvt-clutch"
+  ],
+  "dtc": [],
+  "section": "final-drive-moto"
+ },
+ {
+  "id": "moto-charging",
+  "patterns": [
+   "moto batterie se decharge",
+   "batterie moto a plat",
+   "moto ne charge pas",
+   "stator",
+   "regulateur redresseur",
+   "regulateur moto",
+   "voyant batterie moto",
+   "charge moto"
+  ],
+  "fuel": [
+   "petrol"
+  ],
+  "kind": "moto",
+  "answer": "Sur moto, la charge passe par le stator (alternateur dans le carter) et le régulateur-redresseur. Une batterie qui se vide en roulant indique souvent un régulateur ou un stator défaillant, ou une connexion chauffée.",
+  "checks": [
+   "Mesurez la batterie au repos (12,6 V) puis moteur à 5000 tr/min : 13,5 à 14,8 V attendus",
+   "Contrôlez le connecteur stator → régulateur (bornes brunies ou fondues)",
+   "Mesurez la tension alternative du stator entre phases (valeurs égales entre les trois fils)",
+   "Vérifiez qu'aucune phase du stator ne touche la masse",
+   "Batterie testée en charge : remplacez-la si elle ne tient pas"
+  ],
+  "parts": [
+   "stator",
+   "rectifier-regulator",
+   "battery",
+   "connector"
+  ],
+  "dtc": [],
+  "views": [
+   "wiring-moto-charging"
+  ],
+  "section": "charging-starting"
+ },
+ {
+  "id": "fork-seal",
+  "patterns": [
+   "spi de fourche",
+   "fourche fuit",
+   "joint spi de fourche",
+   "fuite de fourche",
+   "huile sur le tube de fourche",
+   "fourche molle"
+  ],
+  "fuel": [
+   "petrol"
+  ],
+  "kind": "moto",
+  "answer": "Un joint spi de fourche qui fuit laisse de l'huile sur le tube, souvent à cause de saleté ou d'un tube marqué. L'huile peut atteindre les freins.",
+  "checks": [
+   "Nettoyez le tube et le joint, puis observez après quelques kilomètres",
+   "Contrôlez les tubes (rouille, impacts)",
+   "Essayez un nettoyage du joint avec un outil adapté",
+   "Remplacez les joints et l'huile de fourche, des deux côtés"
+  ],
+  "safety": "De l'huile sur le disque ou les plaquettes supprime le freinage : nettoyez/remplacez avant de rouler.",
+  "parts": [
+   "fork-seal",
+   "front-fork"
+  ],
+  "dtc": [],
+  "section": "suspension-moto"
+ },
+ {
+  "id": "moto-steering-head",
+  "patterns": [
+   "jeu de direction moto",
+   "roulements de direction",
+   "guidonnage",
+   "louvoiement",
+   "moto guidonne",
+   "direction crantee moto",
+   "colonne de direction moto"
+  ],
+  "fuel": [
+   "petrol"
+  ],
+  "kind": "moto",
+  "answer": "Un jeu ou un point dur dans la colonne de direction donne guidonnage, cognement au freinage ou une direction « crantée » au centre.",
+  "checks": [
+   "Roue avant levée, tournez le guidon : point dur au centre = roulements marqués",
+   "Tirez/poussez le bas de fourche : jeu = roulements desserrés ou usés",
+   "Contrôlez aussi la pression et l'usure du pneu avant",
+   "Resserrez ou remplacez les roulements selon le constructeur"
+  ],
+  "safety": "Guidonnage à haute vitesse : ne freinez pas brutalement, relâchez progressivement les gaz.",
+  "parts": [
+   "steering-head-bearing",
+   "front-fork",
+   "tyre"
+  ],
+  "dtc": [],
+  "section": "suspension-moto"
+ },
+ {
+  "id": "moto-brakes",
+  "patterns": [
+   "frein moto",
+   "frein moto spongieux",
+   "plaquettes moto",
+   "levier de frein mou",
+   "frein avant moto",
+   "disque moto"
+  ],
+  "fuel": [
+   "petrol"
+  ],
+  "kind": "moto",
+  "answer": "Un levier de frein mou sur moto vient d'air ou de liquide usé dans le circuit, de plaquettes usées ou d'une durite fatiguée.",
+  "checks": [
+   "Contrôlez le niveau et la couleur du liquide (foncé = à remplacer)",
+   "Contrôlez l'épaisseur des plaquettes",
+   "Purgez le circuit (liquide renouvelé tous les 2 ans)",
+   "Contrôlez les durites et l'état des disques"
+  ],
+  "safety": "Freins : intervention de sécurité, testez à l'arrêt avant de rouler.",
+  "parts": [
+   "brake-pad",
+   "brake-disc",
+   "caliper",
+   "brake-hose",
+   "master-cylinder"
+  ],
+  "dtc": [],
+  "section": "brake-system"
+ },
+ {
+  "id": "moto-overheating",
+  "patterns": [
+   "moto chauffe",
+   "moto surchauffe",
+   "scooter chauffe",
+   "ventilateur moto",
+   "liquide de refroidissement moto"
+  ],
+  "fuel": [
+   "petrol"
+  ],
+  "kind": "moto",
+  "answer": "Une moto qui chauffe à l'arrêt ou dans les bouchons doit déclencher son ventilateur. Surchauffe : niveau de liquide, ventilateur (fusible, sonde), radiateur obstrué, ou mélange trop pauvre.",
+  "checks": [
+   "Contrôlez le niveau du vase à froid",
+   "Vérifiez que le ventilateur démarre (fusible, relais, sonde)",
+   "Nettoyez les ailettes du radiateur",
+   "Contrôlez la pompe à eau (fuite au trou témoin)"
+  ],
+  "safety": "N'ouvrez pas le bouchon de radiateur moteur chaud.",
+  "parts": [
+   "radiator",
+   "cooling-fan",
+   "coolant-temp-sensor",
+   "water-pump",
+   "expansion-tank"
+  ],
+  "dtc": [],
+  "section": "cooling-circuit"
+ },
+ {
+  "id": "burning-smell",
+  "patterns": [
+   "ca sent le brule",
+   "odeur de brule",
+   "sent le brule",
+   "odeur de chaud",
+   "sent le chaud",
+   "odeur de plastique brule",
+   "odeur de caoutchouc brule",
+   "odeur de crame",
+   "ca sent le crame"
+  ],
+  "fuel": [],
+  "answer": "Une odeur de brûlé a quelques causes classiques : embrayage qui patine (odeur âcre après une côte ou une manœuvre), frein qui reste serré (une roue nettement plus chaude), huile ou liquide de refroidissement qui coule sur l'échappement, ou un composant électrique qui chauffe (odeur de plastique). Sur diesel à FAP, une régénération peut aussi sentir le chaud.",
+  "checks": [
+   "Arrêtez-vous, coupez le moteur et regardez s'il sort de la fumée du capot ou d'une roue",
+   "Approchez la main des jantes sans les toucher : une roue bien plus chaude = étrier grippé ou frein à main qui reste serré",
+   "Moteur froid, cherchez de l'huile ou du liquide sur le collecteur, le turbo et l'échappement",
+   "[car] Odeur âcre après un démarrage en côte : embrayage qui patine",
+   "Odeur de plastique : contrôlez fusibles, pulseur de chauffage et faisceaux qui frottent ou chauffent",
+   "[dpf] Odeur de chaud à l'arrêt avec ventilateur qui tourne : régénération du FAP, normale si ponctuelle"
+  ],
+  "safety": "Fumée ou odeur de plastique brûlé : arrêtez-vous, coupez le contact et faites sortir les passagers. Si vous voyez des flammes, n'ouvrez pas le capot et appelez le 18 ou le 112.",
+  "parts": [
+   "clutch-disc",
+   "caliper",
+   "brake-pad",
+   "valve-cover-gasket",
+   "exhaust-manifold",
+   "wiring-harness",
+   "blower-motor"
+  ],
+  "dtc": [],
+  "section": "wiring-fuses-relays"
+ }
+]

@@ -1,0 +1,33 @@
+{
+  "data_version": "2026.10.27",
+  "changelog": [
+    {
+      "version": "2026.10.27",
+      "changes": [
+        "Suivi des dépenses par véhicule : catégories, totaux, coût au km indicatif, export CSV, section PDF",
+        "Pré-contrôle technique : 116 points (voiture et moto) par fonction, cases par véhicule, synthèse et section PDF",
+        "Galerie des voyants : 63 voyants (51 auto, 12 moto) avec pictogrammes originaux, urgence et liens vers codes, pièces et guides",
+        "Journal « Mes codes relevés » par véhicule, intégré au rapport PDF",
+        "Badge d'urgence sur chaque code défaut (peut rouler / garage sous peu / arrêt conseillé)",
+        "Pistes « fréquemment observé sur votre moteur » croisant codes, fiches moteur et points faibles du modèle",
+        "289 fiches moteur et 909 vues (toutes les motorisations avec code moteur couvertes)",
+        "533 fiches modèles détaillées (80 % des motorisations)",
+        "+1 284 codes moteur dans le catalogue véhicules",
+        "1 022 codes défaut dont P2xxx, C0xxx, U0xxx et codes hybrides",
+        "Politique de confidentialité intégrée"
+      ],
+      "date": "2026-10-27"
+    },
+    {
+      "version": "2026.10.26",
+      "date": "2026-10-26",
+      "changes": [
+        "Première base de données : arborescence de 480 pièces, 42 vues éclatées et schémas électriques génériques.",
+        "994 codes défaut OBD-II P0000–P0999 en français, dont 436 fiches complètes (symptômes, causes, diagnostic).",
+        "Catalogue véhicules voiture et moto (952 modèles), assistant hors ligne (129 intentions).",
+        "Premières fiches modèle (model_specs).",
+        "Contrôle qualité automatique des données (tools/qa/check_data.py) et nouvelle famille moto/scooter électrique."
+      ]
+    }
+  ]
+}

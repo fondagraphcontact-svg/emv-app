@@ -1,0 +1,1329 @@
+{
+ "version": 1,
+ "disclaimer": "Pré-contrôle indicatif rédigé par EMV : il aide à préparer le passage mais ne remplace pas le contrôle technique ni l'avis d'un professionnel. Seul le centre agréé constate les défaillances.",
+ "functions": [
+  {
+   "id": "identification",
+   "name": "Identification",
+   "intro": "Le contrôleur vérifie que le véhicule présenté correspond à ses papiers."
+  },
+  {
+   "id": "freinage",
+   "name": "Freinage",
+   "intro": "Efficacité, équilibre et état des organes de freinage."
+  },
+  {
+   "id": "direction",
+   "name": "Direction",
+   "intro": "Précision et absence de jeu entre le volant (ou le guidon) et les roues."
+  },
+  {
+   "id": "visibilite",
+   "name": "Visibilité",
+   "intro": "Ce que le conducteur voit : vitrages, essuyage, rétroviseurs."
+  },
+  {
+   "id": "eclairage",
+   "name": "Éclairage et signalisation",
+   "intro": "Tous les feux, leur couleur, leur réglage et l'avertisseur sonore."
+  },
+  {
+   "id": "liaisons-sol",
+   "name": "Liaisons au sol",
+   "intro": "Pneus, roues, suspension et transmission jusqu'à la route."
+  },
+  {
+   "id": "structure",
+   "name": "Structure et carrosserie",
+   "intro": "Solidité de la caisse ou du cadre, ouvrants et fixations."
+  },
+  {
+   "id": "equipements",
+   "name": "Équipements",
+   "intro": "Ceintures, sièges, tableau de bord et équipements électriques."
+  },
+  {
+   "id": "nuisances",
+   "name": "Nuisances et pollution",
+   "intro": "Émissions, bruit et fuites de liquides."
+  }
+ ],
+ "levels": [
+  {
+   "id": "mineure",
+   "name": "Mineure",
+   "text": "Défaut sans effet notable sur la sécurité ou l'environnement : il est signalé, sans contre-visite, mais mérite d'être corrigé."
+  },
+  {
+   "id": "majeure",
+   "name": "Majeure",
+   "text": "Défaut pouvant compromettre la sécurité ou l'environnement : une contre-visite est à prévoir après réparation, dans le délai fixé."
+  },
+  {
+   "id": "critique",
+   "name": "Critique",
+   "text": "Danger direct et immédiat : contre-visite obligatoire et usage du véhicule très limité après le contrôle. À réparer avant de rouler."
+  }
+ ],
+ "points": [
+  {
+   "id": "car-plates",
+   "function": "identification",
+   "title": "Plaques d'immatriculation",
+   "check": "Les deux plaques sont présentes, bien fixées, lisibles et portent le même numéro que le certificat d'immatriculation.",
+   "level": "majeure",
+   "advice": "Nettoyez-les et remplacez une plaque fendue, décolorée ou mal fixée avant le passage.",
+   "kind": "car"
+  },
+  {
+   "id": "car-vin",
+   "function": "identification",
+   "title": "Numéro d'identification (VIN)",
+   "check": "Repérez le numéro frappé sur la caisse (souvent en bas du pare-brise ou dans le compartiment moteur) et comparez-le au certificat.",
+   "level": "majeure",
+   "advice": "Dégagez son accès (tapis, cache, saleté) pour que le contrôleur le lise sans démontage.",
+   "kind": "car"
+  },
+  {
+   "id": "car-registration-doc",
+   "function": "identification",
+   "title": "Certificat d'immatriculation",
+   "check": "Préparez l'original du certificat et vérifiez que marque, type et énergie correspondent bien au véhicule.",
+   "level": "majeure",
+   "advice": "Sans document valide, le contrôle peut être refusé : vérifiez-le la veille.",
+   "kind": "car"
+  },
+  {
+   "id": "car-maker-plate",
+   "function": "identification",
+   "title": "Plaque ou étiquette constructeur",
+   "check": "L'étiquette d'identification (souvent sur un pied de porte ou dans le compartiment moteur) est présente et lisible.",
+   "level": "mineure",
+   "advice": "Ne la recouvrez pas et ne la décollez pas lors d'un nettoyage.",
+   "kind": "car"
+  },
+  {
+   "id": "car-odometer",
+   "function": "identification",
+   "title": "Compteur kilométrique",
+   "check": "Le kilométrage s'affiche au contact et évolue normalement en roulant.",
+   "level": "mineure",
+   "advice": "Notez le kilométrage avant le passage : il figure sur le procès-verbal.",
+   "part": "instrument-cluster",
+   "kind": "car"
+  },
+  {
+   "id": "car-brake-pads",
+   "function": "freinage",
+   "title": "Plaquettes de frein",
+   "check": "Regardez à travers la jante l'épaisseur de garniture restante. Un sifflement métallique ou un témoin d'usure allumé indique une limite atteinte.",
+   "level": "majeure",
+   "advice": "Faites-les changer par paire sur un même essieu avant le contrôle si elles sont fines.",
+   "part": "brake-pad",
+   "guide": "brake-noise",
+   "light": "brake-pad-wear",
+   "kind": "car"
+  },
+  {
+   "id": "car-brake-discs",
+   "function": "freinage",
+   "title": "Disques de frein",
+   "check": "Roues froides, regardez la piste du disque : un rebord prononcé, des rayures profondes ou une forte corrosion sont à signaler.",
+   "level": "majeure",
+   "advice": "Disques et plaquettes se remplacent souvent ensemble : demandez un avis si un rebord est marqué.",
+   "part": "brake-disc",
+   "kind": "car"
+  },
+  {
+   "id": "car-brake-fluid",
+   "function": "freinage",
+   "title": "Niveau de liquide de frein",
+   "check": "Le niveau dans le bocal est entre les repères mini et maxi et le témoin de frein est éteint.",
+   "level": "majeure",
+   "advice": "Un niveau qui baisse signale une usure des plaquettes ou une fuite : ne complétez pas sans chercher la cause.",
+   "part": "brake-fluid-reservoir",
+   "light": "brake-system",
+   "kind": "car"
+  },
+  {
+   "id": "car-brake-hoses",
+   "function": "freinage",
+   "title": "Flexibles et canalisations de frein",
+   "check": "Derrière chaque roue, roues braquées, regardez les flexibles : pas de craquelure, de gonflement ni de trace humide. Les tuyaux rigides ne doivent pas être rongés par la rouille.",
+   "level": "critique",
+   "advice": "Une fuite de liquide de frein est un danger immédiat : ne roulez pas et faites réparer.",
+   "part": "brake-hose",
+   "kind": "car"
+  },
+  {
+   "id": "car-brake-pedal",
+   "function": "freinage",
+   "title": "Pédale de frein",
+   "check": "Moteur tournant, appuyez fermement et maintenez la pression : la pédale reste ferme et ne s'enfonce pas lentement.",
+   "level": "critique",
+   "advice": "Une pédale molle ou qui descend impose une réparation avant tout trajet.",
+   "part": "master-cylinder",
+   "guide": "brake-pedal-soft",
+   "kind": "car"
+  },
+  {
+   "id": "car-brake-balance",
+   "function": "freinage",
+   "title": "Efficacité et équilibre du freinage",
+   "check": "À basse vitesse sur une voie dégagée, freinez franchement : la voiture reste droite, sans vibration ni bruit anormal.",
+   "level": "majeure",
+   "advice": "Un tirage d'un côté vient souvent d'un étrier grippé ou d'un pneu sous-gonflé : vérifiez les pressions d'abord.",
+   "part": "caliper",
+   "guide": "pulls-to-side",
+   "kind": "car"
+  },
+  {
+   "id": "car-brake-drag",
+   "function": "freinage",
+   "title": "Frein qui frotte ou reste serré",
+   "check": "Après un trajet, approchez la main de chaque jante sans la toucher : une roue nettement plus chaude que les autres signale un frein qui frotte.",
+   "level": "majeure",
+   "advice": "Un étrier ou un cylindre de roue grippé use vite les pièces : faites-le contrôler.",
+   "part": "caliper-piston",
+   "kind": "car"
+  },
+  {
+   "id": "car-parking-brake",
+   "function": "freinage",
+   "title": "Frein de stationnement",
+   "check": "Il retient la voiture dans une pente, sans course de levier excessive. Un frein électrique ne doit afficher aucun message de défaut.",
+   "level": "majeure",
+   "advice": "Un câble détendu se règle souvent facilement ; un défaut de frein électrique se lit à la valise.",
+   "part": "handbrake-cable",
+   "light": "epb-fault",
+   "kind": "car"
+  },
+  {
+   "id": "car-abs",
+   "function": "freinage",
+   "title": "Antiblocage des roues (ABS)",
+   "check": "Au contact, le témoin ABS s'allume quelques secondes puis s'éteint après le démarrage.",
+   "level": "majeure",
+   "advice": "Un témoin allumé vient souvent d'un capteur de roue encrassé ou d'un câble abîmé : faites lire le code.",
+   "part": "wheel-speed-sensor",
+   "guide": "abs-esp-light",
+   "light": "abs",
+   "kind": "car"
+  },
+  {
+   "id": "car-brake-booster",
+   "function": "freinage",
+   "title": "Assistance de freinage",
+   "check": "Moteur arrêté, pompez plusieurs fois puis gardez le pied appuyé et démarrez : la pédale doit descendre légèrement.",
+   "level": "majeure",
+   "advice": "Un sifflement à l'appui ou une pédale très dure orientent vers l'assistance ou sa durite de dépression.",
+   "part": "brake-booster",
+   "kind": "car"
+  },
+  {
+   "id": "car-steering-play",
+   "function": "direction",
+   "title": "Jeu dans la direction",
+   "check": "Moteur tournant, à l'arrêt, bougez doucement le volant de part et d'autre : les roues doivent réagir sans jeu notable.",
+   "level": "majeure",
+   "advice": "Un jeu ou un claquement se localise roue levée : biellette, rotule ou crémaillère.",
+   "part": "tie-rod",
+   "kind": "car"
+  },
+  {
+   "id": "car-tie-rod-ends",
+   "function": "direction",
+   "title": "Rotules de direction",
+   "check": "Roue avant levée, secouez-la tenue de chaque côté : aucun claquement ni jeu ne doit apparaître. Le capuchon de la rotule n'est pas déchiré.",
+   "level": "majeure",
+   "advice": "Une rotule usée se remplace et impose un réglage du parallélisme ensuite.",
+   "part": "tie-rod-end",
+   "kind": "car"
+  },
+  {
+   "id": "car-rack-boots",
+   "function": "direction",
+   "title": "Soufflets de crémaillère",
+   "check": "Roues braquées, regardez derrière les roues avant : les soufflets ne sont ni déchirés ni gras.",
+   "level": "mineure",
+   "advice": "Un soufflet fendu laisse entrer l'eau et use la crémaillère : remplacez-le tôt, c'est peu coûteux.",
+   "part": "rack-boot",
+   "kind": "car"
+  },
+  {
+   "id": "car-power-steering",
+   "function": "direction",
+   "title": "Direction assistée",
+   "check": "La direction n'est ni dure ni irrégulière et aucun témoin de direction n'est allumé. Sur une assistance hydraulique, le niveau est correct et sans fuite.",
+   "level": "majeure",
+   "advice": "Un point dur ou un bruit en braquant mérite un diagnostic avant le passage.",
+   "part": "steering-rack",
+   "light": "power-steering",
+   "kind": "car"
+  },
+  {
+   "id": "car-steering-wheel",
+   "function": "direction",
+   "title": "Volant et colonne",
+   "check": "Le volant est bien fixé, sans jeu en le tirant ou en le poussant, et reste droit en ligne droite.",
+   "level": "mineure",
+   "advice": "Un volant de travers après un choc de trottoir appelle un contrôle de géométrie.",
+   "part": "steering-column",
+   "kind": "car"
+  },
+  {
+   "id": "car-windscreen",
+   "function": "visibilite",
+   "title": "Pare-brise",
+   "check": "Aucune fissure ni impact important dans la zone balayée par les essuie-glaces, surtout côté conducteur.",
+   "level": "majeure",
+   "advice": "Faites réparer un petit impact tant qu'il est petit : c'est souvent pris en charge par l'assurance bris de glace.",
+   "kind": "car"
+  },
+  {
+   "id": "car-wipers",
+   "function": "visibilite",
+   "title": "Essuie-glaces",
+   "check": "Les balais essuient sans traces ni broutement, à toutes les vitesses, et reviennent en position de repos.",
+   "level": "majeure",
+   "advice": "Des balais neufs coûtent peu : changez-les s'ils laissent des traînées.",
+   "part": "wiper-motor",
+   "guide": "wipers-horn",
+   "kind": "car"
+  },
+  {
+   "id": "car-washer",
+   "function": "visibilite",
+   "title": "Lave-glace",
+   "check": "Les gicleurs projettent le liquide sur le pare-brise et le réservoir est rempli.",
+   "level": "mineure",
+   "advice": "Remplissez le réservoir et débouchez un gicleur avec une aiguille fine.",
+   "part": "washer-pump",
+   "light": "washer-fluid",
+   "kind": "car"
+  },
+  {
+   "id": "car-mirrors",
+   "function": "visibilite",
+   "title": "Rétroviseurs",
+   "check": "Les rétroviseurs obligatoires sont présents, bien fixés, réglables et leurs miroirs sont intacts.",
+   "level": "mineure",
+   "advice": "Un miroir fêlé se remplace seul, sans changer tout le rétroviseur.",
+   "kind": "car"
+  },
+  {
+   "id": "car-side-windows",
+   "function": "visibilite",
+   "title": "Vitres latérales et lunette",
+   "check": "Les vitres ne sont pas fissurées et les vitres avant ne portent pas de film trop sombre.",
+   "level": "mineure",
+   "advice": "Les films teintés à l'avant sont encadrés par la réglementation : retirez un film non conforme.",
+   "kind": "car"
+  },
+  {
+   "id": "car-demister",
+   "function": "visibilite",
+   "title": "Désembuage et dégivrage",
+   "check": "La ventilation désembue le pare-brise et le dégivrage de lunette arrière fonctionne.",
+   "level": "mineure",
+   "advice": "Un pulseur muet vient souvent d'un fusible ou de la résistance de ventilation.",
+   "part": "blower-motor",
+   "light": "heated-rear-window",
+   "kind": "car"
+  },
+  {
+   "id": "car-view-obstruction",
+   "function": "visibilite",
+   "title": "Champ de vision dégagé",
+   "check": "Rien ne gêne la vue à travers le pare-brise : support, autocollant, objet suspendu au rétroviseur.",
+   "level": "mineure",
+   "advice": "Retirez supports et objets superflus le jour du passage.",
+   "kind": "car"
+  },
+  {
+   "id": "car-low-beam",
+   "function": "eclairage",
+   "title": "Feux de croisement",
+   "check": "Les deux feux s'allument avec une intensité semblable et le témoin vert est présent.",
+   "level": "majeure",
+   "advice": "Changez les ampoules par paire pour garder un éclairage homogène.",
+   "part": "low-beam-bulb",
+   "guide": "dim-lights",
+   "light": "low-beam",
+   "kind": "car"
+  },
+  {
+   "id": "car-headlamp-aim",
+   "function": "eclairage",
+   "title": "Réglage des projecteurs",
+   "check": "Face à un mur à quelques mètres, sur sol plat, les deux faisceaux sont à la même hauteur avec une coupure nette, légèrement plongeante.",
+   "level": "majeure",
+   "advice": "Remettez la molette de correction de hauteur sur la position « véhicule vide » avant le passage.",
+   "part": "headlamp",
+   "kind": "car"
+  },
+  {
+   "id": "car-headlamp-lens",
+   "function": "eclairage",
+   "title": "Optiques de phares",
+   "check": "Les glaces ne sont ni fendues ni très jaunies, et ne contiennent pas d'eau.",
+   "level": "mineure",
+   "advice": "Une rénovation d'optiques améliore nettement l'éclairage d'une glace opaque.",
+   "part": "headlamp",
+   "kind": "car"
+  },
+  {
+   "id": "car-high-beam",
+   "function": "eclairage",
+   "title": "Feux de route",
+   "check": "Ils s'allument des deux côtés avec le témoin bleu au tableau de bord.",
+   "level": "mineure",
+   "advice": "Testez aussi l'appel de phares au commodo.",
+   "part": "high-beam-bulb",
+   "light": "high-beam",
+   "kind": "car"
+  },
+  {
+   "id": "car-position-lamps",
+   "function": "eclairage",
+   "title": "Feux de position",
+   "check": "Les feux de position avant et arrière s'allument tous.",
+   "level": "mineure",
+   "advice": "Ce sont de petites ampoules faciles à remplacer : prévoyez un jeu de rechange.",
+   "part": "position-lamp",
+   "light": "position-lamps",
+   "kind": "car"
+  },
+  {
+   "id": "car-brake-lights",
+   "function": "eclairage",
+   "title": "Feux stop",
+   "check": "Faites-vous aider ou reculez près d'une vitrine : tous les feux stop, y compris le troisième, s'allument au freinage.",
+   "level": "majeure",
+   "advice": "Si aucun ne s'allume, pensez au contacteur de pédale ou au fusible avant les ampoules.",
+   "part": "brake-light-switch",
+   "kind": "car"
+  },
+  {
+   "id": "car-indicators",
+   "function": "eclairage",
+   "title": "Clignotants et feux de détresse",
+   "check": "Tous les clignotants fonctionnent, à un rythme régulier, et les feux de détresse aussi. Un clignotement rapide signale une ampoule hors service.",
+   "level": "majeure",
+   "advice": "Vérifiez aussi les répétiteurs latéraux sur les ailes ou les rétroviseurs.",
+   "part": "indicator",
+   "light": "indicators",
+   "kind": "car"
+  },
+  {
+   "id": "car-reverse-light",
+   "function": "eclairage",
+   "title": "Feu de recul",
+   "check": "Le feu de recul s'allume quand la marche arrière est engagée.",
+   "level": "mineure",
+   "advice": "S'il reste éteint avec une ampoule saine, regardez le contacteur sur la boîte.",
+   "part": "reverse-light-switch",
+   "kind": "car"
+  },
+  {
+   "id": "car-rear-fog",
+   "function": "eclairage",
+   "title": "Feu de brouillard arrière",
+   "check": "Il s'allume avec son témoin et s'éteint correctement.",
+   "level": "mineure",
+   "advice": "Ne le laissez pas allumé par temps clair : il éblouit.",
+   "part": "tail-lamp",
+   "light": "fog-rear",
+   "kind": "car"
+  },
+  {
+   "id": "car-plate-light",
+   "function": "eclairage",
+   "title": "Éclairage de plaque arrière",
+   "check": "La plaque arrière est éclairée feux allumés.",
+   "level": "mineure",
+   "advice": "Ampoule souvent oubliée : vérifiez-la, elle coûte quelques euros.",
+   "kind": "car"
+  },
+  {
+   "id": "car-reflectors",
+   "function": "eclairage",
+   "title": "Catadioptres",
+   "check": "Les catadioptres arrière sont présents, propres et non cassés.",
+   "level": "mineure",
+   "advice": "Un catadioptre cassé se remplace souvent seul ou avec le pare-chocs.",
+   "part": "tail-lamp",
+   "kind": "car"
+  },
+  {
+   "id": "car-lamp-colours",
+   "function": "eclairage",
+   "title": "Couleur et conformité des feux",
+   "check": "Les feux ont la bonne couleur (blanc ou jaune à l'avant, rouge à l'arrière, orange pour les clignotants) et des ampoules adaptées au phare.",
+   "level": "majeure",
+   "advice": "Évitez les kits d'éclairage non homologués pour le phare : remettez des ampoules d'origine.",
+   "kind": "car"
+  },
+  {
+   "id": "car-horn",
+   "function": "eclairage",
+   "title": "Avertisseur sonore",
+   "check": "Le klaxon émet un son continu et franc à l'appui.",
+   "level": "mineure",
+   "advice": "Un klaxon muet vient souvent du fusible, du relais ou du contact tournant du volant.",
+   "part": "horn",
+   "guide": "wipers-horn",
+   "kind": "car"
+  },
+  {
+   "id": "car-tyre-tread",
+   "function": "liaisons-sol",
+   "title": "Usure des pneus",
+   "check": "La gomme reste au-dessus des témoins d'usure moulés dans les rainures, sur toute la largeur. Une usure d'un seul bord trahit un défaut de géométrie.",
+   "level": "majeure",
+   "advice": "Remplacez les pneus usés par paire sur un même essieu et faites vérifier le parallélisme si l'usure est irrégulière.",
+   "part": "tyre",
+   "kind": "car"
+  },
+  {
+   "id": "car-tyre-damage",
+   "function": "liaisons-sol",
+   "title": "État des flancs",
+   "check": "Aucune hernie, coupure profonde, craquelure marquée ni corde visible sur les flancs intérieurs et extérieurs.",
+   "level": "critique",
+   "advice": "Une hernie peut éclater : remplacez le pneu avant de rouler sur voie rapide.",
+   "part": "tyre",
+   "kind": "car"
+  },
+  {
+   "id": "car-tyre-match",
+   "function": "liaisons-sol",
+   "title": "Pneus homogènes par essieu",
+   "check": "Sur un même essieu, les deux pneus ont la même dimension, la même structure et idéalement la même marque et le même modèle, dans une dimension prévue pour le véhicule.",
+   "level": "majeure",
+   "advice": "Comparez les inscriptions des flancs gauche et droit avant le passage.",
+   "kind": "car"
+  },
+  {
+   "id": "car-tyre-pressure",
+   "function": "liaisons-sol",
+   "title": "Pression des pneus",
+   "check": "Pneus froids, gonflez selon l'étiquette du véhicule (pied de porte ou trappe à carburant).",
+   "level": "mineure",
+   "advice": "Une bonne pression évite un tirage au freinage et une usure anormale.",
+   "part": "tpms-sensor",
+   "light": "tpms",
+   "kind": "car"
+  },
+  {
+   "id": "car-wheel-rims",
+   "function": "liaisons-sol",
+   "title": "Jantes et fixations de roue",
+   "check": "Les jantes ne sont ni fêlées ni voilées et toutes les vis ou écrous de roue sont présents et serrés.",
+   "level": "critique",
+   "advice": "Une fixation manquante est un danger immédiat : resserrez au couple avec une clé dynamométrique.",
+   "part": "wheel-rim",
+   "kind": "car"
+  },
+  {
+   "id": "car-shock-absorbers",
+   "function": "liaisons-sol",
+   "title": "Amortisseurs",
+   "check": "Appuyez fortement sur chaque coin : la caisse remonte et se stabilise sans rebondir. Aucun suintement d'huile sur le corps de l'amortisseur.",
+   "level": "majeure",
+   "advice": "Les amortisseurs se changent par paire sur un même essieu.",
+   "part": "shock-absorber",
+   "kind": "car"
+  },
+  {
+   "id": "car-springs",
+   "function": "liaisons-sol",
+   "title": "Ressorts de suspension",
+   "check": "Dans chaque passage de roue, aucune spire n'est cassée et la voiture est à la même hauteur à gauche et à droite.",
+   "level": "majeure",
+   "advice": "Un ressort cassé peut abîmer le pneu : faites-le remplacer rapidement, par paire.",
+   "part": "coil-spring",
+   "kind": "car"
+  },
+  {
+   "id": "car-ball-joints",
+   "function": "liaisons-sol",
+   "title": "Rotules et triangles de suspension",
+   "check": "Les capuchons des rotules ne sont pas déchirés et aucun claquement n'apparaît sur les bosses ou en braquant.",
+   "level": "majeure",
+   "advice": "Un jeu de rotule se confirme roue levée avec un levier : à faire vérifier.",
+   "part": "ball-joint",
+   "kind": "car"
+  },
+  {
+   "id": "car-bushings",
+   "function": "liaisons-sol",
+   "title": "Silentblocs",
+   "check": "Les caoutchoucs des bras de suspension ne sont ni fendus, ni décollés, ni écrasés.",
+   "level": "mineure",
+   "advice": "Des silentblocs fatigués donnent un flou au freinage : à remplacer à la prochaine intervention.",
+   "part": "suspension-bushing",
+   "kind": "car"
+  },
+  {
+   "id": "car-wheel-bearings",
+   "function": "liaisons-sol",
+   "title": "Roulements de roue",
+   "check": "Aucun grondement qui augmente avec la vitesse. Roue levée, elle tourne sans bruit et sans jeu.",
+   "level": "majeure",
+   "advice": "Un grondement qui change en virage indique souvent le côté du roulement usé.",
+   "part": "wheel-bearing",
+   "kind": "car"
+  },
+  {
+   "id": "car-cv-boots",
+   "function": "liaisons-sol",
+   "title": "Soufflets de cardan",
+   "check": "Roues braquées, les soufflets ne sont pas déchirés et aucune graisse n'est projetée autour.",
+   "level": "mineure",
+   "advice": "Remplacez un soufflet fendu tôt : sinon le joint de cardan s'use et claque en virage.",
+   "part": "cv-boot",
+   "guide": "cv-joint-click",
+   "kind": "car"
+  },
+  {
+   "id": "car-anti-roll-links",
+   "function": "liaisons-sol",
+   "title": "Biellettes de barre stabilisatrice",
+   "check": "Aucun petit claquement sec sur les bosses à basse vitesse.",
+   "level": "mineure",
+   "advice": "Pièce peu coûteuse, souvent à l'origine des bruits de train avant.",
+   "part": "anti-roll-bar-link",
+   "kind": "car"
+  },
+  {
+   "id": "car-underbody-corrosion",
+   "function": "structure",
+   "title": "Corrosion du soubassement",
+   "check": "Sous la voiture, observez bas de caisse, longerons et zones d'attache des suspensions : une rouille qui gonfle ou perce est à signaler.",
+   "level": "majeure",
+   "advice": "Une corrosion perforante près d'un point d'ancrage peut être jugée critique : faites-la traiter par un carrossier.",
+   "kind": "car"
+  },
+  {
+   "id": "car-floor",
+   "function": "structure",
+   "title": "Plancher et coffre",
+   "check": "Soulevez les tapis : le plancher n'est pas percé et aucune eau ne stagne dans l'habitacle ou le coffre.",
+   "level": "majeure",
+   "advice": "Une infiltration d'eau abîme aussi les faisceaux : trouvez son origine.",
+   "kind": "car"
+  },
+  {
+   "id": "car-doors",
+   "function": "structure",
+   "title": "Portes, capot et coffre",
+   "check": "Chaque porte s'ouvre et se ferme de l'intérieur et de l'extérieur ; capot et coffre se verrouillent correctement.",
+   "level": "majeure",
+   "advice": "Graissez les serrures et charnières ; une porte qui ne s'ouvre pas de l'intérieur est à réparer.",
+   "light": "door-open",
+   "kind": "car"
+  },
+  {
+   "id": "car-bumpers",
+   "function": "structure",
+   "title": "Pare-chocs et éléments de carrosserie",
+   "check": "Pare-chocs, ailes et protections sont bien fixés, sans pièce qui pend ni arête coupante.",
+   "level": "mineure",
+   "advice": "Refixez les agrafes manquantes et retirez une pièce cassée tranchante.",
+   "kind": "car"
+  },
+  {
+   "id": "car-engine-mounts",
+   "function": "structure",
+   "title": "Supports moteur et boîte",
+   "check": "Le moteur ne bouge pas exagérément à l'accélération et aucun choc sourd n'apparaît au démarrage ou au passage des rapports.",
+   "level": "mineure",
+   "advice": "Un support fendu transmet des vibrations : à remplacer si le caoutchouc est déchiré.",
+   "part": "engine-mount",
+   "fuel": [
+    "petrol",
+    "diesel",
+    "hybrid",
+    "lpg"
+   ],
+   "kind": "car"
+  },
+  {
+   "id": "car-fuel-tank",
+   "function": "structure",
+   "title": "Réservoir et circuit de carburant",
+   "check": "Aucune odeur de carburant ni trace humide sous la voiture ; le bouchon est présent et ferme bien.",
+   "level": "critique",
+   "advice": "Une fuite de carburant est un risque d'incendie : ne roulez pas et faites réparer.",
+   "part": "fuel-tank",
+   "light": "fuel-cap",
+   "fuel": [
+    "petrol",
+    "diesel",
+    "hybrid",
+    "lpg"
+   ],
+   "kind": "car"
+  },
+  {
+   "id": "car-seatbelts",
+   "function": "equipements",
+   "title": "Ceintures de sécurité",
+   "check": "Chaque ceinture se déroule, se bloque sur un coup sec, se boucle et se déboucle. La sangle n'est ni effilochée ni coupée.",
+   "level": "majeure",
+   "advice": "Testez toutes les places, y compris à l'arrière, et dégagez les boucles coincées sous les sièges.",
+   "light": "seatbelt",
+   "kind": "car"
+  },
+  {
+   "id": "car-seats",
+   "function": "equipements",
+   "title": "Sièges",
+   "check": "Le siège conducteur est verrouillé dans ses rails et le dossier tient en position.",
+   "level": "majeure",
+   "advice": "Un siège qui glisse au freinage est dangereux : faites contrôler le verrouillage.",
+   "kind": "car"
+  },
+  {
+   "id": "car-airbag",
+   "function": "equipements",
+   "title": "Témoin d'airbag",
+   "check": "Au contact, le témoin d'airbag s'allume puis s'éteint. Aucun airbag ne doit être neutralisé.",
+   "level": "majeure",
+   "advice": "Un témoin allumé vient souvent d'un connecteur sous un siège ou du contact tournant du volant : faites lire le défaut.",
+   "part": "clock-spring",
+   "light": "airbag",
+   "kind": "car"
+  },
+  {
+   "id": "car-dashboard-lights",
+   "function": "equipements",
+   "title": "Témoins du tableau de bord",
+   "check": "Au contact, les témoins s'allument puis s'éteignent moteur tournant. Un témoin de défaut resté allumé sera relevé.",
+   "level": "majeure",
+   "advice": "Identifiez chaque témoin allumé dans la galerie des voyants avant le passage.",
+   "part": "dashboard-warning-lamp",
+   "kind": "car"
+  },
+  {
+   "id": "car-speedometer",
+   "function": "equipements",
+   "title": "Compteur de vitesse",
+   "check": "L'affichage de vitesse fonctionne et suit l'allure du véhicule.",
+   "level": "mineure",
+   "advice": "Un compteur figé vient souvent d'un capteur de vitesse ou d'un défaut d'ABS.",
+   "part": "vehicle-speed-sensor",
+   "kind": "car"
+  },
+  {
+   "id": "car-battery",
+   "function": "equipements",
+   "title": "Batterie et fixation",
+   "check": "La batterie est bien bridée, les cosses sont serrées et sans dépôt blanchâtre, le bac n'est pas fissuré.",
+   "level": "mineure",
+   "advice": "Nettoyez les cosses et remettez la bride d'origine si elle manque.",
+   "part": "battery",
+   "light": "battery-charge",
+   "kind": "car"
+  },
+  {
+   "id": "car-wiring",
+   "function": "equipements",
+   "title": "Faisceaux électriques",
+   "check": "Aucun fil dénudé, pendant ou frottant sur une pièce chaude ou mobile dans le compartiment moteur.",
+   "level": "mineure",
+   "advice": "Fixez les faisceaux avec des colliers et isolez un fil abîmé.",
+   "part": "wiring-harness",
+   "kind": "car"
+  },
+  {
+   "id": "car-obd-socket",
+   "function": "equipements",
+   "title": "Prise diagnostic",
+   "check": "La prise diagnostic est accessible et rien n'y est branché en permanence. Sur les véhicules récents, elle peut être utilisée pendant le contrôle.",
+   "level": "mineure",
+   "advice": "Débranchez tout boîtier ajouté et repérez la prise pour gagner du temps.",
+   "part": "diagnostic-socket",
+   "kind": "car"
+  },
+  {
+   "id": "car-engine-light",
+   "function": "nuisances",
+   "title": "Voyant moteur (antipollution)",
+   "check": "Le voyant moteur s'allume au contact puis s'éteint au démarrage. Allumé moteur tournant, il signale un défaut enregistré.",
+   "level": "majeure",
+   "advice": "Faites lire le code bien avant le passage : effacer sans réparer ne suffit pas, le défaut revient.",
+   "guide": "check-engine-light",
+   "light": "engine-check",
+   "fuel": [
+    "petrol",
+    "diesel",
+    "hybrid",
+    "lpg"
+   ],
+   "kind": "car"
+  },
+  {
+   "id": "car-diesel-smoke",
+   "function": "nuisances",
+   "title": "Opacité des fumées (diesel)",
+   "check": "Moteur chaud, en accélérant à vide, il ne sort pas de fumée noire épaisse à l'échappement.",
+   "level": "majeure",
+   "advice": "Avant le passage, roulez une vingtaine de minutes sur voie rapide pour que le moteur soit bien chaud.",
+   "guide": "exhaust-smoke",
+   "fuel": [
+    "diesel"
+   ],
+   "kind": "car"
+  },
+  {
+   "id": "car-petrol-emissions",
+   "function": "nuisances",
+   "title": "Émissions (essence ou GPL)",
+   "check": "Moteur chaud, le ralenti est stable, sans odeur d'essence ni fumée bleue à l'échappement.",
+   "level": "majeure",
+   "advice": "Un ralenti instable ou une forte odeur d'essence se diagnostiquent avant le contrôle.",
+   "part": "catalytic-converter",
+   "guide": "rough-idle",
+   "fuel": [
+    "petrol",
+    "hybrid",
+    "lpg"
+   ],
+   "kind": "car"
+  },
+  {
+   "id": "car-pollution-devices",
+   "function": "nuisances",
+   "title": "Dispositifs antipollution présents",
+   "check": "Catalyseur, filtre à particules et vanne EGR sont présents et actifs, sans neutralisation ni suppression.",
+   "level": "majeure",
+   "advice": "Un dispositif retiré ou désactivé est relevé : remettez la configuration d'origine.",
+   "part": "dpf",
+   "fuel": [
+    "diesel"
+   ],
+   "kind": "car"
+  },
+  {
+   "id": "car-adblue",
+   "function": "nuisances",
+   "title": "AdBlue",
+   "check": "Le témoin AdBlue est éteint et le réservoir d'AdBlue est rempli.",
+   "level": "mineure",
+   "advice": "Complétez l'AdBlue avant le passage et faites lire un défaut persistant.",
+   "guide": "adblue",
+   "light": "adblue",
+   "fuel": [
+    "diesel"
+   ],
+   "kind": "car"
+  },
+  {
+   "id": "car-exhaust-leak",
+   "function": "nuisances",
+   "title": "Étanchéité de l'échappement",
+   "check": "Moteur froid, au démarrage, écoutez sous la voiture : pas de souffle, de claquement ni de trace de suie aux raccords.",
+   "level": "majeure",
+   "advice": "Une fuite avant la sonde lambda fausse aussi la mesure de pollution.",
+   "part": "exhaust-gasket",
+   "fuel": [
+    "petrol",
+    "diesel",
+    "hybrid",
+    "lpg"
+   ],
+   "kind": "car"
+  },
+  {
+   "id": "car-exhaust-mounting",
+   "function": "nuisances",
+   "title": "Fixation de la ligne d'échappement",
+   "check": "La ligne est bien suspendue, aucun élément ne touche la caisse ni ne pend.",
+   "level": "mineure",
+   "advice": "Les silentblocs de suspension d'échappement se changent facilement.",
+   "part": "exhaust-hanger",
+   "fuel": [
+    "petrol",
+    "diesel",
+    "hybrid",
+    "lpg"
+   ],
+   "kind": "car"
+  },
+  {
+   "id": "car-exhaust-noise",
+   "function": "nuisances",
+   "title": "Bruit d'échappement",
+   "check": "Le silencieux n'est pas percé et la ligne est d'origine ou homologuée.",
+   "level": "mineure",
+   "advice": "Un silencieux percé s'entend au démarrage à froid : remplacez-le.",
+   "part": "muffler",
+   "fuel": [
+    "petrol",
+    "diesel",
+    "hybrid",
+    "lpg"
+   ],
+   "kind": "car"
+  },
+  {
+   "id": "car-oil-leak",
+   "function": "nuisances",
+   "title": "Fuites d'huile",
+   "check": "Après une nuit, aucune flaque ou goutte d'huile sous le moteur ou la boîte.",
+   "level": "majeure",
+   "advice": "Nettoyez une ancienne trace pour repérer la fuite active et faites-la réparer.",
+   "part": "oil-pan-gasket",
+   "guide": "oil-leak",
+   "fuel": [
+    "petrol",
+    "diesel",
+    "hybrid",
+    "lpg"
+   ],
+   "kind": "car"
+  },
+  {
+   "id": "car-coolant-leak",
+   "function": "nuisances",
+   "title": "Fuites de liquide de refroidissement",
+   "check": "Moteur froid, le niveau du vase d'expansion est stable, sans trace colorée sous l'avant de la voiture.",
+   "level": "mineure",
+   "advice": "N'ouvrez jamais le vase moteur chaud ; une baisse régulière mérite une recherche de fuite.",
+   "part": "radiator-hose",
+   "guide": "coolant-leak",
+   "fuel": [
+    "petrol",
+    "diesel",
+    "hybrid",
+    "lpg"
+   ],
+   "kind": "car"
+  },
+  {
+   "id": "car-lpg",
+   "function": "nuisances",
+   "title": "Installation GPL",
+   "check": "Aucune odeur de gaz, réservoir et canalisations bien fixés, document de l'installation disponible.",
+   "level": "majeure",
+   "advice": "Faites vérifier l'installation par un spécialiste si une odeur de gaz apparaît.",
+   "fuel": [
+    "lpg"
+   ],
+   "kind": "car"
+  },
+  {
+   "id": "car-high-voltage",
+   "function": "equipements",
+   "title": "Système haute tension (hybride, électrique)",
+   "check": "Les câbles orange visibles ne sont pas abîmés, la prise de recharge est propre et aucun témoin haute tension n'est allumé.",
+   "level": "majeure",
+   "advice": "Ne touchez jamais un câble orange abîmé : faites intervenir un professionnel habilité.",
+   "part": "charging-port",
+   "light": "hv-system-fault",
+   "fuel": [
+    "hybrid",
+    "electric"
+   ],
+   "kind": "car"
+  },
+  {
+   "id": "moto-plate",
+   "function": "identification",
+   "title": "Plaque d'immatriculation",
+   "check": "La plaque est présente, rigide, bien fixée, lisible et au format prévu pour les deux-roues.",
+   "level": "majeure",
+   "advice": "Remplacez une plaque pliée ou fendue et vérifiez ses fixations.",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-vin",
+   "function": "identification",
+   "title": "Numéro de cadre",
+   "check": "Le numéro frappé sur le cadre (souvent près de la colonne de direction) est lisible et identique au certificat d'immatriculation.",
+   "level": "majeure",
+   "advice": "Nettoyez la zone et retirez un cache qui le masque.",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-registration-doc",
+   "function": "identification",
+   "title": "Certificat d'immatriculation",
+   "check": "Préparez l'original du certificat et vérifiez qu'il correspond au deux-roues présenté.",
+   "level": "majeure",
+   "advice": "Sans document valide, le contrôle peut être refusé.",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-odometer",
+   "function": "identification",
+   "title": "Compteur kilométrique",
+   "check": "Le kilométrage s'affiche et évolue en roulant.",
+   "level": "mineure",
+   "advice": "Notez le kilométrage : il figure sur le procès-verbal.",
+   "part": "instrument-cluster",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-front-brake",
+   "function": "freinage",
+   "title": "Frein avant",
+   "check": "Le levier est ferme, ne revient pas jusqu'à la poignée et la moto freine franchement à basse vitesse.",
+   "level": "critique",
+   "advice": "Un levier spongieux impose une purge ou une réparation avant de rouler.",
+   "part": "brake-lever",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-rear-brake",
+   "function": "freinage",
+   "title": "Frein arrière",
+   "check": "La pédale (ou le levier gauche sur un scooter) est ferme, avec une garde normale, et ralentit nettement la roue arrière.",
+   "level": "majeure",
+   "advice": "Une garde trop longue se règle ; une pédale molle demande une purge.",
+   "part": "rear-brake-pedal",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-brake-pads",
+   "function": "freinage",
+   "title": "Plaquettes de frein",
+   "check": "Avec une lampe, regardez entre l'étrier et le disque : il reste de la garniture sur chaque plaquette.",
+   "level": "majeure",
+   "advice": "Changez les plaquettes avant d'atteindre le support métallique, qui raye le disque.",
+   "part": "brake-pad",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-brake-discs",
+   "function": "freinage",
+   "title": "Disques de frein",
+   "check": "Les disques ne sont ni fissurés ni voilés, et leurs vis de fixation sont toutes présentes.",
+   "level": "majeure",
+   "advice": "Un frein qui pulse au levier signale souvent un disque voilé.",
+   "part": "brake-disc",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-brake-fluid",
+   "function": "freinage",
+   "title": "Liquide de frein",
+   "check": "Dans les bocaux avant et arrière, le niveau est entre les repères et le liquide n'est pas foncé.",
+   "level": "majeure",
+   "advice": "Un liquide très foncé se remplace : faites purger le circuit.",
+   "part": "brake-fluid-reservoir",
+   "light": "brake-system",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-brake-hoses",
+   "function": "freinage",
+   "title": "Durites de frein",
+   "check": "Les durites ne sont ni craquelées ni gonflées et aucun suintement n'apparaît aux raccords.",
+   "level": "critique",
+   "advice": "Une fuite de liquide de frein est un danger immédiat : ne roulez pas.",
+   "part": "brake-hose",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-abs",
+   "function": "freinage",
+   "title": "ABS",
+   "check": "Le témoin ABS s'éteint après le démarrage ou dès les premiers mètres.",
+   "level": "majeure",
+   "advice": "Un capteur ou une couronne encrassés allument souvent ce témoin : nettoyez puis faites lire le défaut.",
+   "part": "wheel-speed-sensor",
+   "light": "moto-abs",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-steering-head",
+   "function": "direction",
+   "title": "Roulements de direction",
+   "check": "Roue avant décollée, le guidon tourne librement de butée à butée sans point dur. Frein avant serré, en poussant la moto, aucun cognement ne se fait sentir.",
+   "level": "majeure",
+   "advice": "Un point dur au centre signale des roulements marqués : à remplacer.",
+   "part": "steering-head-bearing",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-handlebar",
+   "function": "direction",
+   "title": "Guidon et commandes",
+   "check": "Le guidon est fixé et droit, les leviers sont intacts et la poignée de gaz revient seule en position fermée.",
+   "level": "critique",
+   "advice": "Une poignée de gaz qui ne revient pas est dangereuse : vérifiez câbles et passage des gaines.",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-fork",
+   "function": "direction",
+   "title": "Fourche",
+   "check": "Les tubes ne présentent ni fuite d'huile ni rayure, et la fourche s'enfonce et remonte sans à-coup.",
+   "level": "majeure",
+   "advice": "Une fuite aux joints spi peut atteindre le frein avant : à réparer vite.",
+   "part": "fork-seal",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-mirrors",
+   "function": "visibilite",
+   "title": "Rétroviseurs",
+   "check": "Les rétroviseurs obligatoires sont présents, bien serrés et leurs miroirs intacts.",
+   "level": "mineure",
+   "advice": "Resserrez-les : ils ne doivent pas tourner tout seuls en roulant.",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-windshield",
+   "function": "visibilite",
+   "title": "Bulle ou pare-brise",
+   "check": "S'il y en a une, la bulle est bien fixée et n'est ni fendue ni opaque dans le champ de vision.",
+   "level": "mineure",
+   "advice": "Une bulle fendue peut se rompre : remplacez-la.",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-headlight",
+   "function": "eclairage",
+   "title": "Feu avant (croisement et route)",
+   "check": "Le feu de croisement et le feu de route fonctionnent, avec un faisceau orienté vers la route, sans éblouir.",
+   "level": "majeure",
+   "advice": "Réglez la hauteur du phare moto chargée, pilote assis.",
+   "part": "headlamp",
+   "light": "low-beam",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-tail-brake-light",
+   "function": "eclairage",
+   "title": "Feu arrière et feu stop",
+   "check": "Le feu arrière est allumé et le feu stop s'allume avec le levier de frein avant comme avec la commande arrière.",
+   "level": "majeure",
+   "advice": "Si une seule commande allume le stop, vérifiez le contacteur concerné.",
+   "part": "brake-light-switch",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-indicators",
+   "function": "eclairage",
+   "title": "Clignotants",
+   "check": "Les quatre clignotants fonctionnent, à un rythme régulier, avec le témoin au tableau de bord.",
+   "level": "majeure",
+   "advice": "Un clignotant cassé après une chute se remplace facilement : faites-le avant le passage.",
+   "part": "indicator",
+   "light": "indicators",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-plate-light",
+   "function": "eclairage",
+   "title": "Éclairage de plaque et catadioptre",
+   "check": "La plaque est éclairée et le catadioptre arrière est présent.",
+   "level": "mineure",
+   "advice": "Les supports de plaque courts doivent garder éclairage et catadioptre.",
+   "part": "tail-lamp",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-horn",
+   "function": "eclairage",
+   "title": "Avertisseur sonore",
+   "check": "Le klaxon émet un son franc et continu.",
+   "level": "mineure",
+   "advice": "Un klaxon faible vient souvent d'une batterie fatiguée ou d'un contact oxydé.",
+   "part": "horn",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-tyres",
+   "function": "liaisons-sol",
+   "title": "Pneus",
+   "check": "La gomme reste au-dessus des témoins d'usure, sans hernie, coupure ni craquelure marquée, et les deux pneus sont d'une dimension prévue pour la moto.",
+   "level": "majeure",
+   "advice": "Un pneu méplat au centre ou très vieux se remplace avant le passage.",
+   "part": "tyre",
+   "light": "moto-tpms",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-wheels",
+   "function": "liaisons-sol",
+   "title": "Jantes et rayons",
+   "check": "Les jantes ne sont ni fêlées ni voilées ; sur une roue à rayons, aucun rayon n'est cassé ou détendu.",
+   "level": "majeure",
+   "advice": "Tapotez les rayons : un son mat signale un rayon détendu.",
+   "part": "wheel-rim",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-axles",
+   "function": "liaisons-sol",
+   "title": "Axes et écrous de roue",
+   "check": "Les écrous d'axe sont serrés et leurs sécurités (goupille, vis de pincement) sont en place.",
+   "level": "critique",
+   "advice": "Un axe desserré est un danger immédiat : resserrez au couple prévu.",
+   "part": "axle-nut",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-chain",
+   "function": "liaisons-sol",
+   "title": "Chaîne et kit de transmission",
+   "check": "La chaîne a une tension correcte, elle est graissée, et les dents de la couronne ne sont pas en crochet.",
+   "level": "majeure",
+   "advice": "Remplacez chaîne, pignon et couronne ensemble quand le kit est usé.",
+   "part": "drive-chain",
+   "guide": "moto-chain",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-rear-shock",
+   "function": "liaisons-sol",
+   "title": "Amortisseur arrière",
+   "check": "L'amortisseur ne fuit pas et l'arrière ne rebondit pas après un appui franc sur la selle.",
+   "level": "majeure",
+   "advice": "Un amortisseur qui suinte a perdu son efficacité : à remplacer ou réviser.",
+   "part": "rear-monoshock",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-swingarm",
+   "function": "liaisons-sol",
+   "title": "Bras oscillant",
+   "check": "Roue arrière décollée, poussez-la latéralement : aucun jeu ne doit se faire sentir à l'articulation.",
+   "level": "majeure",
+   "advice": "Un jeu au bras oscillant vient souvent des roulements d'axe : à faire vérifier.",
+   "part": "swingarm",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-frame",
+   "function": "structure",
+   "title": "Cadre et fixations",
+   "check": "Aucune fissure aux soudures ni déformation visible après une chute ; les carénages sont bien fixés.",
+   "level": "majeure",
+   "advice": "Après une chute, faites contrôler le cadre et la géométrie.",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-side-stand",
+   "function": "structure",
+   "title": "Béquilles",
+   "check": "La béquille latérale revient seule sous l'effet de son ressort et la béquille centrale, s'il y en a une, tient la moto.",
+   "level": "mineure",
+   "advice": "Graissez l'articulation et changez un ressort fatigué.",
+   "part": "side-stand-switch",
+   "light": "moto-side-stand",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-footrests",
+   "function": "structure",
+   "title": "Repose-pieds, selle et poignées",
+   "check": "Repose-pieds, selle et poignée passager sont présents et bien fixés.",
+   "level": "mineure",
+   "advice": "Resserrez les fixations et remplacez un repose-pied tordu.",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-dashboard",
+   "function": "equipements",
+   "title": "Compteur et témoins",
+   "check": "Le compteur de vitesse fonctionne et les témoins s'allument au contact puis s'éteignent.",
+   "level": "mineure",
+   "advice": "Identifiez tout témoin resté allumé dans la galerie des voyants.",
+   "part": "instrument-cluster",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-kill-switch",
+   "function": "equipements",
+   "title": "Coupe-circuit",
+   "check": "Le coupe-circuit arrête bien le moteur.",
+   "level": "mineure",
+   "advice": "Un coupe-circuit oxydé se nettoie avec un produit contact.",
+   "part": "kill-switch",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-battery-wiring",
+   "function": "equipements",
+   "title": "Batterie et faisceau",
+   "check": "La batterie est fixée, ses cosses sont serrées et aucun fil n'est dénudé ou pincé près de la direction.",
+   "level": "mineure",
+   "advice": "Fixez les faisceaux pour qu'ils ne se coincent pas en braquant.",
+   "part": "battery",
+   "light": "moto-battery-charge",
+   "kind": "moto"
+  },
+  {
+   "id": "moto-exhaust-noise",
+   "function": "nuisances",
+   "title": "Silencieux et bruit",
+   "check": "Le silencieux est d'origine ou homologué, avec son marquage, et aucun élément réducteur de bruit n'a été retiré.",
+   "level": "majeure",
+   "advice": "Remettez la chicane ou le silencieux d'origine avant le passage.",
+   "part": "muffler",
+   "fuel": [
+    "petrol"
+   ],
+   "kind": "moto"
+  },
+  {
+   "id": "moto-exhaust-leak",
+   "function": "nuisances",
+   "title": "Étanchéité de l'échappement",
+   "check": "Pas de souffle ni de trace de suie au raccord avec le moteur.",
+   "level": "mineure",
+   "advice": "Un joint de collecteur se remplace souvent à peu de frais.",
+   "part": "exhaust-gasket",
+   "fuel": [
+    "petrol"
+   ],
+   "kind": "moto"
+  },
+  {
+   "id": "moto-emissions",
+   "function": "nuisances",
+   "title": "Émissions et ralenti",
+   "check": "Moteur chaud, le ralenti est stable, le témoin d'injection est éteint et il n'y a pas de fumée bleue.",
+   "level": "majeure",
+   "advice": "Faites chauffer le moteur avant le passage et faites lire un défaut d'injection.",
+   "guide": "moto-carburetor",
+   "light": "moto-engine-check",
+   "fuel": [
+    "petrol"
+   ],
+   "kind": "moto"
+  },
+  {
+   "id": "moto-fluid-leaks",
+   "function": "nuisances",
+   "title": "Fuites d'huile",
+   "check": "Aucune trace d'huile sous le moteur, au bouchon de vidange ou sur le pneu arrière.",
+   "level": "majeure",
+   "advice": "De l'huile sur le pneu arrière est dangereuse : nettoyez et réparez la fuite.",
+   "part": "oil-drain-plug",
+   "fuel": [
+    "petrol"
+   ],
+   "kind": "moto"
+  },
+  {
+   "id": "moto-fuel-leak",
+   "function": "nuisances",
+   "title": "Réservoir et durites d'essence",
+   "check": "Aucune odeur ni suintement d'essence au réservoir, au robinet ou aux durites.",
+   "level": "critique",
+   "advice": "Une fuite d'essence près du moteur chaud est un risque d'incendie : ne roulez pas.",
+   "part": "fuel-line",
+   "fuel": [
+    "petrol"
+   ],
+   "kind": "moto"
+  }
+ ]
+}

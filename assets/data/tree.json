@@ -1,0 +1,4643 @@
+[
+ {
+  "slug": "engine",
+  "name": "Moteur",
+  "kind": "both",
+  "children": [
+   {
+    "slug": "cylinder-head-group",
+    "name": "Culasse",
+    "parts": [
+     {
+      "slug": "cylinder-head",
+      "name": "Culasse",
+      "role": "Ferme le haut des cylindres et porte soupapes et arbres à cames.",
+      "wear": "Déformation ou fissure après surchauffe, fuite de liquide ou d'huile.",
+      "dtc": []
+     },
+     {
+      "slug": "head-gasket",
+      "name": "Joint de culasse",
+      "role": "Assure l'étanchéité entre le bloc et la culasse.",
+      "wear": "Claque après surchauffe : fumée blanche, perte de liquide, huile mayonnaise.",
+      "dtc": [
+       "P0217"
+      ]
+     },
+     {
+      "slug": "intake-valve",
+      "name": "Soupape d'admission",
+      "role": "S'ouvre pour laisser entrer l'air (ou le mélange) dans le cylindre.",
+      "wear": "Encrassement, siège marqué : perte de compression, ratés.",
+      "dtc": [
+       "P0300"
+      ]
+     },
+     {
+      "slug": "exhaust-valve",
+      "name": "Soupape d'échappement",
+      "role": "S'ouvre pour évacuer les gaz brûlés du cylindre.",
+      "wear": "Soupape brûlée ou mal étanche : ratés, perte de compression.",
+      "dtc": [
+       "P0300"
+      ]
+     },
+     {
+      "slug": "valve-spring",
+      "name": "Ressort de soupape",
+      "role": "Referme la soupape après le passage de la came.",
+      "wear": "Ressort fatigué ou cassé : affolement à haut régime, ratés.",
+      "dtc": [
+       "P0300"
+      ]
+     },
+     {
+      "slug": "valve-stem-seal",
+      "name": "Joint de queue de soupape",
+      "role": "Empêche l'huile de descendre le long de la soupape.",
+      "wear": "Joint durci : fumée bleue au démarrage, consommation d'huile.",
+      "dtc": []
+     },
+     {
+      "slug": "camshaft",
+      "name": "Arbre à cames",
+      "role": "Commande l'ouverture des soupapes au bon moment.",
+      "wear": "Cames usées, bruit de distribution, calage décalé.",
+      "dtc": [
+       "P0016",
+       "P0340"
+      ]
+     },
+     {
+      "slug": "hydraulic-lifter",
+      "name": "Poussoir hydraulique",
+      "role": "Rattrape automatiquement le jeu aux soupapes.",
+      "wear": "Claquement à froid, surtout si huile usée ou niveau bas.",
+      "dtc": []
+     },
+     {
+      "slug": "rocker-arm",
+      "name": "Culbuteur / linguet",
+      "role": "Transmet le mouvement de la came à la soupape.",
+      "wear": "Usure du patin : bruit, jeu excessif.",
+      "dtc": []
+     },
+     {
+      "slug": "valve-cover",
+      "name": "Couvre-culasse",
+      "role": "Ferme le dessus de la culasse et protège la distribution.",
+      "wear": "Fissure ou déformation, souvent associée au joint qui suinte.",
+      "dtc": []
+     },
+     {
+      "slug": "valve-cover-gasket",
+      "name": "Joint de couvre-culasse",
+      "role": "Assure l'étanchéité du couvre-culasse.",
+      "wear": "Joint durci : suintement d'huile, odeur de brûlé sur l'échappement.",
+      "dtc": []
+     },
+     {
+      "slug": "glow-plug",
+      "name": "Bougie de préchauffage",
+      "role": "Chauffe la chambre de combustion pour démarrer un diesel à froid.",
+      "wear": "Bougie grillée : démarrage difficile à froid, fumée blanche.",
+      "dtc": [
+       "P0380",
+       "P0670",
+       "P0671"
+      ]
+     },
+     {
+      "slug": "vvt-solenoid",
+      "name": "Électrovanne de distribution variable (VVT)",
+      "role": "Pilote le déphaseur d'arbre à cames avec la pression d'huile.",
+      "wear": "Encrassement par l'huile : ralenti instable, voyant moteur.",
+      "dtc": [
+       "P0010",
+       "P0011",
+       "P0013",
+       "P0014"
+      ]
+     },
+     {
+      "slug": "cam-bearing-cap",
+      "name": "Chapeau de palier d'arbre à cames",
+      "role": "Maintient l'arbre à cames dans ses paliers sur la culasse.",
+      "wear": "Serrage incorrect ou chapeau inversé : arbre qui grippe, usure rapide des paliers.",
+      "dtc": []
+     },
+     {
+      "slug": "camshaft-seal",
+      "name": "Joint spi d'arbre à cames",
+      "role": "Assure l'étanchéité de l'arbre à cames en sortie de culasse.",
+      "wear": "Joint durci : fuite d'huile côté distribution, courroie souillée à remplacer.",
+      "dtc": []
+     },
+     {
+      "slug": "head-bolt",
+      "name": "Vis de culasse",
+      "role": "Serre la culasse sur le bloc et écrase le joint de culasse.",
+      "wear": "Vis étirées (souvent à usage unique) : joint de culasse qui fuit. Toujours remplacer et serrer à l'angle.",
+      "dtc": []
+     },
+     {
+      "slug": "valve-collet",
+      "name": "Clavettes de soupape",
+      "role": "Verrouille la coupelle de ressort sur la queue de soupape.",
+      "wear": "Clavette mal posée ou usée : soupape qui tombe dans le cylindre, casse moteur.",
+      "dtc": []
+     },
+     {
+      "slug": "valve-guide",
+      "name": "Guide de soupape",
+      "role": "Guide la soupape dans la culasse et évacue sa chaleur.",
+      "wear": "Jeu excessif : consommation d'huile, fumée bleue au démarrage.",
+      "dtc": []
+     },
+     {
+      "slug": "valve-seat",
+      "name": "Siège de soupape",
+      "role": "Surface d'appui de la soupape assurant l'étanchéité de la chambre.",
+      "wear": "Siège brûlé ou décollé : perte de compression sur un cylindre, raté.",
+      "dtc": [
+       "P0300"
+      ]
+     },
+     {
+      "slug": "valve-spring-retainer",
+      "name": "Coupelle de ressort de soupape",
+      "role": "Coupelle qui retient le ressort de soupape sur la queue.",
+      "wear": "Fissurée ou déformée : bruit de distribution, risque de chute de soupape.",
+      "dtc": []
+     },
+     {
+      "slug": "vvt-actuator",
+      "name": "Déphaseur d'arbre à cames",
+      "role": "Déphaseur monté sur l'arbre à cames qui décale le calage selon le régime.",
+      "wear": "Usé ou encrassé (huile sale) : claquement au démarrage, ralenti instable, défaut de calage.",
+      "dtc": [
+       "P0011",
+       "P0014",
+       "P0016",
+       "P0021"
+      ]
+     },
+     {
+      "slug": "camshaft-pulley",
+      "name": "Poulie d'arbre à cames",
+      "role": "Poulie entraînée par la courroie de distribution, solidaire de l'arbre à cames.",
+      "wear": "Clavette cisaillée ou dents usées : calage décalé, moteur qui tourne mal.",
+      "dtc": [
+       "P0016"
+      ]
+     },
+     {
+      "slug": "camshaft-sprocket",
+      "name": "Pignon d'arbre à cames",
+      "role": "Pignon entraîné par la chaîne de distribution, solidaire de l'arbre à cames.",
+      "wear": "Dents usées avec la chaîne : bruit, chaîne qui saute une dent.",
+      "dtc": [
+       "P0016"
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "engine-block-group",
+    "name": "Bas moteur",
+    "parts": [
+     {
+      "slug": "engine-block",
+      "name": "Bloc moteur",
+      "role": "Structure principale qui contient les cylindres et le vilebrequin.",
+      "wear": "Rare : fissure par gel ou surchauffe, usure des cylindres.",
+      "dtc": []
+     },
+     {
+      "slug": "piston",
+      "name": "Piston",
+      "role": "Reçoit la pression de combustion et la transmet à la bielle.",
+      "wear": "Rayures, segments collés, piston percé après cliquetis.",
+      "dtc": [
+       "P0300"
+      ]
+     },
+     {
+      "slug": "piston-ring",
+      "name": "Segments",
+      "role": "Assurent l'étanchéité entre piston et cylindre et raclent l'huile.",
+      "wear": "Segments usés : consommation d'huile, perte de compression, fumée bleue.",
+      "dtc": []
+     },
+     {
+      "slug": "connecting-rod",
+      "name": "Bielle",
+      "role": "Relie le piston au vilebrequin.",
+      "wear": "Coussinets usés : cognement sourd qui augmente avec la charge.",
+      "dtc": []
+     },
+     {
+      "slug": "crankshaft",
+      "name": "Vilebrequin",
+      "role": "Transforme le va-et-vient des pistons en rotation.",
+      "wear": "Usure des tourillons par manque d'huile, jeu axial.",
+      "dtc": [
+       "P0335"
+      ]
+     },
+     {
+      "slug": "main-bearing",
+      "name": "Coussinet de palier",
+      "role": "Surface de frottement entre vilebrequin et bloc.",
+      "wear": "Usure par huile dégradée : chute de pression d'huile, bruit.",
+      "dtc": []
+     },
+     {
+      "slug": "flywheel",
+      "name": "Volant moteur",
+      "role": "Régularise la rotation et sert d'appui à l'embrayage.",
+      "wear": "Surface brûlée, couronne de démarreur abîmée.",
+      "dtc": []
+     },
+     {
+      "slug": "dual-mass-flywheel",
+      "name": "Volant moteur bimasse",
+      "role": "Filtre les à-coups du moteur avant la boîte.",
+      "wear": "Ressorts usés ou jeu excessif : claquements au ralenti et à l'arrêt moteur, vibrations, embrayage qui broute. Se change en général avec le kit d'embrayage.",
+      "dtc": []
+     },
+     {
+      "slug": "oil-pan",
+      "name": "Carter d'huile",
+      "role": "Réservoir d'huile sous le moteur.",
+      "wear": "Choc, joint qui fuit, bouchon de vidange abîmé.",
+      "dtc": []
+     },
+     {
+      "slug": "crankshaft-seal",
+      "name": "Joint spi de vilebrequin",
+      "role": "Empêche l'huile de fuir en bout de vilebrequin.",
+      "wear": "Joint durci : fuite d'huile côté distribution ou côté boîte.",
+      "dtc": []
+     },
+     {
+      "slug": "engine-mount",
+      "name": "Support moteur",
+      "role": "Fixe le moteur à la caisse et absorbe les vibrations.",
+      "wear": "Caoutchouc fissuré : vibrations, à-coups au démarrage.",
+      "dtc": []
+     },
+     {
+      "slug": "balance-shaft",
+      "name": "Arbre d'équilibrage",
+      "role": "Arbre tournant qui compense les vibrations du moteur.",
+      "wear": "Chaîne ou paliers usés : vibrations, bruit ; rupture possible de l'entraînement.",
+      "dtc": []
+     },
+     {
+      "slug": "crankcase",
+      "name": "Carter moteur (demi-carters)",
+      "role": "Carter en deux moitiés qui porte vilebrequin, boîte et embrayage (moto).",
+      "wear": "Fissure après chute ou plan de joint qui fuit : suintement d'huile.",
+      "dtc": []
+     },
+     {
+      "slug": "cylinder-barrel",
+      "name": "Cylindre",
+      "role": "Cylindre dans lequel coulisse le piston (moto, monté sur le carter).",
+      "wear": "Rayé ou ovalisé : perte de compression, consommation d'huile, fumée.",
+      "dtc": []
+     },
+     {
+      "slug": "piston-pin",
+      "name": "Axe de piston",
+      "role": "Axe qui relie le piston à la bielle.",
+      "wear": "Jeu excessif : cliquetis métallique sous charge.",
+      "dtc": []
+     },
+     {
+      "slug": "piston-pin-clip",
+      "name": "Clip d'axe de piston",
+      "role": "Circlip qui empêche l'axe de piston de sortir latéralement.",
+      "wear": "Mal posé ou réutilisé : l'axe raye le cylindre, casse moteur.",
+      "dtc": []
+     },
+     {
+      "slug": "flywheel-bolt",
+      "name": "Vis de volant moteur",
+      "role": "Fixe le volant moteur sur le vilebrequin.",
+      "wear": "Vis à usage unique ; mal serrée : volant qui prend du jeu, bruit.",
+      "dtc": []
+     },
+     {
+      "slug": "starter-ring-gear",
+      "name": "Couronne de démarreur",
+      "role": "Couronne dentée du volant sur laquelle engrène le lanceur.",
+      "wear": "Dents usées : démarreur qui tourne dans le vide ou grince.",
+      "dtc": []
+     },
+     {
+      "slug": "kickstart-lever",
+      "name": "Kick de démarrage",
+      "role": "Levier de démarrage au pied sur moto ou scooter.",
+      "wear": "Ressort de rappel cassé ou pignon qui patine : kick qui ne revient pas ou ne lance plus le moteur.",
+      "dtc": []
+     },
+     {
+      "slug": "combustion-engine",
+      "name": "Moteur thermique",
+      "role": "Moteur thermique qui entraîne les roues ou la génératrice dans une hybride.",
+      "wear": "Voir les sous-ensembles moteur (allumage, injection, distribution).",
+      "dtc": []
+     }
+    ]
+   },
+   {
+    "slug": "timing",
+    "name": "Distribution",
+    "parts": [
+     {
+      "slug": "timing-belt",
+      "name": "Courroie de distribution",
+      "role": "Synchronise vilebrequin et arbres à cames.",
+      "wear": "Remplacement périodique impératif : une rupture peut casser le moteur.",
+      "dtc": [
+       "P0016",
+       "P0335",
+       "P0340"
+      ]
+     },
+     {
+      "slug": "timing-chain",
+      "name": "Chaîne de distribution",
+      "role": "Synchronise vilebrequin et arbres à cames (version chaîne).",
+      "wear": "Allongement : bruit de crécelle au démarrage, calage décalé.",
+      "dtc": [
+       "P0016",
+       "P0017"
+      ]
+     },
+     {
+      "slug": "tensioner",
+      "name": "Galet tendeur",
+      "role": "Maintient la bonne tension de la courroie ou de la chaîne.",
+      "wear": "Roulement bruyant, tension insuffisante : saut de dent.",
+      "dtc": []
+     },
+     {
+      "slug": "idler-pulley",
+      "name": "Galet enrouleur",
+      "role": "Guide la courroie sur son trajet.",
+      "wear": "Roulement sec : sifflement, grognement.",
+      "dtc": []
+     },
+     {
+      "slug": "chain-guide",
+      "name": "Patin guide de chaîne de distribution",
+      "role": "Guide la chaîne et limite ses battements.",
+      "wear": "Patin usé ou cassé : bruit, débris dans l'huile.",
+      "dtc": []
+     },
+     {
+      "slug": "timing-cover",
+      "name": "Carter de distribution",
+      "role": "Protège la courroie ou la chaîne.",
+      "wear": "Fissure, joint qui fuit (version chaîne).",
+      "dtc": []
+     },
+     {
+      "slug": "accessory-belt",
+      "name": "Courroie d'accessoires",
+      "role": "Entraîne alternateur, pompe de direction, climatisation.",
+      "wear": "Craquelures, sifflement au démarrage, glissement par temps humide.",
+      "dtc": []
+     },
+     {
+      "slug": "accessory-belt-tensioner",
+      "name": "Tendeur de courroie d'accessoires",
+      "role": "Tend automatiquement la courroie d'accessoires.",
+      "wear": "Ressort fatigué : courroie qui bat ou siffle.",
+      "dtc": []
+     },
+     {
+      "slug": "crankshaft-pulley",
+      "name": "Poulie de vilebrequin (damper)",
+      "role": "Entraîne la courroie d'accessoires et amortit les vibrations.",
+      "wear": "Caoutchouc décollé : vibrations, courroie qui saute.",
+      "dtc": []
+     },
+     {
+      "slug": "chain-tensioner",
+      "name": "Tendeur de chaîne hydraulique",
+      "role": "Tendeur hydraulique qui pousse le patin pour tendre la chaîne de distribution.",
+      "wear": "Clapet ou ressort usé : bruit de chaîne au démarrage, risque de saut de dent.",
+      "dtc": [
+       "P0016",
+       "P0017"
+      ]
+     },
+     {
+      "slug": "tensioner-rail",
+      "name": "Patin tendeur de chaîne",
+      "role": "Patin pivotant appuyé par le tendeur, côté mou de la chaîne.",
+      "wear": "Garniture usée ou cassée : bruit de chaîne, débris dans le carter.",
+      "dtc": [
+       "P0016"
+      ]
+     },
+     {
+      "slug": "crankshaft-sprocket",
+      "name": "Pignon de vilebrequin",
+      "role": "Pignon de vilebrequin qui entraîne la courroie ou la chaîne de distribution.",
+      "wear": "Dents usées ou clavette cisaillée : calage décalé.",
+      "dtc": [
+       "P0016",
+       "P0335"
+      ]
+     },
+     {
+      "slug": "oil-pump-chain",
+      "name": "Chaîne de pompe à huile",
+      "role": "Chaîne qui entraîne la pompe à huile depuis le vilebrequin.",
+      "wear": "Allongée ou cassée : chute de pression d'huile, voyant d'huile.",
+      "dtc": [
+       "P0520",
+       "P0524"
+      ]
+     },
+     {
+      "slug": "cam-chain",
+      "name": "Chaîne de distribution (moto)",
+      "role": "Entraîne le ou les arbres à cames depuis le vilebrequin sur un moteur de moto.",
+      "wear": "S'allonge avec le temps : bruit de cliquetis, tendeur en bout de course.",
+      "dtc": [
+       "P0016"
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "lubrication",
+    "name": "Lubrification",
+    "parts": [
+     {
+      "slug": "oil-pump",
+      "name": "Pompe à huile",
+      "role": "Fait circuler l'huile sous pression dans le moteur.",
+      "wear": "Usure ou crépine bouchée : chute de pression, voyant d'huile.",
+      "dtc": [
+       "P0520",
+       "P0524"
+      ]
+     },
+     {
+      "slug": "oil-filter",
+      "name": "Filtre à huile",
+      "role": "Retient les impuretés de l'huile.",
+      "wear": "Colmaté si vidanges trop espacées.",
+      "dtc": []
+     },
+     {
+      "slug": "oil-pressure-sensor",
+      "name": "Manocontact de pression d'huile",
+      "role": "Surveille la pression d'huile et allume le voyant.",
+      "wear": "Fuite ou contact défaillant : voyant intempestif. Voyant d'huile allumé moteur tournant = arrêter le moteur et contrôler le niveau avant tout.",
+      "dtc": [
+       "P0520",
+       "P0521",
+       "P0522",
+       "P0523"
+      ]
+     },
+     {
+      "slug": "oil-cooler",
+      "name": "Échangeur huile / eau",
+      "role": "Refroidit l'huile grâce au liquide de refroidissement.",
+      "wear": "Joint interne qui fuit : mélange huile et liquide.",
+      "dtc": []
+     },
+     {
+      "slug": "oil-level-sensor",
+      "name": "Sonde de niveau d'huile",
+      "role": "Mesure le niveau d'huile dans le carter.",
+      "wear": "Fausse alerte de niveau, fuite au joint.",
+      "dtc": []
+     },
+     {
+      "slug": "pcv-valve",
+      "name": "Clapet de réaspiration des vapeurs d'huile",
+      "role": "Recycle les vapeurs du carter vers l'admission.",
+      "wear": "Membrane percée : sifflement, ralenti instable, prise d'air.",
+      "dtc": [
+       "P0171",
+       "P0174"
+      ]
+     },
+     {
+      "slug": "dipstick",
+      "name": "Jauge à huile",
+      "role": "Jauge qui permet de contrôler le niveau d'huile moteur.",
+      "wear": "Tube mal emboîté : fuite d'air, prise d'air au carter.",
+      "dtc": []
+     },
+     {
+      "slug": "oil-drain-plug",
+      "name": "Bouchon de vidange",
+      "role": "Bouchon de vidange au point bas du carter d'huile.",
+      "wear": "Filet abîmé ou joint non remplacé : fuite d'huile goutte à goutte.",
+      "dtc": []
+     },
+     {
+      "slug": "oil-filler-cap",
+      "name": "Bouchon de remplissage d'huile",
+      "role": "Bouchon de remplissage d'huile sur le couvre-culasse.",
+      "wear": "Joint durci ou bouchon absent : fuite, prise d'air, ralenti instable.",
+      "dtc": [
+       "P0171"
+      ]
+     },
+     {
+      "slug": "oil-pan-gasket",
+      "name": "Joint de carter d'huile",
+      "role": "Joint entre le carter d'huile et le bloc.",
+      "wear": "Durci ou mal serré : suintement d'huile sous le moteur.",
+      "dtc": []
+     },
+     {
+      "slug": "oil-strainer",
+      "name": "Crépine d'aspiration d'huile",
+      "role": "Crépine qui filtre grossièrement l'huile aspirée par la pompe.",
+      "wear": "Colmatée (boues) : pression d'huile basse, voyant à chaud.",
+      "dtc": [
+       "P0520",
+       "P0524"
+      ]
+     },
+     {
+      "slug": "piston-cooling-jet",
+      "name": "Gicleur de fond de piston",
+      "role": "Gicleur qui projette de l'huile sous le piston pour le refroidir.",
+      "wear": "Bouché ou déplacé : surchauffe du piston, serrage moteur.",
+      "dtc": []
+     },
+     {
+      "slug": "turbo-oil-line",
+      "name": "Tuyau de graissage du turbo",
+      "role": "Tuyau qui amène l'huile sous pression aux paliers du turbo.",
+      "wear": "Calaminé ou bouché : turbo qui siffle puis casse faute de graissage.",
+      "dtc": [
+       "P0299"
+      ]
+     },
+     {
+      "slug": "engine-oil",
+      "name": "Huile moteur",
+      "role": "Lubrifie, refroidit et nettoie les pièces mobiles du moteur.",
+      "wear": "Niveau bas ou huile usée : voyant de pression, usure accélérée. Respecter grade et vidange.",
+      "dtc": [
+       "P0011",
+       "P0012",
+       "P0014",
+       "P0015",
+       "P0021",
+       "P0022",
+       "P0024",
+       "P0025",
+       "P0298",
+       "P0520",
+       "P0521",
+       "P0522",
+       "P0523",
+       "P0524"
+      ]
+     },
+     {
+      "slug": "oil-temp-sensor",
+      "name": "Sonde de température d'huile",
+      "role": "Informe le calculateur de la température d'huile.",
+      "wear": "Signal faux : affichage erroné, gestion moteur dégradée.",
+      "dtc": [
+       "P0195",
+       "P0196",
+       "P0197",
+       "P0198",
+       "P0199",
+       "P0298"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "air-intake",
+  "name": "Admission d'air",
+  "kind": "both",
+  "children": [
+   {
+    "slug": "intake",
+    "name": "Admission",
+    "parts": [
+     {
+      "slug": "air-filter",
+      "name": "Filtre à air",
+      "role": "Filtre l'air aspiré par le moteur.",
+      "wear": "Colmaté : perte de puissance, surconsommation.",
+      "dtc": []
+     },
+     {
+      "slug": "airbox",
+      "name": "Boîtier de filtre à air",
+      "role": "Contient le filtre et canalise l'air.",
+      "wear": "Clips cassés, prise d'air parasite.",
+      "dtc": []
+     },
+     {
+      "slug": "maf-sensor",
+      "name": "Débitmètre d'air",
+      "role": "Mesure la quantité d'air aspirée.",
+      "wear": "Encrassement : trous à l'accélération, perte de puissance, fumée (diesel).",
+      "dtc": [
+       "P0100",
+       "P0101",
+       "P0102",
+       "P0103",
+       "P0171"
+      ]
+     },
+     {
+      "slug": "map-sensor",
+      "name": "Capteur de pression d'admission",
+      "role": "Mesure la pression dans le collecteur d'admission.",
+      "wear": "Encrassement ou fuite de durite : mauvaise richesse, ratés.",
+      "dtc": [
+       "P0105",
+       "P0106",
+       "P0107",
+       "P0108"
+      ]
+     },
+     {
+      "slug": "intake-air-temp-sensor",
+      "name": "Sonde de température d'air",
+      "role": "Mesure la température de l'air admis.",
+      "wear": "Valeur figée : démarrage difficile, richesse incorrecte.",
+      "dtc": [
+       "P0110",
+       "P0112",
+       "P0113"
+      ]
+     },
+     {
+      "slug": "throttle-body",
+      "name": "Boîtier papillon",
+      "role": "Dose l'air admis selon la demande du conducteur.",
+      "wear": "Encrassement : ralenti instable, calage, mode dégradé.",
+      "dtc": [
+       "P0120",
+       "P0121",
+       "P0122",
+       "P0123",
+       "P0505",
+       "P0638"
+      ]
+     },
+     {
+      "slug": "intake-manifold",
+      "name": "Collecteur d'admission",
+      "role": "Répartit l'air entre les cylindres.",
+      "wear": "Joint qui fuit : prise d'air, mélange pauvre.",
+      "dtc": [
+       "P0171",
+       "P0174"
+      ]
+     },
+     {
+      "slug": "idle-air-control-valve",
+      "name": "Moteur pas à pas / vanne de ralenti",
+      "role": "Ajuste l'air au ralenti (moteurs anciens).",
+      "wear": "Encrassé : ralenti trop haut, trop bas ou calage.",
+      "dtc": [
+       "P0505",
+       "P0506",
+       "P0507"
+      ]
+     },
+     {
+      "slug": "swirl-flap",
+      "name": "Volets de turbulence",
+      "role": "Créent un tourbillon d'air pour mieux brûler à bas régime.",
+      "wear": "Axes grippés ou volet cassé (risque moteur).",
+      "dtc": []
+     },
+     {
+      "slug": "intake-hose",
+      "name": "Durite d'admission",
+      "role": "Durite qui relie le filtre à air au boîtier papillon ou au turbo.",
+      "wear": "Fissurée : prise d'air, mélange pauvre, sifflement.",
+      "dtc": [
+       "P0171",
+       "P0101"
+      ]
+     },
+     {
+      "slug": "intake-manifold-gasket",
+      "name": "Joint de collecteur d'admission",
+      "role": "Assure l'étanchéité entre collecteur d'admission et culasse.",
+      "wear": "Joint durci : prise d'air, ralenti instable, mélange pauvre.",
+      "dtc": [
+       "P0105",
+       "P0106",
+       "P0107",
+       "P0108",
+       "P0109",
+       "P0171",
+       "P0174",
+       "P0301",
+       "P0302",
+       "P0303",
+       "P0304",
+       "P0305",
+       "P0306",
+       "P0307",
+       "P0308",
+       "P0309",
+       "P0310",
+       "P0311",
+       "P0312"
+      ]
+     },
+     {
+      "slug": "vacuum-hose",
+      "name": "Durite de dépression",
+      "role": "Relie les organes pilotés par dépression (servofrein, électrovannes, recyclage).",
+      "wear": "Durite fendue : sifflement, ralenti instable, mélange pauvre, turbo ou EGR mal piloté.",
+      "dtc": [
+       "P0045",
+       "P0046",
+       "P0047",
+       "P0048",
+       "P0105",
+       "P0106",
+       "P0107",
+       "P0108",
+       "P0109",
+       "P0234",
+       "P0243",
+       "P0244",
+       "P0245",
+       "P0246",
+       "P0400",
+       "P0401",
+       "P0507"
+      ]
+     },
+     {
+      "slug": "intake-air-heater",
+      "name": "Réchauffeur d'air d'admission",
+      "role": "Chauffe l'air admis par temps froid pour aider le démarrage.",
+      "wear": "Résistance coupée ou relais défaillant : démarrage difficile à froid, fumée blanche.",
+      "dtc": [
+       "P0540",
+       "P0541",
+       "P0542",
+       "P0543",
+       "P0640"
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "turbo",
+    "name": "Suralimentation",
+    "parts": [
+     {
+      "slug": "turbocharger",
+      "name": "Turbo (turbocompresseur)",
+      "role": "Comprime l'air admis grâce aux gaz d'échappement.",
+      "wear": "Jeu à l'axe, sifflement, fumée bleue, perte de puissance. Cause fréquente : graissage insuffisant (huile usée, tuyau de graissage calaminé) — chercher la cause avant de remplacer.",
+      "dtc": [
+       "P0234",
+       "P0299"
+      ]
+     },
+     {
+      "slug": "wastegate-actuator",
+      "name": "Actionneur de wastegate / géométrie variable",
+      "role": "Régule la pression de suralimentation.",
+      "wear": "Tringlerie grippée : surpression ou manque de puissance.",
+      "dtc": [
+       "P0234",
+       "P0243",
+       "P0299"
+      ]
+     },
+     {
+      "slug": "boost-pressure-sensor",
+      "name": "Capteur de pression de suralimentation",
+      "role": "Mesure la pression fournie par le turbo.",
+      "wear": "Prise de pression bouchée, connecteur oxydé ou capteur dérivé : valeur incohérente, mode dégradé, perte de puissance.",
+      "dtc": [
+       "P0235",
+       "P0236",
+       "P0237",
+       "P0238"
+      ]
+     },
+     {
+      "slug": "intercooler",
+      "name": "Échangeur air/air (intercooler)",
+      "role": "Refroidit l'air comprimé par le turbo.",
+      "wear": "Percé ou plein d'huile : perte de puissance.",
+      "dtc": [
+       "P0299"
+      ]
+     },
+     {
+      "slug": "boost-solenoid",
+      "name": "Électrovanne de suralimentation",
+      "role": "Pilote l'actionneur du turbo.",
+      "wear": "Membrane percée, connecteur oxydé : mode dégradé.",
+      "dtc": [
+       "P0243",
+       "P0245",
+       "P0246"
+      ]
+     },
+     {
+      "slug": "diverter-valve",
+      "name": "Soupape de décharge (dump valve)",
+      "role": "Recycle ou évacue la surpression quand on lâche l'accélérateur (moteurs essence turbo surtout).",
+      "wear": "Membrane percée : perte de pression, sifflement.",
+      "dtc": [
+       "P0299"
+      ]
+     },
+     {
+      "slug": "intercooler-hose",
+      "name": "Durite de suralimentation",
+      "role": "Relie turbo, échangeur et admission.",
+      "wear": "Durite fendue ou déboîtée : sifflement, perte de puissance.",
+      "dtc": [
+       "P0299"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "fuel",
+  "name": "Alimentation carburant",
+  "kind": "both",
+  "children": [
+   {
+    "slug": "fuel-supply",
+    "name": "Alimentation commune",
+    "parts": [
+     {
+      "slug": "fuel-tank",
+      "name": "Réservoir",
+      "role": "Stocke le carburant.",
+      "wear": "Corrosion, fuite, jauge défaillante.",
+      "dtc": []
+     },
+     {
+      "slug": "fuel-pump",
+      "name": "Pompe à carburant",
+      "role": "Envoie le carburant du réservoir vers le moteur.",
+      "wear": "Pompe faible : démarrage long, trous à l'accélération.",
+      "dtc": [
+       "P0087",
+       "P0230"
+      ]
+     },
+     {
+      "slug": "fuel-filter",
+      "name": "Filtre à carburant",
+      "role": "Retient eau et impuretés du carburant.",
+      "wear": "Colmaté : manque de puissance, démarrage difficile (diesel).",
+      "dtc": [
+       "P0087"
+      ]
+     },
+     {
+      "slug": "fuel-level-sender",
+      "name": "Jauge à carburant",
+      "role": "Mesure le niveau dans le réservoir.",
+      "wear": "Piste usée : jauge erratique.",
+      "dtc": [
+       "P0460",
+       "P0461",
+       "P0462",
+       "P0463"
+      ]
+     },
+     {
+      "slug": "fuel-cap",
+      "name": "Bouchon de réservoir",
+      "role": "Ferme le réservoir de façon étanche.",
+      "wear": "Joint abîmé : odeur d'essence, défaut d'étanchéité EVAP.",
+      "dtc": [
+       "P0455",
+       "P0457"
+      ]
+     },
+     {
+      "slug": "injector",
+      "name": "Injecteur",
+      "role": "Pulvérise le carburant dans le moteur au bon moment.",
+      "wear": "Encrassé ou fuyard : ratés, fumée, surconsommation.",
+      "dtc": [
+       "P0200",
+       "P0201",
+       "P0202",
+       "P0203",
+       "P0204",
+       "P0300"
+      ]
+     },
+     {
+      "slug": "fuel-rail",
+      "name": "Rampe d'injection",
+      "role": "Distribue le carburant sous pression aux injecteurs.",
+      "wear": "Fuite aux raccords, capteur de pression défaillant.",
+      "dtc": []
+     },
+     {
+      "slug": "fuel-rail-pressure-sensor",
+      "name": "Capteur de pression de rampe",
+      "role": "Mesure la pression du carburant dans la rampe.",
+      "wear": "Valeur erronée : calage, mode dégradé.",
+      "dtc": [
+       "P0190",
+       "P0191",
+       "P0192",
+       "P0193"
+      ]
+     },
+     {
+      "slug": "fuel-temperature-sensor",
+      "name": "Sonde de température carburant",
+      "role": "Mesure la température du carburant.",
+      "wear": "Valeur incohérente : richesse ou débit mal corrigés.",
+      "dtc": [
+       "P0180",
+       "P0182",
+       "P0183"
+      ]
+     },
+     {
+      "slug": "fuel-filler-neck",
+      "name": "Goulotte de remplissage",
+      "role": "Goulotte qui conduit le carburant du bouchon au réservoir.",
+      "wear": "Corrodée ou fissurée : odeur d'essence, défaut de fuite EVAP.",
+      "dtc": [
+       "P0455",
+       "P0442"
+      ]
+     },
+     {
+      "slug": "fuel-line",
+      "name": "Conduite de carburant basse pression",
+      "role": "Conduite basse pression entre réservoir, filtre et pompe haute pression ou rampe.",
+      "wear": "Fissurée ou raccord desserré : fuite, odeur de carburant, prise d'air (diesel).",
+      "dtc": [
+       "P0087"
+      ]
+     },
+     {
+      "slug": "high-pressure-line",
+      "name": "Tuyau haute pression",
+      "role": "Tuyau rigide haute pression entre pompe, rampe et injecteurs.",
+      "wear": "Raccord desserré ou fissure : fuite de carburant dangereuse, pression rail insuffisante.",
+      "dtc": [
+       "P0087",
+       "P0093"
+      ]
+     },
+     {
+      "slug": "injector-seal",
+      "name": "Joint d'injecteur",
+      "role": "Joint qui assure l'étanchéité entre l'injecteur et la culasse.",
+      "wear": "Joint usé : fuite de compression, calamine autour de l'injecteur, odeur de gazole.",
+      "dtc": []
+     },
+     {
+      "slug": "fuel-shutoff-valve",
+      "name": "Électrovanne de coupure carburant",
+      "role": "Coupe l'arrivée de carburant à l'arrêt moteur ou en cas de défaut.",
+      "wear": "Bobine ou commande défaillante : moteur qui ne démarre pas ou cale.",
+      "dtc": [
+       "P0005",
+       "P0006",
+       "P0007",
+       "P0215"
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "petrol-system",
+    "name": "Circuit essence",
+    "parts": [
+     {
+      "slug": "fuel-pressure-regulator",
+      "name": "Régulateur de pression d'essence",
+      "role": "Maintient une pression d'essence constante.",
+      "wear": "Membrane percée : mélange trop riche, démarrage difficile à chaud.",
+      "dtc": [
+       "P0172"
+      ]
+     },
+     {
+      "slug": "evap-canister",
+      "name": "Canister (absorbeur de vapeurs)",
+      "role": "Stocke les vapeurs d'essence du réservoir.",
+      "wear": "Saturé : odeur d'essence, difficulté au remplissage.",
+      "dtc": [
+       "P0440",
+       "P0442",
+       "P0455"
+      ]
+     },
+     {
+      "slug": "purge-valve",
+      "name": "Électrovanne de purge canister",
+      "role": "Envoie les vapeurs du canister vers l'admission.",
+      "wear": "Reste ouverte : ralenti instable après le plein.",
+      "dtc": [
+       "P0441",
+       "P0443",
+       "P0444",
+       "P0445"
+      ]
+     },
+     {
+      "slug": "evap-vent-valve",
+      "name": "Électrovanne de mise à l'air du canister",
+      "role": "Ouvre ou ferme la mise à l'air du canister pour les tests d'étanchéité.",
+      "wear": "Bloquée par la poussière : réservoir en dépression, plein difficile, voyant moteur.",
+      "dtc": [
+       "P0440",
+       "P0441",
+       "P0442",
+       "P0446",
+       "P0447",
+       "P0448",
+       "P0449",
+       "P0455",
+       "P0456",
+       "P0498",
+       "P0499"
+      ]
+     },
+     {
+      "slug": "evap-hose",
+      "name": "Durite de recyclage des vapeurs",
+      "role": "Relie réservoir, canister et collecteur d'admission.",
+      "wear": "Durite fissurée : odeur d'essence, fuite détectée par le calculateur.",
+      "dtc": [
+       "P0440",
+       "P0441",
+       "P0442",
+       "P0455",
+       "P0456",
+       "P0457",
+       "P0497"
+      ]
+     },
+     {
+      "slug": "evap-pressure-sensor",
+      "name": "Capteur de pression du réservoir",
+      "role": "Mesure la pression du circuit de vapeurs pour détecter les fuites.",
+      "wear": "Signal faux : faux défauts de fuite, voyant moteur.",
+      "dtc": [
+       "P0450",
+       "P0451",
+       "P0452",
+       "P0453",
+       "P0454"
+      ]
+     },
+     {
+      "slug": "fuel-composition-sensor",
+      "name": "Capteur de composition du carburant",
+      "role": "Mesure le taux d'éthanol (moteurs flex-fuel) pour adapter l'injection.",
+      "wear": "Signal erroné : démarrage difficile, mélange mal adapté.",
+      "dtc": [
+       "P0169",
+       "P0176",
+       "P0177",
+       "P0178",
+       "P0179"
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "diesel-system",
+    "name": "Circuit diesel common rail",
+    "parts": [
+     {
+      "slug": "high-pressure-pump",
+      "name": "Pompe haute pression",
+      "role": "Monte le gazole à très haute pression dans la rampe.",
+      "wear": "Usure ou limaille (carburant pollué) : manque de pression.",
+      "dtc": [
+       "P0087",
+       "P0088",
+       "P0093"
+      ]
+     },
+     {
+      "slug": "fuel-pressure-control-valve",
+      "name": "Régulateur de pression de rampe",
+      "role": "Ajuste la pression dans la rampe commune.",
+      "wear": "Grippé : pression instable, calage.",
+      "dtc": [
+       "P0089",
+       "P0090",
+       "P0091",
+       "P0092"
+      ]
+     },
+     {
+      "slug": "common-rail",
+      "name": "Rampe commune",
+      "role": "Accumulateur de gazole haute pression pour les injecteurs.",
+      "wear": "Fuite aux raccords, limiteur de pression défaillant.",
+      "dtc": [
+       "P0087",
+       "P0088"
+      ]
+     },
+     {
+      "slug": "pressure-relief-valve",
+      "name": "Limiteur de pression",
+      "role": "Ouvre en cas de surpression dans la rampe.",
+      "wear": "Fuyard : manque de pression, démarrage difficile.",
+      "dtc": [
+       "P0088"
+      ]
+     },
+     {
+      "slug": "injector-return-line",
+      "name": "Retour injecteurs",
+      "role": "Ramène le gazole en excès vers le réservoir.",
+      "wear": "Tuyaux durcis : fuite, prise d'air.",
+      "dtc": []
+     },
+     {
+      "slug": "fuel-metering-valve",
+      "name": "Régulateur de débit (doseur)",
+      "role": "Électrovanne qui dose le carburant admis dans la pompe haute pression.",
+      "wear": "Encrassée : pression rail instable, à-coups, calage, mode dégradé.",
+      "dtc": [
+       "P0251",
+       "P0087",
+       "P0088"
+      ]
+     },
+     {
+      "slug": "water-in-fuel-sensor",
+      "name": "Détecteur d'eau dans le gazole",
+      "role": "Détecte la présence d'eau au fond du filtre à gazole.",
+      "wear": "Voyant allumé : purger le filtre ; capteur HS = fausse alerte.",
+      "dtc": []
+     }
+    ]
+   },
+   {
+    "slug": "carburation",
+    "name": "Carburation",
+    "kind": "moto",
+    "parts": [
+     {
+      "slug": "carburetor",
+      "name": "Carburateur",
+      "role": "Dose le mélange air / essence sans électronique.",
+      "wear": "Gicleurs bouchés, membranes durcies : ralenti instable, trous.",
+      "dtc": []
+     },
+     {
+      "slug": "float-bowl",
+      "name": "Cuve à niveau constant",
+      "role": "Garde une réserve d'essence au bon niveau.",
+      "wear": "Pointeau qui fuit : débordement, mélange trop riche.",
+      "dtc": []
+     },
+     {
+      "slug": "main-jet",
+      "name": "Gicleur principal",
+      "role": "Calibre l'essence à mi et plein régime.",
+      "wear": "Bouché : manque de puissance en haut.",
+      "dtc": []
+     },
+     {
+      "slug": "choke",
+      "name": "Starter",
+      "role": "Enrichit le mélange pour le démarrage à froid.",
+      "wear": "Câble grippé : démarrage difficile ou surconsommation.",
+      "dtc": []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "ignition",
+  "name": "Allumage",
+  "kind": "both",
+  "children": [
+   {
+    "slug": "ignition-system",
+    "name": "Allumage",
+    "parts": [
+     {
+      "slug": "spark-plug",
+      "name": "Bougie d'allumage",
+      "role": "Produit l'étincelle qui enflamme le mélange.",
+      "wear": "Électrodes usées : ratés, démarrage difficile, surconsommation.",
+      "dtc": [
+       "P0300",
+       "P0301",
+       "P0302",
+       "P0303",
+       "P0304"
+      ]
+     },
+     {
+      "slug": "ignition-coil",
+      "name": "Bobine d'allumage",
+      "role": "Transforme le 12 V en haute tension pour la bougie.",
+      "wear": "Bobine fissurée : ratés sous charge, voyant clignotant.",
+      "dtc": [
+       "P0300",
+       "P0351",
+       "P0352",
+       "P0353",
+       "P0354"
+      ]
+     },
+     {
+      "slug": "spark-plug-wire",
+      "name": "Fil de bougie",
+      "role": "Transporte la haute tension jusqu'à la bougie.",
+      "wear": "Isolant craquelé : fuite de courant, ratés par temps humide.",
+      "dtc": [
+       "P0300"
+      ]
+     },
+     {
+      "slug": "cdi-unit",
+      "name": "Boîtier CDI / module d'allumage",
+      "role": "Déclenche l'allumage au bon moment (moto, anciens moteurs).",
+      "wear": "Panne franche : plus d'étincelle, coupures à chaud.",
+      "dtc": []
+     },
+     {
+      "slug": "distributor",
+      "name": "Allumeur",
+      "role": "Répartit l'étincelle vers chaque cylindre et donne le régime sur les moteurs anciens.",
+      "wear": "Tête ou rotor usé, capteur interne défaillant : ratés, moteur qui cale ou ne démarre pas.",
+      "dtc": [
+       "P0320",
+       "P0321",
+       "P0322",
+       "P0323"
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "engine-sensors",
+    "name": "Capteurs moteur",
+    "parts": [
+     {
+      "slug": "crankshaft-position-sensor",
+      "name": "Capteur PMH (position vilebrequin)",
+      "role": "Lit la cible du volant ou du vilebrequin : donne au calculateur le régime et la position du moteur (PMH).",
+      "wear": "Capteur HS : le moteur tourne mais ne démarre pas, calage à chaud.",
+      "dtc": [
+       "P0335",
+       "P0336",
+       "P0337",
+       "P0338"
+      ]
+     },
+     {
+      "slug": "camshaft-position-sensor",
+      "name": "Capteur d'arbre à cames (capteur de phase)",
+      "role": "Repère le cycle de chaque cylindre (phase) pour la séquence d'injection et d'allumage.",
+      "wear": "Signal absent ou décalé : démarrage long, mode dégradé, voyant moteur ; vérifier aussi le calage de la distribution.",
+      "dtc": [
+       "P0340",
+       "P0341",
+       "P0342",
+       "P0343"
+      ]
+     },
+     {
+      "slug": "knock-sensor",
+      "name": "Capteur de cliquetis",
+      "role": "Détecte les cognements de combustion pour corriger l'avance.",
+      "wear": "Mauvais serrage ou capteur HS : voyant moteur, avance réduite, perte de puissance et consommation en hausse.",
+      "dtc": [
+       "P0325",
+       "P0326",
+       "P0327",
+       "P0328"
+      ]
+     },
+     {
+      "slug": "coolant-temp-sensor",
+      "name": "Sonde de température d'eau (moteur)",
+      "role": "Informe le calculateur de la température du moteur.",
+      "wear": "Valeur erronée : démarrage difficile, ralenti trop haut, surconsommation, ventilateur permanent ou absent.",
+      "dtc": [
+       "P0115",
+       "P0116",
+       "P0117",
+       "P0118",
+       "P0125"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "exhaust",
+  "name": "Échappement et dépollution",
+  "kind": "both",
+  "children": [
+   {
+    "slug": "exhaust-line",
+    "name": "Ligne d'échappement",
+    "parts": [
+     {
+      "slug": "exhaust-manifold",
+      "name": "Collecteur d'échappement",
+      "role": "Recueille les gaz à la sortie de la culasse.",
+      "wear": "Fissure ou joint soufflé : bruit de claquement à froid.",
+      "dtc": []
+     },
+     {
+      "slug": "exhaust-gasket",
+      "name": "Joint d'échappement",
+      "role": "Assure l'étanchéité entre les éléments de la ligne.",
+      "wear": "Joint soufflé : bruit, odeur de gaz.",
+      "dtc": []
+     },
+     {
+      "slug": "exhaust-flex-pipe",
+      "name": "Flexible d'échappement",
+      "role": "Absorbe les mouvements du moteur.",
+      "wear": "Tresse cassée : bruit de fuite.",
+      "dtc": []
+     },
+     {
+      "slug": "muffler",
+      "name": "Silencieux",
+      "role": "Réduit le bruit d'échappement.",
+      "wear": "Corrosion, chicanes détachées : bruit, vibrations.",
+      "dtc": []
+     },
+     {
+      "slug": "exhaust-clamp",
+      "name": "Collier d'échappement",
+      "role": "Collier qui serre deux tronçons d'échappement.",
+      "wear": "Desserré ou rouillé : fuite, bruit d'échappement, sonde lambda faussée.",
+      "dtc": []
+     },
+     {
+      "slug": "exhaust-hanger",
+      "name": "Silentbloc de suspension d'échappement",
+      "role": "Silentbloc caoutchouc qui suspend la ligne sous la caisse.",
+      "wear": "Cassé ou déchiré : ligne qui tape sous la voiture, cognements.",
+      "dtc": []
+     },
+     {
+      "slug": "exhaust-pipe",
+      "name": "Tube d'échappement intermédiaire",
+      "role": "Tube intermédiaire qui relie les éléments de la ligne.",
+      "wear": "Percé par la rouille : bruit, fuite de gaz.",
+      "dtc": []
+     },
+     {
+      "slug": "front-pipe",
+      "name": "Tube avant (descente)",
+      "role": "Tube avant entre collecteur et catalyseur.",
+      "wear": "Fissuré : bruit au démarrage, fuite avant la sonde lambda.",
+      "dtc": [
+       "P0171"
+      ]
+     },
+     {
+      "slug": "heat-shield",
+      "name": "Écran thermique",
+      "role": "Tôle qui protège la caisse de la chaleur de l'échappement.",
+      "wear": "Fixation rouillée : vibration métallique à certains régimes.",
+      "dtc": []
+     },
+     {
+      "slug": "resonator",
+      "name": "Silencieux intermédiaire",
+      "role": "Silencieux intermédiaire qui atténue certaines fréquences.",
+      "wear": "Percé : bourdonnement, bruit accru.",
+      "dtc": []
+     },
+     {
+      "slug": "tailpipe",
+      "name": "Embout d'échappement",
+      "role": "Embout de sortie de l'échappement.",
+      "wear": "Suie noire = mélange riche ; dépôts blancs humides = possible fuite de liquide.",
+      "dtc": []
+     }
+    ]
+   },
+   {
+    "slug": "emissions",
+    "name": "Dépollution",
+    "parts": [
+     {
+      "slug": "catalytic-converter",
+      "name": "Catalyseur",
+      "role": "Transforme les gaz polluants en gaz moins nocifs.",
+      "wear": "Colmaté ou cassé : perte de puissance, contrôle technique refusé.",
+      "dtc": [
+       "P0420",
+       "P0430"
+      ]
+     },
+     {
+      "slug": "lambda-sensor-upstream",
+      "name": "Sonde lambda amont",
+      "role": "Mesure l'oxygène avant le catalyseur pour régler la richesse.",
+      "wear": "Sonde lente ou encrassée : surconsommation, ralenti instable.",
+      "dtc": [
+       "P0130",
+       "P0131",
+       "P0132",
+       "P0133",
+       "P0134",
+       "P0135",
+       "P0171",
+       "P0172"
+      ]
+     },
+     {
+      "slug": "lambda-sensor-downstream",
+      "name": "Sonde lambda aval",
+      "role": "Surveille l'efficacité du catalyseur.",
+      "wear": "Valeur figée : faux défaut catalyseur.",
+      "dtc": [
+       "P0136",
+       "P0137",
+       "P0138",
+       "P0139",
+       "P0140",
+       "P0141"
+      ]
+     },
+     {
+      "slug": "egr-valve",
+      "name": "Vanne EGR",
+      "role": "Réinjecte une partie des gaz d'échappement à l'admission.",
+      "wear": "Encrassée : fumée noire, à-coups, perte de puissance.",
+      "dtc": [
+       "P0400",
+       "P0401",
+       "P0402",
+       "P0403",
+       "P0404",
+       "P0405"
+      ]
+     },
+     {
+      "slug": "egr-cooler",
+      "name": "Refroidisseur EGR",
+      "role": "Refroidit les gaz recirculés.",
+      "wear": "Encrassé ou percé : perte de liquide, fumée blanche.",
+      "dtc": [
+       "P0401"
+      ]
+     },
+     {
+      "slug": "dpf",
+      "name": "Filtre à particules (FAP)",
+      "role": "Piège les suies des moteurs diesel.",
+      "wear": "Colmaté si trajets courts : mode dégradé, régénérations ratées.",
+      "dtc": [
+       "P2002",
+       "P2463"
+      ]
+     },
+     {
+      "slug": "dpf-pressure-sensor",
+      "name": "Capteur de pression différentielle FAP",
+      "role": "Mesure le colmatage du FAP.",
+      "wear": "Durites fendues ou bouchées : fausses alertes de colmatage.",
+      "dtc": [
+       "P2452",
+       "P2453"
+      ]
+     },
+     {
+      "slug": "exhaust-temperature-sensor",
+      "name": "Sonde de température des gaz",
+      "role": "Surveille la température avant turbo, catalyseur ou FAP.",
+      "wear": "Sonde HS : régénérations impossibles.",
+      "dtc": [
+       "P0544",
+       "P0545",
+       "P0546"
+      ]
+     },
+     {
+      "slug": "scr-catalyst",
+      "name": "Catalyseur SCR",
+      "role": "Réduit les oxydes d'azote grâce à l'AdBlue.",
+      "wear": "Encrassement par cristaux d'AdBlue.",
+      "dtc": [
+       "P20EE"
+      ]
+     },
+     {
+      "slug": "adblue-injector",
+      "name": "Injecteur AdBlue",
+      "role": "Pulvérise l'AdBlue dans l'échappement.",
+      "wear": "Cristallisation : buse bouchée, alerte AdBlue.",
+      "dtc": [
+       "P20B9",
+       "P2047"
+      ]
+     },
+     {
+      "slug": "nox-sensor",
+      "name": "Capteur NOx",
+      "role": "Mesure les oxydes d'azote dans l'échappement.",
+      "wear": "Défaut fréquent : alerte AdBlue, compte à rebours de démarrage.",
+      "dtc": [
+       "P2200"
+      ]
+     },
+     {
+      "slug": "secondary-air-pump",
+      "name": "Pompe à air secondaire",
+      "role": "Injecte de l'air dans l'échappement à froid.",
+      "wear": "Moteur grippé, clapet bloqué par condensation.",
+      "dtc": [
+       "P0410",
+       "P0411"
+      ]
+     },
+     {
+      "slug": "adblue-line",
+      "name": "Conduite AdBlue",
+      "role": "Conduite chauffée qui amène l'AdBlue de la pompe à l'injecteur.",
+      "wear": "Cristallisée ou chauffage HS : défaut SCR, compte à rebours de démarrage.",
+      "dtc": []
+     },
+     {
+      "slug": "adblue-pump",
+      "name": "Pompe AdBlue",
+      "role": "Met l'AdBlue sous pression pour l'injecteur.",
+      "wear": "Grippée par cristallisation : défaut SCR, démarrage limité.",
+      "dtc": []
+     },
+     {
+      "slug": "adblue-tank",
+      "name": "Réservoir AdBlue",
+      "role": "Réservoir d'AdBlue avec jauge et chauffage.",
+      "wear": "Capteur de niveau ou chauffage HS : alerte AdBlue même plein.",
+      "dtc": []
+     },
+     {
+      "slug": "gasoline-particulate-filter",
+      "name": "Filtre à particules essence (GPF)",
+      "role": "Filtre à particules des moteurs essence injection directe.",
+      "wear": "Colmaté sur trajets courts : perte de puissance, régénération nécessaire.",
+      "dtc": []
+     },
+     {
+      "slug": "oxidation-catalyst",
+      "name": "Catalyseur d'oxydation",
+      "role": "Catalyseur d'oxydation diesel (DOC) en amont du FAP.",
+      "wear": "Encrassé : régénérations ratées, fumée, perte de puissance.",
+      "dtc": [
+       "P0420"
+      ]
+     },
+     {
+      "slug": "scr-mixer",
+      "name": "Mélangeur AdBlue",
+      "role": "Mélangeur qui répartit l'AdBlue dans les gaz avant le SCR.",
+      "wear": "Dépôts d'urée : efficacité SCR faible.",
+      "dtc": []
+     },
+     {
+      "slug": "secondary-air-valve",
+      "name": "Vanne d'air secondaire",
+      "role": "Laisse passer l'air de la pompe d'air secondaire vers l'échappement au démarrage à froid.",
+      "wear": "Clapet grippé ou percé par la condensation : voyant moteur, pompe endommagée.",
+      "dtc": [
+       "P0410",
+       "P0411",
+       "P0412",
+       "P0413",
+       "P0414",
+       "P0415",
+       "P0416",
+       "P0417",
+       "P0491",
+       "P0492"
+      ]
+     },
+     {
+      "slug": "egr-solenoid",
+      "name": "Électrovanne de commande EGR",
+      "role": "Pilote par dépression l'ouverture de la vanne EGR.",
+      "wear": "Bobine coupée ou durite percée : EGR inactive, voyant moteur.",
+      "dtc": [
+       "P0400",
+       "P0401",
+       "P0402"
+      ]
+     },
+     {
+      "slug": "egr-throttle-valve",
+      "name": "Volet d'admission (doseur EGR)",
+      "role": "Ferme partiellement l'admission pour favoriser le recyclage et couper le moteur proprement (diesel).",
+      "wear": "Encrassé ou moteur grippé : perte de puissance, à-coups à l'arrêt moteur.",
+      "dtc": [
+       "P0487",
+       "P0488"
+      ]
+     },
+     {
+      "slug": "exhaust-flap",
+      "name": "Volet d'échappement",
+      "role": "Crée une contre-pression pour chauffer plus vite ou piloter la régénération.",
+      "wear": "Volet grippé par la calamine : perte de puissance ou bruit d'échappement modifié.",
+      "dtc": [
+       "P0475",
+       "P0476",
+       "P0477",
+       "P0478",
+       "P0479"
+      ]
+     },
+     {
+      "slug": "exhaust-pressure-sensor",
+      "name": "Capteur de pression d'échappement",
+      "role": "Mesure la pression des gaz en amont du turbo ou de la dépollution.",
+      "wear": "Tuyau bouché ou signal faux : gestion turbo et dépollution perturbée.",
+      "dtc": [
+       "P0470",
+       "P0471",
+       "P0472",
+       "P0473",
+       "P0474"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "cooling",
+  "name": "Refroidissement",
+  "kind": "both",
+  "children": [
+   {
+    "slug": "cooling-circuit",
+    "name": "Circuit de refroidissement",
+    "parts": [
+     {
+      "slug": "radiator",
+      "name": "Radiateur",
+      "role": "Évacue la chaleur du liquide de refroidissement.",
+      "wear": "Ailettes bouchées, fuite : surchauffe.",
+      "dtc": [
+       "P0217"
+      ]
+     },
+     {
+      "slug": "water-pump",
+      "name": "Pompe à eau",
+      "role": "Fait circuler le liquide de refroidissement.",
+      "wear": "Roulement bruyant, fuite au témoin : surchauffe.",
+      "dtc": [
+       "P0217"
+      ]
+     },
+     {
+      "slug": "thermostat",
+      "name": "Thermostat (calorstat)",
+      "role": "Régule la température du moteur.",
+      "wear": "Bloqué ouvert : moteur long à chauffer ; bloqué fermé : surchauffe.",
+      "dtc": [
+       "P0125",
+       "P0128"
+      ]
+     },
+     {
+      "slug": "cooling-fan",
+      "name": "Motoventilateur",
+      "role": "Force l'air à travers le radiateur.",
+      "wear": "Moteur grippé, résistance HS : surchauffe à l'arrêt.",
+      "dtc": [
+       "P0480",
+       "P0481"
+      ]
+     },
+     {
+      "slug": "expansion-tank",
+      "name": "Vase d'expansion",
+      "role": "Réserve de liquide et absorbe la dilatation.",
+      "wear": "Fissure, bouchon qui ne tient plus la pression.",
+      "dtc": []
+     },
+     {
+      "slug": "radiator-hose",
+      "name": "Durite de refroidissement",
+      "role": "Relie moteur, radiateur et chauffage.",
+      "wear": "Durite poreuse ou gonflée : fuite, surchauffe.",
+      "dtc": []
+     },
+     {
+      "slug": "heater-core",
+      "name": "Radiateur de chauffage",
+      "role": "Chauffe l'habitacle avec le liquide moteur.",
+      "wear": "Fuite : buée grasse, moquette humide.",
+      "dtc": []
+     },
+     {
+      "slug": "fan-resistor",
+      "name": "Résistance de motoventilateur",
+      "role": "Réduit le courant pour la petite vitesse du ventilateur.",
+      "wear": "Résistance coupée : plus de petite vitesse, seule la grande vitesse fonctionne. Connecteur souvent fondu.",
+      "dtc": [
+       "P0480"
+      ]
+     },
+     {
+      "slug": "fan-thermo-switch",
+      "name": "Thermocontact de ventilateur",
+      "role": "Sur les véhicules anciens, met le ventilateur en marche au-delà d'une température.",
+      "wear": "Contact qui ne ferme plus : surchauffe à l'arrêt ; collé : ventilateur permanent.",
+      "dtc": [
+       "P0480"
+      ]
+     },
+     {
+      "slug": "electric-coolant-pump",
+      "name": "Pompe à eau électrique",
+      "role": "Pompe à eau électrique (circuit annexe, turbo, batterie ou moteur électrique).",
+      "wear": "Moteur grippé : surchauffe locale, défaut de refroidissement.",
+      "dtc": [
+       "P0217"
+      ]
+     },
+     {
+      "slug": "expansion-tank-cap",
+      "name": "Bouchon de vase d'expansion",
+      "role": "Bouchon taré qui pressurise le circuit de refroidissement.",
+      "wear": "Clapet HS : perte de liquide, ébullition, durites qui gonflent.",
+      "dtc": [
+       "P0217"
+      ]
+     },
+     {
+      "slug": "expansion-tank-hose",
+      "name": "Durite de vase d'expansion",
+      "role": "Durite de retour vers le vase d'expansion.",
+      "wear": "Fissurée : perte de liquide lente.",
+      "dtc": []
+     },
+     {
+      "slug": "fan-shroud",
+      "name": "Buse de ventilateur",
+      "role": "Buse qui canalise l'air du ventilateur à travers le radiateur.",
+      "wear": "Cassée : refroidissement moins efficace à l'arrêt.",
+      "dtc": []
+     },
+     {
+      "slug": "heater-hose",
+      "name": "Durite de chauffage",
+      "role": "Durites qui alimentent le radiateur de chauffage.",
+      "wear": "Fuite : odeur sucrée dans l'habitacle, perte de liquide.",
+      "dtc": []
+     },
+     {
+      "slug": "lower-radiator-hose",
+      "name": "Durite inférieure de radiateur",
+      "role": "Durite de retour du radiateur vers la pompe à eau.",
+      "wear": "Durite molle ou fissurée : fuite, prise d'air.",
+      "dtc": []
+     },
+     {
+      "slug": "upper-radiator-hose",
+      "name": "Durite supérieure de radiateur",
+      "role": "Durite de sortie moteur vers le radiateur.",
+      "wear": "Fuite ou éclatement à chaud : surchauffe rapide.",
+      "dtc": [
+       "P0217"
+      ]
+     },
+     {
+      "slug": "radiator-drain-plug",
+      "name": "Bouchon de vidange de radiateur",
+      "role": "Bouchon de vidange en bas du radiateur.",
+      "wear": "Plastique fragile : fuite ou casse au démontage.",
+      "dtc": []
+     },
+     {
+      "slug": "thermostat-housing",
+      "name": "Boîtier de thermostat",
+      "role": "Boîtier qui loge le thermostat et la sonde de température.",
+      "wear": "Plastique fissuré : fuite de liquide fréquente.",
+      "dtc": [
+       "P0128"
+      ]
+     },
+     {
+      "slug": "ptc-heater",
+      "name": "Chauffage électrique (PTC)",
+      "role": "Résistance électrique qui chauffe l'habitacle ou la batterie.",
+      "wear": "Élément coupé : chauffage froid, défaut d'isolement sur VE.",
+      "dtc": []
+     },
+     {
+      "slug": "battery-chiller",
+      "name": "Échangeur de refroidissement batterie",
+      "role": "Échangeur qui refroidit le liquide de la batterie avec la climatisation.",
+      "wear": "Défaut : batterie trop chaude, charge rapide limitée.",
+      "dtc": []
+     },
+     {
+      "slug": "battery-cooling-fan",
+      "name": "Ventilateur de batterie",
+      "role": "Ventilateur qui refroidit la batterie hybride.",
+      "wear": "Filtre ou grille bouchée : surchauffe batterie, puissance réduite.",
+      "dtc": []
+     },
+     {
+      "slug": "coolant",
+      "name": "Liquide de refroidissement",
+      "role": "Transporte la chaleur du moteur vers le radiateur et protège du gel et de la corrosion.",
+      "wear": "Niveau bas ou liquide usé : surchauffe, corrosion. Ne jamais ouvrir le bocal à chaud.",
+      "dtc": [
+       "P0115",
+       "P0116",
+       "P0117",
+       "P0118",
+       "P0119",
+       "P0125",
+       "P0126",
+       "P0128",
+       "P0217"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "electrical",
+  "name": "Électricité",
+  "kind": "both",
+  "children": [
+   {
+    "slug": "charging-starting",
+    "name": "Charge et démarrage",
+    "parts": [
+     {
+      "slug": "battery",
+      "name": "Batterie",
+      "role": "Stocke l'énergie pour démarrer et alimenter le véhicule.",
+      "wear": "Vieillissement : démarrage lent par temps froid.",
+      "dtc": [
+       "P0560",
+       "P0562",
+       "P0563"
+      ]
+     },
+     {
+      "slug": "alternator",
+      "name": "Alternateur",
+      "role": "Recharge la batterie quand le moteur tourne.",
+      "wear": "Charbons ou régulateur usés : voyant batterie, batterie à plat.",
+      "dtc": [
+       "P0562",
+       "P0620",
+       "P0622"
+      ]
+     },
+     {
+      "slug": "voltage-regulator",
+      "name": "Régulateur de tension",
+      "role": "Limite la tension de charge.",
+      "wear": "Surcharge ou sous-charge de la batterie.",
+      "dtc": [
+       "P0560",
+       "P0562",
+       "P0563"
+      ]
+     },
+     {
+      "slug": "starter-motor",
+      "name": "Démarreur",
+      "role": "Lance le moteur au démarrage.",
+      "wear": "Charbons ou solénoïde usés : clic sans démarrage.",
+      "dtc": [
+       "P0615",
+       "P0616",
+       "P0617"
+      ]
+     },
+     {
+      "slug": "stator",
+      "name": "Stator (alternateur moto)",
+      "role": "Produit le courant de charge sur une moto.",
+      "wear": "Bobinage brûlé : batterie qui se décharge en roulant.",
+      "dtc": [
+       "P0562"
+      ]
+     },
+     {
+      "slug": "rectifier-regulator",
+      "name": "Régulateur / redresseur (moto)",
+      "role": "Transforme et limite le courant du stator.",
+      "wear": "Surchauffe : batterie qui bout ou ne charge plus.",
+      "dtc": [
+       "P0562",
+       "P0563"
+      ]
+     },
+     {
+      "slug": "starter-solenoid",
+      "name": "Solénoïde de démarreur",
+      "role": "Électroaimant qui lance le pignon et ferme le contact de puissance du démarreur.",
+      "wear": "Contacts brûlés : un clac net sans rotation. Vérifier d'abord la tension batterie et la borne 50.",
+      "dtc": [
+       "P0615",
+       "P0616",
+       "P0617"
+      ]
+     },
+     {
+      "slug": "battery-sensor",
+      "name": "Capteur de batterie (IBS)",
+      "role": "Mesure courant, tension et température sur la borne négative pour gérer la charge.",
+      "wear": "Défaut ou mauvaise initialisation après remplacement de batterie : charge mal gérée, Stop & Start inactif.",
+      "dtc": [
+       "P0560",
+       "P0562",
+       "P0563"
+      ]
+     },
+     {
+      "slug": "alternator-rectifier",
+      "name": "Pont de diodes d'alternateur",
+      "role": "Redresse le courant alternatif produit par l'alternateur en courant continu.",
+      "wear": "Diode claquée : charge faible, ondulation, batterie qui se vide la nuit, sifflement radio.",
+      "dtc": [
+       "P0562",
+       "P0620"
+      ]
+     },
+     {
+      "slug": "magneto-rotor",
+      "name": "Rotor à aimants (moto)",
+      "role": "Volant aimanté qui tourne autour du stator et produit le courant de charge.",
+      "wear": "Aimant décollé ou fissuré : charge faible, bruit de frottement. Rare.",
+      "dtc": [
+       "P0562"
+      ]
+     },
+     {
+      "slug": "battery-terminal",
+      "name": "Cosse de batterie",
+      "role": "Raccorde les câbles de puissance aux bornes de la batterie.",
+      "wear": "Sulfatation ou serrage faible : démarrage difficile, coupures, chute de tension. Nettoyer et resserrer.",
+      "dtc": [
+       "P0560",
+       "P0562"
+      ]
+     },
+     {
+      "slug": "alternator-pulley",
+      "name": "Poulie d'alternateur",
+      "role": "Poulie d'alternateur, souvent débrayable (roue libre).",
+      "wear": "Roue libre bloquée : bruit et vibration de courroie, tendeur qui bat.",
+      "dtc": []
+     },
+     {
+      "slug": "battery-cable",
+      "name": "Câble de batterie (+)",
+      "role": "Câble de puissance entre batterie, démarreur et masse.",
+      "wear": "Cosse oxydée ou câble coupé : démarrage faible, coupures.",
+      "dtc": [
+       "P0562"
+      ]
+     },
+     {
+      "slug": "starter-pinion",
+      "name": "Lanceur de démarreur",
+      "role": "Lanceur qui engrène sur la couronne du volant pour lancer le moteur.",
+      "wear": "Roue libre usée : démarreur qui tourne sans entraîner le moteur.",
+      "dtc": [
+       "P0615"
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "wiring-fuses-relays",
+    "name": "Câblage / Fusibles / Relais",
+    "parts": [
+     {
+      "slug": "fuse-box-engine",
+      "name": "Boîte à fusibles compartiment moteur",
+      "role": "Regroupe fusibles maxi, fusibles principaux et relais de puissance près de la batterie.",
+      "wear": "Couvercle mal fermé : humidité, corrosion des cosses et des relais. Emplacements : voir le manuel ou le couvercle.",
+      "dtc": []
+     },
+     {
+      "slug": "fuse-box-cabin",
+      "name": "Boîte à fusibles habitacle",
+      "role": "Protège les circuits de confort, d'éclairage et des calculateurs.",
+      "wear": "Rarement en cause ; fusible grillé = conséquence, chercher le court-circuit en aval.",
+      "dtc": []
+     },
+     {
+      "slug": "fuse-mini",
+      "name": "Fusible mini",
+      "role": "Fusible enfichable compact (5 à 30 A) des circuits basse puissance.",
+      "wear": "Grillé : filament coupé visible. Un fusible qui regrille signale un court-circuit à trouver.",
+      "dtc": []
+     },
+     {
+      "slug": "fuse-ato",
+      "name": "Fusible standard (ATO)",
+      "role": "Fusible enfichable standard ; couleur = calibre (10 A rouge, 15 A bleu, 20 A jaune…).",
+      "wear": "Grillé ou cosses oxydées. Ne jamais remplacer par un calibre supérieur.",
+      "dtc": []
+     },
+     {
+      "slug": "fuse-maxi",
+      "name": "Fusible maxi",
+      "role": "Fusible enfichable de forte intensité (20 à 80 A) : ventilateur, ABS, pompe.",
+      "wear": "Grillé après blocage d'un moteur électrique ou court-circuit franc.",
+      "dtc": []
+     },
+     {
+      "slug": "main-fuse",
+      "name": "Fusible principal batterie",
+      "role": "Protège le câblage de puissance directement au pôle positif.",
+      "wear": "Grillé : panne générale. Corrosion de la borne : chutes de tension.",
+      "dtc": []
+     },
+     {
+      "slug": "relay",
+      "name": "Relais",
+      "role": "Interrupteur commandé : un petit courant commande un circuit de puissance.",
+      "wear": "Relais collé (circuit toujours alimenté) ou qui claque sans commuter ; test par échange avec un relais identique.",
+      "dtc": [
+       "P0615",
+       "P0480",
+       "P0230"
+      ]
+     },
+     {
+      "slug": "starter-relay",
+      "name": "Relais de démarreur",
+      "role": "Commande le courant fort du solénoïde de démarreur.",
+      "wear": "Contact usé : démarreur muet par intermittence, clic sans démarrage.",
+      "dtc": [
+       "P0615",
+       "P0616",
+       "P0617"
+      ]
+     },
+     {
+      "slug": "fuel-pump-relay",
+      "name": "Relais de pompe à carburant",
+      "role": "Alimente la pompe à carburant sur ordre du calculateur.",
+      "wear": "Relais HS : pas de bruit de pompe à la mise du contact, moteur qui ne démarre pas.",
+      "dtc": [
+       "P0230",
+       "P0231",
+       "P0232"
+      ]
+     },
+     {
+      "slug": "cooling-fan-relay",
+      "name": "Relais de motoventilateur",
+      "role": "Commande l'alimentation du ventilateur.",
+      "wear": "Contact collé ou brûlé : ventilateur permanent ou absent.",
+      "dtc": [
+       "P0480",
+       "P0481"
+      ]
+     },
+     {
+      "slug": "glow-plug-control-unit",
+      "name": "Boîtier de préchauffage",
+      "role": "Alimente et surveille les bougies de préchauffage (diesel).",
+      "wear": "Défaut interne ou cosses oxydées : démarrage difficile à froid, voyant préchauffage.",
+      "dtc": [
+       "P0380",
+       "P0381",
+       "P0670",
+       "P0683"
+      ]
+     },
+     {
+      "slug": "ignition-switch",
+      "name": "Contacteur à clé",
+      "role": "Met le véhicule sous contact et lance le démarreur.",
+      "wear": "Contacts usés : coupures, démarreur muet, accessoires sans courant.",
+      "dtc": []
+     },
+     {
+      "slug": "wiring-harness",
+      "name": "Faisceau électrique",
+      "role": "Relie capteurs, actionneurs et calculateurs.",
+      "wear": "Fils frottés ou rongés, connecteurs oxydés : défauts intermittents.",
+      "dtc": []
+     },
+     {
+      "slug": "connector",
+      "name": "Connecteur",
+      "role": "Raccorde un faisceau à un composant ou à un autre faisceau.",
+      "wear": "Broches oxydées ou desserrées, verrou cassé : défauts intermittents, valeurs incohérentes.",
+      "dtc": []
+     },
+     {
+      "slug": "ground-strap",
+      "name": "Tresse de masse",
+      "role": "Relie moteur, caisse et batterie à la masse.",
+      "wear": "Oxydée ou desserrée : démarrage difficile, feux faibles, pannes électriques bizarres.",
+      "dtc": [
+       "P0562"
+      ]
+     },
+     {
+      "slug": "fuse-puller",
+      "name": "Pince extracteur de fusibles",
+      "role": "Outil fourni dans la boîte à fusibles pour retirer les fusibles.",
+      "wear": "Souvent perdue ; ne pas utiliser d'outil métallique sous tension.",
+      "dtc": []
+     },
+     {
+      "slug": "main-relay",
+      "name": "Relais principal",
+      "role": "Alimente le calculateur moteur et ses actionneurs (bobines, injecteurs, sondes) après la mise du contact.",
+      "wear": "Relais qui claque ou contact brûlé : calage, non-démarrage intermittent, plusieurs défauts d'alimentation en même temps.",
+      "dtc": [
+       "P0685",
+       "P0686",
+       "P0687"
+      ]
+     },
+     {
+      "slug": "ground-point",
+      "name": "Point de masse",
+      "role": "Point de raccordement des fils de masse sur la caisse ou le moteur.",
+      "wear": "Vis desserrée ou corrosion : symptômes électriques multiples et incohérents. Contrôler la chute de tension (< 0,2 V).",
+      "dtc": [
+       "P0562"
+      ]
+     },
+     {
+      "slug": "inertia-switch",
+      "name": "Interrupteur à inertie",
+      "role": "Coupe la pompe à carburant en cas de choc (selon véhicule).",
+      "wear": "Déclenché après un choc ou un nid-de-poule : moteur qui ne démarre plus, pas de bruit de pompe. Réarmer le bouton.",
+      "dtc": [
+       "P0230"
+      ]
+     },
+     {
+      "slug": "diagnostic-socket",
+      "name": "Prise diagnostic OBD",
+      "role": "Prise normalisée 16 broches pour lire les défauts et les paramètres des calculateurs.",
+      "wear": "Broches écartées ou fusible d'alimentation grillé : outil de diagnostic qui ne communique pas.",
+      "dtc": []
+     },
+     {
+      "slug": "clock-spring",
+      "name": "Ressort spirale (contacteur tournant)",
+      "role": "Relie électriquement le volant (klaxon, airbag, commandes) à la colonne tout en permettant de tourner.",
+      "wear": "Ruban coupé : klaxon muet, voyant airbag allumé, commandes au volant inactives.",
+      "dtc": []
+     },
+     {
+      "slug": "steering-column-switch",
+      "name": "Commodo",
+      "role": "Manettes sous le volant qui commandent éclairage, clignotants et essuie-glaces.",
+      "wear": "Contacts usés : feux ou essuie-glaces qui ne fonctionnent que dans certaines positions.",
+      "dtc": []
+     },
+     {
+      "slug": "dashboard-warning-lamp",
+      "name": "Témoin du tableau de bord",
+      "role": "Voyant qui informe le conducteur (charge, moteur, ABS, préchauffage, point mort...).",
+      "wear": "Témoin grillé ou absent au contact : un défaut peut passer inaperçu. Vérifier qu'il s'allume au contact.",
+      "dtc": [
+       "P0650"
+      ]
+     },
+     {
+      "slug": "kill-switch",
+      "name": "Coupe-circuit moto",
+      "role": "Interrupteur au guidon qui coupe allumage et démarreur.",
+      "wear": "Laissé sur OFF ou contacts oxydés : démarreur muet, moto qui ne démarre pas.",
+      "dtc": []
+     },
+     {
+      "slug": "starter-button",
+      "name": "Bouton de démarreur",
+      "role": "Commande le relais de démarreur sur moto et scooter.",
+      "wear": "Contacts oxydés : il faut appuyer plusieurs fois, démarreur muet.",
+      "dtc": [
+       "P0615"
+      ]
+     },
+     {
+      "slug": "clutch-lever-switch",
+      "name": "Contact de levier d'embrayage",
+      "role": "Autorise le démarrage quand l'embrayage est tiré (sécurité).",
+      "wear": "Contact déréglé ou cassé : démarreur muet en vitesse, coupure moteur avec béquille.",
+      "dtc": [
+       "P0830"
+      ]
+     },
+     {
+      "slug": "neutral-switch",
+      "name": "Contact de point mort",
+      "role": "Signale le point mort au tableau de bord et autorise le démarrage.",
+      "wear": "Fuite d'huile ou contact HS : témoin point mort absent, démarrage refusé.",
+      "dtc": [
+       "P0850"
+      ]
+     },
+     {
+      "slug": "side-stand-switch",
+      "name": "Contact de béquille latérale",
+      "role": "Coupe le moteur si une vitesse est engagée béquille sortie.",
+      "wear": "Encrassé ou cassé : moteur qui cale en passant la 1re, démarrage impossible.",
+      "dtc": []
+     },
+     {
+      "slug": "reverse-light-switch",
+      "name": "Contacteur de feux de recul",
+      "role": "Contacteur sur la boîte qui allume les feux de recul.",
+      "wear": "Contact HS : feux de recul inactifs.",
+      "dtc": []
+     },
+     {
+      "slug": "tcm-relay",
+      "name": "Relais d'alimentation calculateur de boîte",
+      "role": "Alimente le calculateur de boîte automatique.",
+      "wear": "Relais collé ou contact oxydé : boîte en mode dégradé, pas de communication.",
+      "dtc": [
+       "P0885",
+       "P0886",
+       "P0887",
+       "P0888",
+       "P0889",
+       "P0890",
+       "P0891",
+       "P0892"
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "control-units",
+    "name": "Calculateurs et capteurs",
+    "parts": [
+     {
+      "slug": "ecu",
+      "name": "Calculateur moteur",
+      "role": "Pilote injection, allumage et dépollution.",
+      "wear": "Rare : défaut interne, connecteur oxydé, logiciel.",
+      "dtc": [
+       "P0600",
+       "P0601",
+       "P0603",
+       "P0604",
+       "P0605",
+       "P0606"
+      ]
+     },
+     {
+      "slug": "vehicle-speed-sensor",
+      "name": "Capteur de vitesse véhicule",
+      "role": "Indique la vitesse au calculateur et au compteur.",
+      "wear": "Compteur figé, régulateur inopérant.",
+      "dtc": [
+       "P0500",
+       "P0501",
+       "P0502"
+      ]
+     },
+     {
+      "slug": "accelerator-pedal-sensor",
+      "name": "Capteur de pédale d'accélérateur",
+      "role": "Transmet la demande du conducteur au calculateur.",
+      "wear": "Piste usée : à-coups, mode dégradé.",
+      "dtc": [
+       "P0220",
+       "P0222",
+       "P0223",
+       "P2135"
+      ]
+     },
+     {
+      "slug": "brake-light-switch",
+      "name": "Contacteur de feux stop",
+      "role": "Signale l'appui sur la pédale de frein.",
+      "wear": "Feux stop inopérants, régulateur qui ne s'enclenche pas.",
+      "dtc": [
+       "P0504",
+       "P0571"
+      ]
+     },
+     {
+      "slug": "clutch-pedal-switch",
+      "name": "Contacteur de pédale d'embrayage",
+      "role": "Signale l'appui sur la pédale d'embrayage.",
+      "wear": "Régulateur ou démarrage inopérant.",
+      "dtc": [
+       "P0704"
+      ]
+     },
+     {
+      "slug": "ambient-temp-sensor",
+      "name": "Sonde de température extérieure",
+      "role": "Mesure la température extérieure.",
+      "wear": "Affichage erroné, climatisation perturbée.",
+      "dtc": [
+       "P0070",
+       "P0072",
+       "P0073"
+      ]
+     },
+     {
+      "slug": "hybrid-control-unit",
+      "name": "Calculateur hybride",
+      "role": "Calculateur qui gère la répartition entre moteur thermique et électrique.",
+      "wear": "Défaut de communication : voyant hybride, mode dégradé.",
+      "dtc": []
+     },
+     {
+      "slug": "instrument-cluster",
+      "name": "Combiné d'instruments",
+      "role": "Affiche vitesse, régime, voyants et messages ; échange avec les calculateurs.",
+      "wear": "Soudures fatiguées : aiguilles ou affichage figés, voyants intempestifs.",
+      "dtc": [
+       "P0381",
+       "P0644",
+       "P0648",
+       "P0649",
+       "P0650",
+       "P0655",
+       "P0804",
+       "P0814"
+      ]
+     },
+     {
+      "slug": "cruise-control-switch",
+      "name": "Commande de régulateur de vitesse",
+      "role": "Transmet les ordres du régulateur/limiteur (marche, +, -, reprise).",
+      "wear": "Contact usé ou ruban du volant coupé : régulateur inopérant.",
+      "dtc": [
+       "P0525",
+       "P0564",
+       "P0565",
+       "P0566",
+       "P0567",
+       "P0568",
+       "P0569",
+       "P0570",
+       "P0574",
+       "P0575",
+       "P0576",
+       "P0577",
+       "P0578",
+       "P0579",
+       "P0580",
+       "P0581",
+       "P0582",
+       "P0583",
+       "P0584",
+       "P0585",
+       "P0586",
+       "P0587",
+       "P0588",
+       "P0589",
+       "P0590",
+       "P0591",
+       "P0592",
+       "P0593",
+       "P0594",
+       "P0595",
+       "P0596"
+      ]
+     },
+     {
+      "slug": "immobilizer",
+      "name": "Antidémarrage",
+      "role": "Vérifie la clé ou le badge avant d'autoriser le démarrage.",
+      "wear": "Pile de clé faible, antenne ou clé non reconnue : démarreur qui tourne mais moteur qui ne démarre pas.",
+      "dtc": [
+       "P0513",
+       "P0633"
+      ]
+     },
+     {
+      "slug": "injector-driver-module",
+      "name": "Boîtier de commande des injecteurs",
+      "role": "Fournit la haute tension et le courant de commande aux injecteurs.",
+      "wear": "Surchauffe ou défaut interne : ratés, moteur qui ne démarre pas, voyant moteur.",
+      "dtc": [
+       "P0611",
+       "P0612"
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "lighting",
+    "name": "Éclairage et signalisation",
+    "parts": [
+     {
+      "slug": "headlamp",
+      "name": "Projecteur avant",
+      "role": "Éclaire la route.",
+      "wear": "Ampoule grillée, optique jaunie.",
+      "dtc": []
+     },
+     {
+      "slug": "tail-lamp",
+      "name": "Feu arrière",
+      "role": "Signale le véhicule et le freinage.",
+      "wear": "Ampoule ou connecteur oxydé.",
+      "dtc": []
+     },
+     {
+      "slug": "indicator",
+      "name": "Clignotant",
+      "role": "Signale un changement de direction.",
+      "wear": "Clignotement rapide si une ampoule est grillée.",
+      "dtc": []
+     },
+     {
+      "slug": "horn",
+      "name": "Avertisseur sonore",
+      "role": "Prévient les autres usagers.",
+      "wear": "Contacts oxydés : son faible ou absent.",
+      "dtc": []
+     },
+     {
+      "slug": "position-lamp",
+      "name": "Feu de position",
+      "role": "Signale le véhicule de nuit (veilleuses avant).",
+      "wear": "Ampoule grillée ou douille oxydée.",
+      "dtc": []
+     },
+     {
+      "slug": "low-beam-bulb",
+      "name": "Ampoule de croisement",
+      "role": "Éclaire la route sans éblouir.",
+      "wear": "Grillée ou noircie ; feux faibles = souvent masse ou connecteur oxydé.",
+      "dtc": []
+     },
+     {
+      "slug": "high-beam-bulb",
+      "name": "Ampoule de route",
+      "role": "Éclairage longue portée.",
+      "wear": "Grillée ; si les deux ne s'allument pas, vérifier relais, fusible et commodo.",
+      "dtc": []
+     },
+     {
+      "slug": "horn-button",
+      "name": "Bouton d'avertisseur",
+      "role": "Ferme le circuit de commande du relais de klaxon.",
+      "wear": "Contact usé ou ressort spirale coupé : klaxon muet.",
+      "dtc": []
+     },
+     {
+      "slug": "wiper-motor",
+      "name": "Moteur d'essuie-glace",
+      "role": "Entraîne les balais via la tringlerie.",
+      "wear": "Charbons usés ou contact de position fixe HS : balais qui s'arrêtent n'importe où ou ne bougent plus.",
+      "dtc": []
+     },
+     {
+      "slug": "washer-pump",
+      "name": "Pompe de lave-glace",
+      "role": "Envoie le liquide vers les gicleurs.",
+      "wear": "Grippée après gel ou réservoir vide ; fusible grillé si bloquée.",
+      "dtc": []
+     },
+     {
+      "slug": "rain-sensor",
+      "name": "Capteur de pluie",
+      "role": "Détecte l'eau sur le pare-brise pour l'essuyage automatique.",
+      "wear": "Mal recollé après changement de pare-brise : essuyage automatique erratique.",
+      "dtc": []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "transmission",
+  "name": "Transmission",
+  "kind": "both",
+  "children": [
+   {
+    "slug": "clutch",
+    "name": "Embrayage",
+    "parts": [
+     {
+      "slug": "clutch-disc",
+      "name": "Disque d'embrayage",
+      "role": "Transmet le couple du moteur à la boîte.",
+      "wear": "Garniture usée : patinage, odeur de brûlé.",
+      "dtc": []
+     },
+     {
+      "slug": "pressure-plate",
+      "name": "Mécanisme d'embrayage",
+      "role": "Plaque le disque contre le volant moteur.",
+      "wear": "Diaphragme fatigué : patinage, pédale dure.",
+      "dtc": []
+     },
+     {
+      "slug": "release-bearing",
+      "name": "Butée d'embrayage",
+      "role": "Actionne le mécanisme quand on débraye.",
+      "wear": "Bruit pédale enfoncée, fuite (butée hydraulique).",
+      "dtc": []
+     },
+     {
+      "slug": "clutch-master-cylinder",
+      "name": "Émetteur d'embrayage",
+      "role": "Transforme l'appui sur la pédale d'embrayage en pression hydraulique vers le récepteur d'embrayage.",
+      "wear": "Fuite interne : pédale qui reste au plancher.",
+      "dtc": []
+     },
+     {
+      "slug": "clutch-slave-cylinder",
+      "name": "Récepteur d'embrayage",
+      "role": "Actionne la fourchette ou la butée.",
+      "wear": "Fuite : passage des vitesses difficile.",
+      "dtc": []
+     },
+     {
+      "slug": "clutch-cable",
+      "name": "Câble d'embrayage",
+      "role": "Commande mécanique de l'embrayage.",
+      "wear": "Câble effiloché ou grippé : pédale dure, rupture.",
+      "dtc": []
+     },
+     {
+      "slug": "wet-clutch-pack",
+      "name": "Embrayage multidisque à bain d'huile",
+      "role": "Embrayage de moto baignant dans l'huile.",
+      "wear": "Disques usés ou huile inadaptée : patinage.",
+      "dtc": []
+     },
+     {
+      "slug": "bellhousing",
+      "name": "Carter d'embrayage",
+      "role": "Carter qui enferme l'embrayage entre moteur et boîte.",
+      "wear": "Fissure ou trace d'huile : joint spi de vilebrequin ou d'arbre primaire qui fuit.",
+      "dtc": []
+     },
+     {
+      "slug": "clutch-basket",
+      "name": "Cloche d'embrayage",
+      "role": "Cloche d'embrayage moto qui porte les disques garnis.",
+      "wear": "Rainures marquées : embrayage qui accroche, passages durs.",
+      "dtc": []
+     },
+     {
+      "slug": "clutch-bell",
+      "name": "Cloche d'embrayage centrifuge",
+      "role": "Cloche entraînée par l'embrayage centrifuge du scooter.",
+      "wear": "Cloche ovalisée ou glacée : broutement au démarrage.",
+      "dtc": []
+     },
+     {
+      "slug": "clutch-fluid-reservoir",
+      "name": "Réservoir de liquide d'embrayage",
+      "role": "Réservoir de liquide de l'embrayage hydraulique (souvent commun au frein).",
+      "wear": "Niveau bas : pédale molle, prise d'air.",
+      "dtc": []
+     },
+     {
+      "slug": "clutch-fork",
+      "name": "Fourchette d'embrayage",
+      "role": "Fourchette qui pousse la butée d'embrayage.",
+      "wear": "Usée ou fissurée au pivot : débrayage incomplet, vitesses qui craquent.",
+      "dtc": []
+     },
+     {
+      "slug": "clutch-hydraulic-line",
+      "name": "Canalisation d'embrayage",
+      "role": "Canalisation entre émetteur et récepteur d'embrayage.",
+      "wear": "Fuite ou bulle d'air : pédale qui reste au plancher.",
+      "dtc": []
+     },
+     {
+      "slug": "clutch-pedal",
+      "name": "Pédale d'embrayage",
+      "role": "Pédale qui commande l'embrayage.",
+      "wear": "Ressort ou palier usé : pédale dure, grincement.",
+      "dtc": []
+     },
+     {
+      "slug": "pilot-bearing",
+      "name": "Roulement pilote",
+      "role": "Roulement au bout du vilebrequin qui centre l'arbre primaire.",
+      "wear": "Usé : bruit pédale enfoncée, débrayage difficile.",
+      "dtc": []
+     },
+     {
+      "slug": "release-fork-pivot",
+      "name": "Rotule de fourchette",
+      "role": "Rotule sur laquelle pivote la fourchette d'embrayage.",
+      "wear": "Sèche ou usée : pédale dure, grincement.",
+      "dtc": []
+     },
+     {
+      "slug": "transmission-damper",
+      "name": "Amortisseur de torsion",
+      "role": "Ressorts amortisseurs de torsion du disque ou du volant.",
+      "wear": "Ressorts cassés : claquements au lever de pied, vibrations.",
+      "dtc": []
+     },
+     {
+      "slug": "driven-pulley",
+      "name": "Poulie menée (embrayage arrière)",
+      "role": "Poulie menée du variateur scooter avec son embrayage.",
+      "wear": "Usure du guide ou du ressort : patinage, perte de vitesse.",
+      "dtc": []
+     },
+     {
+      "slug": "torque-spring",
+      "name": "Ressort de poulie menée",
+      "role": "Ressort de poulie menée qui règle la montée en régime du scooter.",
+      "wear": "Ressort fatigué : patinage, vitesse maxi réduite.",
+      "dtc": []
+     },
+     {
+      "slug": "clutch-position-sensor",
+      "name": "Capteur de position d'embrayage",
+      "role": "Indique au calculateur la position de la pédale ou de l'embrayage piloté.",
+      "wear": "Capteur déréglé : démarrage refusé, régulateur de vitesse inactif, à-coups.",
+      "dtc": [
+       "P0805",
+       "P0806",
+       "P0807",
+       "P0808",
+       "P0809"
+      ]
+     },
+     {
+      "slug": "clutch-actuator",
+      "name": "Actionneur d'embrayage piloté",
+      "role": "Commande l'embrayage à la place de la pédale (boîte robotisée).",
+      "wear": "Usure ou défaut de capteur : patinage, décollages brutaux, apprentissage à refaire.",
+      "dtc": [
+       "P0810",
+       "P0900",
+       "P0901",
+       "P0902",
+       "P0903"
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "gearbox-group",
+    "name": "Boîte de vitesses",
+    "parts": [
+     {
+      "slug": "gearbox",
+      "name": "Boîte de vitesses",
+      "role": "Adapte le régime moteur à la vitesse.",
+      "wear": "Roulements bruyants, synchros usés, fuite d'huile.",
+      "dtc": []
+     },
+     {
+      "slug": "gear-selector",
+      "name": "Commande de boîte",
+      "role": "Relie le levier aux fourchettes de la boîte.",
+      "wear": "Rotules usées : vitesses floues ou qui sautent.",
+      "dtc": []
+     },
+     {
+      "slug": "synchronizer",
+      "name": "Synchroniseur",
+      "role": "Égalise les vitesses avant l'engagement d'un rapport.",
+      "wear": "Usé : craquement au passage des vitesses.",
+      "dtc": []
+     },
+     {
+      "slug": "input-speed-sensor",
+      "name": "Capteur de vitesse d'entrée de boîte",
+      "role": "Mesure la vitesse de l'arbre primaire (boîte auto).",
+      "wear": "Passages de rapports brutaux, mode secours.",
+      "dtc": [
+       "P0715",
+       "P0716",
+       "P0717"
+      ]
+     },
+     {
+      "slug": "output-speed-sensor",
+      "name": "Capteur de vitesse de sortie de boîte",
+      "role": "Mesure la vitesse de l'arbre de sortie.",
+      "wear": "Compteur erratique, mode secours.",
+      "dtc": [
+       "P0720",
+       "P0721",
+       "P0722"
+      ]
+     },
+     {
+      "slug": "transmission-control-module",
+      "name": "Calculateur de boîte automatique",
+      "role": "Pilote les passages de rapports.",
+      "wear": "Défaut interne ou connecteur : mode secours.",
+      "dtc": [
+       "P0700"
+      ]
+     },
+     {
+      "slug": "shift-solenoid",
+      "name": "Électrovanne de passage",
+      "role": "Oriente l'huile pour engager les rapports.",
+      "wear": "Encrassée : rapport bloqué, à-coups.",
+      "dtc": [
+       "P0750",
+       "P0755",
+       "P0760",
+       "P0765"
+      ]
+     },
+     {
+      "slug": "torque-converter",
+      "name": "Convertisseur de couple",
+      "role": "Coupleur hydraulique entre moteur et boîte auto.",
+      "wear": "Pontage défaillant : vibrations, surconsommation.",
+      "dtc": [
+       "P0740",
+       "P0741"
+      ]
+     },
+     {
+      "slug": "transmission-fluid-temp-sensor",
+      "name": "Sonde de température d'huile de boîte",
+      "role": "Mesure la température de l'huile de boîte.",
+      "wear": "Passages tardifs ou mode secours.",
+      "dtc": [
+       "P0710",
+       "P0711",
+       "P0712",
+       "P0713"
+      ]
+     },
+     {
+      "slug": "gear-position-sensor",
+      "name": "Capteur de rapport engagé",
+      "role": "Indique le rapport engagé au calculateur.",
+      "wear": "Affichage erroné, démarrage impossible en prise.",
+      "dtc": [
+       "P0705",
+       "P0706"
+      ]
+     },
+     {
+      "slug": "countershaft",
+      "name": "Arbre de sortie de boîte (secondaire)",
+      "role": "Arbre secondaire de la boîte (moto) qui porte les pignons menés et le pignon de sortie.",
+      "wear": "Roulements usés : sifflement, bruit sur un rapport.",
+      "dtc": []
+     },
+     {
+      "slug": "drive-gear",
+      "name": "Pignons menants",
+      "role": "Pignons de l'arbre primaire qui entraînent les rapports.",
+      "wear": "Dents usées : bruit de boîte, vitesse qui saute.",
+      "dtc": []
+     },
+     {
+      "slug": "driven-gear",
+      "name": "Pignons menés",
+      "role": "Pignons de l'arbre secondaire engrenés par les menants.",
+      "wear": "Craboteur usé : vitesse qui saute.",
+      "dtc": []
+     },
+     {
+      "slug": "final-drive-gear",
+      "name": "Pignons de réduction finale",
+      "role": "Pignon de réduction finale vers le différentiel.",
+      "wear": "Usure : bruit constant en roulant.",
+      "dtc": []
+     },
+     {
+      "slug": "gearbox-drain-plug",
+      "name": "Bouchon de vidange de boîte",
+      "role": "Bouchon de vidange de la boîte.",
+      "wear": "Joint non remplacé : fuite d'huile de boîte.",
+      "dtc": []
+     },
+     {
+      "slug": "input-shaft",
+      "name": "Arbre primaire",
+      "role": "Arbre primaire entraîné par le disque d'embrayage.",
+      "wear": "Cannelures usées ou roulement HS : bruit embrayé au point mort.",
+      "dtc": []
+     },
+     {
+      "slug": "output-shaft",
+      "name": "Arbre secondaire",
+      "role": "Arbre secondaire qui transmet le couple au différentiel.",
+      "wear": "Roulement usé : grondement qui augmente avec la vitesse.",
+      "dtc": []
+     },
+     {
+      "slug": "reverse-idler-gear",
+      "name": "Pignon de marche arrière",
+      "role": "Pignon intermédiaire qui inverse le sens pour la marche arrière.",
+      "wear": "Dents abîmées : craquement à l'engagement de la marche arrière.",
+      "dtc": []
+     },
+     {
+      "slug": "shaft-bearing",
+      "name": "Roulements d'arbres de boîte",
+      "role": "Roulements qui supportent les arbres de la boîte.",
+      "wear": "Usés : sifflement ou grondement en roulant.",
+      "dtc": []
+     },
+     {
+      "slug": "shift-cable",
+      "name": "Câble de commande de boîte",
+      "role": "Câbles qui relient le levier à la boîte.",
+      "wear": "Rotule cassée ou câble détendu : vitesses difficiles à passer.",
+      "dtc": []
+     },
+     {
+      "slug": "shift-drum",
+      "name": "Barillet de sélection",
+      "role": "Barillet qui guide les fourchettes sur une boîte moto.",
+      "wear": "Rainures usées : vitesses qui sautent, point mort difficile.",
+      "dtc": [
+       "P0850"
+      ]
+     },
+     {
+      "slug": "shift-fork",
+      "name": "Fourchette de sélection",
+      "role": "Fourchette qui déplace le baladeur ou le synchroniseur.",
+      "wear": "Patins usés : vitesse qui saute en charge.",
+      "dtc": []
+     },
+     {
+      "slug": "shift-rod",
+      "name": "Axe de fourchette",
+      "role": "Axe sur lequel coulisse la fourchette.",
+      "wear": "Grippé : passages durs.",
+      "dtc": []
+     },
+     {
+      "slug": "synchronizer-ring",
+      "name": "Bague de synchroniseur",
+      "role": "Bague cône qui freine le pignon avant le crabotage.",
+      "wear": "Usée : craquement au passage d'un rapport.",
+      "dtc": []
+     },
+     {
+      "slug": "driveshaft-oil-seal",
+      "name": "Joint spi de sortie de boîte",
+      "role": "Joint spi d'étanchéité en sortie de boîte côté cardan.",
+      "wear": "Fuite d'huile de boîte au niveau du cardan.",
+      "dtc": []
+     },
+     {
+      "slug": "valve-body",
+      "name": "Bloc hydraulique de boîte auto",
+      "role": "Distribue l'huile sous pression vers les embrayages et freins internes de la boîte automatique.",
+      "wear": "Encrassement par huile usée, tiroirs ou électrovannes collés : à-coups, passages durs, mode dégradé.",
+      "dtc": [
+       "P0729",
+       "P0730",
+       "P0731",
+       "P0732",
+       "P0733",
+       "P0734",
+       "P0735",
+       "P0736",
+       "P0745",
+       "P0746",
+       "P0747",
+       "P0748",
+       "P0749",
+       "P0750",
+       "P0751",
+       "P0752",
+       "P0753",
+       "P0754",
+       "P0755",
+       "P0756",
+       "P0757",
+       "P0758",
+       "P0759",
+       "P0760",
+       "P0761",
+       "P0762",
+       "P0763",
+       "P0764",
+       "P0765",
+       "P0766",
+       "P0767",
+       "P0768",
+       "P0769",
+       "P0770",
+       "P0771",
+       "P0772",
+       "P0773",
+       "P0774",
+       "P0775",
+       "P0776",
+       "P0777",
+       "P0778",
+       "P0779",
+       "P0795",
+       "P0796",
+       "P0797",
+       "P0798",
+       "P0799",
+       "P0960",
+       "P0961",
+       "P0962",
+       "P0963",
+       "P0964",
+       "P0965",
+       "P0966",
+       "P0967",
+       "P0968",
+       "P0969",
+       "P0970",
+       "P0971",
+       "P0972",
+       "P0973",
+       "P0974",
+       "P0975",
+       "P0976",
+       "P0977",
+       "P0978",
+       "P0979",
+       "P0980",
+       "P0981",
+       "P0982",
+       "P0983",
+       "P0984",
+       "P0985",
+       "P0986",
+       "P0997",
+       "P0998",
+       "P0999"
+      ]
+     },
+     {
+      "slug": "transmission-fluid",
+      "name": "Huile de boîte (ATF)",
+      "role": "Lubrifie, refroidit et transmet la pression hydraulique dans la boîte automatique.",
+      "wear": "Huile noircie ou niveau bas : patinage, à-coups, surchauffe de boîte. Vidange selon entretien.",
+      "dtc": [
+       "P0218",
+       "P0700",
+       "P0701",
+       "P0710",
+       "P0711",
+       "P0712",
+       "P0713",
+       "P0714",
+       "P0729",
+       "P0730",
+       "P0731",
+       "P0732",
+       "P0733",
+       "P0734",
+       "P0735",
+       "P0736",
+       "P0740",
+       "P0741",
+       "P0742",
+       "P0743",
+       "P0744",
+       "P0745",
+       "P0746",
+       "P0747",
+       "P0748",
+       "P0749",
+       "P0750",
+       "P0751",
+       "P0752",
+       "P0753",
+       "P0754",
+       "P0755",
+       "P0756",
+       "P0757",
+       "P0758",
+       "P0759",
+       "P0760",
+       "P0761",
+       "P0762",
+       "P0763",
+       "P0764",
+       "P0765",
+       "P0766",
+       "P0767",
+       "P0768",
+       "P0769",
+       "P0770",
+       "P0771",
+       "P0772",
+       "P0773",
+       "P0774",
+       "P0867",
+       "P0868",
+       "P0897"
+      ]
+     },
+     {
+      "slug": "gearbox-actuator",
+      "name": "Actionneur de boîte robotisée",
+      "role": "Moteur ou vérin qui sélectionne et engage les rapports à la place du conducteur.",
+      "wear": "Moteur usé, capteur de position déréglé : rapport refusé, point mort intempestif, apprentissage à refaire.",
+      "dtc": [
+       "P0904",
+       "P0905",
+       "P0906",
+       "P0907",
+       "P0908",
+       "P0910",
+       "P0911",
+       "P0912",
+       "P0913",
+       "P0914",
+       "P0915",
+       "P0916",
+       "P0917",
+       "P0918",
+       "P0920",
+       "P0921",
+       "P0922",
+       "P0923",
+       "P0924",
+       "P0925",
+       "P0926",
+       "P0927",
+       "P0932",
+       "P0933",
+       "P0934",
+       "P0935",
+       "P0936",
+       "P0937",
+       "P0938",
+       "P0939",
+       "P0940",
+       "P0941",
+       "P0942",
+       "P0943",
+       "P0944",
+       "P0945",
+       "P0946",
+       "P0947",
+       "P0948"
+      ]
+     },
+     {
+      "slug": "transmission-pressure-sensor",
+      "name": "Capteur de pression hydraulique de boîte",
+      "role": "Mesure la pression d'huile dans la boîte pour piloter les passages.",
+      "wear": "Signal faux ou connecteur oxydé : passages brutaux, mode dégradé.",
+      "dtc": [
+       "P0840",
+       "P0841",
+       "P0842",
+       "P0843",
+       "P0844",
+       "P0845",
+       "P0846",
+       "P0847",
+       "P0848",
+       "P0849",
+       "P0870",
+       "P0871",
+       "P0872",
+       "P0873",
+       "P0874",
+       "P0875",
+       "P0876",
+       "P0877",
+       "P0878",
+       "P0879",
+       "P0987",
+       "P0988",
+       "P0989",
+       "P0990",
+       "P0991",
+       "P0992",
+       "P0993",
+       "P0994",
+       "P0995",
+       "P0996"
+      ]
+     },
+     {
+      "slug": "pressure-control-solenoid",
+      "name": "Électrovanne de régulation de pression",
+      "role": "Règle la pression de ligne de la boîte automatique selon la charge.",
+      "wear": "Bobine coupée ou tiroir collé : passages durs ou patinage, mode dégradé.",
+      "dtc": [
+       "P0745",
+       "P0746",
+       "P0747",
+       "P0748",
+       "P0749",
+       "P0775",
+       "P0776",
+       "P0777",
+       "P0778",
+       "P0779",
+       "P0795",
+       "P0796",
+       "P0797",
+       "P0798",
+       "P0799",
+       "P0869",
+       "P0960",
+       "P0961",
+       "P0962",
+       "P0963",
+       "P0964",
+       "P0965",
+       "P0966",
+       "P0967",
+       "P0968",
+       "P0969",
+       "P0970",
+       "P0971"
+      ]
+     },
+     {
+      "slug": "transmission-filter",
+      "name": "Filtre à huile de boîte auto",
+      "role": "Retient les particules d'usure dans l'huile de boîte.",
+      "wear": "Colmaté : baisse de pression, bruit de pompe, passages lents. À changer à la vidange.",
+      "dtc": [
+       "P0729",
+       "P0730",
+       "P0731",
+       "P0732",
+       "P0733",
+       "P0734",
+       "P0735",
+       "P0736",
+       "P0868"
+      ]
+     },
+     {
+      "slug": "torque-converter-clutch-solenoid",
+      "name": "Électrovanne de pontage du convertisseur",
+      "role": "Commande le verrouillage du convertisseur de couple pour supprimer le glissement.",
+      "wear": "Défaillante : régime qui flotte à vitesse stabilisée, surconsommation, calage à l'arrêt.",
+      "dtc": [
+       "P0740",
+       "P0741",
+       "P0742",
+       "P0743",
+       "P0744"
+      ]
+     },
+     {
+      "slug": "shift-lock-solenoid",
+      "name": "Électroaimant de verrouillage du levier",
+      "role": "Bloque le levier en P tant que la pédale de frein n'est pas enfoncée.",
+      "wear": "Bloqué : levier impossible à sortir de P ; vérifier aussi le contacteur de stop.",
+      "dtc": [
+       "P0928",
+       "P0929",
+       "P0930",
+       "P0931"
+      ]
+     },
+     {
+      "slug": "intermediate-speed-sensor",
+      "name": "Capteur de vitesse intermédiaire de boîte",
+      "role": "Mesure la vitesse d'un arbre intermédiaire pour contrôler le glissement des embrayages.",
+      "wear": "Capteur encrassé de limaille ou câble coupé : passages erratiques, mode dégradé.",
+      "dtc": [
+       "P0791",
+       "P0792",
+       "P0793",
+       "P0794"
+      ]
+     },
+     {
+      "slug": "transmission-cooler",
+      "name": "Refroidisseur d'huile de boîte",
+      "role": "Évacue la chaleur de l'huile de boîte via le radiateur ou un échangeur.",
+      "wear": "Fuite ou mélange huile/liquide de refroidissement : surchauffe de boîte, huile laiteuse.",
+      "dtc": [
+       "P0218"
+      ]
+     },
+     {
+      "slug": "gear-shift-switch",
+      "name": "Contacteur de montée/descente de rapport",
+      "role": "Transmet les demandes de passage manuel (levier ou palettes) au calculateur de boîte.",
+      "wear": "Contact usé ou faisceau du volant coupé : palettes inopérantes.",
+      "dtc": [
+       "P0815",
+       "P0816",
+       "P0826",
+       "P0827",
+       "P0828",
+       "P0950",
+       "P0951",
+       "P0952",
+       "P0953",
+       "P0954"
+      ]
+     },
+     {
+      "slug": "gear-lever-sensor",
+      "name": "Capteur de position du levier de vitesses",
+      "role": "Indique au calculateur la position du levier (grille X/Y).",
+      "wear": "Capteur déréglé ou mal fixé : rapport affiché faux, démarrage refusé.",
+      "dtc": [
+       "P0820",
+       "P0821",
+       "P0822",
+       "P0823",
+       "P0824",
+       "P0860",
+       "P0861",
+       "P0862"
+      ]
+     },
+     {
+      "slug": "transmission-mode-switch",
+      "name": "Sélecteur de mode de boîte",
+      "role": "Choisit le programme de passage (normal, sport, neige, manuel).",
+      "wear": "Contact défaillant : mode bloqué ou voyant de boîte.",
+      "dtc": [
+       "P0790",
+       "P0955",
+       "P0956",
+       "P0957",
+       "P0958",
+       "P0959"
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "driveline",
+    "name": "Transmission aux roues",
+    "kind": "car",
+    "parts": [
+     {
+      "slug": "driveshaft",
+      "name": "Cardan (arbre de roue)",
+      "role": "Transmet le couple de la boîte aux roues.",
+      "wear": "Claquement en braquant si un joint est usé.",
+      "dtc": []
+     },
+     {
+      "slug": "cv-joint",
+      "name": "Joint homocinétique",
+      "role": "Permet de transmettre le couple roue braquée.",
+      "wear": "Usé : claquement en virage serré.",
+      "dtc": []
+     },
+     {
+      "slug": "cv-boot",
+      "name": "Soufflet de cardan",
+      "role": "Protège le joint et garde la graisse.",
+      "wear": "Déchiré : graisse projetée, usure rapide du joint.",
+      "dtc": []
+     },
+     {
+      "slug": "differential",
+      "name": "Différentiel",
+      "role": "Permet aux roues de tourner à des vitesses différentes.",
+      "wear": "Bruit en virage, fuite d'huile.",
+      "dtc": []
+     },
+     {
+      "slug": "wheel-bearing",
+      "name": "Roulement de roue",
+      "role": "Permet à la roue de tourner librement.",
+      "wear": "Grondement qui augmente avec la vitesse.",
+      "dtc": []
+     },
+     {
+      "slug": "propeller-shaft",
+      "name": "Arbre de transmission",
+      "role": "Relie la boîte au pont arrière (propulsion, 4x4).",
+      "wear": "Croisillons usés : vibrations, claquements.",
+      "dtc": []
+     },
+     {
+      "slug": "boot-clamp",
+      "name": "Collier de soufflet",
+      "role": "Collier qui serre le soufflet sur le cardan.",
+      "wear": "Desserré ou cassé : graisse projetée, joint qui s'use.",
+      "dtc": []
+     },
+     {
+      "slug": "cv-ball",
+      "name": "Billes de joint homocinétique",
+      "role": "Billes qui transmettent le couple dans le joint homocinétique.",
+      "wear": "Piquées : claquements en braquage.",
+      "dtc": []
+     },
+     {
+      "slug": "cv-cage",
+      "name": "Cage à billes",
+      "role": "Cage qui maintient les billes du joint homocinétique.",
+      "wear": "Usée : claquements en braquage et en accélération.",
+      "dtc": []
+     },
+     {
+      "slug": "inner-cv-joint",
+      "name": "Joint de cardan côté boîte (tripode)",
+      "role": "Joint tripode côté boîte qui permet le coulissement.",
+      "wear": "Usé : vibrations en accélération.",
+      "dtc": []
+     },
+     {
+      "slug": "intermediate-shaft",
+      "name": "Arbre intermédiaire de transmission",
+      "role": "Arbre intermédiaire pour égaliser la longueur des cardans.",
+      "wear": "Palier usé : vibrations, bruit.",
+      "dtc": []
+     },
+     {
+      "slug": "support-bearing",
+      "name": "Palier relais de transmission",
+      "role": "Palier relais qui soutient l'arbre intermédiaire.",
+      "wear": "Roulement HS : grondement, vibration.",
+      "dtc": []
+     },
+     {
+      "slug": "tripod",
+      "name": "Tripode",
+      "role": "Croisillon à trois galets du joint côté boîte.",
+      "wear": "Galets usés : vibrations à l'accélération.",
+      "dtc": []
+     },
+     {
+      "slug": "damper-weight",
+      "name": "Masse anti-vibration de cardan",
+      "role": "Masse fixée sur le cardan qui atténue les vibrations.",
+      "wear": "Déplacée ou détachée : vibrations à certaines vitesses.",
+      "dtc": []
+     },
+     {
+      "slug": "differential-ring-gear",
+      "name": "Couronne de différentiel",
+      "role": "Couronne de différentiel entraînée par le pignon de sortie.",
+      "wear": "Usure ou réglage : sifflement en accélération ou en décélération.",
+      "dtc": []
+     },
+     {
+      "slug": "transfer-case",
+      "name": "Boîte de transfert",
+      "role": "Répartit le couple entre essieux avant et arrière sur un 4x4.",
+      "wear": "Fuite ou huile usée : bruits, vibrations, 4x4 qui ne s'engage plus.",
+      "dtc": [
+       "P0818",
+       "P0836",
+       "P0837",
+       "P0838",
+       "P0839"
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "final-drive-moto",
+    "name": "Transmission finale moto",
+    "kind": "moto",
+    "parts": [
+     {
+      "slug": "drive-chain",
+      "name": "Chaîne de transmission",
+      "role": "Transmet le couple au pignon de roue arrière.",
+      "wear": "Chaîne détendue ou sèche : à-coups, bruit, risque de saut.",
+      "dtc": []
+     },
+     {
+      "slug": "front-sprocket",
+      "name": "Pignon de sortie de boîte",
+      "role": "Entraîne la chaîne.",
+      "wear": "Dents en crochet : chaîne qui saute.",
+      "dtc": []
+     },
+     {
+      "slug": "rear-sprocket",
+      "name": "Couronne arrière",
+      "role": "Reçoit la chaîne et entraîne la roue.",
+      "wear": "Dents usées : à changer avec la chaîne.",
+      "dtc": []
+     },
+     {
+      "slug": "chain-adjuster",
+      "name": "Tendeur de chaîne",
+      "role": "Règle la tension de la chaîne.",
+      "wear": "Mal réglé : roue désalignée, usure rapide.",
+      "dtc": []
+     },
+     {
+      "slug": "rear-hub-damper",
+      "name": "Silentblocs de couronne",
+      "role": "Amortissent les à-coups de transmission.",
+      "wear": "Caoutchoucs écrasés : jeu, claquements à l'accélération.",
+      "dtc": []
+     },
+     {
+      "slug": "cvt-belt",
+      "name": "Courroie de variateur",
+      "role": "Transmet le couple sur un scooter.",
+      "wear": "Courroie usée ou fissurée : perte de vitesse, rupture.",
+      "dtc": []
+     },
+     {
+      "slug": "variator",
+      "name": "Variateur",
+      "role": "Fait varier le rapport selon le régime.",
+      "wear": "Flasques marqués : à-coups au démarrage.",
+      "dtc": []
+     },
+     {
+      "slug": "variator-rollers",
+      "name": "Galets de variateur",
+      "role": "Écartent les flasques du variateur.",
+      "wear": "Galets usés ou méplats : reprises molles.",
+      "dtc": []
+     },
+     {
+      "slug": "cvt-clutch",
+      "name": "Embrayage centrifuge et cloche",
+      "role": "Relie le moteur à la roue au-delà d'un régime.",
+      "wear": "Garnitures usées : patinage, broutement au démarrage.",
+      "dtc": []
+     },
+     {
+      "slug": "chain-master-link",
+      "name": "Attache rapide de chaîne",
+      "role": "Attache rapide ou maillon riveté qui ferme la chaîne.",
+      "wear": "Clip mal posé : chaîne qui s'ouvre. Préférer un maillon riveté.",
+      "dtc": []
+     },
+     {
+      "slug": "chain-slider",
+      "name": "Patin de chaîne de transmission (bras oscillant)",
+      "role": "Patin qui protège le bras oscillant du frottement de la chaîne.",
+      "wear": "Usé : chaîne qui entaille le bras, bruit.",
+      "dtc": []
+     },
+     {
+      "slug": "sprocket-carrier",
+      "name": "Porte-couronne",
+      "role": "Porte-couronne monté sur le moyeu arrière avec les silentblocs.",
+      "wear": "Roulement ou silentblocs usés : jeu, à-coups.",
+      "dtc": []
+     },
+     {
+      "slug": "sprocket-cover",
+      "name": "Cache-pignon",
+      "role": "Cache qui protège le pignon de sortie de boîte.",
+      "wear": "Accumulation de graisse et sable : à nettoyer à chaque entretien.",
+      "dtc": []
+     },
+     {
+      "slug": "sprocket-nut",
+      "name": "Écrous de couronne",
+      "role": "Écrous de fixation de la couronne arrière.",
+      "wear": "Desserrés : couronne qui prend du jeu, bruit.",
+      "dtc": []
+     },
+     {
+      "slug": "cvt-air-filter",
+      "name": "Filtre à air de variateur",
+      "role": "Filtre qui ventile le carter de variateur.",
+      "wear": "Colmaté : courroie qui chauffe et s'use vite.",
+      "dtc": []
+     },
+     {
+      "slug": "cvt-cover",
+      "name": "Carter de variateur",
+      "role": "Carter qui ferme le variateur.",
+      "wear": "Fissuré ou joint HS : poussière et eau dans le variateur.",
+      "dtc": []
+     },
+     {
+      "slug": "drive-face",
+      "name": "Demi-poulie fixe (ventilée)",
+      "role": "Demi-poulie fixe ventilée du variateur.",
+      "wear": "Surface marquée : courroie qui s'use vite.",
+      "dtc": []
+     },
+     {
+      "slug": "ramp-plate",
+      "name": "Plateau de rampe (contre-flasque)",
+      "role": "Plateau de rampe contre lequel les galets montent.",
+      "wear": "Patins usés : bruit, variateur qui claque.",
+      "dtc": []
+     },
+     {
+      "slug": "variator-nut",
+      "name": "Écrou de variateur",
+      "role": "Écrou qui fixe le variateur sur le vilebrequin.",
+      "wear": "Mal serré : variateur qui tourne fou, casse.",
+      "dtc": []
+     },
+     {
+      "slug": "variator-sleeve",
+      "name": "Bague de variateur",
+      "role": "Bague sur laquelle coulisse le variateur.",
+      "wear": "Usée : vibration, variation irrégulière.",
+      "dtc": []
+     },
+     {
+      "slug": "rear-axle",
+      "name": "Axe de roue arrière",
+      "role": "Axe de roue arrière.",
+      "wear": "Mal serré ou non graissé : jeu, roulements qui s'usent.",
+      "dtc": []
+     },
+     {
+      "slug": "rear-wheel-hub",
+      "name": "Moyeu de roue arrière",
+      "role": "Moyeu arrière qui porte roulements, disque et couronne.",
+      "wear": "Roulements usés : jeu latéral, grondement.",
+      "dtc": []
+     },
+     {
+      "slug": "axle-spacer",
+      "name": "Entretoise d'axe",
+      "role": "Entretoise qui positionne la roue sur l'axe.",
+      "wear": "Oubliée ou inversée : roue décentrée, disque qui frotte.",
+      "dtc": []
+     },
+     {
+      "slug": "swingarm-pivot-bolt",
+      "name": "Axe de bras oscillant",
+      "role": "Axe d'articulation du bras oscillant.",
+      "wear": "Grippé ou roulements usés : flou de l'arrière, instabilité.",
+      "dtc": []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "brakes",
+  "name": "Freinage",
+  "kind": "both",
+  "children": [
+   {
+    "slug": "brake-system",
+    "name": "Freins",
+    "parts": [
+     {
+      "slug": "brake-disc",
+      "name": "Disque de frein",
+      "role": "Surface de friction serrée par les plaquettes.",
+      "wear": "Voilé ou trop fin : vibrations au freinage.",
+      "dtc": []
+     },
+     {
+      "slug": "brake-pad",
+      "name": "Plaquette de frein",
+      "role": "Garniture qui frotte sur le disque.",
+      "wear": "Usure normale : grincement, témoin, distance de freinage plus longue.",
+      "dtc": []
+     },
+     {
+      "slug": "caliper",
+      "name": "Étrier de frein",
+      "role": "Serre les plaquettes sur le disque.",
+      "wear": "Piston grippé : frein qui reste serré, voiture qui tire.",
+      "dtc": []
+     },
+     {
+      "slug": "brake-drum",
+      "name": "Tambour de frein",
+      "role": "Surface de friction des freins arrière à tambour.",
+      "wear": "Ovalisé : vibrations, frein à main faible.",
+      "dtc": []
+     },
+     {
+      "slug": "brake-shoe",
+      "name": "Mâchoire de frein",
+      "role": "Garniture qui frotte dans le tambour.",
+      "wear": "Usure ou garniture grasse : freinage faible.",
+      "dtc": []
+     },
+     {
+      "slug": "wheel-cylinder",
+      "name": "Cylindre de roue",
+      "role": "Écarte les mâchoires dans le tambour.",
+      "wear": "Fuite de liquide : garnitures grasses.",
+      "dtc": []
+     },
+     {
+      "slug": "master-cylinder",
+      "name": "Maître-cylindre",
+      "role": "Transforme l'appui sur la pédale de frein en pression hydraulique dans le circuit de freinage.",
+      "wear": "Fuite interne : pédale qui s'enfonce lentement.",
+      "dtc": []
+     },
+     {
+      "slug": "brake-booster",
+      "name": "Servofrein",
+      "role": "Amplifie l'effort sur la pédale.",
+      "wear": "Membrane percée : pédale dure, sifflement.",
+      "dtc": [
+       "P0556"
+      ]
+     },
+     {
+      "slug": "brake-hose",
+      "name": "Flexible de frein",
+      "role": "Relie la tuyauterie rigide à l'étrier.",
+      "wear": "Flexible gonflé ou craquelé : pédale spongieuse.",
+      "dtc": []
+     },
+     {
+      "slug": "brake-fluid-reservoir",
+      "name": "Bocal de liquide de frein",
+      "role": "Réserve de liquide de frein.",
+      "wear": "Niveau bas : plaquettes usées ou fuite.",
+      "dtc": []
+     },
+     {
+      "slug": "abs-module",
+      "name": "Bloc ABS",
+      "role": "Module la pression pour éviter le blocage des roues.",
+      "wear": "Défaut pompe ou calculateur : voyant ABS.",
+      "dtc": [
+       "U0121"
+      ]
+     },
+     {
+      "slug": "wheel-speed-sensor",
+      "name": "Capteur de vitesse de roue (ABS)",
+      "role": "Mesure la vitesse de chaque roue.",
+      "wear": "Encrassé ou câble coupé : voyant ABS / ESP.",
+      "dtc": [
+       "C0035",
+       "C0040",
+       "C0045",
+       "C0050"
+      ]
+     },
+     {
+      "slug": "handbrake-cable",
+      "name": "Câble de frein à main",
+      "role": "Commande mécanique du frein de stationnement.",
+      "wear": "Grippé ou détendu : frein à main inefficace.",
+      "dtc": []
+     },
+     {
+      "slug": "electric-parking-brake",
+      "name": "Frein de parking électrique",
+      "role": "Serre les freins arrière par moteur électrique.",
+      "wear": "Moteur d'étrier en défaut : frein qui ne se libère pas.",
+      "dtc": []
+     },
+     {
+      "slug": "abs-tone-ring",
+      "name": "Cible ABS (roue phonique)",
+      "role": "Couronne dentée lue par le capteur de vitesse de roue.",
+      "wear": "Fissurée, rouillée ou encrassée : défaut ABS, voyant allumé.",
+      "dtc": []
+     },
+     {
+      "slug": "anti-rattle-clip",
+      "name": "Ressort anti-bruit de plaquettes",
+      "role": "Ressort qui maintient les plaquettes et évite les bruits.",
+      "wear": "Absent ou fatigué : cliquetis au freinage.",
+      "dtc": []
+     },
+     {
+      "slug": "backing-plate",
+      "name": "Flasque de frein",
+      "role": "Flasque qui porte les mâchoires et le cylindre de roue.",
+      "wear": "Rouillé : bruit, mâchoires mal guidées.",
+      "dtc": []
+     },
+     {
+      "slug": "banjo-bolt",
+      "name": "Vis banjo",
+      "role": "Vis creuse qui raccorde le flexible à l'étrier ou au maître-cylindre.",
+      "wear": "Joints cuivre réutilisés : fuite de liquide.",
+      "dtc": []
+     },
+     {
+      "slug": "bleed-screw",
+      "name": "Vis de purge",
+      "role": "Vis qui permet de purger l'air du circuit de frein.",
+      "wear": "Grippée ou cassée : purge impossible ; prise d'air si mal serrée.",
+      "dtc": []
+     },
+     {
+      "slug": "brake-lever",
+      "name": "Levier de frein",
+      "role": "Levier de frein avant au guidon.",
+      "wear": "Levier tordu ou garde trop grande : freinage tardif, purge nécessaire.",
+      "dtc": []
+     },
+     {
+      "slug": "brake-line",
+      "name": "Canalisation de frein",
+      "role": "Canalisation rigide du circuit de frein.",
+      "wear": "Rouillée : fuite, pédale qui s'enfonce. Contrôle technique.",
+      "dtc": []
+     },
+     {
+      "slug": "caliper-bolt",
+      "name": "Vis d'étrier",
+      "role": "Vis qui fixent l'étrier ou sa chape.",
+      "wear": "Mal serrée : étrier qui bouge, bruit, danger. Freinfilet et couple constructeur.",
+      "dtc": []
+     },
+     {
+      "slug": "caliper-boot",
+      "name": "Cache-poussière de piston d'étrier",
+      "role": "Cache-poussière qui protège le piston d'étrier.",
+      "wear": "Déchiré : piston qui rouille et grippe, frein qui reste serré.",
+      "dtc": []
+     },
+     {
+      "slug": "caliper-bracket",
+      "name": "Chape d'étrier",
+      "role": "Chape qui porte l'étrier et guide les plaquettes.",
+      "wear": "Glissières rouillées : plaquettes coincées, usure inégale.",
+      "dtc": []
+     },
+     {
+      "slug": "caliper-piston",
+      "name": "Piston d'étrier",
+      "role": "Piston qui pousse les plaquettes sur le disque.",
+      "wear": "Grippé : frein qui reste serré, voiture qui tire.",
+      "dtc": []
+     },
+     {
+      "slug": "disc-carrier",
+      "name": "Support de disque (flottant)",
+      "role": "Support central d'un disque flottant de moto.",
+      "wear": "Pions de flottement usés : claquement, vibrations.",
+      "dtc": []
+     },
+     {
+      "slug": "dust-shield",
+      "name": "Tôle de protection (déflecteur)",
+      "role": "Tôle qui protège le disque des projections.",
+      "wear": "Tordue : frottement métallique sur le disque.",
+      "dtc": []
+     },
+     {
+      "slug": "guide-pin",
+      "name": "Colonnette d'étrier",
+      "role": "Colonnette sur laquelle coulisse l'étrier flottant.",
+      "wear": "Grippée : usure inégale des plaquettes, frein qui chauffe.",
+      "dtc": []
+     },
+     {
+      "slug": "guide-pin-boot",
+      "name": "Soufflet de colonnette",
+      "role": "Soufflet qui protège la colonnette.",
+      "wear": "Déchiré : colonnette qui rouille et grippe.",
+      "dtc": []
+     },
+     {
+      "slug": "hold-down-spring",
+      "name": "Ressort de maintien de mâchoire",
+      "role": "Ressort qui maintient la mâchoire contre le flasque.",
+      "wear": "Cassé : bruit, mâchoire qui vibre.",
+      "dtc": []
+     },
+     {
+      "slug": "pad-pin",
+      "name": "Axe de plaquettes",
+      "role": "Axe qui maintient les plaquettes dans l'étrier (moto).",
+      "wear": "Usé ou sans goupille : plaquettes qui tombent. Danger.",
+      "dtc": []
+     },
+     {
+      "slug": "pad-wear-sensor",
+      "name": "Témoin d'usure de plaquettes",
+      "role": "Témoin électrique d'usure de plaquettes.",
+      "wear": "Voyant allumé : plaquettes usées ; témoin à remplacer avec elles.",
+      "dtc": []
+     },
+     {
+      "slug": "parking-brake-lever",
+      "name": "Levier de frein à main (sur mâchoire)",
+      "role": "Levier sur la mâchoire actionné par le câble de frein à main.",
+      "wear": "Grippé : frein à main inefficace ou qui reste serré.",
+      "dtc": []
+     },
+     {
+      "slug": "piston-seal",
+      "name": "Joint de piston d'étrier",
+      "role": "Joint carré qui assure l'étanchéité et le recul du piston.",
+      "wear": "Durci : fuite, frein qui frotte.",
+      "dtc": []
+     },
+     {
+      "slug": "rear-brake-pedal",
+      "name": "Pédale de frein arrière",
+      "role": "Pédale de frein arrière de la moto.",
+      "wear": "Axe grippé : pédale qui ne revient pas, frein qui frotte.",
+      "dtc": []
+     },
+     {
+      "slug": "rear-master-cylinder",
+      "name": "Maître-cylindre arrière",
+      "role": "Maître-cylindre du frein arrière moto.",
+      "wear": "Joints usés : pédale molle, liquide sombre.",
+      "dtc": []
+     },
+     {
+      "slug": "return-spring",
+      "name": "Ressort de rappel de mâchoires",
+      "role": "Ressorts qui ramènent les mâchoires après freinage.",
+      "wear": "Fatigués : frein qui frotte, tambour qui chauffe.",
+      "dtc": []
+     },
+     {
+      "slug": "self-adjuster",
+      "name": "Rattrapage automatique d'usure",
+      "role": "Mécanisme qui rattrape l'usure des garnitures de mâchoires.",
+      "wear": "Grippé : course de frein à main longue, freinage faible à l'arrière.",
+      "dtc": []
+     },
+     {
+      "slug": "brake-booster-sensor",
+      "name": "Capteur de dépression du servofrein",
+      "role": "Mesure la dépression du servofrein (pompe à vide, moteurs essence à injection directe).",
+      "wear": "Signal faux ou durite percée : pédale dure, voyant de freinage.",
+      "dtc": [
+       "P0555",
+       "P0556",
+       "P0557",
+       "P0558",
+       "P0559"
+      ]
+     },
+     {
+      "slug": "vacuum-pump",
+      "name": "Pompe à vide",
+      "role": "Crée la dépression de l'assistance de freinage (et de certains actionneurs) sur les moteurs diesel ou à injection directe.",
+      "wear": "Fuite d'huile, joint ou clapet HS : pédale de frein dure, assistance faible.",
+      "dtc": [
+       "P0556",
+       "P0557"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "chassis",
+  "name": "Suspension, direction et roues",
+  "kind": "both",
+  "children": [
+   {
+    "slug": "suspension-car",
+    "name": "Suspension",
+    "kind": "car",
+    "parts": [
+     {
+      "slug": "shock-absorber",
+      "name": "Amortisseur",
+      "role": "Freine les oscillations du ressort.",
+      "wear": "Fuite d'huile, rebonds, tenue de route dégradée.",
+      "dtc": []
+     },
+     {
+      "slug": "coil-spring",
+      "name": "Ressort hélicoïdal",
+      "role": "Porte le poids du véhicule.",
+      "wear": "Ressort cassé : caisse affaissée, bruit.",
+      "dtc": []
+     },
+     {
+      "slug": "strut-mount",
+      "name": "Coupelle d'amortisseur",
+      "role": "Fixe l'amortisseur à la caisse et permet la rotation.",
+      "wear": "Roulement grippé : bruit en braquant à l'arrêt.",
+      "dtc": []
+     },
+     {
+      "slug": "control-arm",
+      "name": "Triangle de suspension",
+      "role": "Guide la roue et la relie au berceau.",
+      "wear": "Silentblocs fendus : claquements, usure des pneus.",
+      "dtc": []
+     },
+     {
+      "slug": "ball-joint",
+      "name": "Rotule de suspension",
+      "role": "Articulation entre triangle et porte-moyeu.",
+      "wear": "Jeu : claquement sur bosses, direction floue.",
+      "dtc": []
+     },
+     {
+      "slug": "anti-roll-bar",
+      "name": "Barre stabilisatrice",
+      "role": "Limite le roulis en virage.",
+      "wear": "Paliers usés : grincements.",
+      "dtc": []
+     },
+     {
+      "slug": "anti-roll-bar-link",
+      "name": "Biellette de barre stabilisatrice",
+      "role": "Relie la barre stabilisatrice à la suspension.",
+      "wear": "Rotules usées : claquement sur petites bosses.",
+      "dtc": []
+     },
+     {
+      "slug": "suspension-bushing",
+      "name": "Silentbloc",
+      "role": "Articulation caoutchouc qui filtre les chocs.",
+      "wear": "Caoutchouc fendu : bruit, imprécision.",
+      "dtc": []
+     },
+     {
+      "slug": "anti-roll-bar-bushing",
+      "name": "Silentbloc de barre stabilisatrice",
+      "role": "Silentbloc qui fixe la barre stabilisatrice à la caisse.",
+      "wear": "Usé : claquements sur bosses, grincement.",
+      "dtc": []
+     },
+     {
+      "slug": "bump-stop",
+      "name": "Butée de suspension",
+      "role": "Butée qui limite la course de l'amortisseur.",
+      "wear": "Désagrégée : choc métallique en fin de course.",
+      "dtc": []
+     },
+     {
+      "slug": "spring-seat",
+      "name": "Coupelle de ressort",
+      "role": "Coupelle sur laquelle appuie le ressort.",
+      "wear": "Rouillée : ressort qui casse, grincement.",
+      "dtc": []
+     },
+     {
+      "slug": "strut-bearing",
+      "name": "Roulement de coupelle",
+      "role": "Roulement de coupelle qui permet au ressort de tourner avec le braquage.",
+      "wear": "Grippé : direction dure, craquement en braquant à l'arrêt.",
+      "dtc": []
+     },
+     {
+      "slug": "strut-boot",
+      "name": "Soufflet d'amortisseur",
+      "role": "Soufflet qui protège la tige de l'amortisseur.",
+      "wear": "Déchiré : tige qui se raye, amortisseur qui fuit.",
+      "dtc": []
+     },
+     {
+      "slug": "strut-nut",
+      "name": "Écrou de tige d'amortisseur",
+      "role": "Écrou de fixation de la tige d'amortisseur sur la coupelle.",
+      "wear": "Desserré : claquement sur bosses.",
+      "dtc": []
+     },
+     {
+      "slug": "steering-knuckle",
+      "name": "Pivot de roue (porte-moyeu)",
+      "role": "Pivot qui porte le moyeu, l'étrier et relie bras, amortisseur et biellette.",
+      "wear": "Tordu après choc : parallélisme impossible à régler.",
+      "dtc": []
+     }
+    ]
+   },
+   {
+    "slug": "steering",
+    "name": "Direction",
+    "kind": "car",
+    "parts": [
+     {
+      "slug": "steering-rack",
+      "name": "Crémaillère de direction",
+      "role": "Transforme la rotation du volant en braquage des roues.",
+      "wear": "Jeu, fuite d'huile, point dur.",
+      "dtc": []
+     },
+     {
+      "slug": "tie-rod",
+      "name": "Biellette de direction",
+      "role": "Relie la crémaillère au porte-moyeu.",
+      "wear": "Rotule axiale usée : jeu dans la direction.",
+      "dtc": []
+     },
+     {
+      "slug": "tie-rod-end",
+      "name": "Rotule de direction",
+      "role": "Articulation au bout de la biellette.",
+      "wear": "Jeu : direction floue, usure des pneus.",
+      "dtc": []
+     },
+     {
+      "slug": "power-steering-pump",
+      "name": "Pompe de direction assistée",
+      "role": "Fournit la pression d'assistance hydraulique.",
+      "wear": "Grognement en braquant, direction dure.",
+      "dtc": []
+     },
+     {
+      "slug": "eps-motor",
+      "name": "Moteur de direction assistée électrique",
+      "role": "Assiste le conducteur électriquement.",
+      "wear": "Perte d'assistance, voyant direction.",
+      "dtc": []
+     },
+     {
+      "slug": "steering-angle-sensor",
+      "name": "Capteur d'angle de volant",
+      "role": "Indique l'angle du volant à l'ESP.",
+      "wear": "Mal calibré : voyant ESP.",
+      "dtc": []
+     },
+     {
+      "slug": "steering-column",
+      "name": "Colonne de direction",
+      "role": "Relie le volant à la crémaillère.",
+      "wear": "Cardan de colonne grippé : point dur, claquement.",
+      "dtc": []
+     },
+     {
+      "slug": "pinion",
+      "name": "Pignon de direction",
+      "role": "Pignon qui transforme la rotation du volant en déplacement de la crémaillère.",
+      "wear": "Usé : jeu dans la direction, point dur.",
+      "dtc": []
+     },
+     {
+      "slug": "rack-bar",
+      "name": "Barre de crémaillère",
+      "role": "Barre dentée qui déplace les biellettes de direction.",
+      "wear": "Jeu ou fuite : direction floue, claquement.",
+      "dtc": []
+     },
+     {
+      "slug": "rack-boot",
+      "name": "Soufflet de crémaillère",
+      "role": "Soufflet qui protège la crémaillère.",
+      "wear": "Déchiré : poussière dans la crémaillère, fuite. Contrôle technique.",
+      "dtc": []
+     },
+     {
+      "slug": "rack-mount-bushing",
+      "name": "Silentbloc de crémaillère",
+      "role": "Silentbloc qui fixe la crémaillère au berceau.",
+      "wear": "Usé : claquement en braquant, direction floue.",
+      "dtc": []
+     },
+     {
+      "slug": "steering-intermediate-shaft",
+      "name": "Arbre intermédiaire de direction",
+      "role": "Arbre entre colonne et crémaillère.",
+      "wear": "Cardan usé : claquement ou point dur au volant.",
+      "dtc": []
+     },
+     {
+      "slug": "steering-wheel",
+      "name": "Volant de direction",
+      "role": "Volant de direction.",
+      "wear": "Volant décentré : parallélisme ou capteur d'angle à recalibrer.",
+      "dtc": []
+     },
+     {
+      "slug": "torque-sensor",
+      "name": "Capteur de couple de direction",
+      "role": "Mesure l'effort du conducteur pour la direction assistée électrique.",
+      "wear": "Défaut : assistance coupée, direction très dure.",
+      "dtc": []
+     },
+     {
+      "slug": "universal-joint",
+      "name": "Cardan de colonne",
+      "role": "Cardan qui transmet la rotation avec un angle dans la colonne.",
+      "wear": "Usé : jeu, claquement au volant.",
+      "dtc": []
+     },
+     {
+      "slug": "power-steering-pressure-sensor",
+      "name": "Capteur de pression de direction assistée",
+      "role": "Signale au calculateur l'effort de direction pour remonter le ralenti.",
+      "wear": "Fuite ou contact défaillant : ralenti qui chute en braquant, voyant.",
+      "dtc": [
+       "P0550",
+       "P0551",
+       "P0552",
+       "P0553",
+       "P0554"
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "suspension-moto",
+    "name": "Partie cycle moto",
+    "kind": "moto",
+    "parts": [
+     {
+      "slug": "front-fork",
+      "name": "Fourche",
+      "role": "Suspension et guidage de la roue avant.",
+      "wear": "Huile usée : fourche molle, talonnage.",
+      "dtc": []
+     },
+     {
+      "slug": "fork-seal",
+      "name": "Joint spi de fourche",
+      "role": "Retient l'huile dans le tube de fourche.",
+      "wear": "Fuite d'huile sur le tube, risque sur le frein.",
+      "dtc": []
+     },
+     {
+      "slug": "rear-monoshock",
+      "name": "Amortisseur arrière",
+      "role": "Suspend et amortit la roue arrière.",
+      "wear": "Fuite, perte d'amortissement, moto qui pompe.",
+      "dtc": []
+     },
+     {
+      "slug": "swingarm",
+      "name": "Bras oscillant",
+      "role": "Porte la roue arrière.",
+      "wear": "Roulements d'axe usés : jeu, imprécision.",
+      "dtc": []
+     },
+     {
+      "slug": "steering-head-bearing",
+      "name": "Roulements de colonne",
+      "role": "Permettent au guidon de tourner.",
+      "wear": "Point dur au centre, guidonnage.",
+      "dtc": []
+     },
+     {
+      "slug": "damper-cartridge",
+      "name": "Cartouche d'amortissement",
+      "role": "Cartouche hydraulique qui freine les mouvements de fourche.",
+      "wear": "Huile usée : fourche qui rebondit, perte de précision.",
+      "dtc": []
+     },
+     {
+      "slug": "dust-seal",
+      "name": "Joint cache-poussière",
+      "role": "Joint cache-poussière au-dessus du joint spi de fourche.",
+      "wear": "Fendu : saleté sur le joint spi, fuite de fourche.",
+      "dtc": []
+     },
+     {
+      "slug": "fork-cap",
+      "name": "Bouchon de fourche",
+      "role": "Bouchon supérieur du tube de fourche, porte les réglages.",
+      "wear": "Joint torique HS : fuite d'huile en haut.",
+      "dtc": []
+     },
+     {
+      "slug": "fork-slider",
+      "name": "Fourreau de fourche",
+      "role": "Fourreau inférieur de la fourche qui porte l'axe de roue.",
+      "wear": "Rayé ou bosselé : fuite, coulissement dur.",
+      "dtc": []
+     },
+     {
+      "slug": "fork-spring",
+      "name": "Ressort de fourche",
+      "role": "Ressort qui porte le poids sur la fourche.",
+      "wear": "Fatigué : fourche qui talonne, assiette basse.",
+      "dtc": []
+     },
+     {
+      "slug": "fork-tube",
+      "name": "Tube de fourche",
+      "role": "Tube plongeur chromé de la fourche.",
+      "wear": "Piqué ou tordu : fuite de joint spi, fourche qui accroche.",
+      "dtc": []
+     },
+     {
+      "slug": "linkage-rod",
+      "name": "Biellette de suspension",
+      "role": "Biellette qui relie le basculeur au cadre.",
+      "wear": "Roulements secs : grincement, suspension arrière dure.",
+      "dtc": []
+     },
+     {
+      "slug": "lower-triple-clamp",
+      "name": "Té de fourche inférieur",
+      "role": "Té inférieur qui serre les tubes de fourche.",
+      "wear": "Faussé après chute : guidon décalé, moto qui tire.",
+      "dtc": []
+     },
+     {
+      "slug": "upper-triple-clamp",
+      "name": "Té de fourche supérieur",
+      "role": "Té supérieur qui relie fourche et pivot de direction.",
+      "wear": "Serrage incorrect : jeu de direction.",
+      "dtc": []
+     },
+     {
+      "slug": "preload-adjuster",
+      "name": "Bague de réglage de précharge",
+      "role": "Bague qui règle la précontrainte du ressort.",
+      "wear": "Grippée : réglage impossible.",
+      "dtc": []
+     },
+     {
+      "slug": "steering-stem",
+      "name": "Pivot de direction (tube de colonne)",
+      "role": "Pivot qui relie le té inférieur au cadre via les roulements.",
+      "wear": "Roulements marqués : point dur au centre, guidonnage.",
+      "dtc": []
+     },
+     {
+      "slug": "suspension-linkage",
+      "name": "Biellette à basculeur",
+      "role": "Basculeur de suspension arrière progressive.",
+      "wear": "Roulements usés : grincement, jeu à l'arrière.",
+      "dtc": []
+     }
+    ]
+   },
+   {
+    "slug": "wheels",
+    "name": "Roues et pneus",
+    "parts": [
+     {
+      "slug": "tyre",
+      "name": "Pneumatique",
+      "role": "Assure l'adhérence au sol.",
+      "wear": "Usure, hernie, sous-gonflage : tenue de route dégradée.",
+      "dtc": []
+     },
+     {
+      "slug": "wheel-rim",
+      "name": "Jante",
+      "role": "Porte le pneu et se fixe au moyeu.",
+      "wear": "Voilée ou fissurée après choc : vibrations, fuite d'air.",
+      "dtc": []
+     },
+     {
+      "slug": "tpms-sensor",
+      "name": "Capteur de pression des pneus",
+      "role": "Surveille la pression de chaque pneu.",
+      "wear": "Pile usée : voyant de pression permanent.",
+      "dtc": [
+       "C0750"
+      ]
+     },
+     {
+      "slug": "axle-nut",
+      "name": "Écrou d'axe de roue",
+      "role": "Écrou qui serre l'axe de roue.",
+      "wear": "Mal serré : roue qui prend du jeu. Couple et goupille obligatoires.",
+      "dtc": []
+     },
+     {
+      "slug": "hub-cap",
+      "name": "Capuchon de moyeu",
+      "role": "Capuchon qui protège l'écrou et le roulement du moyeu.",
+      "wear": "Absent : eau et poussière dans le roulement.",
+      "dtc": []
+     },
+     {
+      "slug": "hub-nut",
+      "name": "Écrou de moyeu",
+      "role": "Écrou de moyeu qui serre le roulement et le cardan.",
+      "wear": "Écrou à usage unique ; mal serré : roulement qui casse vite.",
+      "dtc": []
+     },
+     {
+      "slug": "wheel-hub",
+      "name": "Moyeu de roue",
+      "role": "Moyeu qui porte la roue et tourne sur le roulement.",
+      "wear": "Voilé ou roulement usé : vibrations, grondement.",
+      "dtc": []
+     },
+     {
+      "slug": "wheel-stud",
+      "name": "Goujon de roue",
+      "role": "Goujon sur lequel se visse la roue.",
+      "wear": "Filet abîmé ou cassé : roue mal serrée. Danger.",
+      "dtc": []
+     },
+     {
+      "slug": "bolt",
+      "name": "Vis de fixation",
+      "role": "Vis de fixation d'un élément.",
+      "wear": "Mal serrée ou réutilisée : jeu, bruit, desserrage. Respecter le couple.",
+      "dtc": []
+     },
+     {
+      "slug": "circlip",
+      "name": "Circlip",
+      "role": "Anneau élastique qui bloque une pièce sur un arbre ou dans un alésage.",
+      "wear": "Déformé : pièce qui se déplace. Toujours remplacer.",
+      "dtc": []
+     },
+     {
+      "slug": "lock-nut",
+      "name": "Contre-écrou",
+      "role": "Contre-écrou qui bloque un réglage.",
+      "wear": "Desserré : réglage qui se dérègle (parallélisme, garde).",
+      "dtc": []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "hv-system",
+  "name": "Hybride et électrique",
+  "kind": "both",
+  "children": [
+   {
+    "slug": "hv-components",
+    "name": "Haute tension",
+    "parts": [
+     {
+      "slug": "hv-battery",
+      "name": "Batterie de traction",
+      "role": "Stocke l'énergie du moteur électrique.",
+      "wear": "Perte de capacité, déséquilibre des cellules : autonomie réduite.",
+      "dtc": [
+       "P0A80",
+       "P0AFA"
+      ]
+     },
+     {
+      "slug": "bms",
+      "name": "Gestionnaire de batterie (BMS)",
+      "role": "Surveille cellules, températures et charge.",
+      "wear": "Défaut de communication ou de mesure : limitation de puissance.",
+      "dtc": [
+       "P0A7F"
+      ]
+     },
+     {
+      "slug": "inverter",
+      "name": "Onduleur",
+      "role": "Convertit le courant continu de la batterie pour le moteur.",
+      "wear": "Surchauffe, défaut de refroidissement : mode dégradé.",
+      "dtc": [
+       "P0A78"
+      ]
+     },
+     {
+      "slug": "electric-motor",
+      "name": "Moteur électrique de traction",
+      "role": "Entraîne les roues et récupère l'énergie au freinage.",
+      "wear": "Roulements, capteur de position du rotor.",
+      "dtc": []
+     },
+     {
+      "slug": "dc-dc-converter",
+      "name": "Convertisseur DC/DC",
+      "role": "Recharge la batterie 12 V depuis la haute tension.",
+      "wear": "Batterie 12 V qui se décharge, voyants multiples.",
+      "dtc": []
+     },
+     {
+      "slug": "onboard-charger",
+      "name": "Chargeur embarqué",
+      "role": "Convertit le courant de la borne pour charger la batterie.",
+      "wear": "Charge impossible ou lente sur certaines bornes.",
+      "dtc": []
+     },
+     {
+      "slug": "charging-port",
+      "name": "Prise de recharge",
+      "role": "Raccorde le véhicule à la borne.",
+      "wear": "Verrou bloqué, broches abîmées.",
+      "dtc": []
+     },
+     {
+      "slug": "hv-contactor",
+      "name": "Contacteurs haute tension",
+      "role": "Connectent ou isolent la batterie de traction.",
+      "wear": "Contact collé ou usé : véhicule qui ne passe pas en mode prêt.",
+      "dtc": [
+       "P0AA1"
+      ]
+     },
+     {
+      "slug": "hv-cable",
+      "name": "Câbles haute tension (orange)",
+      "role": "Transportent le courant haute tension.",
+      "wear": "Défaut d'isolement : véhicule bloqué. Intervention réservée aux habilités.",
+      "dtc": [
+       "P0AA6"
+      ]
+     },
+     {
+      "slug": "battery-module",
+      "name": "Module de cellules",
+      "role": "Module de cellules assemblées dans la batterie de traction.",
+      "wear": "Cellule faible : autonomie réduite, déséquilibre signalé par le BMS.",
+      "dtc": []
+     },
+     {
+      "slug": "generator",
+      "name": "Générateur (MG1, hybride à dérivation de puissance)",
+      "role": "Machine électrique (MG1) qui démarre le moteur et produit l'électricité.",
+      "wear": "Défaut capteur ou isolement : système hybride désactivé.",
+      "dtc": [],
+      "kind": "car"
+     },
+     {
+      "slug": "hv-junction-box",
+      "name": "Boîtier de jonction haute tension",
+      "role": "Boîtier qui distribue la haute tension entre batterie, onduleur et chargeur.",
+      "wear": "Connecteur ou fusible HV défectueux : non prêt à rouler. Intervention habilitée uniquement.",
+      "dtc": []
+     },
+     {
+      "slug": "motor-rotor",
+      "name": "Rotor du moteur électrique",
+      "role": "Partie tournante à aimants du moteur électrique.",
+      "wear": "Roulement usé : bruit de roulement, vibration.",
+      "dtc": []
+     },
+     {
+      "slug": "motor-stator",
+      "name": "Stator du moteur électrique",
+      "role": "Bobinage fixe du moteur électrique.",
+      "wear": "Défaut d'isolement ou surchauffe : puissance limitée.",
+      "dtc": []
+     },
+     {
+      "slug": "reduction-gear",
+      "name": "Réducteur",
+      "role": "Réducteur à rapport fixe entre moteur électrique et roues.",
+      "wear": "Fuite d'huile ou roulement usé : sifflement en accélération.",
+      "dtc": []
+     },
+     {
+      "slug": "resolver",
+      "name": "Capteur de position du rotor (résolveur)",
+      "role": "Capteur de position du rotor pour piloter le moteur électrique.",
+      "wear": "Signal perturbé : à-coups, non prêt à rouler.",
+      "dtc": []
+     },
+     {
+      "slug": "service-disconnect",
+      "name": "Prise de service (coupure haute tension)",
+      "role": "Prise qui coupe physiquement la batterie haute tension pour l'atelier.",
+      "wear": "Mal enclenchée : véhicule qui ne passe pas en READY. Manipulation habilitée.",
+      "dtc": []
+     },
+     {
+      "slug": "planet-carrier",
+      "name": "Porte-satellites",
+      "role": "Porte-satellites du train épicycloïdal (répartiteur de puissance).",
+      "wear": "Usure rare ; bruit de roulement en charge.",
+      "dtc": [],
+      "kind": "car"
+     },
+     {
+      "slug": "planet-gear",
+      "name": "Satellites",
+      "role": "Pignons satellites du train épicycloïdal.",
+      "wear": "Usure rare : grognement en charge.",
+      "dtc": [],
+      "kind": "car"
+     },
+     {
+      "slug": "ring-gear",
+      "name": "Couronne du train épicycloïdal",
+      "role": "Couronne extérieure du train épicycloïdal reliée aux roues.",
+      "wear": "Usure rare : bruit sous charge.",
+      "dtc": [],
+      "kind": "car"
+     },
+     {
+      "slug": "sun-gear",
+      "name": "Planétaire",
+      "role": "Pignon central du train épicycloïdal relié à la génératrice.",
+      "wear": "Usure rare : bruit de transmission.",
+      "dtc": [],
+      "kind": "car"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "hvac",
+  "name": "Climatisation et chauffage",
+  "kind": "car",
+  "children": [
+   {
+    "slug": "ac",
+    "name": "Climatisation",
+    "parts": [
+     {
+      "slug": "ac-compressor",
+      "name": "Compresseur de climatisation",
+      "role": "Comprime le fluide frigorigène.",
+      "wear": "Embrayage usé, fuite : plus de froid.",
+      "dtc": []
+     },
+     {
+      "slug": "ac-condenser",
+      "name": "Condenseur",
+      "role": "Refroidit le fluide comprimé, devant le radiateur.",
+      "wear": "Percé par gravillons : fuite de gaz.",
+      "dtc": []
+     },
+     {
+      "slug": "evaporator",
+      "name": "Évaporateur",
+      "role": "Produit le froid dans l'habitacle.",
+      "wear": "Fuite, odeur de moisi.",
+      "dtc": []
+     },
+     {
+      "slug": "ac-expansion-valve",
+      "name": "Détendeur",
+      "role": "Détend le fluide avant l'évaporateur.",
+      "wear": "Bloqué : froid irrégulier.",
+      "dtc": []
+     },
+     {
+      "slug": "ac-pressure-sensor",
+      "name": "Capteur de pression de climatisation",
+      "role": "Surveille la pression du circuit.",
+      "wear": "Compresseur qui ne s'enclenche pas.",
+      "dtc": [
+       "P0530",
+       "P0532",
+       "P0533"
+      ]
+     },
+     {
+      "slug": "cabin-filter",
+      "name": "Filtre d'habitacle",
+      "role": "Filtre l'air entrant dans l'habitacle.",
+      "wear": "Colmaté : faible débit d'air, buée, odeurs.",
+      "dtc": []
+     },
+     {
+      "slug": "blower-motor",
+      "name": "Pulseur d'air",
+      "role": "Ventile l'air dans l'habitacle.",
+      "wear": "Bruit, vitesses manquantes (résistance HS).",
+      "dtc": []
+     },
+     {
+      "slug": "ac-evaporator-sensor",
+      "name": "Sonde de température d'évaporateur",
+      "role": "Mesure la température de l'évaporateur pour éviter le givrage.",
+      "wear": "Sonde défaillante : compresseur qui ne s'enclenche pas ou évaporateur qui givre.",
+      "dtc": [
+       "P0535",
+       "P0536",
+       "P0537",
+       "P0538",
+       "P0539"
+      ]
+     }
+    ]
+   }
+  ]
+ }
+]

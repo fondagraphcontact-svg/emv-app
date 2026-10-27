@@ -1,0 +1,26 @@
+EMV — statistiques vehicles.json
+
+car: 31 marques, 719 modèles, 4779 motorisations
+moto: 16 marques, 233 modèles, 403 motorisations
+total: 47 marques, 952 modèles, 5182 motorisations
+avec code moteur: 3267
+diesels avec champ dpf: 1081
+
+par famille:
+  diesel-i4-turbo-cr: 1580
+  diesel-i6-turbo-cr: 261
+  electric-bev: 308
+  hybrid-diesel: 14
+  hybrid-petrol: 302
+  moto-electric: 5
+  moto-i4: 80
+  moto-single: 49
+  moto-triple: 30
+  moto-twin: 143
+  petrol-i3-turbo: 274
+  petrol-i4-na: 672
+  petrol-i4-turbo: 874
+  petrol-i6-turbo: 113
+  petrol-v6: 201
+  petrol-v8: 180
+  scooter-cvt: 96

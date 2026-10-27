@@ -1,0 +1,2564 @@
+[
+ {
+  "id": "engine-check",
+  "name": "Voyant moteur (antipollution)",
+  "category": "moteur",
+  "color": "orange",
+  "urgency": 2,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "lpg"
+  ],
+  "keywords": [
+   "moteur orange",
+   "injection",
+   "check engine",
+   "MIL",
+   "antipollution",
+   "dépollution"
+  ],
+  "meaning": "Le calculateur moteur a enregistré un défaut qui peut augmenter les émissions polluantes. Allumé fixe : défaut à faire lire sous peu. Clignotant : ratés de combustion sévères, le catalyseur risque d'être détruit, il faut lever le pied tout de suite.",
+  "now": [
+   "S'il clignote : réduire l'allure, éviter les fortes accélérations et s'arrêter dès que possible.",
+   "S'il est fixe et que le moteur tourne normalement : rouler calmement jusqu'au garage dans les jours qui viennent.",
+   "Faire lire les codes défaut avec une valise OBD (prise sous la planche de bord).",
+   "Noter les circonstances (à froid, à chaud, en accélération) pour le diagnostic."
+  ],
+  "causes": [
+   "Bougie, bobine ou injecteur défaillant (ratés)",
+   "Sonde lambda ou débitmètre d'air hors service",
+   "Prise d'air à l'admission",
+   "Catalyseur fatigué",
+   "Bouchon de réservoir mal serré (essence)"
+  ],
+  "dtc": [
+   "P0300",
+   "P0171",
+   "P0420",
+   "P0101",
+   "P0130"
+  ],
+  "parts": [
+   "spark-plug",
+   "ignition-coil",
+   "injector",
+   "lambda-sensor-upstream",
+   "maf-sensor",
+   "catalytic-converter"
+  ],
+  "guides": [
+   "check-engine-light"
+  ],
+  "intents": [
+   "check-engine-light",
+   "check-engine-flashing"
+  ]
+ },
+ {
+  "id": "oil-pressure",
+  "name": "Pression d'huile",
+  "category": "moteur",
+  "color": "rouge",
+  "urgency": 3,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "lpg"
+  ],
+  "keywords": [
+   "huile",
+   "burette",
+   "lampe à huile",
+   "goutte"
+  ],
+  "meaning": "La pression d'huile est insuffisante pour lubrifier le moteur. Rouler dans cet état peut détruire le moteur en quelques minutes.",
+  "now": [
+   "S'arrêter dès que possible en sécurité et couper le moteur.",
+   "Attendre quelques minutes puis contrôler le niveau à la jauge, véhicule à plat.",
+   "Niveau bas : compléter avec l'huile préconisée et rechercher une fuite. Niveau correct : ne pas redémarrer, faire remorquer.",
+   "Si le voyant s'éteint après appoint mais revient, ne pas rouler."
+  ],
+  "causes": [
+   "Niveau d'huile trop bas (fuite, consommation)",
+   "Pompe à huile ou crépine encrassée",
+   "Manocontact de pression d'huile défectueux",
+   "Filtre à huile colmaté",
+   "Paliers usés (moteur fatigué)"
+  ],
+  "dtc": [
+   "P0520",
+   "P0521",
+   "P0522"
+  ],
+  "parts": [
+   "engine-oil",
+   "oil-pump",
+   "oil-strainer",
+   "oil-pressure-sensor",
+   "oil-filter",
+   "dipstick"
+  ],
+  "guides": [
+   "oil-leak",
+   "engine-noise"
+  ],
+  "intents": [
+   "oil-pressure-light"
+  ]
+ },
+ {
+  "id": "oil-level",
+  "name": "Niveau d'huile bas",
+  "category": "moteur",
+  "color": "orange",
+  "urgency": 2,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "lpg"
+  ],
+  "keywords": [
+   "huile",
+   "niveau",
+   "jauge",
+   "appoint"
+  ],
+  "meaning": "Le capteur de niveau signale qu'il manque de l'huile dans le carter. Le moteur n'est pas encore en danger immédiat mais l'appoint s'impose.",
+  "now": [
+   "Se garer à plat, couper le moteur et attendre quelques minutes.",
+   "Lire le niveau à la jauge (entre les repères mini et maxi).",
+   "Compléter par petites quantités avec l'huile préconisée par le carnet.",
+   "Si le niveau baisse vite, chercher une fuite ou une consommation anormale (fumée bleue)."
+  ],
+  "causes": [
+   "Consommation d'huile normale entre deux vidanges",
+   "Fuite (joint de carter, joint de cache-culbuteurs, joints spi)",
+   "Capteur de niveau défectueux",
+   "Segmentation ou turbo usés (fumée bleue)"
+  ],
+  "dtc": [],
+  "parts": [
+   "engine-oil",
+   "oil-level-sensor",
+   "dipstick",
+   "oil-pan-gasket",
+   "valve-cover-gasket"
+  ],
+  "guides": [
+   "oil-leak"
+  ],
+  "intents": []
+ },
+ {
+  "id": "coolant-temp",
+  "name": "Température moteur",
+  "category": "moteur",
+  "color": "rouge",
+  "urgency": 3,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "lpg"
+  ],
+  "keywords": [
+   "température",
+   "thermomètre",
+   "surchauffe",
+   "chauffe",
+   "eau"
+  ],
+  "meaning": "Le liquide de refroidissement est trop chaud : le moteur surchauffe. Continuer peut déformer la culasse ou griller le joint de culasse.",
+  "now": [
+   "S'arrêter dès que possible et couper le moteur.",
+   "Ne jamais ouvrir le vase d'expansion à chaud : risque de brûlure grave.",
+   "Une fois refroidi, contrôler le niveau de liquide et l'absence de fuite.",
+   "Si le ventilateur ne s'est pas déclenché ou si le niveau baisse sans fuite visible, faire diagnostiquer avant de reprendre la route."
+  ],
+  "causes": [
+   "Niveau de liquide trop bas (fuite de durite, radiateur, pompe à eau)",
+   "Motoventilateur ou son relais en panne",
+   "Thermostat bloqué fermé",
+   "Pompe à eau défaillante",
+   "Joint de culasse (bulles dans le vase)"
+  ],
+  "dtc": [
+   "P0217",
+   "P0115",
+   "P0118",
+   "P0480"
+  ],
+  "parts": [
+   "coolant",
+   "expansion-tank",
+   "radiator",
+   "thermostat",
+   "water-pump",
+   "cooling-fan",
+   "coolant-temp-sensor"
+  ],
+  "guides": [
+   "overheating",
+   "coolant-leak"
+  ],
+  "intents": [
+   "overheating"
+  ]
+ },
+ {
+  "id": "coolant-level",
+  "name": "Niveau de liquide de refroidissement",
+  "category": "moteur",
+  "color": "orange",
+  "urgency": 2,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "lpg"
+  ],
+  "keywords": [
+   "liquide de refroidissement",
+   "vase d'expansion",
+   "niveau eau",
+   "antigel"
+  ],
+  "meaning": "Le niveau du vase d'expansion est sous le repère minimum. Une surchauffe peut suivre si rien n'est fait.",
+  "now": [
+   "Laisser refroidir le moteur avant d'ouvrir le vase d'expansion.",
+   "Compléter jusqu'au repère maxi avec le liquide adapté (pas d'eau seule en hiver).",
+   "Surveiller la jauge ou le voyant de température lors des trajets suivants.",
+   "Si le niveau baisse encore, rechercher une fuite."
+  ],
+  "causes": [
+   "Fuite de durite, de radiateur ou de pompe à eau",
+   "Bouchon de vase d'expansion qui ne tient plus la pression",
+   "Fuite interne (joint de culasse, échangeur)",
+   "Capteur de niveau défectueux"
+  ],
+  "dtc": [],
+  "parts": [
+   "coolant",
+   "expansion-tank",
+   "expansion-tank-cap",
+   "radiator-hose",
+   "water-pump",
+   "radiator"
+  ],
+  "guides": [
+   "coolant-leak"
+  ],
+  "intents": []
+ },
+ {
+  "id": "glow-plug",
+  "name": "Préchauffage (diesel)",
+  "category": "moteur",
+  "color": "orange",
+  "urgency": 2,
+  "kind": "car",
+  "fuel": [
+   "diesel"
+  ],
+  "keywords": [
+   "préchauffage",
+   "résistance",
+   "tire-bouchon",
+   "ressort",
+   "bougie diesel"
+  ],
+  "meaning": "Allumé quelques secondes au contact : préchauffage en cours, c'est normal, attendre qu'il s'éteigne pour démarrer. Il reste allumé ou clignote moteur tournant : le calculateur signale un défaut moteur (préchauffage, injection ou FAP selon les véhicules).",
+  "now": [
+   "Au contact : attendre l'extinction avant d'actionner le démarreur.",
+   "S'il clignote en roulant : rouler calmement, sans forcer, jusqu'au garage.",
+   "Faire lire les codes défaut pour savoir quel circuit est concerné."
+  ],
+  "causes": [
+   "Bougie de préchauffage hors service",
+   "Boîtier de préchauffage défaillant",
+   "Défaut d'injection ou de pression de rampe",
+   "Filtre à particules saturé (sur certains modèles)"
+  ],
+  "dtc": [
+   "P0380",
+   "P0670",
+   "P0683",
+   "P0087"
+  ],
+  "parts": [
+   "glow-plug",
+   "glow-plug-control-unit",
+   "fuel-rail-pressure-sensor"
+  ],
+  "guides": [
+   "glow-dpf-light",
+   "no-start-cranks"
+  ],
+  "intents": [
+   "glow-plug-light"
+  ]
+ },
+ {
+  "id": "dpf",
+  "name": "Filtre à particules (FAP)",
+  "category": "moteur",
+  "color": "orange",
+  "urgency": 2,
+  "kind": "car",
+  "fuel": [
+   "diesel"
+  ],
+  "keywords": [
+   "FAP",
+   "filtre à particules",
+   "régénération",
+   "suie"
+  ],
+  "meaning": "Le filtre à particules se remplit de suie et n'a pas pu se régénérer. Sans régénération, il finit par se colmater et le moteur passe en mode dégradé.",
+  "now": [
+   "Si la route le permet, rouler 15 à 20 minutes à allure régulière sur voie rapide, régime moteur soutenu, pour lancer la régénération.",
+   "Ne pas couper le moteur pendant une régénération en cours (ventilateur qui tourne, ralenti plus haut).",
+   "Si le voyant reste allumé après ce trajet, ou si la puissance chute, aller au garage."
+  ],
+  "causes": [
+   "Trajets courts répétés, moteur jamais assez chaud",
+   "Capteur de pression différentielle défaillant",
+   "Additif FAP épuisé (systèmes à additif)",
+   "Injecteur, vanne EGR ou turbo qui produit trop de suie"
+  ],
+  "dtc": [
+   "P2002",
+   "P2463",
+   "P244A",
+   "P2452"
+  ],
+  "parts": [
+   "dpf",
+   "dpf-pressure-sensor",
+   "exhaust-temperature-sensor",
+   "egr-valve"
+  ],
+  "guides": [
+   "dpf-regeneration",
+   "glow-dpf-light"
+  ],
+  "intents": [
+   "dpf-clogged"
+  ]
+ },
+ {
+  "id": "adblue",
+  "name": "AdBlue (réduction des NOx)",
+  "category": "moteur",
+  "color": "orange",
+  "urgency": 2,
+  "kind": "car",
+  "fuel": [
+   "diesel"
+  ],
+  "keywords": [
+   "AdBlue",
+   "urée",
+   "SCR",
+   "NOx"
+  ],
+  "meaning": "Le niveau d'urée (AdBlue) est bas ou le système de réduction des oxydes d'azote est en défaut. Le compteur affiche souvent l'autonomie restante : à zéro, le redémarrage peut être bloqué.",
+  "now": [
+   "Faire le plein d'AdBlue dès que possible (réservoir dédié, bouchon bleu).",
+   "Ne jamais verser d'AdBlue dans le réservoir de gazole, ni l'inverse.",
+   "Si le voyant reste allumé réservoir plein, faire lire les codes défaut (pompe, injecteur, capteur NOx)."
+  ],
+  "causes": [
+   "Réservoir d'AdBlue vide",
+   "Cristallisation de l'injecteur ou de la ligne",
+   "Pompe ou réchauffeur d'AdBlue en panne",
+   "Capteur NOx défaillant",
+   "AdBlue de mauvaise qualité"
+  ],
+  "dtc": [
+   "P203F",
+   "P20E8",
+   "P20B9",
+   "P20EE"
+  ],
+  "parts": [
+   "adblue-tank",
+   "adblue-pump",
+   "adblue-injector",
+   "adblue-line",
+   "nox-sensor",
+   "scr-catalyst"
+  ],
+  "guides": [
+   "adblue"
+  ],
+  "intents": [
+   "adblue"
+  ]
+ },
+ {
+  "id": "water-in-fuel",
+  "name": "Eau dans le gazole",
+  "category": "moteur",
+  "color": "orange",
+  "urgency": 2,
+  "kind": "car",
+  "fuel": [
+   "diesel"
+  ],
+  "keywords": [
+   "eau gasoil",
+   "eau gazole",
+   "filtre gazole",
+   "goutte filtre"
+  ],
+  "meaning": "Le capteur du filtre à gazole a détecté de l'eau. L'eau abîme la pompe haute pression et les injecteurs.",
+  "now": [
+   "Éviter les longs trajets et les fortes charges.",
+   "Faire purger le filtre à gazole (ou le remplacer) rapidement.",
+   "Si le voyant revient vite, suspecter un carburant pollué."
+  ],
+  "causes": [
+   "Condensation dans le réservoir",
+   "Carburant contenant de l'eau",
+   "Filtre à gazole saturé",
+   "Capteur défectueux"
+  ],
+  "dtc": [],
+  "parts": [
+   "water-in-fuel-sensor",
+   "fuel-filter"
+  ],
+  "guides": [
+   "power-loss-diesel"
+  ],
+  "intents": [
+   "diesel-fuel-filter"
+  ]
+ },
+ {
+  "id": "engine-power-reduced",
+  "name": "Puissance réduite (mode dégradé)",
+  "category": "moteur",
+  "color": "orange",
+  "urgency": 2,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "lpg"
+  ],
+  "keywords": [
+   "mode dégradé",
+   "mode sécurité",
+   "perte de puissance",
+   "limp mode",
+   "service moteur"
+  ],
+  "meaning": "Le calculateur limite volontairement la puissance pour protéger le moteur ou la dépollution. La voiture roule mais n'accélère plus normalement.",
+  "now": [
+   "Adapter la conduite (pas de dépassement, pas d'autoroute chargée).",
+   "Arrêter, couper le contact une minute et redémarrer : si le défaut est passager, il peut disparaître.",
+   "Faire lire les codes défaut rapidement."
+  ],
+  "causes": [
+   "Défaut de suralimentation (durite de turbo percée, turbo, électrovanne)",
+   "Filtre à particules colmaté",
+   "Défaut de pression carburant",
+   "Capteur de pédale d'accélérateur incohérent"
+  ],
+  "dtc": [
+   "P0299",
+   "P0234",
+   "P2263",
+   "P2135",
+   "P0087"
+  ],
+  "parts": [
+   "turbocharger",
+   "intercooler-hose",
+   "boost-pressure-sensor",
+   "boost-solenoid",
+   "accelerator-pedal-sensor"
+  ],
+  "guides": [
+   "power-loss-diesel",
+   "power-loss-petrol"
+  ],
+  "intents": []
+ },
+ {
+  "id": "fuel-low",
+  "name": "Réserve de carburant",
+  "category": "moteur",
+  "color": "orange",
+  "urgency": 1,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "lpg"
+  ],
+  "keywords": [
+   "essence",
+   "gasoil",
+   "réserve",
+   "pompe à essence",
+   "panne sèche"
+  ],
+  "meaning": "Le carburant atteint la réserve. Il reste généralement quelques dizaines de kilomètres, variable selon le véhicule et la conduite.",
+  "now": [
+   "Faire le plein à la prochaine station.",
+   "Ne pas rouler régulièrement sur la réserve : la pompe immergée chauffe et aspire les dépôts.",
+   "Diesel : une panne sèche peut imposer un réamorçage du circuit."
+  ],
+  "causes": [
+   "Réservoir presque vide",
+   "Jauge ou capteur de niveau défaillant (si le voyant s'allume réservoir plein)"
+  ],
+  "dtc": [
+   "P0460"
+  ],
+  "parts": [
+   "fuel-level-sender",
+   "fuel-pump",
+   "fuel-tank"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "fuel-cap",
+  "name": "Bouchon de réservoir",
+  "category": "moteur",
+  "color": "orange",
+  "urgency": 1,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "hybrid",
+   "lpg"
+  ],
+  "keywords": [
+   "bouchon",
+   "réservoir",
+   "trappe",
+   "EVAP",
+   "vapeurs"
+  ],
+  "meaning": "Le système de récupération des vapeurs d'essence détecte une fuite, souvent un bouchon mal fermé.",
+  "now": [
+   "S'arrêter au calme et resserrer le bouchon jusqu'au clic.",
+   "Le voyant peut mettre quelques trajets à s'éteindre.",
+   "S'il persiste, faire contrôler le circuit des vapeurs (canister, électrovanne de purge)."
+  ],
+  "causes": [
+   "Bouchon mal serré ou joint usé",
+   "Fuite sur une durite de vapeurs",
+   "Électrovanne de purge du canister"
+  ],
+  "dtc": [
+   "P0457",
+   "P0455"
+  ],
+  "parts": [
+   "fuel-cap",
+   "evap-canister",
+   "purge-valve",
+   "evap-hose"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "start-stop-active",
+  "name": "Stop & Start actif",
+  "category": "moteur",
+  "color": "vert",
+  "urgency": 1,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "lpg"
+  ],
+  "keywords": [
+   "stop and start",
+   "stop start",
+   "A cercle",
+   "arrêt automatique"
+  ],
+  "meaning": "Le moteur s'est coupé automatiquement à l'arrêt pour économiser du carburant. Il redémarre au relâchement du frein ou à l'appui sur l'embrayage.",
+  "now": [
+   "Rien à faire : c'est un fonctionnement normal.",
+   "La fonction peut être désactivée par un bouton (elle se réactive souvent au démarrage suivant)."
+  ],
+  "causes": [
+   "Conditions réunies : moteur chaud, batterie bien chargée, ceinture bouclée"
+  ],
+  "dtc": [],
+  "parts": [
+   "battery",
+   "battery-sensor"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "start-stop-fault",
+  "name": "Stop & Start indisponible",
+  "category": "moteur",
+  "color": "orange",
+  "urgency": 1,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "lpg"
+  ],
+  "keywords": [
+   "stop and start barré",
+   "stop start défaut",
+   "A barré"
+  ],
+  "meaning": "Le système d'arrêt automatique est désactivé ou indisponible. Le moteur continue de tourner à l'arrêt.",
+  "now": [
+   "Rouler normalement : la voiture n'est pas en danger.",
+   "Si l'indisponibilité est permanente, faire tester la batterie (souvent une batterie spécifique EFB ou AGM)."
+  ],
+  "causes": [
+   "Batterie faible ou inadaptée",
+   "Capteur de batterie défectueux",
+   "Climatisation ou dégivrage très sollicités",
+   "Moteur pas encore chaud"
+  ],
+  "dtc": [
+   "P0562"
+  ],
+  "parts": [
+   "battery",
+   "battery-sensor",
+   "alternator"
+  ],
+  "guides": [
+   "battery-drain"
+  ],
+  "intents": []
+ },
+ {
+  "id": "transmission-fault",
+  "name": "Boîte de vitesses",
+  "category": "moteur",
+  "color": "orange",
+  "urgency": 2,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "boîte auto",
+   "BVA",
+   "engrenage",
+   "roue dentée",
+   "boîte de vitesses"
+  ],
+  "meaning": "Le calculateur de boîte automatique ou robotisée signale un défaut ou une surchauffe. La boîte peut se bloquer sur un rapport.",
+  "now": [
+   "Rouler doucement et éviter les démarrages répétés en côte.",
+   "En cas de surchauffe signalée, s'arrêter, passer en P ou N et laisser refroidir.",
+   "Faire lire les codes défaut et contrôler le niveau et l'état de l'huile de boîte."
+  ],
+  "causes": [
+   "Huile de boîte usée ou niveau bas",
+   "Capteur de régime d'entrée ou de sortie",
+   "Électrovanne de passage",
+   "Surchauffe (remorquage, embouteillages en côte)",
+   "Embrayage robotisé usé"
+  ],
+  "dtc": [
+   "P0700",
+   "P0715",
+   "P0730",
+   "P0218"
+  ],
+  "parts": [
+   "transmission-control-module",
+   "transmission-fluid",
+   "shift-solenoid",
+   "input-speed-sensor",
+   "output-speed-sensor"
+  ],
+  "guides": [
+   "gearbox-grinding"
+  ],
+  "intents": []
+ },
+ {
+  "id": "service",
+  "name": "Entretien à prévoir",
+  "category": "moteur",
+  "color": "orange",
+  "urgency": 1,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "clé",
+   "clé plate",
+   "vidange",
+   "révision",
+   "maintenance"
+  ],
+  "meaning": "L'indicateur de maintenance rappelle qu'une vidange ou une révision arrive à échéance.",
+  "now": [
+   "Consulter le carnet d'entretien pour savoir quelle opération est due.",
+   "Prendre rendez-vous ; noter l'intervention dans le carnet EMV.",
+   "La remise à zéro de l'indicateur se fait après l'entretien (procédure décrite dans la notice)."
+  ],
+  "causes": [
+   "Kilométrage ou délai d'entretien atteint",
+   "Usure d'huile calculée par le calculateur"
+  ],
+  "dtc": [],
+  "parts": [
+   "engine-oil",
+   "oil-filter",
+   "air-filter",
+   "cabin-filter"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "immobilizer",
+  "name": "Antidémarrage",
+  "category": "moteur",
+  "color": "orange",
+  "urgency": 2,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "clé",
+   "voiture et clé",
+   "antidémarrage",
+   "antivol",
+   "transpondeur"
+  ],
+  "meaning": "Allumé brièvement au contact : contrôle normal. Il clignote ou reste allumé et le moteur ne démarre pas : la clé n'est pas reconnue.",
+  "now": [
+   "Essayer le double de la clé.",
+   "Rapprocher la clé du lecteur (clé mains libres à pile faible).",
+   "Si aucune clé n'est reconnue, faire appel à un garage équipé (programmation)."
+  ],
+  "causes": [
+   "Pile de clé faible (mains libres)",
+   "Transpondeur de clé défaillant",
+   "Antenne de lecture autour du contacteur",
+   "Calculateur moteur ou antidémarrage en défaut"
+  ],
+  "dtc": [
+   "P0513",
+   "P0633"
+  ],
+  "parts": [
+   "immobilizer",
+   "ignition-switch",
+   "ecu"
+  ],
+  "guides": [
+   "no-start-cranks"
+  ],
+  "intents": [
+   "immobilizer"
+  ]
+ },
+ {
+  "id": "brake-system",
+  "name": "Système de freinage",
+  "category": "freinage",
+  "color": "rouge",
+  "urgency": 3,
+  "kind": "both",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "frein",
+   "point d'exclamation",
+   "liquide de frein",
+   "cercle",
+   "parenthèses"
+  ],
+  "meaning": "Niveau de liquide de frein trop bas, défaut de répartition du freinage ou frein de stationnement serré. Si le frein de stationnement est desserré, c'est un défaut de freinage.",
+  "now": [
+   "Vérifier d'abord que le frein de stationnement est bien desserré.",
+   "S'il reste allumé : s'arrêter prudemment en freinant progressivement.",
+   "Contrôler le niveau du bocal de liquide de frein ; ne pas repartir si la pédale est molle ou s'enfonce.",
+   "Un niveau bas signale des plaquettes très usées ou une fuite : faire remorquer en cas de doute."
+  ],
+  "causes": [
+   "Plaquettes très usées (le niveau baisse avec l'usure)",
+   "Fuite de liquide (flexible, étrier, cylindre de roue)",
+   "Maître-cylindre défaillant",
+   "Défaut de répartiteur électronique (avec voyant ABS)"
+  ],
+  "dtc": [],
+  "parts": [
+   "brake-fluid-reservoir",
+   "master-cylinder",
+   "brake-pad",
+   "brake-hose",
+   "caliper",
+   "wheel-cylinder"
+  ],
+  "guides": [
+   "brake-pedal-soft"
+  ],
+  "intents": [
+   "brake-warning-light"
+  ]
+ },
+ {
+  "id": "parking-brake",
+  "name": "Frein de stationnement serré",
+  "category": "freinage",
+  "color": "rouge",
+  "urgency": 1,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "frein à main",
+   "P",
+   "stationnement",
+   "frein parking"
+  ],
+  "meaning": "Le frein de stationnement est serré. Allumé à l'arrêt, c'est normal ; en roulant, il faut le desserrer.",
+  "now": [
+   "Desserrer le frein à main ou appuyer sur le bouton du frein électrique, pied sur le frein.",
+   "S'il reste allumé une fois desserré, se reporter au voyant Système de freinage."
+  ],
+  "causes": [
+   "Frein de stationnement serré",
+   "Contacteur de frein à main déréglé"
+  ],
+  "dtc": [],
+  "parts": [
+   "handbrake-cable",
+   "electric-parking-brake",
+   "parking-brake-lever"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "epb-fault",
+  "name": "Défaut frein de stationnement électrique",
+  "category": "freinage",
+  "color": "orange",
+  "urgency": 2,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "frein électrique",
+   "EPB",
+   "frein de parking électrique"
+  ],
+  "meaning": "Le frein de stationnement électrique est en défaut : il peut ne plus se serrer ou ne plus se desserrer.",
+  "now": [
+   "À l'arrêt, caler la voiture (rapport engagé ou position P, cale sous la roue en pente).",
+   "Ne pas forcer le desserrage à répétition.",
+   "Faire diagnostiquer : certains travaux (plaquettes arrière) exigent un outil pour ouvrir les étriers motorisés."
+  ],
+  "causes": [
+   "Moteur d'étrier arrière en panne",
+   "Batterie faible",
+   "Faisceau ou connecteur d'étrier",
+   "Bouton de commande"
+  ],
+  "dtc": [],
+  "parts": [
+   "electric-parking-brake",
+   "caliper",
+   "connector",
+   "battery"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "abs",
+  "name": "ABS (antiblocage des roues)",
+  "category": "freinage",
+  "color": "orange",
+  "urgency": 2,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "ABS",
+   "antiblocage",
+   "blocage des roues"
+  ],
+  "meaning": "L'antiblocage des roues est désactivé. Le freinage classique fonctionne, mais les roues peuvent se bloquer en freinage d'urgence ou sur sol glissant.",
+  "now": [
+   "Augmenter les distances de sécurité et freiner progressivement.",
+   "Si le voyant de freinage rouge s'allume aussi, s'arrêter : la répartition du freinage peut être touchée.",
+   "Faire lire les codes défaut : un capteur de roue est souvent en cause."
+  ],
+  "causes": [
+   "Capteur de vitesse de roue sale ou coupé",
+   "Cible magnétique (couronne) abîmée ou encrassée",
+   "Faisceau de capteur arraché",
+   "Bloc ABS ou fusible",
+   "Tension batterie basse"
+  ],
+  "dtc": [
+   "C0035",
+   "C0040",
+   "C0045",
+   "C0050",
+   "U0121"
+  ],
+  "parts": [
+   "wheel-speed-sensor",
+   "abs-tone-ring",
+   "abs-module",
+   "wheel-bearing"
+  ],
+  "guides": [
+   "abs-esp-light"
+  ],
+  "intents": [
+   "abs-light"
+  ]
+ },
+ {
+  "id": "brake-pad-wear",
+  "name": "Usure des plaquettes",
+  "category": "freinage",
+  "color": "orange",
+  "urgency": 2,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "plaquettes",
+   "usure frein",
+   "pointillés"
+  ],
+  "meaning": "Le témoin d'usure intégré aux plaquettes signale qu'elles arrivent en fin de vie.",
+  "now": [
+   "Prévoir le remplacement des plaquettes (et le contrôle des disques) rapidement.",
+   "Contrôler le niveau du liquide de frein.",
+   "Remplacer le témoin d'usure s'il a été entamé."
+  ],
+  "causes": [
+   "Plaquettes usées",
+   "Témoin d'usure coupé ou débranché"
+  ],
+  "dtc": [],
+  "parts": [
+   "brake-pad",
+   "pad-wear-sensor",
+   "brake-disc"
+  ],
+  "guides": [
+   "brake-noise"
+  ],
+  "intents": []
+ },
+ {
+  "id": "auto-hold",
+  "name": "Maintien automatique à l'arrêt",
+  "category": "freinage",
+  "color": "vert",
+  "urgency": 1,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "auto hold",
+   "maintien",
+   "A cercle frein"
+  ],
+  "meaning": "La fonction de maintien à l'arrêt est active : la voiture reste freinée sans appui sur la pédale, jusqu'à la prochaine accélération.",
+  "now": [
+   "Rien à faire : fonctionnement normal.",
+   "Désactivable par un bouton selon les véhicules."
+  ],
+  "causes": [
+   "Fonction activée par le conducteur"
+  ],
+  "dtc": [],
+  "parts": [
+   "electric-parking-brake",
+   "brake-light-switch"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "esp-active",
+  "name": "Contrôle de stabilité (ESP / antipatinage)",
+  "category": "securite",
+  "color": "orange",
+  "urgency": 1,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "ESP",
+   "antipatinage",
+   "ASR",
+   "voiture qui glisse",
+   "traces"
+  ],
+  "meaning": "Clignote : le système corrige une perte d'adhérence, c'est normal. Reste allumé : le système est en défaut et ne corrigera plus les dérapages.",
+  "now": [
+   "S'il clignote : lever le pied, adapter la vitesse à l'adhérence.",
+   "S'il reste allumé : conduire prudemment et faire lire les codes défaut (souvent lié à l'ABS ou au capteur d'angle de volant)."
+  ],
+  "causes": [
+   "Sol glissant (clignotement normal)",
+   "Capteur de vitesse de roue",
+   "Capteur d'angle de volant",
+   "Contacteur de feux stop",
+   "Défaut ABS"
+  ],
+  "dtc": [
+   "C0035",
+   "C0040",
+   "P0571"
+  ],
+  "parts": [
+   "wheel-speed-sensor",
+   "steering-angle-sensor",
+   "abs-module",
+   "brake-light-switch"
+  ],
+  "guides": [
+   "abs-esp-light"
+  ],
+  "intents": [
+   "abs-light"
+  ]
+ },
+ {
+  "id": "esp-off",
+  "name": "Contrôle de stabilité désactivé",
+  "category": "securite",
+  "color": "orange",
+  "urgency": 1,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "ESP OFF",
+   "antipatinage désactivé"
+  ],
+  "meaning": "Le contrôle de stabilité a été désactivé, en général par le bouton (utile pour démarrer dans la neige ou avec des chaînes).",
+  "now": [
+   "Le réactiver dès que possible par le même bouton.",
+   "S'il s'allume sans action du conducteur, voir le voyant ESP / antipatinage."
+  ],
+  "causes": [
+   "Désactivation volontaire",
+   "Défaut du système de stabilité"
+  ],
+  "dtc": [],
+  "parts": [
+   "abs-module",
+   "wheel-speed-sensor"
+  ],
+  "guides": [
+   "abs-esp-light"
+  ],
+  "intents": []
+ },
+ {
+  "id": "airbag",
+  "name": "Airbag / prétensionneurs",
+  "category": "securite",
+  "color": "rouge",
+  "urgency": 2,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "airbag",
+   "coussin gonflable",
+   "SRS",
+   "personnage ballon"
+  ],
+  "meaning": "Un défaut est détecté sur les airbags ou les prétensionneurs de ceinture. En cas de choc, ils pourraient ne pas se déclencher.",
+  "now": [
+   "La voiture roule normalement, mais la protection est réduite : aller au garage rapidement.",
+   "Ne jamais débrancher un connecteur d'airbag ou de siège soi-même, contact mis.",
+   "Signaler si le voyant est apparu après un démontage de siège ou de volant."
+  ],
+  "causes": [
+   "Connecteur sous siège débranché ou oxydé",
+   "Ruban de volant (contacteur tournant) coupé",
+   "Faisceau abîmé",
+   "Airbag passager neutralisé par erreur"
+  ],
+  "dtc": [],
+  "parts": [
+   "clock-spring",
+   "connector",
+   "wiring-harness"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "seatbelt",
+  "name": "Ceinture non bouclée",
+  "category": "securite",
+  "color": "rouge",
+  "urgency": 1,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "ceinture",
+   "bip",
+   "personnage ceinture"
+  ],
+  "meaning": "Un occupant n'a pas bouclé sa ceinture, souvent accompagné d'un signal sonore.",
+  "now": [
+   "Boucler toutes les ceintures avant de rouler.",
+   "S'il reste allumé ceinture bouclée, contrôler la boucle et son connecteur."
+  ],
+  "causes": [
+   "Ceinture non bouclée",
+   "Objet lourd sur le siège passager",
+   "Contacteur de boucle défaillant"
+  ],
+  "dtc": [],
+  "parts": [
+   "connector"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "door-open",
+  "name": "Ouvrant mal fermé",
+  "category": "securite",
+  "color": "rouge",
+  "urgency": 2,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "porte",
+   "portière",
+   "coffre",
+   "capot",
+   "voiture vue de dessus"
+  ],
+  "meaning": "Une porte, le coffre ou le capot est mal fermé.",
+  "now": [
+   "S'arrêter en sécurité et refermer l'ouvrant concerné.",
+   "Capot : ne pas rouler, il pourrait s'ouvrir en roulant.",
+   "Si tout est fermé, faire contrôler le contacteur de serrure."
+  ],
+  "causes": [
+   "Ouvrant mal fermé",
+   "Contacteur de serrure encrassé ou défectueux",
+   "Faisceau de porte coupé"
+  ],
+  "dtc": [],
+  "parts": [
+   "connector",
+   "wiring-harness"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "tpms",
+  "name": "Pression des pneus",
+  "category": "securite",
+  "color": "orange",
+  "urgency": 2,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "pneu",
+   "pression",
+   "crevaison",
+   "fer à cheval",
+   "TPMS"
+  ],
+  "meaning": "Un pneu au moins est sous-gonflé (ou le système de surveillance est en défaut si le voyant clignote puis reste fixe).",
+  "now": [
+   "Ralentir et contrôler visuellement les pneus.",
+   "Vérifier la pression à froid à la station et regonfler aux valeurs indiquées (montant de porte ou trappe).",
+   "Réinitialiser le système si la notice le demande ; si un pneu perd encore, faire réparer."
+  ],
+  "causes": [
+   "Pneu sous-gonflé ou crevaison lente",
+   "Écart de température (froid)",
+   "Capteur de valve à pile épuisée",
+   "Roue changée sans capteur"
+  ],
+  "dtc": [
+   "C0750"
+  ],
+  "parts": [
+   "tpms-sensor",
+   "tyre",
+   "wheel-rim"
+  ],
+  "guides": [
+   "pulls-to-side",
+   "vibration-speed"
+  ],
+  "intents": [
+   "tyres"
+  ]
+ },
+ {
+  "id": "power-steering",
+  "name": "Direction assistée",
+  "category": "securite",
+  "color": "orange",
+  "urgency": 2,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "direction",
+   "volant",
+   "direction dure",
+   "EPS"
+  ],
+  "meaning": "L'assistance de direction est réduite ou absente : le volant devient dur. En rouge, certains véhicules demandent l'arrêt.",
+  "now": [
+   "Rouler prudemment, la direction reste possible mais demande plus d'effort.",
+   "Couper et remettre le contact à l'arrêt : un défaut passager peut disparaître.",
+   "Direction hydraulique : contrôler le niveau de liquide et la courroie d'accessoires."
+  ],
+  "causes": [
+   "Moteur ou capteur de couple de direction électrique",
+   "Tension batterie basse",
+   "Pompe ou niveau de liquide (direction hydraulique)",
+   "Courroie d'accessoires cassée"
+  ],
+  "dtc": [
+   "P0551",
+   "P0562"
+  ],
+  "parts": [
+   "eps-motor",
+   "torque-sensor",
+   "steering-angle-sensor",
+   "power-steering-pump",
+   "accessory-belt"
+  ],
+  "guides": [],
+  "intents": [
+   "steering-heavy"
+  ]
+ },
+ {
+  "id": "lane-assist",
+  "name": "Aide au maintien de voie",
+  "category": "securite",
+  "color": "vert",
+  "urgency": 1,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "ligne",
+   "voie",
+   "marquage",
+   "lane assist"
+  ],
+  "meaning": "L'aide au maintien dans la voie est active et détecte les marquages au sol.",
+  "now": [
+   "Rien à faire : l'aide ne remplace pas la vigilance, garder les mains sur le volant."
+  ],
+  "causes": [
+   "Fonction activée, marquages détectés par la caméra"
+  ],
+  "dtc": [],
+  "parts": [],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "driver-assist-fault",
+  "name": "Aides à la conduite indisponibles",
+  "category": "securite",
+  "color": "orange",
+  "urgency": 1,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "radar",
+   "caméra",
+   "freinage d'urgence",
+   "ADAS",
+   "régulateur adaptatif"
+  ],
+  "meaning": "Le radar ou la caméra des aides à la conduite (freinage d'urgence, régulateur adaptatif, maintien de voie) est masqué ou en défaut.",
+  "now": [
+   "Nettoyer le pare-brise devant la caméra et la calandre devant le radar.",
+   "Par pluie forte, neige ou brouillard, le système peut se couper puis revenir seul.",
+   "Persistant par beau temps : faire contrôler (un calibrage est nécessaire après remplacement du pare-brise)."
+  ],
+  "causes": [
+   "Capteur masqué (saleté, neige, insectes)",
+   "Pare-brise remplacé sans calibrage",
+   "Choc sur le bouclier"
+  ],
+  "dtc": [],
+  "parts": [],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "frost",
+  "name": "Risque de verglas",
+  "category": "securite",
+  "color": "orange",
+  "urgency": 1,
+  "kind": "both",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "flocon",
+   "neige",
+   "verglas",
+   "froid"
+  ],
+  "meaning": "La température extérieure est proche de 0 °C : risque de verglas.",
+  "now": [
+   "Adapter la vitesse et augmenter les distances, surtout sur les ponts et en sous-bois."
+  ],
+  "causes": [
+   "Température extérieure basse",
+   "Sonde de température extérieure défaillante (si par temps chaud)"
+  ],
+  "dtc": [
+   "P0070"
+  ],
+  "parts": [
+   "ambient-temp-sensor"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "battery-charge",
+  "name": "Charge de la batterie",
+  "category": "electrique",
+  "color": "rouge",
+  "urgency": 2,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "batterie",
+   "charge",
+   "alternateur",
+   "accumulateur"
+  ],
+  "meaning": "La batterie n'est plus rechargée en roulant : la voiture fonctionne sur la réserve de la batterie, puis s'arrête. Si la courroie d'accessoires est cassée, la pompe à eau et la direction assistée peuvent aussi être touchées.",
+  "now": [
+   "Couper les consommateurs inutiles (chauffage, siège chauffant, radio).",
+   "Surveiller la température moteur : si elle monte, s'arrêter.",
+   "Ne pas couper le moteur avant d'arriver au garage proche : il pourrait ne plus redémarrer.",
+   "Véhicule électrifié : le défaut concerne le convertisseur qui charge la batterie 12 V."
+  ],
+  "causes": [
+   "Courroie d'accessoires cassée ou qui patine",
+   "Alternateur ou régulateur hors service",
+   "Cosse de batterie desserrée ou oxydée",
+   "Fil d'excitation coupé",
+   "Convertisseur DC-DC (hybride, électrique)"
+  ],
+  "dtc": [
+   "P0562",
+   "P0620",
+   "P0625"
+  ],
+  "parts": [
+   "alternator",
+   "voltage-regulator",
+   "accessory-belt",
+   "battery",
+   "battery-terminal",
+   "dc-dc-converter"
+  ],
+  "guides": [
+   "battery-light",
+   "battery-drain"
+  ],
+  "intents": [
+   "battery-light"
+  ]
+ },
+ {
+  "id": "bulb-failure",
+  "name": "Ampoule défectueuse",
+  "category": "electrique",
+  "color": "orange",
+  "urgency": 1,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "ampoule",
+   "lampe",
+   "feu grillé"
+  ],
+  "meaning": "Un feu extérieur ne fonctionne plus (ampoule grillée ou défaut de circuit).",
+  "now": [
+   "Faire le tour du véhicule, feux allumés, pour repérer le feu concerné (un passager peut aider pour les stops).",
+   "Remplacer l'ampoule dès que possible : rouler avec un feu éteint est verbalisable et dangereux.",
+   "Ampoule neuve qui ne s'allume pas : contrôler le fusible et le connecteur."
+  ],
+  "causes": [
+   "Ampoule grillée",
+   "Fusible",
+   "Connecteur oxydé",
+   "Mauvaise masse du feu"
+  ],
+  "dtc": [],
+  "parts": [
+   "low-beam-bulb",
+   "tail-lamp",
+   "headlamp",
+   "fuse-mini",
+   "ground-point"
+  ],
+  "guides": [
+   "dim-lights"
+  ],
+  "intents": []
+ },
+ {
+  "id": "low-beam",
+  "name": "Feux de croisement",
+  "category": "electrique",
+  "color": "vert",
+  "urgency": 1,
+  "kind": "both",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "feux",
+   "phares",
+   "codes",
+   "croisement"
+  ],
+  "meaning": "Les feux de croisement sont allumés.",
+  "now": [
+   "Rien à faire : fonctionnement normal."
+  ],
+  "causes": [
+   "Commande d'éclairage en position croisement ou automatique"
+  ],
+  "dtc": [],
+  "parts": [
+   "low-beam-bulb",
+   "headlamp",
+   "steering-column-switch"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "high-beam",
+  "name": "Feux de route",
+  "category": "electrique",
+  "color": "bleu",
+  "urgency": 1,
+  "kind": "both",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "pleins phares",
+   "feux de route",
+   "phares bleu"
+  ],
+  "meaning": "Les feux de route (pleins phares) sont allumés.",
+  "now": [
+   "Repasser en croisement à l'approche d'un véhicule pour ne pas l'éblouir."
+  ],
+  "causes": [
+   "Feux de route enclenchés (ou appel de phares)"
+  ],
+  "dtc": [],
+  "parts": [
+   "high-beam-bulb",
+   "headlamp",
+   "steering-column-switch"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "fog-front",
+  "name": "Feux de brouillard avant",
+  "category": "electrique",
+  "color": "vert",
+  "urgency": 1,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "antibrouillard avant",
+   "brouillard"
+  ],
+  "meaning": "Les feux de brouillard avant sont allumés.",
+  "now": [
+   "Les éteindre quand la visibilité redevient correcte."
+  ],
+  "causes": [
+   "Commande des feux de brouillard avant activée"
+  ],
+  "dtc": [],
+  "parts": [
+   "steering-column-switch",
+   "relay"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "fog-rear",
+  "name": "Feu de brouillard arrière",
+  "category": "electrique",
+  "color": "orange",
+  "urgency": 1,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "antibrouillard arrière",
+   "feu arrière brouillard"
+  ],
+  "meaning": "Le feu de brouillard arrière est allumé. Il éblouit les véhicules qui suivent quand la visibilité est bonne.",
+  "now": [
+   "Ne l'utiliser que par brouillard épais ou chute de neige, et l'éteindre ensuite."
+  ],
+  "causes": [
+   "Commande du feu de brouillard arrière activée"
+  ],
+  "dtc": [],
+  "parts": [
+   "tail-lamp",
+   "steering-column-switch"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "indicators",
+  "name": "Clignotants",
+  "category": "electrique",
+  "color": "vert",
+  "urgency": 1,
+  "kind": "both",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "clignotant",
+   "flèches",
+   "warning",
+   "détresse"
+  ],
+  "meaning": "Les clignotants ou les feux de détresse fonctionnent. Un clignotement deux fois plus rapide signale souvent une ampoule grillée.",
+  "now": [
+   "Clignotement rapide : vérifier les ampoules de clignotant du côté concerné."
+  ],
+  "causes": [
+   "Clignotant actionné",
+   "Clignotement rapide : ampoule grillée ou mauvaise masse"
+  ],
+  "dtc": [],
+  "parts": [
+   "indicator",
+   "relay",
+   "steering-column-switch"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "position-lamps",
+  "name": "Feux de position",
+  "category": "electrique",
+  "color": "vert",
+  "urgency": 1,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "veilleuses",
+   "lanternes",
+   "feux de position"
+  ],
+  "meaning": "Les feux de position (veilleuses) sont allumés.",
+  "now": [
+   "Penser à les éteindre en quittant la voiture pour ne pas décharger la batterie."
+  ],
+  "causes": [
+   "Commande d'éclairage en position veilleuses"
+  ],
+  "dtc": [],
+  "parts": [
+   "position-lamp",
+   "steering-column-switch"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "washer-fluid",
+  "name": "Niveau de lave-glace",
+  "category": "electrique",
+  "color": "orange",
+  "urgency": 1,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "lave-glace",
+   "essuie-glace",
+   "pare-brise",
+   "gicleur"
+  ],
+  "meaning": "Le réservoir de lave-glace est presque vide.",
+  "now": [
+   "Remplir avec un produit lave-glace (antigel en hiver), pas d'eau seule par temps froid."
+  ],
+  "causes": [
+   "Réservoir vide",
+   "Capteur de niveau défectueux"
+  ],
+  "dtc": [],
+  "parts": [
+   "washer-pump"
+  ],
+  "guides": [
+   "wipers-horn"
+  ],
+  "intents": []
+ },
+ {
+  "id": "key-battery",
+  "name": "Pile de clé faible",
+  "category": "electrique",
+  "color": "orange",
+  "urgency": 1,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "pile",
+   "clé",
+   "télécommande",
+   "mains libres"
+  ],
+  "meaning": "La pile de la clé télécommande ou mains libres est faible ; la clé risque de ne plus être reconnue.",
+  "now": [
+   "Remplacer la pile de la clé (modèle indiqué sur la pile ou dans la notice).",
+   "En attendant, placer la clé à l'emplacement de secours indiqué dans la notice pour démarrer."
+  ],
+  "causes": [
+   "Pile usée",
+   "Clé abîmée (chute, humidité)"
+  ],
+  "dtc": [],
+  "parts": [
+   "immobilizer"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "cruise-control",
+  "name": "Régulateur / limiteur de vitesse",
+  "category": "confort",
+  "color": "vert",
+  "urgency": 1,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "régulateur",
+   "limiteur",
+   "compteur",
+   "cruise"
+  ],
+  "meaning": "Le régulateur ou le limiteur de vitesse est actif.",
+  "now": [
+   "Rien à faire : fonctionnement normal.",
+   "S'il refuse de s'activer, le contacteur de pédale de frein est souvent en cause."
+  ],
+  "causes": [
+   "Fonction activée",
+   "Refus d'activation : contacteur de frein ou d'embrayage"
+  ],
+  "dtc": [
+   "P0571",
+   "P0504"
+  ],
+  "parts": [
+   "cruise-control-switch",
+   "brake-light-switch",
+   "clutch-pedal-switch"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "heated-rear-window",
+  "name": "Dégivrage de lunette arrière",
+  "category": "confort",
+  "color": "orange",
+  "urgency": 1,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "hybrid",
+   "electric",
+   "lpg"
+  ],
+  "keywords": [
+   "dégivrage",
+   "désembuage",
+   "lunette",
+   "vitre arrière"
+  ],
+  "meaning": "Le dégivrage de la lunette arrière (et parfois des rétroviseurs) est en marche.",
+  "now": [
+   "Il s'arrête souvent seul au bout de quelques minutes ; l'éteindre une fois la vitre dégagée."
+  ],
+  "causes": [
+   "Commande de dégivrage activée"
+  ],
+  "dtc": [],
+  "parts": [
+   "relay"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "gear-shift",
+  "name": "Indicateur de changement de rapport",
+  "category": "confort",
+  "color": "vert",
+  "urgency": 1,
+  "kind": "car",
+  "fuel": [
+   "petrol",
+   "diesel",
+   "lpg"
+  ],
+  "keywords": [
+   "flèche haut",
+   "changement de vitesse",
+   "passage de rapport"
+  ],
+  "meaning": "Le calculateur suggère de monter ou descendre un rapport pour consommer moins.",
+  "now": [
+   "Simple conseil : suivre l'indication si la situation le permet."
+  ],
+  "causes": [
+   "Régime moteur jugé trop haut ou trop bas pour la charge"
+  ],
+  "dtc": [],
+  "parts": [],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "ready",
+  "name": "Prêt à rouler (READY)",
+  "category": "hybride-ev",
+  "color": "vert",
+  "urgency": 1,
+  "kind": "car",
+  "fuel": [
+   "hybrid",
+   "electric"
+  ],
+  "keywords": [
+   "ready",
+   "prêt",
+   "voiture verte"
+  ],
+  "meaning": "Le système de traction est activé : la voiture peut avancer, même si aucun bruit de moteur n'est audible.",
+  "now": [
+   "Toujours passer en P et couper le système en quittant le véhicule."
+  ],
+  "causes": [
+   "Système hybride ou électrique activé"
+  ],
+  "dtc": [],
+  "parts": [
+   "hybrid-control-unit"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "hv-system-fault",
+  "name": "Défaut système hybride / haute tension",
+  "category": "hybride-ev",
+  "color": "rouge",
+  "urgency": 3,
+  "kind": "both",
+  "fuel": [
+   "hybrid",
+   "electric"
+  ],
+  "keywords": [
+   "hybride",
+   "haute tension",
+   "voiture éclair",
+   "système électrique"
+  ],
+  "meaning": "Le système haute tension est en défaut (isolement, batterie de traction, onduleur). La voiture peut s'arrêter ou refuser de démarrer.",
+  "now": [
+   "S'arrêter dès que possible en lieu sûr et couper le système.",
+   "Ne jamais toucher les câbles orange ni ouvrir les capots haute tension : danger de mort.",
+   "Appeler l'assistance ; signaler au dépanneur qu'il s'agit d'un véhicule hybride ou électrique."
+  ],
+  "causes": [
+   "Défaut d'isolement du circuit haute tension",
+   "Batterie de traction dégradée",
+   "Onduleur ou son refroidissement",
+   "Contacteur haute tension collé"
+  ],
+  "dtc": [
+   "P0AA6",
+   "P0A80",
+   "P0A7F",
+   "P0AA1",
+   "P0A78"
+  ],
+  "parts": [
+   "hv-battery",
+   "inverter",
+   "bms",
+   "hv-contactor",
+   "hv-cable"
+  ],
+  "guides": [],
+  "intents": [
+   "hybrid-warning"
+  ]
+ },
+ {
+  "id": "reduced-power-ev",
+  "name": "Puissance limitée (tortue)",
+  "category": "hybride-ev",
+  "color": "orange",
+  "urgency": 2,
+  "kind": "car",
+  "fuel": [
+   "hybrid",
+   "electric"
+  ],
+  "keywords": [
+   "tortue",
+   "puissance limitée",
+   "mode dégradé électrique"
+  ],
+  "meaning": "La puissance de traction est limitée : batterie de traction très faible, trop froide ou trop chaude, ou défaut du système.",
+  "now": [
+   "Rejoindre une borne de recharge ou un lieu sûr sans tarder.",
+   "Éviter les fortes accélérations et les voies rapides chargées.",
+   "Si le voyant reste allumé après recharge, faire diagnostiquer."
+  ],
+  "causes": [
+   "Charge de batterie très basse",
+   "Batterie hors de sa plage de température",
+   "Défaut de refroidissement batterie",
+   "Défaut du système haute tension"
+  ],
+  "dtc": [
+   "P0AFA",
+   "P0A7F"
+  ],
+  "parts": [
+   "hv-battery",
+   "bms",
+   "battery-cooling-fan",
+   "battery-chiller"
+  ],
+  "guides": [],
+  "intents": [
+   "hybrid-warning"
+  ]
+ },
+ {
+  "id": "charging-cable",
+  "name": "Câble de recharge branché",
+  "category": "hybride-ev",
+  "color": "vert",
+  "urgency": 1,
+  "kind": "car",
+  "fuel": [
+   "hybrid",
+   "electric"
+  ],
+  "keywords": [
+   "prise",
+   "recharge",
+   "câble",
+   "borne"
+  ],
+  "meaning": "Le câble de recharge est raccordé : le démarrage est bloqué tant qu'il est branché.",
+  "now": [
+   "Débrancher le câble avant de partir.",
+   "Si le voyant reste allumé câble retiré, contrôler la prise de recharge (verrou, saleté)."
+  ],
+  "causes": [
+   "Câble branché",
+   "Contacteur de prise de recharge défectueux"
+  ],
+  "dtc": [],
+  "parts": [
+   "charging-port",
+   "onboard-charger"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "ev-mode",
+  "name": "Mode électrique (EV)",
+  "category": "hybride-ev",
+  "color": "vert",
+  "urgency": 1,
+  "kind": "car",
+  "fuel": [
+   "hybrid"
+  ],
+  "keywords": [
+   "EV",
+   "électrique",
+   "mode électrique"
+  ],
+  "meaning": "L'hybride roule en mode tout électrique, moteur thermique arrêté.",
+  "now": [
+   "Rien à faire. Le mode se coupe seul si la batterie est faible ou si l'on accélère fort."
+  ],
+  "causes": [
+   "Mode EV sélectionné ou choisi automatiquement"
+  ],
+  "dtc": [],
+  "parts": [
+   "hybrid-control-unit",
+   "electric-motor"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "moto-neutral",
+  "name": "Point mort (N)",
+  "category": "moto",
+  "color": "vert",
+  "urgency": 1,
+  "kind": "moto",
+  "fuel": [
+   "petrol",
+   "electric"
+  ],
+  "keywords": [
+   "N",
+   "neutre",
+   "point mort"
+  ],
+  "meaning": "La boîte est au point mort.",
+  "now": [
+   "Rien à faire. Si le voyant ne s'allume jamais au point mort, la moto peut refuser de démarrer : contrôler le contacteur de point mort."
+  ],
+  "causes": [
+   "Point mort engagé",
+   "Pas de voyant au point mort : contacteur ou fil coupé"
+  ],
+  "dtc": [],
+  "parts": [
+   "neutral-switch"
+  ],
+  "guides": [
+   "moto-no-start"
+  ],
+  "intents": []
+ },
+ {
+  "id": "moto-side-stand",
+  "name": "Béquille latérale dépliée",
+  "category": "moto",
+  "color": "orange",
+  "urgency": 2,
+  "kind": "moto",
+  "fuel": [
+   "petrol",
+   "electric"
+  ],
+  "keywords": [
+   "béquille",
+   "béquille latérale",
+   "moteur coupe"
+  ],
+  "meaning": "La béquille latérale est dépliée. Sur la plupart des motos, engager une vitesse coupe alors le moteur.",
+  "now": [
+   "Replier la béquille avant de partir.",
+   "Si le moteur se coupe béquille repliée, contrôler le contacteur de béquille (souvent grippé ou encrassé)."
+  ],
+  "causes": [
+   "Béquille dépliée",
+   "Contacteur de béquille encrassé ou défectueux"
+  ],
+  "dtc": [],
+  "parts": [
+   "side-stand-switch"
+  ],
+  "guides": [
+   "moto-no-start"
+  ],
+  "intents": []
+ },
+ {
+  "id": "moto-engine-check",
+  "name": "Défaut injection (moto)",
+  "category": "moto",
+  "color": "orange",
+  "urgency": 2,
+  "kind": "moto",
+  "fuel": [
+   "petrol"
+  ],
+  "keywords": [
+   "FI",
+   "injection moto",
+   "moteur moto",
+   "MIL moto"
+  ],
+  "meaning": "Le calculateur d'injection de la moto a détecté un défaut. Le moteur peut tourner mal ou en mode dégradé.",
+  "now": [
+   "Rouler calmement jusqu'à un atelier.",
+   "Le code se lit avec l'outil adapté à la marque ; certaines motos l'affichent par clignotements.",
+   "Contrôler la batterie : une tension basse provoque des défauts fantômes."
+  ],
+  "causes": [
+   "Capteur (température, papillon, pression d'admission)",
+   "Injecteur ou pompe à essence",
+   "Batterie faible",
+   "Connecteur oxydé (pluie, lavage haute pression)"
+  ],
+  "dtc": [
+   "P0300",
+   "P0335"
+  ],
+  "parts": [
+   "ecu",
+   "injector",
+   "fuel-pump",
+   "throttle-body",
+   "connector"
+  ],
+  "guides": [
+   "moto-no-start"
+  ],
+  "intents": [
+   "moto-injection"
+  ]
+ },
+ {
+  "id": "moto-oil-pressure",
+  "name": "Pression d'huile (moto)",
+  "category": "moto",
+  "color": "rouge",
+  "urgency": 3,
+  "kind": "moto",
+  "fuel": [
+   "petrol"
+  ],
+  "keywords": [
+   "huile moto",
+   "burette moto"
+  ],
+  "meaning": "La pression d'huile du moteur est insuffisante. Continuer peut serrer le moteur.",
+  "now": [
+   "S'arrêter dès que possible et couper le moteur.",
+   "Contrôler le niveau (hublot ou jauge, moto droite selon la notice).",
+   "Niveau correct et voyant persistant : ne pas redémarrer."
+  ],
+  "causes": [
+   "Niveau d'huile bas",
+   "Pompe à huile",
+   "Manocontact défectueux",
+   "Filtre colmaté"
+  ],
+  "dtc": [],
+  "parts": [
+   "engine-oil",
+   "oil-pump",
+   "oil-pressure-sensor",
+   "oil-filter"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "moto-coolant-temp",
+  "name": "Température moteur (moto)",
+  "category": "moto",
+  "color": "rouge",
+  "urgency": 3,
+  "kind": "moto",
+  "fuel": [
+   "petrol"
+  ],
+  "keywords": [
+   "température moto",
+   "surchauffe moto"
+  ],
+  "meaning": "Le moteur à refroidissement liquide surchauffe.",
+  "now": [
+   "S'arrêter et couper le moteur ; ne pas ouvrir le bouchon de radiateur à chaud.",
+   "Vérifier que le ventilateur se déclenche à l'arrêt, moteur chaud.",
+   "Contrôler le niveau du vase une fois refroidi."
+  ],
+  "causes": [
+   "Niveau de liquide bas",
+   "Ventilateur ou son contacteur",
+   "Radiateur obstrué (boue, insectes)",
+   "Thermostat"
+  ],
+  "dtc": [],
+  "parts": [
+   "coolant",
+   "radiator",
+   "cooling-fan",
+   "fan-thermo-switch",
+   "thermostat"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "moto-abs",
+  "name": "ABS (moto)",
+  "category": "moto",
+  "color": "orange",
+  "urgency": 2,
+  "kind": "moto",
+  "fuel": [
+   "petrol",
+   "electric"
+  ],
+  "keywords": [
+   "ABS moto"
+  ],
+  "meaning": "L'ABS de la moto est désactivé : les roues peuvent se bloquer au freinage. Sur beaucoup de motos, il reste allumé au démarrage jusqu'à quelques km/h : c'est normal.",
+  "now": [
+   "S'il ne s'éteint pas après quelques mètres, freiner progressivement et avec prudence.",
+   "Contrôler la propreté des capteurs et des couronnes de roue.",
+   "Faire diagnostiquer si le défaut persiste."
+  ],
+  "causes": [
+   "Contrôle de démarrage pas encore fait (normal)",
+   "Capteur de roue sale ou mal positionné",
+   "Couronne de roue abîmée",
+   "Tension batterie basse"
+  ],
+  "dtc": [],
+  "parts": [
+   "wheel-speed-sensor",
+   "abs-tone-ring",
+   "abs-module"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "moto-traction-control",
+  "name": "Antipatinage (moto)",
+  "category": "moto",
+  "color": "orange",
+  "urgency": 1,
+  "kind": "moto",
+  "fuel": [
+   "petrol",
+   "electric"
+  ],
+  "keywords": [
+   "TC",
+   "antipatinage moto",
+   "contrôle de traction"
+  ],
+  "meaning": "Clignote : l'antipatinage limite le patinage de la roue arrière. Fixe : système désactivé ou en défaut.",
+  "now": [
+   "S'il clignote : doser l'accélération.",
+   "S'il reste allumé sans l'avoir désactivé : rouler prudemment et faire contrôler."
+  ],
+  "causes": [
+   "Perte d'adhérence (normal)",
+   "Désactivé par le pilote",
+   "Capteur de roue"
+  ],
+  "dtc": [],
+  "parts": [
+   "wheel-speed-sensor",
+   "ecu"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "moto-battery-charge",
+  "name": "Charge de la batterie (moto)",
+  "category": "moto",
+  "color": "rouge",
+  "urgency": 2,
+  "kind": "moto",
+  "fuel": [
+   "petrol"
+  ],
+  "keywords": [
+   "batterie moto",
+   "charge moto",
+   "régulateur"
+  ],
+  "meaning": "La batterie de la moto n'est plus rechargée. La moto finira par s'arrêter.",
+  "now": [
+   "Rentrer directement, en évitant les consommateurs (poignées chauffantes, feux additionnels).",
+   "Mesurer la tension aux bornes moteur tournant : elle doit monter nettement au-dessus de la tension à l'arrêt.",
+   "Contrôler le connecteur du régulateur, qui chauffe souvent."
+  ],
+  "causes": [
+   "Régulateur-redresseur grillé",
+   "Stator (alternateur) défaillant",
+   "Connecteur fondu ou oxydé",
+   "Batterie en fin de vie"
+  ],
+  "dtc": [],
+  "parts": [
+   "rectifier-regulator",
+   "stator",
+   "battery",
+   "connector"
+  ],
+  "guides": [],
+  "intents": [
+   "moto-charging"
+  ]
+ },
+ {
+  "id": "moto-fuel-reserve",
+  "name": "Réserve d'essence (moto)",
+  "category": "moto",
+  "color": "orange",
+  "urgency": 1,
+  "kind": "moto",
+  "fuel": [
+   "petrol"
+  ],
+  "keywords": [
+   "essence moto",
+   "réserve moto"
+  ],
+  "meaning": "Le niveau d'essence atteint la réserve.",
+  "now": [
+   "Faire le plein rapidement ; l'autonomie sur la réserve varie beaucoup selon les modèles."
+  ],
+  "causes": [
+   "Réservoir presque vide",
+   "Sonde de niveau défaillante"
+  ],
+  "dtc": [],
+  "parts": [
+   "fuel-level-sender",
+   "fuel-pump"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "moto-immobilizer",
+  "name": "Antidémarrage (moto)",
+  "category": "moto",
+  "color": "rouge",
+  "urgency": 2,
+  "kind": "moto",
+  "fuel": [
+   "petrol",
+   "electric"
+  ],
+  "keywords": [
+   "clé moto",
+   "antidémarrage moto",
+   "antivol"
+  ],
+  "meaning": "Clignote contact coupé : antidémarrage armé, c'est normal. Reste allumé contact mis et la moto ne démarre pas : clé non reconnue.",
+  "now": [
+   "Couper et remettre le contact, essayer le double de la clé.",
+   "Éloigner les autres clés à puce du trousseau (interférences)."
+  ],
+  "causes": [
+   "Transpondeur de clé défaillant",
+   "Antenne de contacteur",
+   "Batterie faible",
+   "Interférence d'une autre clé"
+  ],
+  "dtc": [],
+  "parts": [
+   "immobilizer",
+   "ignition-switch",
+   "battery"
+  ],
+  "guides": [
+   "moto-no-start"
+  ],
+  "intents": []
+ },
+ {
+  "id": "scooter-belt-service",
+  "name": "Entretien de transmission (scooter)",
+  "category": "moto",
+  "color": "orange",
+  "urgency": 1,
+  "kind": "moto",
+  "fuel": [
+   "petrol",
+   "electric"
+  ],
+  "keywords": [
+   "courroie",
+   "variateur",
+   "galets",
+   "entretien scooter"
+  ],
+  "meaning": "L'indicateur rappelle le contrôle ou le remplacement de la courroie et des galets de variateur.",
+  "now": [
+   "Prévoir l'entretien : une courroie qui casse immobilise le scooter.",
+   "Remettre l'indicateur à zéro après l'intervention (procédure de la notice)."
+  ],
+  "causes": [
+   "Kilométrage d'entretien atteint"
+  ],
+  "dtc": [],
+  "parts": [
+   "cvt-belt",
+   "variator",
+   "variator-rollers",
+   "cvt-clutch"
+  ],
+  "guides": [],
+  "intents": []
+ },
+ {
+  "id": "moto-tpms",
+  "name": "Pression des pneus (moto)",
+  "category": "moto",
+  "color": "orange",
+  "urgency": 2,
+  "kind": "moto",
+  "fuel": [
+   "petrol",
+   "electric"
+  ],
+  "keywords": [
+   "pneu moto",
+   "pression moto"
+  ],
+  "meaning": "Un pneu est sous-gonflé. Sur une moto, un pneu dégonflé rend la tenue de route dangereuse.",
+  "now": [
+   "Ralentir et contrôler les pneus au plus vite.",
+   "Regonfler à froid aux valeurs de la notice ou de l'étiquette du bras oscillant."
+  ],
+  "causes": [
+   "Crevaison lente",
+   "Valve qui fuit",
+   "Pile du capteur épuisée"
+  ],
+  "dtc": [],
+  "parts": [
+   "tpms-sensor",
+   "tyre"
+  ],
+  "guides": [],
+  "intents": []
+ }
+]
